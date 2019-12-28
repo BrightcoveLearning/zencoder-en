@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Using Read-only API Keys</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/advanced-integration/">Advanced Integration</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Using Read-only API Keys</li>
     </ol>
   </nav>
 </header>
@@ -209,7 +213,7 @@
       <a href="https://app.zencoder.com/api">Read-only API Keys</a> can access this information using JSONP by requesting the URL with a .js extension. The response
       will use the
       <code>progress</code> callback unless one is specified using the
-      <code>callback</code> in the querystring. For example, a JSONP request for input progress with no callback specified:</p>
+      <code>callback</code> in the query string. For example, a JSONP request for input progress with no callback specified:</p>
 
     <pre class="line-numbers">
 <code class="language-javascript">progress(
@@ -220,6 +224,7 @@
   }
 )</code></pre>
   </section>
+  </article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

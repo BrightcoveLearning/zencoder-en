@@ -1,6 +1,6 @@
 ---
-title:
-parent:
+title: Using Read-only API Keys
+parent: Advanced Integration
 ---
 <h1>Using Read-only API Keys</h1>
 <summary><a href="https://app.zencoder.com/api">Read-only API Keys</a> can be used in situations where your API key could be exposed to others, such as in client-side code making JSONP requests to Zencoder. Read-only API keys only work with select API requests, and return sanitized information. They can not be used to create jobs or modify account settings.</summary>
@@ -53,7 +53,7 @@ parent:
       <a href="https://app.zencoder.com/api">Read-only API Keys</a> can access this information using JSONP by requesting the URL with a .js extension. The response
       will use the
       <code>progress</code> callback unless one is specified using the
-      <code>callback</code> in the querystring. For example, a JSONP request for input progress with no callback specified:</p>
+      <code>callback</code> in the query string. For example, a JSONP request for input progress with no callback specified:</p>
 
     <pre class="line-numbers">
 <code class="language-javascript">progress(
@@ -64,3 +64,4 @@ parent:
   }
 )</code></pre>
   </section>
+  </article>
