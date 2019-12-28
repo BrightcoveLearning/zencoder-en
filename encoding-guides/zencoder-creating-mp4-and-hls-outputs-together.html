@@ -2,59 +2,8 @@
 title: 
 parent: 
 ---
-<h1><span> Zencoder: Creating MP4 and HLS Outputs Together </span>
-</h1>
-
-  
-<div class="node node--type-support-doc node--view-mode-full bcdocs-four-rows clearfix">
-
-  
-
-  <div class="group-first-row">
-      </div>
-
-  <div class="group-second-row">
-  
-  <div class="field field--name-field-products field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Product(s)</div>
-          <div class="field__items taxonomy__tags">
-        <svg class="icon--product" viewBox="0 0 100 100">
-          <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--product"></use>
-        </svg>
-              <div class="field--item">Zencoder</div>
-              </div>
-      </div>
-
-  <div class="field field--name-field-roles field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Role(s)</div>
-          <div class="field__items taxonomy__tags">
-        <svg class="icon--roles" viewBox="0 0 100 100">
-          <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--roles"></use>
-        </svg>
-              <div class="field--item">API Developer</div>
-              </div>
-      </div>
-
-</div>
-
-  
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
-
-</div>
-
-  <div class="group-fourth-row">
-  
-            <div class="field field--name-field-support-doc-body field--type-text-with-summary field--label-hidden field--item"><p>This topic explains <strong>transmuxing</strong>, a process that allows you to encode your videos to MP4 and then also repackage those as HLS outputs.</p>
+<h1>Creating MP4 and HLS Outputs Together</h1>
+            <p>This topic explains <strong>transmuxing</strong>, a process that allows you to encode your videos to MP4 and then also repackage those as HLS outputs.</p>
     <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
 
 <p>With Zencoder you can encode your videos to MP4 and then also repackage those as HLS outputs, through a process we call "transmuxing" (rather than transcoding). Transmuxing will repackage existing MP4 videos into the MPEG TS segments necessary for HTTP Live Streaming (HLS), without having to re-encode the video files. Using dependent outputs you can create your H.264 files plus the segmented files all in a single job, producing faster turnaround at lower cost; transmuxed outputs are charged at 1/4 of the cost of encoding. The resulting job creates 6 outputs - 2 charged at your account's regular rate, 3 transmuxed files at 1/4 of the encoding cost, and 1 playlist, which is free.</p>
