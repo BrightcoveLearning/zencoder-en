@@ -6,6 +6,13 @@
 
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/advanced-integration/100-integration-reliability.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/404.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
@@ -13,7 +20,770 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/advanced-audio-mapping-guide.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/api-version-history.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/as11-mxf.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/avc-intra-guide.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/cae-settings.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/creating-mp4-and-hls-outputs-together.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/getting-started/creating-multiple-outputs.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/dash-streaming-and-playlists.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-aac.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/encoding-settings-aspera.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-audio-processing.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-audio.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-broadcast.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/encoding-settings-captions.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/encoding-settings-clips.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-conditional-outputs.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/encoding-settings-decryption.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/encoding-settings-drm.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/encoding-settings-encryption.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-flv.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-frame-rate.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-general-output-settings.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-h264.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-hdr10.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-job.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-mp4.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-notifications.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-rate-control.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-resolution.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/encoding-settings-s3-settings.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/encoding-settings-thumbnails.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-transmuxing.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-video-processing.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-video.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-vp6.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/encoding-settings-watermarks.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-checksummismatcherror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-downloadfailureerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-downloadtimeouterror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-filenotfounderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-filepermanentlymovederror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-inaccuratedurationerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-inputfilenotfound.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidfilepatherror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidformatcodecerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidframerateerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-invalidvideosettingserror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-nomediaerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-quicktimereferenceerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-remoteserverproblemerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-rtmpauthfailederror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-segmentingerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-skippedsourceerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-thumbnailerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-transcodingerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-truncatedfileerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpectedprogenresult.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpectedresulterror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unexpectedx264result.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unreadablefileerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unsupportedcodecerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unsupportedencodingerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-uploadfailureerror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-uploadservernotfounderror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-uploadtimeouterror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/error-workertimeouterror.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-basics.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-codecs-and-formats.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-encoding.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-file-transfers.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-integration-libraries.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-rate-limiting.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/getting-started/getting-api-key.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/getting-notifications-when-videos-are-finished.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/h264-advanced-guide.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/hdr10-video-output.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/hevch265-guide.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/highwinds-smil.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/html5-encoding.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/http-live-segmented-streaming-and-playlists.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/http-live-streaming-using-fragmented-mp4.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/icons.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -41,6 +811,48 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/iosmobile-encoding.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/microsoft-smooth-streaming.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/getting-started/output-settings.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/problems.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/region-outages.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/release-notes/release-notes.html</loc>
+        <lastmod>2019-12-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/sitemap.xml</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
@@ -55,847 +867,42 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/advanced-integration/zencoder-100-integration-reliability.html</loc>
+        <loc>https://zencoder.support.brightcove.com/getting-started/test-jobs-and-integration-mode.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-advanced-audio-mapping-guide.html</loc>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/using-quality-based-encoding-modes-streaming-video.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/zencoder-api-version-history.html</loc>
+        <loc>https://zencoder.support.brightcove.com/advanced-integration/using-read-only-api-keys.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-as11-mxf.html</loc>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/vp6-advanced-guide.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-avc-intra-guide.html</loc>
+        <loc>https://zencoder.support.brightcove.com/encoding-guides/vp9-guide.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-cae-guide.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/zencoder-cae-settings.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-creating-mp4-and-hls-outputs-together.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/zencoder-creating-multiple-outputs.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-dash-streaming-and-playlists.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-aac.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/zencoder-encoding-settings-aspera.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-audio-processing.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-audio.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-broadcast.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/zencoder-encoding-settings-captions.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/zencoder-encoding-settings-clips.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/zencoder-encoding-settings-conditional-outputs.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/zencoder-encoding-settings-decryption.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/zencoder-encoding-settings-drm.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/zencoder-encoding-settings-encryption.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-flv.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-format-and-codecs.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-frame-rate.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/zencoder-encoding-settings-general-output-settings.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-h264.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-hdr10.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/zencoder-encoding-settings-job.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-mp4.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/zencoder-encoding-settings-notifications.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-rate-control.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-resolution.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/zencoder-encoding-settings-s3-settings.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-segmented-streaming.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/zencoder-encoding-settings-thumbnails.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-transmuxing.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-video-processing.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/zencoder-encoding-settings-video.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/zencoder-encoding-settings-vp6.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/zencoder-encoding-settings-watermarks.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-akamainetstoragefilesizeerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-checksummismatcherror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-dimensiontoosmallerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-downloadaccessdeniederror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-downloadfailureerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-downloadtimeouterror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-filenotfounderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-filepermanentlymovederror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-inaccuratedurationerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-incompatiblewithdynamicprofileserror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-inputfilenotfound.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidaccesskeyiderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidaudiosettingserror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidcodeccombinationerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invaliddownloadedfiletypeerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidencryptionsettingserror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidfilepatherror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidformatcodecerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidframerateerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidusernameorpassworderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidvideobitrateerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-invalidvideosettingserror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-nomediaerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-quicktimereferenceerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-remoteserverproblemerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-rtmpauthfailederror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-rtmpmaxstreamsxidreached.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-rtmpstreamnamealreadyinuse.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-s3bucketnotfounderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-segmentingerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-skippedsourceerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-thumbnailerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-transcodingerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-transferinvalidgranteegroupurlerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-transferinvalidgranteeiderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-truncatedfileerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unabletocreatedynamicprofileserror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpecteddownloadproblemerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpectedffmpegresult.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpectedmplayerresult.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpectedprogenresult.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpectedresulterror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpecteduploadproblemerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unexpectedx264result.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unreadablefileerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unsupportedcodecerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unsupportedencodingerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unsupportedencryptionerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-unsupportedtranscodecombinationerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-uploadaccessdeniederror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-uploadfailureerror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-uploadservernotfounderror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-uploadtimeouterror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/zencoder-error-workertimeouterror.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-basics.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-codecs-and-formats.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-encoding.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-file-transfers.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-integration-libraries.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/zencoder-faq-rate-limiting.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/zencoder-getting-api-key.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/zencoder-getting-notifications-when-videos-are-finished.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-h264-advanced-guide.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-hdr10-video-output.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-hevch265-guide.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-highwinds-smil.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-html5-encoding.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-http-live-segmented-streaming-and-playlists.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-http-live-streaming-using-fragmented-mp4.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-iosmobile-encoding.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-microsoft-smooth-streaming.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/zencoder-output-settings.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/zencoder-problems.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/zencoder-region-outages.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/release-notes/zencoder-release-notes.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/zencoder-test-jobs-and-integration-mode.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-using-quality-based-encoding-modes-streaming-video.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/advanced-integration/zencoder-using-read-only-api-keys.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-vp6-advanced-guide.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-guides/zencoder-vp9-guide.html</loc>
-        <lastmod>2019-12-28</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/zencoder-when-should-i-retry-failed-jobs.html</loc>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/when-should-i-retry-failed-jobs.html</loc>
         <lastmod>2019-12-28</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
