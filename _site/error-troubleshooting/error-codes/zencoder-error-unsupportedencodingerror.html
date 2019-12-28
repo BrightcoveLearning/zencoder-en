@@ -1,336 +1,164 @@
-<!DOCTYPE html>
-<html  lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"e78a80aa93",applicationID:"129613202"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
-<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2728311-17", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
-<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="/sites/default/files/favicon-64.png" type="image/png" />
-<link rel="alternate" hreflang="en" href="https://support.brightcove.com/zencoder-error-unsupportedencodingerror" />
-<link rel="canonical" href="https://support.brightcove.com/zencoder-error-unsupportedencodingerror" />
-<link rel="shortlink" href="https://support.brightcove.com/node/17811" />
-<link rel="revision" href="https://support.brightcove.com/zencoder-error-unsupportedencodingerror" />
+<!doctype html>
+<html>
 
-    <title>Zencoder Error: UnsupportedEncodingError | Brightcove Learning</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_d7PoQ20hWbRiei75VgExP_tm8C1ylIRfzB3zIYLc5Cw.css?q23msc" />
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_fr7ugR_m15spMT57voAomC2Aklj0ATM7MmH6hvb3pp4.css?q23msc" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9e0492656a.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
 
-    
-<!--[if lte IE 8]>
-<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
-<![endif]-->
+<body class="body">
 
-    <meta name="uri-translation" content="on" />
-    <script>
-window['_fs_debug'] = false; window['_fs_host'] = 'fullstory.com';
-window['_fs_org'] = 'BX3Q1';
-window['_fs_namespace'] = 'FS';
-(function(m,n,e,t,l,o,g,y){
-if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-g.consent=function(a){g("consent",!arguments.length||a)};
-g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-g.clearUserCookie=function(){};
-})(window,document,window['_fs_namespace'],'script','user');
-    </script>
-  </head>
-  <body class="path-node page-node-type-support-doc has-glyphicons">
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      Skip to main content
-    </a>
-    
-      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-              <header class="navbar navbar-default container" id="navbar" role="banner">
-      <div class="navigation-secondary clearfix">
-          <div class="region region-navigation-secondary">
-    <nav role="navigation" aria-labelledby="block-secondarynavigation-menu" id="block-secondarynavigation">
-            
-  <h2 class="visually-hidden" id="block-secondarynavigation-menu">Secondary Navigation</h2>
-  
-
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/logo-bc-zencoder.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      
+      
+      <li class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 left-side-bar">
+      <nav class="sidenav">
         
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="/contact-support" title="Create a Support Request" data-drupal-link-system-path="node/18632">Support Request</a>
-                  </li>
-                              <li class="expanded">
-        <a href="https://status.brightcove.com/">System Status</a>
-                  </li>
-                              <li class="expanded">
-        <a href="https://university.brightcove.com/">Online Courses</a>
-                  </li>
-        </ul>
-  
-
-
-  </nav>
-<section id="block-gtranslate" class="block block-gtranslate block-gtranslate-block clearfix">
-  
-    
-
-      
-<div class="gtranslate">
-<script type="text/javascript">/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;var lang=lang_pair.split('|')[1];var plang=location.pathname.split('/')[1];if(plang.length !=2 && plang != 'zh-CN' && plang != 'zh-TW')plang='en';if(lang == 'en')location.pathname=location.pathname.replace('/'+plang+'/', '/');else location.pathname='/'+lang+location.pathname.replace('/'+plang+'/', '/');}
-/* ]]> */
-</script><select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" style="font-weight:bold;background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -0px;padding-left:18px;">English</option><option value="en|fr" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -160px;padding-left:18px;">French</option><option value="en|de" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -176px;padding-left:18px;">German</option><option value="en|ja" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -240px;padding-left:18px;">Japanese</option><option value="en|ko" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -256px;padding-left:18px;">Korean</option><option value="en|es" style="background:url('/modules/contrib/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -352px;padding-left:18px;">Spanish</option></select>
-</div>
-<div class="gtranslate__credits">
-  Translations Provided by Google Translate
-</div>
-
-  </section>
-
-
-  </div>
-
-      </div>
-      <div class="navbar-header col-md-3">
-                  <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
-            <img src="/themes/custom/bcdocs/images/brightcove.png" alt="Home" />
-          </a>
-                
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-                    <div class="navbar-collapse collapse">
-            <div class="region region-navigation-collapsible">
-    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation">
-            <h2 class="sr-only" id="block-mainnavigation-menu">Main navigation</h2>
-
-      
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="/brightcove-learning-home" title="Home page" data-drupal-link-system-path="node/18643">Home</a>
-                  </li>
-                                            <li class="expanded dropdown">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-          Products
-          <svg class="icon__chevron--down" viewBox="0 0 100 100">
-            <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__chevron--down"></use>
-          </svg>
-        </a>
-                                  <ul class="menu dropdown-menu">
-                                  <li class="expanded">
-        <a href="/video-cloud" data-drupal-link-system-path="node/18332">Video Cloud</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/gallery" data-drupal-link-system-path="node/18368">Gallery</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/brightcove-player" data-drupal-link-system-path="node/18283">Brightcove Player</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/live" data-drupal-link-system-path="node/18642">Live</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/social" data-drupal-link-system-path="node/18444">Social</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/audience" data-drupal-link-system-path="node/18445">Audience</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/zencoder" data-drupal-link-system-path="node/18331">Zencoder</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/ssai" data-drupal-link-system-path="node/18650">SSAI</a>
-                  </li>
-                              <li class="expanded">
-        <a href="https://support.ottflow.com">OTT Flow</a>
-                  </li>
-        </ul>
-  
-            </li>
-                                            <li class="expanded dropdown">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-          Quick Links
-          <svg class="icon__chevron--down" viewBox="0 0 100 100">
-            <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__chevron--down"></use>
-          </svg>
-        </a>
-                                  <ul class="menu dropdown-menu">
-                                  <li class="expanded">
-        <a href="/analytics-api" data-drupal-link-system-path="node/18370">Analytics API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/audience-api" data-drupal-link-system-path="node/18371">Audience API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/cms-api" data-drupal-link-system-path="node/18372">CMS API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/cms-connectors-video-cloud" data-drupal-link-system-path="node/18662">CMS Connectors for Video Cloud</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/data-collection-api" data-drupal-link-system-path="node/18876">Data Collection API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/delivery-system-api" data-drupal-link-system-path="node/18387">Delivery System API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/developer-tools-and-concepts" data-drupal-link-system-path="node/18430">Developer Tools and Concepts</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/native-player-sdks" data-drupal-link-system-path="node/18367">Device SDKs</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/dynamic-ingest-api" data-drupal-link-system-path="node/18373">Dynamic Ingest API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/getting-started-brightcove-apis-0" data-drupal-link-system-path="node/18711">Getting Started - Brightcove APIs</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/page-experience-api" data-drupal-link-system-path="node/18616">In-Page Experience APIs</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/ingest-profiles-api" data-drupal-link-system-path="node/18374">Ingest Profiles API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/live" data-drupal-link-system-path="node/18642">Live API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/oauth-api" data-drupal-link-system-path="node/18376">OAuth API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/platform-api-code-samples" data-drupal-link-system-path="node/18675">Platform API Code Samples</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/playback-api" data-drupal-link-system-path="node/18380">Playback API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/brightcove-player-code-samples" data-drupal-link-system-path="node/18630">Player Code Samples</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/brightcove-player-developer" data-drupal-link-system-path="node/18362">Player Developer</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/player-management-api" data-drupal-link-system-path="node/18378">Player Management API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/policy-api" data-drupal-link-system-path="node/18381">Policy API</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/release-notes" data-drupal-link-system-path="node/18687">Release Notes</a>
-                  </li>
-        </ul>
-  
-            </li>
-                                            <li class="expanded dropdown">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-          Training
-          <svg class="icon__chevron--down" viewBox="0 0 100 100">
-            <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__chevron--down"></use>
-          </svg>
-        </a>
-                                  <ul class="menu dropdown-menu">
-                                  <li class="expanded">
-        <a href="https://university.brightcove.com">Online Courses</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/register-training" data-drupal-link-system-path="node/18270">Register for a Course</a>
-                  </li>
-        </ul>
-  
-            </li>
-                              <li class="expanded">
-        <a href="/brightcove-support-documentation-announcements" title="See what&#039;s new in Brightcove Documentation" data-drupal-link-system-path="node/18896">What&#039;s New</a>
-                  </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </div>
-
-        </div>
-          </header>
-  
-    <div class="full-width-headline">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12" role="heading">
-            <div class="region region-header">
-          <section id="block-brightcoveheadlineblock" class="block block-bc-general block-bc-general-headline-block clearfix">
-  
-    
-
-      Documentation
-  </section>
-
-
-  </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  
-      <div role="main" class="main-container container  js-quickedit-main-content">
-    <div class="row">
-
-                              <aside class="col-sm-3" role="complementary">
-              <div class="region region-sidebar-first">
-    <section class="bc-search-fixes-search-block-form block block-bc-search-fixes block-bc-search-fixes-search-block clearfix" data-drupal-selector="bc-search-fixes-search-block-form" id="block-brightcovesearchblock">
-  
-    
-
-      <form action="/zencoder-error-unsupportedencodingerror" method="post" id="bc-search-fixes-search-block-form" accept-charset="UTF-8">
-  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-search js-form-item-search form-no-label form-group">
-      <label for="edit-search" class="control-label sr-only">Search</label>
-  
-  
-  <input data-drupal-selector="edit-search" class="form-text form-control" type="text" id="edit-search" name="search" value="" size="15" maxlength="128" placeholder="Search" />
-
-  
-  
-  </div>
-<input autocomplete="off" data-drupal-selector="form-7ugt6yww9izhfamsloksdlsa4nerzxbmvzgcots3lyc" type="hidden" name="form_build_id" value="form-7UGT6yWw9iZhfaMSLOKsdLSa4NERzxbMVzGcots3lyc" /><input data-drupal-selector="edit-bc-search-fixes-search-block-form" type="hidden" name="form_id" value="bc_search_fixes_search_block_form" /><div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit" class="button js-form-submit form-submit btn-primary btn icon-only" type="submit" id="edit-submit" name="op" value="Search"><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></div>
-
-</form>
-
-  </section>
-
-<section id="block-inpagenavigationblock" class="hidden-xs block block-bc-ipnav block-bc-ipnav-block clearfix">
-  
-      <h2 class="block-title">On This Page</h2>
-    
-
-      <div class="bc-ipnav-block"></div>
-  </section>
-
-
-  </div>
-
-          </aside>
+          
+          <h5><a href="/">Home</a></h5>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/getting-started/">Getting Started</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                  <section class="col-sm-9">
-
-                                      <div class="highlighted">  <div class="region region-highlighted">
-    <div data-drupal-messages-fallback class="hidden"></div>
-
+                
+                  <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
+                
+              
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/syncing-with-video-cloud/">Syncing with Video Cloud</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+                
+              
+                
+                  <li><a href="/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a></li>
+                
+              
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+                
+              
+                
+                  <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+                
+              
+                
+                  <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
+                
+              
+                
+                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
+                
+              
+                
+                  <li><a href="/using-brightcove-beacon/advertisement.html">Creating an Ad Configuration</a></li>
+                
+              
+                
+                  <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+                
+              
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/creating-your-apps/submitting-device-apps-stores.html">Submitting Device Apps to Stores</a></li>
+                
+              
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/references/glossary.html">Glossary</a></li>
+                
+              
+                
+                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                
+              
+                
+                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                
+              
+            </ul>
+          
+        
+    </nav>
   </div>
-</div>
-                  
-                
-                
-                
-                          <a id="main-content"></a>
-            <div class="region region-content">
-        <h1 class="page-header"><span>Zencoder Error: UnsupportedEncodingError</span>
+  <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+    <!-- search bar -->
+    <div id="search_bar" class="search-bar">
+      <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+      <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:9ybe0wftqs0"></script>
+      <div class="gcse-search"></div>
+    </div>
+<!-- bootstrap layout -->
+
+<h1><span>Zencoder Error: UnsupportedEncodingError</span>
 </h1>
 
   
@@ -400,242 +228,108 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;v
 </section><section class="bcls-section"><h2 id="Retry_this_job">Retry this job?</h2>
 
 <p>Jobs with this error <strong>should not</strong> be retried. <a href="/zencoder-when-should-i-retry-failed-jobs">Learn more about retrying jobs.</a></p>
-</section></article></div>
-      
-</div>
+</section>
 
-</div>
-
-
-<section class="views-element-container block block-views block-views-blockrelated-content-by-field-block-1 clearfix" id="block-views-block-related-content-by-field-block-1">
-  
-    
-
-      <div class="form-group"><div class="view view-related-content-by-field view-id-related_content_by_field view-display-id-block_1 js-view-dom-id-d88d36cf0e999c9b0ff32c4a31f51d557e9af60c12f13d2967bdb6aa352b6c37">
-  
-    
-      <div class="view-header">
-      <h2>Related content</h2>
+<!-- complete bootstrap layout -->
     </div>
+    <div class="col-sm-2 right-side-bar">
       
-      <div class="view-content">
-      <div class="item-list">
-  
-  <ul>
-
-          <li><div class="views-field views-field-title"><span class="field-content"><span class="content-type-support_doc"><a href="/zencoder-when-should-i-retry-failed-jobs" hreflang="en"> Zencoder: When Should I Retry Failed Jobs? </a></span></span></div></li>
-          <li><div class="views-field views-field-title"><span class="field-content"><span class="content-type-support_doc"><a href="/zencoder-error-codes" hreflang="en">Zencoder: Error Codes</a></span></span></div></li>
-    
-  </ul>
-
-</div>
-
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
     </div>
-  
-          </div>
-</div>
-
-  </section>
-
-
   </div>
+</div>
 
-              </section>
+<hr>
+<div class="last-updated">
+  Page last updated on 28 Dec 2019
+</div>
 
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
                 </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
-
-      <footer class="footer container" role="contentinfo">
-              <div class="row">
-            <div class="region region-footer-top-left col-md-9" style="margin-bottom: 1em;">
-    <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      
-  <h2>Brightcove Support</h2>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
   
-
-        
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="https://status.brightcove.com">System Status</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/contact-support" data-drupal-link-system-path="node/18632">Support - Video Cloud</a>
-                  </li>
-                              <li class="expanded">
-        <a href="https://support.brightcove.com/en/contact/create">Support - Zencoder</a>
-                  </li>
-        </ul>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/feedback-beacon.js"></script>
+</body>
 
-
-  </nav>
-<nav role="navigation" aria-labelledby="block-documentation-menu" id="block-documentation" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      
-  <h2>Documentation</h2>
-  
-
-        
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
-                  </li>
-        </ul>
-  
-
-
-  </nav>
-<nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      
-  <h2>Training</h2>
-  
-
-        
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="/online-training-courses" data-drupal-link-system-path="node/18286">Online Courses</a>
-                  </li>
-                              <li class="expanded">
-        <a href="/register-training" data-drupal-link-system-path="node/18270">Register for a course</a>
-                  </li>
-        </ul>
-  
-
-
-  </nav>
-<nav role="navigation" aria-labelledby="block-brightcove-menu" id="block-brightcove" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      
-  <h2>Brightcove</h2>
-  
-
-        
-              <ul class="menu nav">
-                                  <li class="expanded">
-        <a href="https://www.brightcove.com">Brightcove.com</a>
-                  </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </div>
-
-            <div class="region region-footer-top-right col-md-3">
-    <section id="block-footerlegaltext" class="block block-block-content block-block-content4507d09c-a528-4947-b91d-36ec6671822b clearfix">
-  
-    
-
-      
-            <div class="field field--name-field-body field--type-text-long field--label-hidden field--item"><p>Brightcove Inc. (NASDAQ: BCOV), is a leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices.</p>
-</div>
-      
-  </section>
-
-
-  </div>
-
-        </div>
-                    <div class="row">
-            <div class="region region-footer-bottom-left col-md-8">
-    <section id="block-footercopyrightlinewithlinks" class="block block-block-content block-block-content3a164ef9-02d8-42c4-bcc6-3ab435f670b3 clearfix">
-  
-    
-
-      <div class="block-content block-content--type-copyright-block-with-links block-content--view-mode-full ds-1col clearfix">
-
-  
-
-  
-            <div class="field field--name-field-copyright-year field--type-string field--label-hidden field--item">2019</div>
-      
-            <div class="field field--name-field-copyright-text field--type-string-long field--label-hidden field--item">Brightcove Inc. All rights reserved.</div>
-      
-      <div class="field field--name-field-legal-links field--type-link field--label-hidden field--items">
-              <div class="field--item"><a href="https://www.brightcove.com/en/privacy">Privacy</a></div>
-              <div class="field--item"><a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></div>
-          </div>
-  
-
-</div>
-
-
-  </section>
-
-
-  </div>
-
-            <div class="region region-footer-bottom-right col-md-4">
-    <section id="block-footersocialblock" class="block block-block-content block-block-content4fc23afd-8d37-420e-ab28-73b2ba24e836 clearfix">
-  
-    
-
-      
-      <div class="field field--name-field-social-icon field--type-entity-reference-revisions field--label-hidden field--items">
-              <div class="field--item">
-
-<a href="https://www.linkedin.com/company/brightcove" title="" class="icon icon__social--link">
-  <svg viewBox="0 0 100 100" class="icon__social--linkedin">
-    <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__social--linkedin"></use>
-  </svg>
-</a>
-
-</div>
-              <div class="field--item">
-
-<a href="https://twitter.com/brightcove" title="" class="icon icon__social--link">
-  <svg viewBox="0 0 100 100" class="icon__social--twitter">
-    <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__social--twitter"></use>
-  </svg>
-</a>
-
-</div>
-              <div class="field--item">
-
-<a href="https://www.facebook.com/Brightcove" title="" class="icon icon__social--link">
-  <svg viewBox="0 0 100 100" class="icon__social--facebook">
-    <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__social--facebook"></use>
-  </svg>
-</a>
-
-</div>
-              <div class="field--item">
-
-<a href="https://plus.google.com/100830370440271567091" title="" class="icon icon__social--link">
-  <svg viewBox="0 0 100 100" class="icon__social--google-plus">
-    <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon__social--google-plus"></use>
-  </svg>
-</a>
-
-</div>
-          </div>
-  
-
-
-  </section>
-
-<section id="block-scripts" class="block block-block-content block-block-content42e4bd63-d879-470d-a6de-d5e4529a01be clearfix">
-  
-    
-
-      
-            <div class="field field--name-field-body field--type-text-long field--label-hidden field--item"><script src="https://learning-services-media.brightcove.com/doc-assets/js/gtrans.js"></script><script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/feedback-support.js"></script>
-<script src="https://learning-services-media.brightcove.com/doc-assets/js/hide-google-plus.js"></script></div>
-      
-  </section>
-
-
-  </div>
-
-        </div>
-          </footer>
-  
-  </div>
-
-    
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/17811","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"3b7fdb4927baca3ee2939edeb777485b3e2c2d36cf8c80e0d8f49c6dc5e2eeca"}}</script>
-<script src="/sites/default/files/js/js_8fmTAXGyuAUNVu11XoXJaeM8QBDFuAvX7ADwOnigrhc.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
-<script src="/sites/default/files/js/js_L8Eb1bSFk-jGvnjMNZB7VvDJt-7nSbeXfaBlCzWjDbc.js"></script>
-
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e78a80aa93","applicationID":"129613202","transactionName":"YwBUZkcFVktUWhJQX1pKd1FBDVdWGkkHXlVrBldRXQE=","queueTime":0,"applicationTime":14,"atts":"T0dXEA8fRUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
