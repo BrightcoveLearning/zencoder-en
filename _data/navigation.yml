@@ -12,9 +12,9 @@
       url: /getting-started/app-design-considerations.html
     - name: Creating Your Application Design
       url: /getting-started/creating-your-app-design.html
-- section: Syncing with Video Cloud
-  icon: '<i class="far fa-sync"></i>'
-  url: /syncing-with-video-cloud/
+- section: Basics
+  icon: '<i class="fal fa-draw-circle"></i>'
+  url: /basics/
   docs:
     - name: Creating Video Cloud Custom Fields
       url: /syncing-with-video-cloud/vc-custom-fields.html
@@ -24,8 +24,6 @@
   url: /using-brightcove-beacon/
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
-    #- name: Creating a Playlist
-    #  url: /using-brightcove-beacon/playlists.html
     - name: Creating a New Page
       url: /using-brightcove-beacon/creating-a-page.html
     - name: Adding a Carousel to a Page
