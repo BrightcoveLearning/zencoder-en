@@ -1,17 +1,33 @@
 ---
-title: 
-parent: 
+title: Getting an API Key
+parent: Getting Started
 ---
 <h1>Getting an API Key</h1>
-            <p>All requests to the Zencoder API must be authenticated using an API Key. This topic explains the different types of API Keys for Zencoder, and how to obtain them.</p><article class="bcls-article"><section class="bcls-section"><h2 id="getting_api_key">Getting an API Key</h2>
+<p>All requests to the Zencoder API must be authenticated using an API Key. This topic explains the different types of API Keys for Zencoder, and how to obtain them.</p>
+<article class="bcls-article">
+  <section class="bcls-section">
+    <h2 id="getting_api_key">Getting an API Key</h2>
     <p>To request an API Key, go to <a href="https://zencoder.com">the Zencoder site</a>. If you have already registered as a user, login. If not, register as a new user - you cannot request API Keys until you are registered as a user.</p>
     <p>Once you are logged in, go to the API section:</p>
-    <figure class="bcls-figure"><img class="bcls-image" src="https://learning-services-media.brightcove.com/doc-assets/node/18728-zencoder-getting-api-key/api-section-menu-item.png" alt="API Menu Item" /><figcaption class="bcls-caption--image">API Menu Item</figcaption></figure><p>In the API section, you will see options to request different kinds of API Keys:</p>
-    <figure class="bcls-figure"><img class="bcls-image" src="https://learning-services-media.brightcove.com/doc-assets/node/18728-zencoder-getting-api-key/api-keys.png" alt="API Key Options" /><figcaption class="bcls-caption--image">API Key Options</figcaption></figure><p>See the sections below for an explanation of the different types of API Keys. Note that you must be signed up for a paid plan to get full access keys.</p>
-  </section><section class="bcls-section"><h2 id="full_access_key">Full access keys</h2>
+    <figure class="bcls-figure"><img class="bcls-image" src="/images/getting-apikey/api-section-menu-item.png" alt="API Menu Item" />
+      <figcaption class="bcls-caption--image">API Menu Item</figcaption>
+    </figure>
+    <p>In the API section, you will see options to request different kinds of API Keys:</p>
+    <figure class="bcls-figure"><img class="bcls-image" src="/images/getting-apikey/api-keys.png" alt="API Key Options" />
+      <figcaption class="bcls-caption--image">API Key Options</figcaption>
+    </figure>
+    <p>See the sections below for an explanation of the different types of API Keys. Note that you must be signed up for a paid plan to get full access keys.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="full_access_key">Full access keys</h2>
     <p>Full access keys allow to make any kind of request to the Zencoder API. This is the kind of key you will need to submit jobs to Zencoder and get outputs.</p>
-  </section><section class="bcls-section"><h2 id="read_only_keys">Read only keys</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="read_only_keys">Read only keys</h2>
     <p>Read-only access keys allow you to make <code>GET</code> requests only to the Zencoder API. These are useful for users who only need to get the status of jobs, but are not actually submitting jobs. See <a href="/using-read-only-api-keys">Using Read-only API Keys</a> for more information.</p>
-  </section><section class="bcls-section"><h2 id="integration_mode_keys">Integration mode keys</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="integration_mode_keys">Integration mode keys</h2>
     <p>Integration mode keys allow you to submit jobs, but the jobs will not be processed. They are useful mainly to system integrators who want to test requests for errors. They can also be used to get a feel for using the API before you purchase a Zencoder paid plan, or for checking requests before you actually get outputs.</p>
   </section>
+</article>

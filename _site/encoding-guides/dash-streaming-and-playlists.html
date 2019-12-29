@@ -57,22 +57,26 @@
                 
               
                 
-                  <li><a href="/getting-started/implementation-phases.html">Quick Start</a></li>
+                  <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
                 
               
                 
-                  <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                  <li><a href="/getting-started/getting-api-key.html">Getting an API Key</a></li>
                 
               
                 
-                  <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
+                  <li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/basics/">Basics</a></h5>            
+            <h5 class="submenu-header"><a href="/general-information/">General Information</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -87,38 +91,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
-            <ul class="sidenav-submenu" style="display:none;">
-              
-                
-                  <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/advertisement.html">Creating an Ad Configuration</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
-                
-              
-            </ul>
-          
-        
-          
-            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
+            <h5 class="submenu-header"><a href="/integration/">Integration</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -129,7 +102,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <h5 class="submenu-header"><a href="/references/">Encoding Settings</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -145,6 +118,10 @@
                 
               
             </ul>
+          
+        
+          
+          <h5><a href="/encoding-guides">Encoding Guides</a></h5>
           
         
     </nav>
@@ -412,9 +389,9 @@
 
 <p>Since DASH is intended for streaming delivery, we recommend controlling the peaks of the bitrates in each rendition to avoid having the player rebuffer or switch to lower bitrate encodes unnecessarily. The options that control the variability of the encoded stream according to what the decoder/player can handle are</p>
 
-<ul><li><a href="/encoding-settings/encoding-settings-rate-control#decoder-bitrate-cap"><code class="notranslate">decoder_bitrate_cap</code></a></li>
-	<li><a href="/encoding-settings/encoding-settings-rate-control#decoder-buffer-size"><code class="notranslate">decoder_buffer_size</code></a></li>
-</ul><aside class="bcls-aside bcls-aside--information">Note: <a href="/encoding-settings/encoding-settings-rate-control#max-video-bitrate"><code class="notranslate">max_video_bitrate</code></a> is for controlling the maximum average bitrate over the entire stream, and is not suitable for use with streaming content.</aside><p>Our general recommendation is to set <code class="notranslate">decoder_bitrate_cap</code> to the maximum bitrate available for the video stream. Remember you need to take into account the audio, as well as a bit of overhead for the file format. The <code class="notranslate">decoder_buffer_size</code> is technically supposed to match the available video buffer memory on the decoding device, but is often better used to control how much content may be pre-buffered. It works as a multiple of the <code class="notranslate">decoder_bitrate_cap</code>, so that for example, if <code class="notranslate">decoder_bitrate_cap</code> was 500 (Kilobits per second), and <code class="notranslate">decoder_buffer_size</code> was 1000 (Kilobits), then the buffer could store 2 seconds worth of video. We also recommend setting the <a href="/encoding-settings/encoding-settings-rate-control#video-bitrate"><code class="notranslate">video_bitrate</code></a> a little lower than the <code class="notranslate">decoder_bitrate_cap</code>, which allows the encoder to use more data to encode complex scenes and less data on simpler scenes. A decent starting point would be to assume up to 10% of overhead for the file format, setting the <code class="notranslate">video_bitrate</code> 10% lower than the <code class="notranslate">decoder_bitrate_cap</code>, and allowing about 1.5 seconds of video to be buffered.</p>
+<ul><li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder-bitrate-cap"><code class="notranslate">decoder_bitrate_cap</code></a></li>
+	<li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder-buffer-size"><code class="notranslate">decoder_buffer_size</code></a></li>
+</ul><aside class="bcls-aside bcls-aside--information">Note: <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#max-video-bitrate"><code class="notranslate">max_video_bitrate</code></a> is for controlling the maximum average bitrate over the entire stream, and is not suitable for use with streaming content.</aside><p>Our general recommendation is to set <code class="notranslate">decoder_bitrate_cap</code> to the maximum bitrate available for the video stream. Remember you need to take into account the audio, as well as a bit of overhead for the file format. The <code class="notranslate">decoder_buffer_size</code> is technically supposed to match the available video buffer memory on the decoding device, but is often better used to control how much content may be pre-buffered. It works as a multiple of the <code class="notranslate">decoder_bitrate_cap</code>, so that for example, if <code class="notranslate">decoder_bitrate_cap</code> was 500 (Kilobits per second), and <code class="notranslate">decoder_buffer_size</code> was 1000 (Kilobits), then the buffer could store 2 seconds worth of video. We also recommend setting the <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#video-bitrate"><code class="notranslate">video_bitrate</code></a> a little lower than the <code class="notranslate">decoder_bitrate_cap</code>, which allows the encoder to use more data to encode complex scenes and less data on simpler scenes. A decent starting point would be to assume up to 10% of overhead for the file format, setting the <code class="notranslate">video_bitrate</code> 10% lower than the <code class="notranslate">decoder_bitrate_cap</code>, and allowing about 1.5 seconds of video to be buffered.</p>
 
 <p>Assuming a 1000 Kbps connection is available to the customer:</p>
 
@@ -604,7 +581,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Dec 2019
+  Page last updated on 29 Dec 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

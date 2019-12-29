@@ -57,22 +57,26 @@
                 
               
                 
-                  <li><a href="/getting-started/implementation-phases.html">Quick Start</a></li>
+                  <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
                 
               
                 
-                  <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                  <li><a href="/getting-started/getting-api-key.html">Getting an API Key</a></li>
                 
               
                 
-                  <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
+                  <li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/basics/">Basics</a></h5>            
+            <h5 class="submenu-header"><a href="/general-information/">General Information</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -87,38 +91,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
-            <ul class="sidenav-submenu" style="display:none;">
-              
-                
-                  <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/advertisement.html">Creating an Ad Configuration</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
-                
-              
-            </ul>
-          
-        
-          
-            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
+            <h5 class="submenu-header"><a href="/integration/">Integration</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -129,7 +102,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <h5 class="submenu-header"><a href="/references/">Encoding Settings</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -145,6 +118,10 @@
                 
               
             </ul>
+          
+        
+          
+          <h5><a href="/encoding-guides">Encoding Guides</a></h5>
           
         
     </nav>
@@ -181,7 +158,7 @@
 
 <p><strong><a href="/encoding-settings/encoding-settings-vp6#vp6-profile">vp6_profile</a></strong>: either "vp6s" or "vp6e". vp6e is designed for general use. vp6s is optimized for high resolution/datarate video. Decreases decoding complexity, allowing playback on resource constrained machines. Default is vp6e.</p>
 
-<p><strong><a href="/encoding-settings/encoding-settings-vp6#vp6-compression-mode">vp6_compression_mode</a></strong>: Affects the speed of encoding, compared to the quality of output. "good" balances speed and quality. "best" prioritizes quality over speed, resulting in higher compression but slower encoding. Interacts with the <strong><a href="/encoding-settings/encoding-settings-rate-control#speed">speed</a></strong> API option (below). Default is "good".</p>
+<p><strong><a href="/encoding-settings/encoding-settings-vp6#vp6-compression-mode">vp6_compression_mode</a></strong>: Affects the speed of encoding, compared to the quality of output. "good" balances speed and quality. "best" prioritizes quality over speed, resulting in higher compression but slower encoding. Interacts with the <strong><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#speed">speed</a></strong> API option (below). Default is "good".</p>
 
 <p><strong><a href="/encoding-settings/encoding-settings-vp6#vp6-2pass-min-section">vp6_2pass_min_section</a></strong>: For two-pass VBR encoding, this controls the lowest datarate that the encoder will allow for any section, no matter how easy the section is. This value is used to prevent difficult sections from stealing too many bits from easy sections. Expressed as a percentage, as an integer. Default: 40.</p>
 
@@ -217,7 +194,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Dec 2019
+  Page last updated on 29 Dec 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

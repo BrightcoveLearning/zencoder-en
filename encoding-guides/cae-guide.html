@@ -57,12 +57,12 @@ parent:
   
   <h3>VBR variability control</h3>
   
-  <p>The maximum peak bitrates can be controlled with the <a href="/cae-settings#bitrate_cap_to_bitrate_ratio"><code class="notranslate">bitrate_cap_to_bitrate_ratio</code></a> and <a href="/cae-settings#bitrate_cap_offset">bitrate_cap_offset</a> settings. If a bitrate “<code class="notranslate">R</code>” is selected for a rendition, then the <a href="/encoding-settings/encoding-settings-rate-control#decoder_bitrate_cap">decoder_bitrate_cap</a> is calculated as:</p>
+  <p>The maximum peak bitrates can be controlled with the <a href="/cae-settings#bitrate_cap_to_bitrate_ratio"><code class="notranslate">bitrate_cap_to_bitrate_ratio</code></a> and <a href="/cae-settings#bitrate_cap_offset">bitrate_cap_offset</a> settings. If a bitrate “<code class="notranslate">R</code>” is selected for a rendition, then the <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder_bitrate_cap">decoder_bitrate_cap</a> is calculated as:</p>
   
   <pre class="line-numbers">
   <code class="language-javascript notranslate"><code class="notranslate">decoder_bitrate_cap = R * bitrate_cap_to_bitrate_ratio + bitrate_cap_offset</code></code></pre>
   
-  <p>Similarly, the decoder buffer limits can be controlled with the <a href="/cae-settings#buffer_size_to_bitrate_ratio"><code class="notranslate">buffer_size_to_bitrate_ratio</code></a> and <a href="/cae-settings#buffer_size_offset"><code class="notranslate">buffer_size_offset</code></a> settings. The <a href="/encoding-settings/encoding-settings-rate-control#decoder_buffer_size"><code class="notranslate">decoder_buffer_size</code></a> is calculated as:</p>
+  <p>Similarly, the decoder buffer limits can be controlled with the <a href="/cae-settings#buffer_size_to_bitrate_ratio"><code class="notranslate">buffer_size_to_bitrate_ratio</code></a> and <a href="/cae-settings#buffer_size_offset"><code class="notranslate">buffer_size_offset</code></a> settings. The <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder_buffer_size"><code class="notranslate">decoder_buffer_size</code></a> is calculated as:</p>
   
   <pre class="line-numbers">
   <code class="language-javascript notranslate">decoder_buffer_size = R * buffer_size_to_bitrate_ratio + buffer_size_offset</code></pre>

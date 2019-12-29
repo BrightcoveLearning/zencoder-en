@@ -75,7 +75,7 @@ parent:
 
 <p>Codec parameter for temporal resampling. In particularly difficult regions, if enabled, the encoder will drop frames to achieve the target the data rate. The value of vp6_temporal_down_watermark determines the percentage of the datarate buffer below which the encoder is enabled to start dropping frames.</p>
 
-<p>Default is true on files using a low number of bits per pixel, and false on files using a high number of bits per pixel. To calculate, divide the <a href="/encoding-settings/encoding-settings-rate-control#video_bitrate">video_bitrate</a> in bits per second by <a href="/encoding-settings/encoding-settings-resolution#width">width</a> * <a href="/encoding-settings/encoding-settings-resolution#height">height</a> * <a href="/encoding-settings/encoding-settings-frame-rate#frame_rate">frame_rate</a>. If this number is below 0.07, vp6_temporal_resampling will default to true. For example: 600,000 bits per second (about 600 kbps) divided by (640x480 * 30 fps) = 0.065, so in this case, vp6_temporal_resampling would be on.</p>
+<p>Default is true on files using a low number of bits per pixel, and false on files using a high number of bits per pixel. To calculate, divide the <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#video_bitrate">video_bitrate</a> in bits per second by <a href="/encoding-settings/encoding-settings-resolution#width">width</a> * <a href="/encoding-settings/encoding-settings-resolution#height">height</a> * <a href="/encoding-settings/encoding-settings-frame-rate#frame_rate">frame_rate</a>. If this number is below 0.07, vp6_temporal_resampling will default to true. For example: 600,000 bits per second (about 600 kbps) divided by (640x480 * 30 fps) = 0.065, so in this case, vp6_temporal_resampling would be on.</p>
 
 <p>Note: when using <a href="#constant_bitrate">constant_bitrate</a> mode, this option is forced to true. Adjust <a href="#vp6_temporal_down_watermark">vp6_temporal_down_watermark</a> to adjust results.</p>
 
@@ -164,7 +164,7 @@ parent:
 
 <p><strong>Description:</strong></p>
 
-<p>Affects the speed of encoding, compared to the quality of output. "good" balances speed and quality. "best" prioritizes quality over speed, resulting in higher compression but slower encoding. If you set <a href="/encoding-settings/encoding-settings-rate-control#speed">speed</a> to 1 or 2 and use VP6, we will use the "best" mode; otherwise, we use "good".</p>
+<p>Affects the speed of encoding, compared to the quality of output. "good" balances speed and quality. "best" prioritizes quality over speed, resulting in higher compression but slower encoding. If you set <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#speed">speed</a> to 1 or 2 and use VP6, we will use the "best" mode; otherwise, we use "good".</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -176,7 +176,7 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="/encoding-settings/encoding-settings-rate-control#speed">speed</a></p>
+<p><strong>See Also:</strong> <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#speed">speed</a></p>
 </section><section class="bcls-section"><h2 id="vp6_2pass_min_section">vp6_2pass_min_section</h2>
 <code>vp6_2pass_min_section:Integer</code>
 
@@ -196,7 +196,7 @@ parent:
 
 <p>For two-pass VBR encoding, this controls the lowest datarate that the encoder will allow for any section, no matter how easy the section is. This value is used to prevent difficult sections from stealing too many bits from easy sections. Expressed as a percentage, as an integer.</p>
 
-<p>For example, if <a href="/encoding-settings/encoding-settings-rate-control#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_min_section is set to 50, the lowest bitrate of any section will be 500kbps (1000 * 50%).</p>
+<p>For example, if <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_min_section is set to 50, the lowest bitrate of any section will be 500kbps (1000 * 50%).</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -228,7 +228,7 @@ parent:
 
 <p>For two-pass VBR encoding, this controls the highest datarate that can be streamed, and also the highest datarate that the encoder will allow, no matter how difficult the section is.</p>
 
-<p>For example, if <a href="/encoding-settings/encoding-settings-rate-control#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_max_section is set to 450, the highest bitrate of any section will be 4500kbps (1000 * 450%).</p>
+<p>For example, if <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_max_section is set to 450, the highest bitrate of any section will be 4500kbps (1000 * 450%).</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -404,7 +404,7 @@ parent:
 
 <p><strong>Description:</strong></p>
 
-<p>Constant bitrate (CBR) encoding is used by some streaming servers and decoders. CBR encoding looks significantly worse than variable bitrate (VBR) encoding at the same bitrate, so only use this setting if you absolutely must. This setting requires that you set a <a href="/encoding-settings/encoding-settings-rate-control#video_bitrate">video_bitrate</a>; you cannot use <a href="/encoding-settings/encoding-settings-rate-control#quality">quality</a> to autoselect a bitrate when using the constant_bitrate setting.</p>
+<p>Constant bitrate (CBR) encoding is used by some streaming servers and decoders. CBR encoding looks significantly worse than variable bitrate (VBR) encoding at the same bitrate, so only use this setting if you absolutely must. This setting requires that you set a <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#video_bitrate">video_bitrate</a>; you cannot use <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#quality">quality</a> to autoselect a bitrate when using the constant_bitrate setting.</p>
 
 <p>Do not use constant_bitrate for HTTP-based delivery, or for downloaded video.</p>
 

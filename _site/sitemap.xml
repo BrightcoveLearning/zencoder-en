@@ -671,42 +671,42 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-basics.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq-basics.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-codecs-and-formats.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq-codecs-and-formats.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-encoding.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq-encoding.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-file-transfers.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq-file-transfers.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-integration-libraries.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/faq-integration-libraries.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/faq/faq-rate-limiting.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/faq-rate-limiting.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -783,13 +783,6 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/encoding-settings/</loc>
-        <lastmod>2019-12-29</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
@@ -798,6 +791,13 @@
     
     <url>
         <loc>https://zencoder.support.brightcove.com/</loc>
+        <lastmod>2019-12-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -881,7 +881,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/test-jobs-and-integration-mode.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/test-jobs-and-integration-mode.html</loc>
         <lastmod>2019-12-29</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

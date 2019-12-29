@@ -57,22 +57,26 @@
                 
               
                 
-                  <li><a href="/getting-started/implementation-phases.html">Quick Start</a></li>
+                  <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
                 
               
                 
-                  <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                  <li><a href="/getting-started/getting-api-key.html">Getting an API Key</a></li>
                 
               
                 
-                  <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
+                  <li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/basics/">Basics</a></h5>            
+            <h5 class="submenu-header"><a href="/general-information/">General Information</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -87,38 +91,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
-            <ul class="sidenav-submenu" style="display:none;">
-              
-                
-                  <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/advertisement.html">Creating an Ad Configuration</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
-                
-              
-            </ul>
-          
-        
-          
-            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
+            <h5 class="submenu-header"><a href="/integration/">Integration</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -129,7 +102,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <h5 class="submenu-header"><a href="/references/">Encoding Settings</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -145,6 +118,10 @@
                 
               
             </ul>
+          
+        
+          
+          <h5><a href="/encoding-guides">Encoding Guides</a></h5>
           
         
     </nav>
@@ -354,7 +331,7 @@ system-bitrate="64000"/&gt;
 <p><strong>NOTES</strong></p>
 
 <ul><li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
-	<li><a href="/encoding-settings/encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
+	<li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
 </ul></section>
 
 <!-- complete bootstrap layout -->
@@ -372,7 +349,7 @@ system-bitrate="64000"/&gt;
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Dec 2019
+  Page last updated on 29 Dec 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

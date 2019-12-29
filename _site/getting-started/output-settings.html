@@ -61,22 +61,26 @@
                 
               
                 
-                  <li><a href="/getting-started/implementation-phases.html">Quick Start</a></li>
+                  <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
                 
               
                 
-                  <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                  <li><a href="/getting-started/getting-api-key.html">Getting an API Key</a></li>
                 
               
                 
-                  <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
+                  <li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+                
+              
+                
+                  <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/basics/">Basics</a></h5>            
+            <h5 class="submenu-header"><a href="/general-information/">General Information</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -91,38 +95,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
-            <ul class="sidenav-submenu" style="display:none;">
-              
-                
-                  <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/advertisement.html">Creating an Ad Configuration</a></li>
-                
-              
-                
-                  <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
-                
-              
-            </ul>
-          
-        
-          
-            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
+            <h5 class="submenu-header"><a href="/integration/">Integration</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -133,7 +106,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <h5 class="submenu-header"><a href="/references/">Encoding Settings</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -151,6 +124,10 @@
             </ul>
           
         
+          
+          <h5><a href="/encoding-guides">Encoding Guides</a></h5>
+          
+        
     </nav>
   </div>
   <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
@@ -166,16 +143,16 @@
   <h1>Output Settings</h1>
   <summary>This topic explains the default outputs for Zencoder jobs and the basics of defining your own outputs.</summary>
   <section class="bcls-section">
-    <h2 id="Defining_ouputs">Defining outputs</h2>
+    <h2 id="Defining_outputs">Defining outputs</h2>
 
     <p>Our default output is a single video file with the following settings:</p>
 
     <p>H.264 video, AAC Audio, MP4 file format<br />
-      Video: <a href="/encoding-settings/encoding-settings-rate-control#quality">medium quality</a><br /> Audio: stereo, <a href="/encoding-settings/encoding-settings-rate-control#audio-quality">medium quality</a> (about 112kbps), 44100 Hz</p>
+      Video: <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#quality">medium quality</a><br /> Audio: stereo, <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio-quality">medium quality</a> (about 112kbps), 44100 Hz</p>
 
     <p>If you don't specify an output location, the file will be temporarily hosted by Zencoder. After 24 hours the file will no longer be available.</p>
 
-    <p>Of course, you can control the <a href="/encoding-settings">output settings</a>. To do this, pass an array of options in the API request, like this:</p>
+    <p>Of course, you can control the <a href="/encoding-settings/">output settings</a>. To do this, pass an array of options in the API request, like this:</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -190,7 +167,7 @@
   ]
 }</code></pre>
 
-    <p>This example will create a single output file from the original input video and upload it to an S3 bucket. You can create <a href="/creating-multiple-outputs">multiple output files</a> from the original without having to create additional encoding jobs.</p>
+    <p>This example will create a single output file from the original input video and upload it to an S3 bucket. You can create <a href="/getting-started/creating-multiple-outputs">multiple output files</a> from the original without having to create additional encoding jobs.</p>
   </section>
 </article>
 <!-- complete bootstrap layout -->
