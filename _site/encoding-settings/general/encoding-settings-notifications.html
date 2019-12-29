@@ -187,19 +187,19 @@
 
 <p>After a job or an output file is completed, you can find out about it in several ways.</p>
 
-<ul><li>We can send a <a href="/zencoder-getting-notifications-when-videos-are-finished">HTTP POST request</a> to your application with the details.</li>
+<ul><li>We can send a <a href="/getting-notifications-when-videos-are-finished">HTTP POST request</a> to your application with the details.</li>
 	<li>We can send an email.</li>
 	<li>You can request your notifications using a third-party tool such as <a href="https://ngrok.com">ngrok</a>. This is useful when you are developing locally and Zencoder can’t reach your development server.</li>
 	<li>You can check the Zencoder Dashboard for job status.</li>
 	<li>You can check job status via a Job show API request.</li>
-</ul><p>The first two - outgoing <a href="/zencoder-getting-notifications-when-videos-are-finished">HTTP</a> or email notifications - are triggered by adding notification options to your Job create API request.</p>
+</ul><p>The first two - outgoing <a href="/getting-notifications-when-videos-are-finished">HTTP</a> or email notifications - are triggered by adding notification options to your Job create API request.</p>
 
 <p><strong>Notes:</strong></p>
 
 <ul><li>Notifications are limited to 5 per output and job. Output notifications do not count towards the job total. <a href="https://support.brightcove.com/en/contact/create">Contact us</a> if you need more.</li>
 	<li>Notification payloads may repeat notifications for jobs. You should parse the payload body by job ID then state.</li>
   <li>Notification handlers on servers built on HTTP2 are not currenly supported. Notifications sent to HTTP2 servers may fail to be delivered without returning any error.</li>
-</ul><aside class="bcls-aside bcls-aside--information">For more information on notifications, see <a href="/zencoder-getting-notifications-when-videos-are-finished">Getting Notifications When Videos Are Finished</a>.
+</ul><aside class="bcls-aside bcls-aside--information">For more information on notifications, see <a href="/getting-notifications-when-videos-are-finished">Getting Notifications When Videos Are Finished</a>.
 
 <p>Also note that, although output notifications contain the current state of the job, you should only rely on <strong>job</strong> notifications to determine when the job is complete.</p>
 </aside></section><section class="bcls-section"><h2 id="notifications">notifications</h2>
@@ -219,9 +219,9 @@
 
 <p>HTTP notifications will send JSON or XML (depending on the requested <a class="notranslate" href="#notification_format">format</a>).</p>
 
-<p><strong>Notification Contents</strong> vary depending on the <a href="/zencoder-getting-notifications-when-videos-are-finished">API version used</a>.</p>
+<p><strong>Notification Contents</strong> vary depending on the <a href="/getting-notifications-when-videos-are-finished">API version used</a>.</p>
 
-<p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The retry schedule is covered in the <a href="/zencoder-getting-notifications-when-videos-are-finished">notifications guide</a>.</p>
+<p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The retry schedule is covered in the <a href="/getting-notifications-when-videos-are-finished">notifications guide</a>.</p>
 
 <p><strong>Authorization and Security</strong></p>
 
@@ -274,7 +274,7 @@
 	<li class="notranslate">http://example.com/notification-handler.php</li>
 </ul><p><strong>Description:</strong></p>
 
-<p>A URL to <a href="/zencoder-getting-notifications-when-videos-are-finished">notify</a> when a job is complete.</p>
+<p>A URL to <a href="/getting-notifications-when-videos-are-finished">notify</a> when a job is complete.</p>
 
 <p>Use the <a class="notranslate" href="#notification_url">url</a> option when specifying <a class="notranslate" href="#notifications">notifications</a> as a hash, including a <a class="notranslate" href="#notification_format">format</a>. If you don't need to specify a format, you can simply include the URL as an item in the notifications array.</p>
 
@@ -282,7 +282,7 @@
 
 <p>For HTTPS, simply specify a URL using <code>https://</code> so a notification would be sent securely using SSL.</p>
 
-<p><strong>Notification Contents</strong> vary depending on the <a href="/zencoder-getting-notifications-when-videos-are-finished">API version used</a>.</p>
+<p><strong>Notification Contents</strong> vary depending on the <a href="/getting-notifications-when-videos-are-finished">API version used</a>.</p>
 
 <p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The notification will be attempted up to 20 times, with the delay between attempts doubling each time.</p>
 

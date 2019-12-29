@@ -24,7 +24,7 @@ parent:
 
 <p>Again, there is no single mobile profile that works on every mobile device. In fact, there are more varying standards for mobile video than there are for web. But fortunately, a few well-selected recipes can cover most modern mobile devices.</p>
 
-<p>For full details, check out our guide on <a href="/zencoder-iosmobile-encoding">encoding video for mobile use</a>.</p>
+<p>For full details, check out our guide on <a href="/iosmobile-encoding">encoding video for mobile use</a>.</p>
 
 <p>1. Most modern mobile devices support MP4/H.264. This includes the whole iOS series (iPhone, iPod, iPad, Apple TV, etc.), most Android devices, modern Blackberry phones, etc. For most of these, be sure to use the H.264 Baseline profile. Use 640x480 or smaller for iOS and Android, and 480x360 or smaller for Blackberry support.</p>
 
@@ -32,13 +32,13 @@ parent:
 
 <p>2. Use 3GP/MPEG4 for older mobile devices. Most Blackberrys and some Androids also support 3GP, and 3GP generally even plays on iPhone/iPod too (since iOS plays MP4/MPEG-4 and 3GP is just a subset of MP4).</p>
 
-<p><strong>Recommendation:</strong> Minimally, MP4, 640x480 or 480x360. Maximally, three MP4 versions (480x360, 640x480, 720p + Main profile) plus one or two 3GP versions (320x240 and maybe 176x144). See our earlier post for <a href="/zencoder-iosmobile-encoding">specific encoding settings</a>.</p>
+<p><strong>Recommendation:</strong> Minimally, MP4, 640x480 or 480x360. Maximally, three MP4 versions (480x360, 640x480, 720p + Main profile) plus one or two 3GP versions (320x240 and maybe 176x144). See our earlier post for <a href="/iosmobile-encoding">specific encoding settings</a>.</p>
 </section><section class="bcls-section"><h2 id="Multiple_bitrates">Multiple bitrates</h2>
 
 <p>Should you use multiple bitrates to deliver larger video to users with fast internet connections, and smaller videos to users with slower internet connections? If your users are watching high-quality video on the web, then the answer is probably "Yes". Consider using 2-3 sizes and bitrates to accomplish this – e.g. one video at 640x360, and another at 1280x720. More on this in a future post.</p>
 </section><section class="bcls-section"><h2 id="Streaming">Streaming</h2>
 
-<p>Zencoder supports <a href="/zencoder-encoding-settings-segmented-streaming">HTTP Live Streaming</a> for iOS devices, as well as <a href="/zencoder-microsoft-smooth-streaming">Microsoft Smooth Streaming (Silverlight)</a>.</p>
+<p>Zencoder supports <a href="/encoding-settings/encoding-settings-segmented-streaming">HTTP Live Streaming</a> for iOS devices, as well as <a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming (Silverlight)</a>.</p>
 </section><section class="bcls-section"><h2 id="Summary">Summary</h2>
 
 <p>1. The minimum for HTML5 video is <strong>MP4 + WebM or Ogg (or both)</strong>, using the MP4 version for Flash fallback.</p>

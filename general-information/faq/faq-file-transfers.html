@@ -58,7 +58,7 @@ sftp://user:pass@example.com/file.mp4</code></pre>
       <li>
         <p style="font-weight:bold">Can you pull files from a private S3, Google Cloud Storage, or Cloud Files bucket?</p>
 
-        <p>Yes. You can add access <a href="/zencoder-encoding-settings-general-output-settings#credentials.html">credentials</a> to your Zencoder account, or <a href="/using-zencoder-s3">grant read access to the bucket for Zencoder</a>.</p>
+        <p>Yes. You can add access <a href="/encoding-settings/encoding-settings-general-output-settings#credentials.html">credentials</a> to your Zencoder account, or <a href="/using-zencoder-s3">grant read access to the bucket for Zencoder</a>.</p>
       </li>
       <li>
         <p style="font-weight:bold">Are there any file size limits?</p>
@@ -72,9 +72,9 @@ sftp://user:pass@example.com/file.mp4</code></pre>
 
         <p>You have a few options for where we will send the videos.</p>
 
-        <p>We can send the files to a FTP or SFTP server, to a S3 or Google Cloud Storage bucket, or to Rackspace Cloud Files. See the <a href="/zencoder-encoding-settings-general-output-settings#url.html">url option in our API docs</a> for more info.</p>
+        <p>We can send the files to a FTP or SFTP server, to a S3 or Google Cloud Storage bucket, or to Rackspace Cloud Files. See the <a href="/encoding-settings/encoding-settings-general-output-settings#url.html">url option in our API docs</a> for more info.</p>
 
-        <p>Don't forget to add <a href="/zencoder-encoding-settings-general-output-settings#credentials.html">credentials</a> or <a href="/using-zencoder-s3">give Zencoder access to your bucket</a> if you use S3 or Google Cloud Storage.</p>
+        <p>Don't forget to add <a href="/encoding-settings/encoding-settings-general-output-settings#credentials.html">credentials</a> or <a href="/using-zencoder-s3">give Zencoder access to your bucket</a> if you use S3 or Google Cloud Storage.</p>
 
         <p>Or you can specify no output destination, and we'll hold on to the file for 24 hours. We'll provide you with a URL that you can use to download the video. We'll remove the video after 24 hours, so don't forget to download it.</p>
 
@@ -83,7 +83,7 @@ sftp://user:pass@example.com/file.mp4</code></pre>
       <li>
         <p style="font-weight:bold">How do I set the ACL permissions if I send encoded files to S3?</p>
 
-        <p>Use our API. See the API docs on <a href="/zencoder-encoding-settings-s3-settings#access-control.html">access_control</a> for more info.</p>
+        <p>Use our API. See the API docs on <a href="/encoding-settings/encoding-settings-s3-settings#access-control.html">access_control</a> for more info.</p>
       </li>
       <h3>File Transfers</h3>
 
@@ -91,7 +91,7 @@ sftp://user:pass@example.com/file.mp4</code></pre>
 
       <h3>Notifications</h3>
 
-      <p><a href="/zencoder-getting-notifications-when-videos-are-finished">Notifications</a> are currently sent from <code>sg-77f03012</code>, but this could change at any time. In order to account for this, we've added a <code>X-Zencoder-Notification-Secret</code> header to all notifications delivered. This can be found on the <a href="https://app.zencoder.com/api">API</a> dashboard, where you can see your current secret and generate a new one if necessary.</p>
+      <p><a href="/getting-notifications-when-videos-are-finished">Notifications</a> are currently sent from <code>sg-77f03012</code>, but this could change at any time. In order to account for this, we've added a <code>X-Zencoder-Notification-Secret</code> header to all notifications delivered. This can be found on the <a href="https://app.zencoder.com/api">API</a> dashboard, where you can see your current secret and generate a new one if necessary.</p>
 
       <p>This header is delivered with every request and can be used to guarantee that the notification was delivered from your Zencoder account. <strong>Note</strong>: In order to keep your notification secret secure, make sure to deliver notifications to HTTPS endpoints!</p>
 

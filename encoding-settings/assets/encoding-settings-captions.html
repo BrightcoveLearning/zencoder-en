@@ -39,7 +39,7 @@ parent:
 
 <ul><li class="language-editable">MP4/M4V files, with caption track in CEA-608 format</li>
 	<li class="language-editable">HLS outputs (segmented outputs with H.264 video in TS format)</li>
-	<li class="language-editable">SCC and DFXP formats are also supported with <code>captions</code> <a href="/zencoder-encoding-settings-general-output-settings#type">type</a> output</li>
+	<li class="language-editable">SCC and DFXP formats are also supported with <code>captions</code> <a href="/encoding-settings/encoding-settings-general-output-settings#type">type</a> output</li>
 </ul><p>For HLS, captions must be mapped to the outputs to get proper in-manifest captions. For example:</p>
 <pre class="line-numbers"><code class="language-json">{
   "label": "Captions",
@@ -87,7 +87,7 @@ parent:
 
 <p><strong>API Versions: V1, V2 </strong></p>
 
-<p><strong>Parent: <a href="/zencoder-encoding-settings-job#outputs">outputs</a> </strong></p>
+<p><strong>Parent: <a href="/encoding-settings/encoding-settings-job#outputs">outputs</a> </strong></p>
 
 <p><strong>Valid Values:</strong> A valid URL to an SCC, DFXP, or SAMI caption file to include in the output</p>
 
@@ -117,13 +117,13 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#skip-captions">skip_captions</a> and <a href="/zencoder-encoding-settings-segmented-streaming#prepare-for-segmenting">prepare_for_segmenting</a></p>
+<p><strong>See Also:</strong> <a href="#skip-captions">skip_captions</a> and <a href="/encoding-settings/encoding-settings-segmented-streaming#prepare-for-segmenting">prepare_for_segmenting</a></p>
 </section><section class="bcls-section"><h2 id="skip_captions">skip_captions</h2>
 <code>skip_captions:Boolean</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> false</p>
 
@@ -147,5 +147,5 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#caption-url">caption_url</a> and <a href="/zencoder-encoding-settings-segmented-streaming#prepare-for-segmenting">prepare_for_segmenting</a></p>
+<p><strong>See Also:</strong> <a href="#caption-url">caption_url</a> and <a href="/encoding-settings/encoding-settings-segmented-streaming#prepare-for-segmenting">prepare_for_segmenting</a></p>
 </section>

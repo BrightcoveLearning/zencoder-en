@@ -112,13 +112,13 @@ grandparent: Basics
 
         <p>Of course. If you open-source a <span class="notranslate">Zencoder</span> library, we'll probably even link to it. Feel free to copy our <a href="http://github.com/zencoder/zencoder-rb">Ruby library</a> in your language of choice.</p>
       </li>
-      <li><a href="/zencoder-getting-notifications-when-videos-are-finished">How can I get notifications on my development machine?</a>
+      <li><a href="/getting-notifications-when-videos-are-finished">How can I get notifications on my development machine?</a>
         <p>Third-party tools can be used, for example <a href="https://ngrok.com">ngrok</a>.</p>
       </li>
       <li>
         <p style="font-weight:bold">What is integration mode?</p>
 
-        <p>Integration Mode is a setting on your account that allows you to test your integration of <span class="notranslate">Zencoder</span> without getting charged for encoding. You can read more about it in the <a href="/zencoder-test-jobs-and-integration-mode">Test Jobs and Integration Mode</a> section.</p>
+        <p>Integration Mode is a setting on your account that allows you to test your integration of <span class="notranslate">Zencoder</span> without getting charged for encoding. You can read more about it in the <a href="/test-jobs-and-integration-mode">Test Jobs and Integration Mode</a> section.</p>
       </li>
       <li>
         <p style="font-weight:bold">What is privacy mode?</p>
@@ -127,7 +127,7 @@ grandparent: Basics
 
         <p>If you are sending adult content through <span class="notranslate">Zencoder</span> <a href="https://app.zencoder.com/account/subscription">your account must be in privacy mode</a>.</p>
       </li>
-      <li><a href="/zencoder-faq-rate-limiting#are_they">Are API requests rate limited?</a>
+      <li><a href="/faq-rate-limiting#are_they">Are API requests rate limited?</a>
         <p>Yes, <span class="notranslate">Zencoder</span> limits how many times you can call a particular method inside a given timeframe. Limits are tracked on a per-method (resource) basis, with the exception of progress requests, which are tracked per-output. For example, calls to get job and output info all count towards the same limit, while calls for output progress are tracked separately per output.</p>
 
         <p>Each account is allowed 60 requests per minute, with the exception of job creation requests, which are limited to 1,000 requests per minute, and output progress requests, which are limited to 60 requests per minute per output.</p>
@@ -136,7 +136,7 @@ grandparent: Basics
 
         <p>If you exceed your quota, <span class="notranslate">Zencoder</span> will return a 403 error with a body of " <code class="notranslate">403 Forbidden (Rate Limit Exceeded)</code>". We'll also send back an additional header, " <code class="notranslate">Retry-After</code>", which contains the number of seconds until your quota is reset.</p>
       </li>
-      <li><a href="/zencoder-faq-rate-limiting#why">Why are API requests rate limited?</a>
+      <li><a href="/faq-rate-limiting#why">Why are API requests rate limited?</a>
         <p>We limit API requests to a reasonable number in order to ensure that one customer's use of <span class="notranslate">Zencoder</span> does not adversely affect other customers. Without rate limiting, one customer could flood our system with requests in a way that would prevent another customer from being able to use the system. This happens periodically by accident when customers are first working with an API - a simple programming error could flood the API with requests that the customer doesn't mean to send.</p>
 
         <p>As long as your application is set up properly, rate limiting should not be a problem. When we return a 403 with "Rate Limit Exceeded" in the body, just retry your request after the specified period of time.</p>

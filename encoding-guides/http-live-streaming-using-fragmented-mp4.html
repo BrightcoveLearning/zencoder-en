@@ -31,7 +31,7 @@ parent:
 
   
             <p>
-  Please refer to <a href="/zencoder-http-live-segmented-streaming-and-playlists">HTTP Live (Segmented) Streaming and Playlists</a> for more details on ts outputs and playlists. 
+  Please refer to <a href="/http-live-segmented-streaming-and-playlists">HTTP Live (Segmented) Streaming and Playlists</a> for more details on ts outputs and playlists. 
   To choose fragmented MP4 files with HLS outputs, use "format": "m4f" and "streaming_delivery_format": "hls".  We highly recommend setting "byte_range_segmenting": true, to format the media as a single fragmented MP4 file rather than having separate segment files.
 </p><article class="bcls-article"><section class="bcls-section"><pre class="line-numbers"><code class="language-json">{
   "skip_audio": true,
@@ -51,7 +51,7 @@ parent:
 }</code></pre>
   </section><section class="bcls-section"><h2 id="encryption">Encryption</h2>
     <p>
-      Zencoder also supports generating CBCS-encrypted fragmented MP4, HLS outputs with necessary headers for integrating with Fairplay DRM. For each output, specify <a href="/zencoder-encoding-settings-encryption">Encryption</a> options. Once you have those keys, the Zencoder API structure for a single rendition
+      Zencoder also supports generating CBCS-encrypted fragmented MP4, HLS outputs with necessary headers for integrating with Fairplay DRM. For each output, specify <a href="/encoding-settings/encoding-settings-encryption">Encryption</a> options. Once you have those keys, the Zencoder API structure for a single rendition
       is:
     </p>
 <pre class="line-numbers"><code class="language-json">{
@@ -85,7 +85,7 @@ parent:
       <li>In playlist output DO NOT mix <code>ts</code> and <code>m4f</code> outputs (Causes audio video sync issues).</li>
       <li>Captions with fragmented mp4 HLS outputs are not supported in zencoder yet.</li>
     </ul></section><section class="bcls-section"><h2 id="complete_example">Complete example</h2>
-  <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/zencoder-iosmobile-encoding">iOS encoding guide</a>.</p>
+  <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
   <h3>Audio outputs</h3>
 <pre class="line-numbers"><code class="language-json">{
   "outputs": [

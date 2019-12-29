@@ -24,14 +24,14 @@ parent:
 
   
             <p><a name="introduction" id="introduction"></a>
-  When encoding video outputs for streaming, we do not recommend using <a href="/zencoder-encoding-settings-rate-control#quality">quality</a> setting alone (this uses CRF mode of encoding). If you prefer to use quality-targeted mode then we strongly suggest using VBV settings to constrain the variation in bitrate to comply with streaming format specifications.</p><article class="bcls-article"><section class="bcls-section"><h2 id="VBV_Settings">VBV Settings</h2>
+  When encoding video outputs for streaming, we do not recommend using <a href="/encoding-settings/encoding-settings-rate-control#quality">quality</a> setting alone (this uses CRF mode of encoding). If you prefer to use quality-targeted mode then we strongly suggest using VBV settings to constrain the variation in bitrate to comply with streaming format specifications.</p><article class="bcls-article"><section class="bcls-section"><h2 id="VBV_Settings">VBV Settings</h2>
 
-<ul><li><a href="/zencoder-encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a></li>
-	<li><a href="/zencoder-encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a></li>
+<ul><li><a href="/encoding-settings/encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a></li>
+	<li><a href="/encoding-settings/encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a></li>
 </ul><h3>Other Recommended Settings to Consider</h3>
 
-<ul><li><a href="/zencoder-encoding-settings-video#video-reference-frames">video_reference_frames</a></li>
-	<li><a href="/zencoder-encoding-settings-video#video-bframes">video_bframes</a></li>
+<ul><li><a href="/encoding-settings/encoding-settings-video#video-reference-frames">video_reference_frames</a></li>
+	<li><a href="/encoding-settings/encoding-settings-video#video-bframes">video_bframes</a></li>
 </ul></section><section class="bcls-section"><h2 id="example">Example</h2>
 
 <p>Here is an example for quality-targeted encoding with VBV restrictions.</p>
@@ -55,6 +55,6 @@ parent:
 
 <h3>Notes</h3>
 
-<ul><li>Please refer to <a href="/analyticscms-apis-sample-analytics-playlists">HTTP Live (Segmented) Streaming and Playlists</a> and <a href="/zencoder-http-live-streaming-using-fragmented-mp4">HTTP Live Streaming using fragmented MP4</a> for more details on HLS outputs and playlists.</li>
+<ul><li>Please refer to <a href="/analyticscms-apis-sample-analytics-playlists">HTTP Live (Segmented) Streaming and Playlists</a> and <a href="/http-live-streaming-using-fragmented-mp4">HTTP Live Streaming using fragmented MP4</a> for more details on HLS outputs and playlists.</li>
 	<li>Refer to <a href="/analyticscms-apis-sample-recently-added-videos">DASH Streaming and Playlists</a> for more details on DASH playists.</li>
 </ul></section>

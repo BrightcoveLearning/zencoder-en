@@ -40,7 +40,7 @@ parent:
 
 <p>The first entry in the streams will be used when a user opens the file and is used as part of a test to determine which stream is most appropriate. The order of the other entries is irrelevant.</p>
 
-<p>HLS outputs (with video) that have <a href="/zencoder-encoding-settings-segmented-streaming#max-hls-protocol-version">max_hls_protocol_version</a> of 4 or greater will now generate an I-Frame playlist, also known as a "keyframe manifest". By default, the filename is the same as the main manifest file, but with "-iframe-index" appended. For example, for a manifest with the filename "master.m3u8", the keyframe manifest would be named "master-iframe-index.m3u8". This can be overridden using <a href="/zencoder-encoding-settings-segmented-streaming#keyframe-manifest-filename">keyframe_manifest_filename</a>. If an HLS playlist output specifies a "source" stream that has a keyframe manifest, then that keyframe manifest will automatically be included into the playlist as an EXT-X-I-FRAMES-ONLY stream.</p>
+<p>HLS outputs (with video) that have <a href="/encoding-settings/encoding-settings-segmented-streaming#max-hls-protocol-version">max_hls_protocol_version</a> of 4 or greater will now generate an I-Frame playlist, also known as a "keyframe manifest". By default, the filename is the same as the main manifest file, but with "-iframe-index" appended. For example, for a manifest with the filename "master.m3u8", the keyframe manifest would be named "master-iframe-index.m3u8". This can be overridden using <a href="/encoding-settings/encoding-settings-segmented-streaming#keyframe-manifest-filename">keyframe_manifest_filename</a>. If an HLS playlist output specifies a "source" stream that has a keyframe manifest, then that keyframe manifest will automatically be included into the playlist as an EXT-X-I-FRAMES-ONLY stream.</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -73,7 +73,7 @@ parent:
 }</code></pre>
 </section><section class="bcls-section"><h2 id="The_Whole_Picture">The Whole Picture</h2>
 
-<p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/zencoder-iosmobile-encoding">iOS encoding guide</a>.</p>
+<p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -217,6 +217,6 @@ parent:
 
 <ul><li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
 	<li>While iOS devices will play the adaptive bitrate playlist created, VLC won't, due to errors in handling relative URLs. It will look for the segment files in the same directory as the playlist file, rather than the directory of the manifest file.</li>
-	<li><a href="/zencoder-encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/zencoder-encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
-	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/zencoder-encoding-settings-general-output-settings#package-format">ZIP archive</a>.</li>
+	<li><a href="/encoding-settings/encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/encoding-settings-rate-control#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
+	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/encoding-settings-general-output-settings#package-format">ZIP archive</a>.</li>
 </ul></section>

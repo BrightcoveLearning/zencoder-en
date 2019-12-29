@@ -31,7 +31,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> 10</p>
 
@@ -61,7 +61,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> 3</p>
 
@@ -77,7 +77,7 @@ parent:
 
 <p>More reference frames result in slightly higher compression quality, but increased decoding complexity. In practice, going above 5 rarely has much benefit.</p>
 
-<p>Determined partly by <a class="notranslate" href="/zencoder-encoding-settings-rate-control#speed">speed</a> as well as <a class="notranslate" href="#video-codec_profile">video_codec_profile</a>. Set to "auto" to allow our <a class="notranslate" href="/zencoder-encoding-settings-rate-control#speed">speed</a> setting to naturally choose this number.</p>
+<p>Determined partly by <a class="notranslate" href="/encoding-settings/encoding-settings-rate-control#speed">speed</a> as well as <a class="notranslate" href="#video-codec_profile">video_codec_profile</a>. Set to "auto" to allow our <a class="notranslate" href="/encoding-settings/encoding-settings-rate-control#speed">speed</a> setting to naturally choose this number.</p>
 
 <p>We default to 3 as a good compromise of compression and decoding complexity.</p>
 
@@ -97,7 +97,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> H.264: <code>baseline</code>, HEVC: <code>main</code>, VP9: 0</p>
 
@@ -132,7 +132,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264-levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC-levels</a></p>
 
@@ -146,7 +146,7 @@ parent:
 
 <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC).</p>
 
-<p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/zencoder-encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
+<p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/encoding-settings/encoding-settings-rate-control#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
 
 <pre class="line-numbers">
 <code class="language-json">{
@@ -162,7 +162,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> 0</p>
 
@@ -200,7 +200,7 @@ parent:
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="/zencoder-encoding-settings-job#outputs">outputs</a></p>
+<p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
 
 <p><strong>Default:</strong> <code>preserve</code></p>
 

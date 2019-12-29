@@ -186,22 +186,22 @@
 
 <p>Zencoder supports various forms of adaptive and segmented streaming.</p>
 
-<ul><li><a href="/zencoder-http-live-segmented-streaming-and-playlists">HTTP Live (Segmented) Streaming and Playlists</a></li>
-	<li><a href="/zencoder-microsoft-smooth-streaming">Microsoft Smooth Streaming</a></li>
-	<li><a href="/zencoder-highwinds-smil">Highwinds SMIL</a></li>
+<ul><li><a href="/http-live-segmented-streaming-and-playlists">HTTP Live (Segmented) Streaming and Playlists</a></li>
+	<li><a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming</a></li>
+	<li><a href="/highwinds-smil">Highwinds SMIL</a></li>
 </ul><p>Each streaming format uses a different subset of the API options listed below. Refer to the guides for each streaming type for more information.</p>
 
 <aside class="bcls-aside bcls-aside--information">Note: some players do not handle the case where the audio and video stream lengths differ by more than a segment's duration. If you encounter this, try using a shorter segment length.</aside><p><strong>NOTES</strong></p>
 
 <ul><li>A job must have at least one standard or segmented output; creating jobs with only playlist outputs will not work.</li>
-	<li>Playlist outputs will ignore most output options, except for <a href="/zencoder-encoding-settings-general-output-settings#url">url</a>, <a href="/zencoder-encoding-settings-general-output-settings#base-url"><code class="notranslate">base_url</code></a>, <a href="/zencoder-encoding-settings-general-output-settings#filename"><code class="notranslate">filename</code></a>, <a href="#streams"><code class="notranslate">streams</code></a>, <a href="/zencoder-encoding-settings-s3-settings#public"><code class="notranslate">public</code></a>, and <a href="/zencoder-encoding-settings-general-output-settings#type"><code class="notranslate">type</code></a>.</li>
-	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/zencoder-encoding-settings-general-output-settings#package-format">ZIP archive</a>.</li>
+	<li>Playlist outputs will ignore most output options, except for <a href="/encoding-settings/encoding-settings-general-output-settings#url">url</a>, <a href="/encoding-settings/encoding-settings-general-output-settings#base-url"><code class="notranslate">base_url</code></a>, <a href="/encoding-settings/encoding-settings-general-output-settings#filename"><code class="notranslate">filename</code></a>, <a href="#streams"><code class="notranslate">streams</code></a>, <a href="/encoding-settings/encoding-settings-s3-settings#public"><code class="notranslate">public</code></a>, and <a href="/encoding-settings/encoding-settings-general-output-settings#type"><code class="notranslate">type</code></a>.</li>
+	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/encoding-settings-general-output-settings#package-format">ZIP archive</a>.</li>
 </ul></section><section class="bcls-section"><h2 id="streaming_delivery_format" class="notranslate">streaming_delivery_format</h2>
 <code class="notranslate">streaming_delivery_format:String</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> dash</p>
 
@@ -232,7 +232,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> live</p>
 
@@ -269,7 +269,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> <code class="notranslate">dash</code>, <code class="notranslate">mpd</code>, <code class="notranslate">hls</code>, <code class="notranslate">m3u</code>, <code class="notranslate">m3u8</code>, <code class="notranslate">ism</code>, <code class="notranslate">mss</code>, <code class="notranslate">highwinds</code></p>
 
@@ -296,7 +296,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> 10</p>
 
@@ -325,7 +325,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> Hash of alternate audio groups, each of which is an array of audio stream rendition hashes</p>
 
@@ -377,7 +377,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> Array of hashes containing playlist stream info</p>
 
@@ -411,7 +411,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Valid Values:</strong> String containing an absolute or relative path to a manifest file</p>
 
@@ -421,7 +421,7 @@
 
 <p>Specifies the path to a stream manifest file.</p>
 
-<p><em>Note: Required for each stream for <a href="/zencoder-http-live-segmented-streaming-and-playlists"><code class="notranslate">HLS</code></a>, <a href="/zencoder-microsoft-smooth-streaming">Microsoft Smooth Streaming</a>, and <a href="/zencoder-highwinds-smil">Highwinds SMIL</a> playlists.</em></p>
+<p><em>Note: Required for each stream for <a href="/http-live-segmented-streaming-and-playlists"><code class="notranslate">HLS</code></a>, <a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming</a>, and <a href="/highwinds-smil">Highwinds SMIL</a> playlists.</em></p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -447,7 +447,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Valid Values:</strong> Positive integer values in Kbps</p>
 
@@ -459,7 +459,7 @@
 
 <p>Specifies the bandwidth of a playlist stream. Overrides bandwidth determined from a <a href="#streaming_source">source</a>.</p>
 
-<p><em>Note: Required for each stream for <a href="/zencoder-http-live-segmented-streaming-and-playlists"><code class="notranslate">HLS</code></a> and <a href="/zencoder-highwinds-smil">Highwinds SMIL</a> playlists, unless a <a href="#streaming_source">source</a> is provided.</em></p>
+<p><em>Note: Required for each stream for <a href="/http-live-segmented-streaming-and-playlists"><code class="notranslate">HLS</code></a> and <a href="/highwinds-smil">Highwinds SMIL</a> playlists, unless a <a href="#streaming_source">source</a> is provided.</em></p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -485,7 +485,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Valid Values:</strong> String containing width and height as: 800x600</p>
 
@@ -493,7 +493,7 @@
 
 <p><strong>Description:</strong></p>
 
-<p>Specifies the resolution of a playlist stream. Overrides resolution determined from a <a href="/zencoder-encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a>.</p>
+<p>Specifies the resolution of a playlist stream. Overrides resolution determined from a <a href="/encoding-settings/encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">
@@ -521,7 +521,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Valid Values:</strong> String containing codecs in HTML5 format, such as: mp4a.40.2</p>
 
@@ -529,7 +529,7 @@
 
 <p><strong>Description:</strong></p>
 
-<p>Specifies the codecs used in a playlist stream. Overrides codecs determined from a <a href="/zencoder-encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a>.</p>
+<p>Specifies the codecs used in a playlist stream. Overrides codecs determined from a <a href="/encoding-settings/encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -557,7 +557,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Valid Values:</strong> String containing the name of the audio GROUP-ID to use. This value must have been defined as an <a href="#alternate_audio">alternate_audio</a> grouping. The <a href="#codecs">codecs</a> setting should reflect all codecs of the alternate audio group.</p>
 
@@ -605,7 +605,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -628,7 +628,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> false</p>
 
@@ -660,7 +660,7 @@
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -694,7 +694,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Default:</strong> 5 for sample AES encryption; otherwise, 2.</p>
 
@@ -710,7 +710,7 @@
 
 <p>This option should be greater or equal to <a href="#hls_protocol_version"><code class="notranslate">hls_protocol_version</code></a> when provided.</p>
 
-<p><strong>Note:</strong> Only applies to <a href="/zencoder-http-live-segmented-streaming-and-playlists">HTTP Live Streaming</a> outputs.</p>
+<p><strong>Note:</strong> Only applies to <a href="/http-live-segmented-streaming-and-playlists">HTTP Live Streaming</a> outputs.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -751,7 +751,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Default:</strong> Automatic according to <a href="#max_hls_protocol_version"><code class="notranslate">max_hls_protocol_version</code></a> setting</p>
 
@@ -765,7 +765,7 @@
 
 <p>Sets the HLS protocol version to use. Special features will be used as available.</p>
 
-<aside class="bcls-aside bcls-aside--information">Note: HLS versions 1-3 use an integer for <code class="notranslate">duration</code> in HLS playlists. Versions 4 and later use a floating point number.</aside><p><strong>Note:</strong> Only applies to <a href="/zencoder-http-live-segmented-streaming-and-playlists">HTTP Live Streaming</a> outputs.</p>
+<aside class="bcls-aside bcls-aside--information">Note: HLS versions 1-3 use an integer for <code class="notranslate">duration</code> in HLS playlists. Versions 4 and later use a floating point number.</aside><p><strong>Note:</strong> Only applies to <a href="/http-live-segmented-streaming-and-playlists">HTTP Live Streaming</a> outputs.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -784,7 +784,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a> / <a href="#streams">streams</a></p>
 
 <p><strong>Default:</strong> <code class="notranslate">true</code></p>
 
@@ -796,7 +796,7 @@
 
 <p>Optimizes TS segment files for <code class="notranslate">HTTP Live Streaming</code> on iOS devices.</p>
 
-<p><strong>Note:</strong> Only applies to <a href="/zencoder-http-live-segmented-streaming-and-playlists"><code class="notranslate">HTTP Live Streaming</code></a> outputs.</p>
+<p><strong>Note:</strong> Only applies to <a href="/http-live-segmented-streaming-and-playlists"><code class="notranslate">HTTP Live Streaming</code></a> outputs.</p>
 
 <aside class="bcls-aside bcls-aside--information">Note: <code class="notranslate">HLS</code> versions 1-3 use an integer for <code class="notranslate">duration</code> in <code class="notranslate">HLS</code> playlists. Versions 4 and later use a floating point number.</aside><pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -813,7 +813,7 @@
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> <code class="notranslate">hls</code>, <code class="notranslate">mss</code>, <code class="notranslate">dash</code></p>
 
@@ -839,13 +839,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="/zencoder-encoding-settings-captions#caption-url">caption_url</a> and <a href="/zencoder-encoding-settings-captions#skip-captions">skip_captions</a></p>
+<p><strong>See Also:</strong> <a href="/encoding-settings/encoding-settings-captions#caption-url">caption_url</a> and <a href="/encoding-settings/encoding-settings-captions#skip-captions">skip_captions</a></p>
 </section><section class="bcls-section"><h2 id="smil-base-url" class="notranslate">smil-base-url</h2>
 <code class="notranslate">smil_base_url:String</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -900,7 +900,7 @@
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> <code class="notranslate">false</code></p>
 
@@ -934,7 +934,7 @@
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> <code class="notranslate">false</code></p>
 
@@ -971,7 +971,7 @@
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> <code class="notranslate">iframe_index.m3u8</code></p>
 
@@ -1004,7 +1004,7 @@
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/zencoder-encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
 
 <p><strong>Default:</strong> <code class="notranslate">false</code></p>
 
@@ -1016,7 +1016,7 @@
 
 <p><strong>Description:</strong></p>
 
-<p>When generating the playlist, instead of failing the output if any of the referenced streams have been skipped (as part of the <a href="/zencoder-encoding-settings-conditional-outputs">conditional outputs</a> functionality), just leave them out of the playlist.</p>
+<p>When generating the playlist, instead of failing the output if any of the referenced streams have been skipped (as part of the <a href="/encoding-settings/encoding-settings-conditional-outputs">conditional outputs</a> functionality), just leave them out of the playlist.</p>
 
 <p>To properly ignore skipped sources, the streams for the playlist must have a <a href="#streaming_source"><code class="notranslate">source</code></a> defined.</p>
 
@@ -1041,7 +1041,7 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="/zencoder-encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a></p>
+<p><strong>See Also:</strong> <a href="/encoding-settings/encoding-settings-general-output-settings#source"><code class="notranslate">source</code></a></p>
 </section>
 
 <!-- complete bootstrap layout -->

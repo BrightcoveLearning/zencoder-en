@@ -16,7 +16,7 @@ grandparent: Basics
 
     <p>Generally, you want to adjust the following settings.</p>
 
-    <p>Choose the right <strong>codecs</strong> for your target application. All of our codecs play back on the web, but H.264 has the widest compatibility and the best quality. If that's what you're looking for, use H.264 + AAC (or maybe MP3). At the moment, it's also your best bet for mobile device compatibility. If you want something with no <a href="/zencoder-encoding-settings-format-and-codecs#licensing">licensing issues</a> VP8 + Vorbis is pretty good (though new), and Theora + Vorbis is a more established option.</p>
+    <p>Choose the right <strong>codecs</strong> for your target application. All of our codecs play back on the web, but H.264 has the widest compatibility and the best quality. If that's what you're looking for, use H.264 + AAC (or maybe MP3). At the moment, it's also your best bet for mobile device compatibility. If you want something with no <a href="/encoding-settings/encoding-settings-format-and-codecs#licensing">licensing issues</a> VP8 + Vorbis is pretty good (though new), and Theora + Vorbis is a more established option.</p>
 
     <p>Determine a <strong>target resolution</strong>, a strategy for <strong>aspect ratio</strong> conversion, and whether or not you want to upscale videos that are smaller than your target. (It's often smart to leave smaller videos small, and scale them within your player. That saves you kbits and bandwidth.)</p>
 
@@ -48,13 +48,13 @@ grandparent: Basics
 
     <h3>I am going to submit a lot of jobs, can Zencoder handle it? Should I let you know before I start?</h3>
 
-    <p>Zencoder can definitely handle it. Unless you're going to be running in to our <a href="/zencoder-faq-rate-limiting">API rate limit</a> of 1,000 job creation requests per minute you shouldn't need to warn us before submitting your jobs.</p>
+    <p>Zencoder can definitely handle it. Unless you're going to be running in to our <a href="/faq-rate-limiting">API rate limit</a> of 1,000 job creation requests per minute you shouldn't need to warn us before submitting your jobs.</p>
 
     <p>In fact, we're more concerned that we might overwhelm your servers if you're sending through a very large volume of jobs. The only delay you should see from Zencoder will be the time it takes to bring the necessary encoding servers online to handle your jobs if the volume exceeds our current capacity. If this happens it should take no more than a few minutes from your initial request before additional capacity is available. After that, the biggest concerns will be how your servers can handle the traffic from Zencoder. If that initial delay will impact your transcoding, get in touch with us before you start submitting so we can bring additional servers online in anticipation.</p>
 
     <h3>File Transfer Concerns to Consider</h3>
 
-    <p>If you're using S3 for input and output destinations then you should be good to go, as they can handle significant transfer volume, especially within the same <a href="/zencoder-encoding-settings-job#region">region</a>.</p>
+    <p>If you're using S3 for input and output destinations then you should be good to go, as they can handle significant transfer volume, especially within the same <a href="/encoding-settings/encoding-settings-job#region">region</a>.</p>
 
     <p>If you're using FTP servers you may want to throttle your jobs back some and run them in batches of 50 to 500, depending on the capacity of your servers. We've had experiences with large job volume completely overwhelming FTP servers and causing jobs to fail since we can't get to the files.</p>
 
