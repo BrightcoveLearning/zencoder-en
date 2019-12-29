@@ -4,9 +4,9 @@
   url: /getting-started/
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
-    - name: Learning Guide
-      url: /getting-started/learning-guide-bc-beacon.html
-    - name: Implementation Phases
+    - name: Overview
+      url: /getting-started/overview-zencoder.html
+    - name: Quick Start
       url: /getting-started/implementation-phases.html
     - name: Application Design Considerations
       url: /getting-started/app-design-considerations.html
