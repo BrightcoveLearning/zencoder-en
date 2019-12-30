@@ -22,18 +22,28 @@
       url: /syncing-with-video-cloud/vc-custom-fields.html
     - name: Forcing a Sync
       url: /syncing-with-video-cloud/forcing-a-sync.html
-- section: Integration
-  url: /integration/
-  icon: '<i class="fal fa-rocket-launch"></i>'
+    - name: Integration
+      url: /integration/
+      icon: '<i class="far fa-handshake-alt"></i>'
+      docs:
+        - name: Submitting Device Apps to Stores
+          url: /creating-your-apps/submitting-device-apps-stores.html
+- section: References
+  url: /references/
+  icon: '<i class="fal fa-books"></i>'
   docs:
-    - name: Submitting Device Apps to Stores
-      url: /creating-your-apps/submitting-device-apps-stores.html
+    - name: API Reference
+      url: /zencoder-api/v2/api-reference/
+    - name: Known Issues
+      url: /references/known-issues.html
+    - name: Product Updates
+      url: /references/product-updates.html
 - section: Encoding Settings
   url: /encoding-settings/
   icon: '<i class="fal fa-cogs"></i>'
   docs:
-    - name: Glossary
-      url: /references/glossary.html
+    - name: API Reference
+      url: /zencoder-api/v2/api-reference/
     - name: Known Issues
       url: /references/known-issues.html
     - name: Product Updates
