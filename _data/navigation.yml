@@ -29,8 +29,8 @@
     - name: Submitting Device Apps to Stores
       url: /creating-your-apps/submitting-device-apps-stores.html
 - section: Encoding Settings
-  url: /references/
-  icon: '<i class="fal fa-books"></i>'
+  url: /encoding-settings/
+  icon: '<i class="fal fa-cogs"></i>'
   docs:
     - name: Glossary
       url: /references/glossary.html
@@ -39,5 +39,22 @@
     - name: Product Updates
       url: /references/product-updates.html
 - section: Encoding Guides
-  url: /encoding-guides
-  icon: '<i class="fal fa-books"></i>'
+  url: /encoding-guides/
+  icon: '<i class="fas fa-fast-forward"></i>'
+  docs:
+    - name: Glossary
+      url: /references/glossary.html
+    - name: Known Issues
+      url: /references/known-issues.html
+    - name: Product Updates
+      url: /references/product-updates.html
+- section: Errors/Troubleshooting
+  url: /error-troubleshooting/
+  icon: '<i class="far fa-exclamation-triangle"></i>'
+  docs:
+  - name: Glossary
+    url: /references/glossary.html
+  - name: Known Issues
+    url: /references/known-issues.html
+  - name: Product Updates
+    url: /references/product-updates.html

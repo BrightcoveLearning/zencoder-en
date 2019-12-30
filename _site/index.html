@@ -102,7 +102,7 @@
           
         
           
-            <h5 class="submenu-header"><a href="/references/">Encoding Settings</a></h5>            
+            <h5 class="submenu-header"><a href="/encoding-settings/">Encoding Settings</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
@@ -121,7 +121,41 @@
           
         
           
-          <h5><a href="/encoding-guides">Encoding Guides</a></h5>
+            <h5 class="submenu-header"><a href="/encoding-guides/">Encoding Guides</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/references/glossary.html">Glossary</a></li>
+                
+              
+                
+                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                
+              
+                
+                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                
+              
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/error-troubleshooting/">Errors/Troubleshooting</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
+              
+                
+                  <li><a href="/references/glossary.html">Glossary</a></li>
+                
+              
+                
+                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                
+              
+                
+                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                
+              
+            </ul>
           
         
     </nav>
@@ -139,32 +173,26 @@
 			<h1>Zencoder</h1>
 
 			<p>Zencoder offers a fast and reliable transcoding service for video and audio files, as well as live streams. It can produce outputs for the web and a wide variety of devices, and can easily be integrated with your CMS and other applications.</p>
-<section class="landing-page-body-wrapper" id="landing_page_wrapper"><!-- item for a landing-page block - include as many as you need 
-    Suggested Font Awesome icons for different blocks -- should be the first thing inside the Section:
-
-    Getting Started: rocket: <i class="fal fa-rocket">&nbsp;</i>
-    Documentation: doc: <i class="far fa-file-alt">&nbsp;</i>
-    Guides: tools: <i class="fal fa-tools">&nbsp;</i>
-    General Information: info-circle: <i class="far fa-info-circle">&nbsp;</i>
-    Notifications: bell: <i class="far fa-bell">&nbsp;</i>
-    Other kinds of technical info: cogs: <i class="far fa-cogs">&nbsp;</i>
-    References: linode: <i class="fab fa-linode">&nbsp;</i>
-    Code samples: curly braces: <i class="fas fa-brackets-curly">&nbsp;</i>
+<section class="card-wrapper">
     
-    --><section class="landing-page-section"><!-- font awesome icon --><i class="fal fa-rocket"> </i> <!-- h2 for main section title -->
+    <section class="bcls-card" onclick="window.location.href='/getting-started'">
+      <i class="fal fa-rocket"> </i> 
 
-<h2>Getting Started</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><ul><li><a href="/overview-zencoder">Overview: Zencoder</a></li>
-	<li><a href="/quick-start-zencoder">Creating an Encoding Job</a></li>
-	<li><a href="https://app.zencoder.com/request_builder">Create a Job with the Request Builder</a></li>
-	<li><a href="/creating-multiple-outputs">Creating Multiple Outputs</a></li>
-	<li><a href="/output-settings">Output Settings</a></li>
-	<li><a href="/node/1789917901">Test Jobs and Integration Mode</a></li>
-	<li><a href="/faq-integration-libraries">What Integration Libraries do you Offer?</a></li>
-</ul></section><section class="landing-page-section"><!-- font awesome icon --><i class="far fa-play-circle"> </i> <!-- h2 for main section title -->
+<div class="card-content">
+  <h2>Getting Started</h2>
+  <ul><li><a href="/overview-zencoder">Overview: Zencoder</a></li>
+  	<li><a href="/getting-started/quick-start-zencoder.html">Creating an Encoding Job</a></li>
+  	<li><a href="https://app.zencoder.com/request_builder">Create a Job with the Request Builder</a></li>
+  	<li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+  	<li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
+  </ul>
+</div>
+</section>
+<section class="bcls-card">
+  <i class="far fa-info-circle"> </i>
 
-<h2>Basics</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><h5>API Reference</h5>
+<h2>General Information</h2>
+<h5>API Reference</h5>
 
 <ul><li><a href="https://docs.brightcove.com/zencoder-api/v2/doc/index.html">API Reference</a></li>
 </ul><h5>FAQs</h5>
@@ -182,10 +210,8 @@
 </ul><h5>Formats and Codecs</h5>
 
 <ul><li><a href="/faq-codecs-and-formats">Supported Formats for Input and Output</a></li>
-</ul></section><section class="landing-page-section"><!-- font awesome icon --><i class="far fa-info-circle"> </i> <!-- h2 for main section title -->
-
-<h2>General Information</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><ul><li><a href="/api-version-history">API Version History</a></li>
+</ul>
+<ul><li><a href="/api-version-history">API Version History</a></li>
 	<li><a href="/faq-rate-limiting">Rate Limiting</a></li>
 	<li><a href="/encoding-settings/encoding-settings-encryption">Encryption</a></li>
 	<li><a href="/encoding-settings/encoding-settings-drm">DRM</a></li>
@@ -194,10 +220,10 @@
 
 <ul><li><a href="/problems">Common Problems</a></li>
 	<li><a href="/error-troubleshooting/error-codes">Error Codes Reference</a></li>
-</ul></section><section class="landing-page-section"><!-- font awesome icon --><i class="far fa-qrcode"> </i> <!-- h2 for main section title -->
+</ul></section><section class="bcls-card"><i class="far fa-qrcode"> </i> 
 
 <h2>Encoding Settings</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><ul><li><a href="/encoding-settings">Quick Reference</a></li>
+<ul><li><a href="/encoding-settings">Quick Reference</a></li>
 </ul><h5>General</h5>
 
 <ul><li><a href="/encoding-settings/encoding-settings-job">Job Settings</a></li>
@@ -242,10 +268,10 @@
 
 <ul><li><a href="/encoding-settings/encoding-settings-aspera">Aspera</a></li>
 	<li><a href="/encoding-settings/encoding-settings-s3-settings">S3 Settings</a></li>
-</ul></section><section class="landing-page-section"><!-- font awesome icon --><i class="fas fa-qrcode"> </i> <!-- h2 for main section title -->
+</ul></section><section class="bcls-card"><i class="fas fa-qrcode"> </i> 
 
 <h2>Encoding Recommendations</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><ul><li><a href="/cae-guide">CAE Guide</a></li>
+<ul><li><a href="/cae-guide">CAE Guide</a></li>
 	<li><a href="/advanced-audio-mapping-guide">Advanced Audio Mapping Guide</a></li>
 	<li><a href="/http-live-segmented-streaming-and-playlists">HTTP Live Streaming (HLS)</a></li>
 	<li><a href="/http-live-streaming-using-fragmented-mp4">HTTP Live Streaming using fragmented MP4</a></li>
@@ -263,10 +289,10 @@
 	<li><a href="/as11-mxf">AS11 MXF OP1a Guide</a></li>
 	<li><a href="/h264-advanced-guide">H.264 Advanced Guide</a></li>
 	<li><a href="/vp6-advanced-guide">VP6 Advanced Guide</a></li>
-</ul></section><section class="landing-page-section"><!-- font awesome icon --><i class="far fa-handshake-alt"> </i> <!-- h2 for main section title -->
+</ul></section><section class="bcls-card"><i class="far fa-handshake-alt"> </i> 
 
 <h2>Advanced Integration</h2>
-<!-- always include the br below after the h2 --><br style="clear: left" /><!-- h5 for subheadings --><ul><li><a href="/100-integration-reliability">Integration Reliability</a></li>
+<ul><li><a href="/100-integration-reliability">Integration Reliability</a></li>
 	<li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs">When Should I Retry Failed Jobs</a></li>
 	<li><a href="/using-read-only-api-keys">Using Read-only API Keys</a></li>
 	<li><a href="/region-outages">Region Outages</a></li>
