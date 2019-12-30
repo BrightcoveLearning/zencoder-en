@@ -1,7 +1,6 @@
 ---
 title: FAQ: Basics
-parent: FAQs
-grandparent: Basics
+parent: General Information
 ---
 <h1>FAQ: Basics</h1>
 
@@ -34,7 +33,7 @@ grandparent: Basics
       <li>
         <p style="font-weight:bold">What is an encoding job?</p>
 
-        <p>An encoding job is the process of taking an input video or audio file and converting it to one or more output formats. You can start an encoding job through the <a href="https://docs.brightcove.com/zencoder-api/v2/doc/index.html">API</a> or using the <a href="https://app.zencoder.com/request_builder">Request Builder</a> in your account. In the encoding process, <span class="notranslate">Zencoder</span> first downloads the input file from wherever it is hosted. We then convert the file to the specified output settings and upload the output files to either our own servers, or to a specific location that you set (often the same hosting server as the input file).</p>
+        <p>An encoding job is the process of taking an input video or audio file and converting it to one or more output formats. You can start an encoding job through the <a href="/zencoder-api/v2/api-reference/">API</a> or using the <a href="https://app.zencoder.com/request_builder">Request Builder</a> in your account. In the encoding process, <span class="notranslate">Zencoder</span> first downloads the input file from wherever it is hosted. We then convert the file to the specified output settings and upload the output files to either our own servers, or to a specific location that you set (often the same hosting server as the input file).</p>
       </li>
       <li>
         <p style="font-weight:bold">What programming languages is <span class="notranslate">Zencoder</span> compatible with?</p>
@@ -71,7 +70,7 @@ grandparent: Basics
 
         <p>Beyond that, you might want to receive output_notification via HTTP. Give us a URL, and we'll POST job status back to you. You just need a URL on your site set up to receive a HTTP POST with a JSON or XML body.</p>
 
-        <p>Finally, you might want to use our API to <a href="https://docs.brightcove.com/zencoder-api/v2/doc/index.html#api-Jobs-Create_a_Job">do other things with encoding jobs</a>, like working_with_jobs, working_with_jobs, or working_with_jobs. That's just HTTP requests too.</p>
+        <p>Finally, you might want to use our API to <a href="/zencoder-api/v2/api-reference/index.html#api-Jobs-Create_a_Job">do other things with encoding jobs</a>, like working_with_jobs, working_with_jobs, or working_with_jobs. That's just HTTP requests too.</p>
       </li>
       <li>
         <p style="font-weight:bold">What does an integration library do?</p>
@@ -112,13 +111,13 @@ grandparent: Basics
 
         <p>Of course. If you open-source a <span class="notranslate">Zencoder</span> library, we'll probably even link to it. Feel free to copy our <a href="http://github.com/zencoder/zencoder-rb">Ruby library</a> in your language of choice.</p>
       </li>
-      <li><a href="/getting-notifications-when-videos-are-finished">How can I get notifications on my development machine?</a>
+      <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">How can I get notifications on my development machine?</a>
         <p>Third-party tools can be used, for example <a href="https://ngrok.com">ngrok</a>.</p>
       </li>
       <li>
         <p style="font-weight:bold">What is integration mode?</p>
 
-        <p>Integration Mode is a setting on your account that allows you to test your integration of <span class="notranslate">Zencoder</span> without getting charged for encoding. You can read more about it in the <a href="/test-jobs-and-integration-mode">Test Jobs and Integration Mode</a> section.</p>
+        <p>Integration Mode is a setting on your account that allows you to test your integration of <span class="notranslate">Zencoder</span> without getting charged for encoding. You can read more about it in the <a href="/general-information/test-jobs-and-integration-mode.html">Test Jobs and Integration Mode</a> section.</p>
       </li>
       <li>
         <p style="font-weight:bold">What is privacy mode?</p>
@@ -127,7 +126,7 @@ grandparent: Basics
 
         <p>If you are sending adult content through <span class="notranslate">Zencoder</span> <a href="https://app.zencoder.com/account/subscription">your account must be in privacy mode</a>.</p>
       </li>
-      <li><a href="/faq-rate-limiting#are_they">Are API requests rate limited?</a>
+      <li><a href="/general-information/faq-rate-limiting.html#are_they">Are API requests rate limited?</a>
         <p>Yes, <span class="notranslate">Zencoder</span> limits how many times you can call a particular method inside a given timeframe. Limits are tracked on a per-method (resource) basis, with the exception of progress requests, which are tracked per-output. For example, calls to get job and output info all count towards the same limit, while calls for output progress are tracked separately per output.</p>
 
         <p>Each account is allowed 60 requests per minute, with the exception of job creation requests, which are limited to 1,000 requests per minute, and output progress requests, which are limited to 60 requests per minute per output.</p>
@@ -136,7 +135,7 @@ grandparent: Basics
 
         <p>If you exceed your quota, <span class="notranslate">Zencoder</span> will return a 403 error with a body of " <code class="notranslate">403 Forbidden (Rate Limit Exceeded)</code>". We'll also send back an additional header, " <code class="notranslate">Retry-After</code>", which contains the number of seconds until your quota is reset.</p>
       </li>
-      <li><a href="/faq-rate-limiting#why">Why are API requests rate limited?</a>
+      <li><a href="/general-information/faq-rate-limiting.html#why">Why are API requests rate limited?</a>
         <p>We limit API requests to a reasonable number in order to ensure that one customer's use of <span class="notranslate">Zencoder</span> does not adversely affect other customers. Without rate limiting, one customer could flood our system with requests in a way that would prevent another customer from being able to use the system. This happens periodically by accident when customers are first working with an API - a simple programming error could flood the API with requests that the customer doesn't mean to send.</p>
 
         <p>As long as your application is set up properly, rate limiting should not be a problem. When we return a 403 with "Rate Limit Exceeded" in the body, just retry your request after the specified period of time.</p>

@@ -6,7 +6,7 @@
 
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/integration/100-integration-reliability.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/integration/100-integration-reliability.html</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -699,7 +699,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/integration/faq-integration-libraries.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/integration/faq-integration-libraries.html</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -783,7 +783,21 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
+        <lastmod>2019-12-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
+        <lastmod>2019-12-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -798,20 +812,6 @@
     
     <url>
         <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
-        <lastmod>2019-12-30</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
-        <lastmod>2019-12-30</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -867,7 +867,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/release-notes/release-notes.html</loc>
+        <loc>https://zencoder.support.brightcove.com/references/release-notes.html</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -888,7 +888,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/integration/test-jobs-and-integration-mode.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/test-jobs-and-integration-mode.html</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -902,7 +902,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/integration/using-read-only-api-keys.html</loc>
+        <loc>https://zencoder.support.brightcove.com/general-information/integration/using-read-only-api-keys.html</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
