@@ -783,14 +783,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
-        <lastmod>2019-12-30</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/</loc>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -804,7 +797,21 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
+        <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
+        <lastmod>2019-12-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
+        <lastmod>2019-12-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/</loc>
         <lastmod>2019-12-30</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
