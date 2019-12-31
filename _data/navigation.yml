@@ -20,8 +20,10 @@
   docs:
     - name: 'FAQ: Basics'
       url: /general-information/vc-custom-fields.html
-    - name: Forcing a Sync
-      url: /general-information/forcing-a-sync.html
+    - name: 'FAQ: Codecs And Formats'
+      url: /general-information/faq-codecs-and-formats.html
+    - name: 'FAQ: Encoding'
+      url: /general-information/faq-encoding.html
     - name: Integration
       url: /integration/
       icon: '<i class="far fa-handshake-alt"></i>'
