@@ -224,7 +224,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Default:</strong> 3</p>
   
@@ -268,7 +268,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Valid Values:</strong> A positive integer. 100000 max.</p>
   
@@ -284,7 +284,7 @@
   
   <aside class="bcls-aside bcls-aside--information">Note that if <code class="notranslate">quality</code> and <code class="notranslate">video_bitrate</code> are set, the <code class="notranslate">video_bitrate</code> setting will be ignored.</aside><p>video_bitrate uses two-pass, variable bitrate (VBR) encoding. one_pass encoding may be triggered via the <a class="notranslate" href="#one_pass">one_pass</a> option, though one_pass VBR encoding is typically of poor quality, and only results in a small speedup, so this is not recommended.</p>
   
-  <p>Also keep in mind that bitrates that are too high or too low are unusable. By default, if you specify a bitrate that is too low, we will automatically correct to an acceptable bitrate. Enable <a class="notranslate" href="/encoding-settings/encoding-settings-general-output-settings#strict">strict</a> mode if you would prefer a job to fail in this situation rather than auto-correcting.</p>
+  <p>Also keep in mind that bitrates that are too high or too low are unusable. By default, if you specify a bitrate that is too low, we will automatically correct to an acceptable bitrate. Enable <a class="notranslate" href="/encoding-settings/general/encoding-settings-general-output-settings.html#strict">strict</a> mode if you would prefer a job to fail in this situation rather than auto-correcting.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -302,7 +302,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Default:</strong> 3</p>
   
@@ -336,7 +336,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Valid Values:</strong> A positive integer.</p>
   
@@ -348,7 +348,7 @@
   
   <p>An output bitrate setting, in Kbps. With 2 channel output, this is the total audio bitrate, not the bitrate of each channel, so 128kbps stereo output is encoded at 64kbps per channel. Below 48kbps per channel, quality can start to suffer.</p>
   
-  <aside class="bcls-aside bcls-aside--information">Note that if <code class="notranslate">audio_quality</code> and <code class="notranslate">audio_bitrate</code> are set, the <code class="notranslate">audio_bitrate</code> setting will be ignored.</aside><p>Beware that if you manually set an <a class="notranslate" href="/encoding-settings/encoding-settings-audio#audio_sample_rate">audio_sample_rate</a>, you need to choose a compatible audio_bitrate, or the encoding may fail. By default, we will auto-correct these failures and choose a valid bitrate/sample rate combination. Enable strict_mode to avoid this auto-correction.</p>
+  <aside class="bcls-aside bcls-aside--information">Note that if <code class="notranslate">audio_quality</code> and <code class="notranslate">audio_bitrate</code> are set, the <code class="notranslate">audio_bitrate</code> setting will be ignored.</aside><p>Beware that if you manually set an <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_sample_rate">audio_sample_rate</a>, you need to choose a compatible audio_bitrate, or the encoding may fail. By default, we will auto-correct these failures and choose a valid bitrate/sample rate combination. Enable strict_mode to avoid this auto-correction.</p>
 
   <p>This setting does not limit the peak bitrate of the encoded video.  If the system detects that the final encoded bitrate will be higher than this value, it internally restarts the encode with this bitrate as the target average bitrate.  See <code>decoder_bitrate_cap</code> for limiting peak bitrates.</p>
   
@@ -364,13 +364,13 @@
     ]
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a href="#audio-quality">audio_quality</a>, <a class="notranslate" href="/encoding-settings/encoding-settings-audio#audio_sample_rate">audio_sample_rate</a>, and <a href="/encoding-settings/encoding-settings-aac#max_aac_profile">max_aac_profile</a></p>
+  <p><strong>See Also:</strong> <a href="#audio-quality">audio_quality</a>, <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_sample_rate">audio_sample_rate</a>, and <a href="/encoding-settings/encoding-settings-aac#max_aac_profile">max_aac_profile</a></p>
   </section><section class="bcls-section"><h2 id="max_video_bitrate" class="notranslate">max_video_bitrate</h2>
   <code class="notranslate">max_video_bitrate:Integer</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Valid Values:</strong> A positive integer. 100000 max.</p>
   
@@ -400,7 +400,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Default:</strong> 3</p>
   
@@ -430,7 +430,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Valid Values:</strong> A positive integer. 100000 max.</p>
   
@@ -462,7 +462,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Valid Values:</strong> A positive integer. 100000 max.</p>
   
@@ -494,7 +494,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Default:</strong> <code class="notranslate">false</code></p>
   
@@ -524,7 +524,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+  <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
   
   <p><strong>Default:</strong> <code class="notranslate">false</code></p>
   
@@ -536,11 +536,11 @@
   
   <p><strong>Description:</strong></p>
   
-  <p>Enable constant bitrate (CBR) mode for audio, when possible. <a class="notranslate" href="/encoding-settings/encoding-settings-audio#audio_sample_rate">audio_sample_rate</a> may be adjusted for compatibility.</p>
+  <p>Enable constant bitrate (CBR) mode for audio, when possible. <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_sample_rate">audio_sample_rate</a> may be adjusted for compatibility.</p>
   
   <p><a class="notranslate" href="#audio_bitrate">audio_bitrate</a> setting must also be specified when using this option.</p>
   
-  <p>Compatible with AAC and MP3 <a href="/encoding-settings/encoding-settings-format-and-codecs#audio_codec">audio codecs</a>. Not compatible when used with the VP6 <a href="/encoding-settings/encoding-settings-format-and-codecs#video_codec"><code class="notranslate">video_codec</code></a>.) For MP3 audio, only certain bitrates are compatible with this option: 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320.</p>
+  <p>Compatible with AAC and MP3 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec">audio codecs</a>. Not compatible when used with the VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video_codec"><code class="notranslate">video_codec</code></a>.) For MP3 audio, only certain bitrates are compatible with this option: 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320.</p>
   
   <p><em>Note: The AAC codec does not define a fixed CBR mode, so there are still small variations in bitrate over short time periods. Most software will still report these encodes as VBR.</em></p>
   

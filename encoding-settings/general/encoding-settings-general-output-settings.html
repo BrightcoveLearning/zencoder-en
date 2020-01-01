@@ -31,7 +31,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> standard</p>
 
@@ -48,7 +48,7 @@ parent:
 <ul><li class="language-editable"><code>segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/encoding-settings-segmented-streaming">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
 	<li class="language-editable"><code>captions</code>: <em><strong><a href="/api-version-history">API V2 Only</a></strong></em><br />
 	The captions output type creates a file containing just the captions from the source video, rather than a video with captions added to it. <em>Note: captions type outputs may not be the only outputs for a job.</em><br />
-	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/encoding-settings-captions#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
+	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
 	Supported formats for extracting captions from the source video are MP4 and TS. In an MP4 file, the captions may be located in a separate track (in CEA-608 format); otherwise captions in an MP4 or TS file must be embedded in an MPEG2 or AVC video stream, compliant to A/53 or SCTE-128 (CC1 and CC3) standards.<br />
 	Supported output formats for captions type outputs: '<code>mp4</code>', '<code>scc</code>', '<code>webvtt</code>', '<code>vtt</code>', '<code>m3u8</code>', '<code>dfxp</code>'.</li>
 	<li class="language-editable"><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
@@ -65,13 +65,13 @@ parent:
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a> and <a class="notranslate" href="/encoding-settings/encoding-settings-captions#caption_url">caption_url</a></p>
+<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a> and <a class="notranslate" href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="label">label</h2>
 <code>label:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A string</p>
 
@@ -99,7 +99,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -128,7 +128,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure, or HTTP address.</p>
 
@@ -209,7 +209,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure, or HTTP URL.</p>
 
@@ -229,7 +229,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, Aspera, FTP, FTPS, or SFTP URL, without a filename.</p>
 
@@ -299,7 +299,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid video or audio filename.</p>
 
@@ -331,7 +331,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid package filename.</p>
 
@@ -359,7 +359,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> <code>zip</code> and <code>tar</code></p>
 
@@ -424,13 +424,13 @@ parent:
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-format-and-codecs#format">format</a></p>
+<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="strict">strict</h2>
 <code>strict:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code>false</code></p>
 
@@ -460,7 +460,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code>false</code></p>
 
@@ -488,7 +488,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code>false</code></p>
 
@@ -516,7 +516,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -550,7 +550,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/encoding-settings-job#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -644,7 +644,7 @@ parent:
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parents:</strong> <a href="/encoding-settings/encoding-settings-job#outputs">outputs</a> OR <a href="/encoding-settings/encoding-settings-thumbnails#thumbnails">thumbnails</a></p>
+<p class="language-editable"><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 

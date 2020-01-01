@@ -224,7 +224,7 @@
     <h2 id="Reliable_app_integration">Reliable app integration</h2>
 
     <ol>
-      <li>Include a <a href="/encoding-settings/encoding-settings-general-output-settings#secondary-url">Secondary URL</a> as a backup in case upload to your primary location fails.</li>
+      <li>Include a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#secondary-url">Secondary URL</a> as a backup in case upload to your primary location fails.</li>
       <li>If you get a non-successful response code from Zencoder - basically, something other than a 200 or 201 - <strong>don't fail the job</strong>. A response code of 503 doesn't mean that your video can't be processed. It just means that Zencoder is temporarily unavailable.</li>
       <li>If you get a <strong>connection error</strong> when trying to connect to Zencoder, do the same thing.</li>
       <li>Similarly, <strong>wrap your API requests in a timeout</strong>. We recommend a 30 second timeout; Zencoder usually responds in less than a second, so 30 seconds is usually plenty of time.</li>

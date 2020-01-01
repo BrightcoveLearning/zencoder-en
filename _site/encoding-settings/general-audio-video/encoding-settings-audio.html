@@ -225,7 +225,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Valid Values:</strong> A valid sample rate. Depends on the codec; typically 8000, 11025, 12000, 16000, 22050, 32000, 44100, 48000, 96000</p>
   
@@ -237,13 +237,13 @@
   
   <p>Audio sample rate in Hz.</p>
   
-  <p>We recommend that you only use this setting if you have a good reason to do so. Forcing an output sample rate can cause unexpected problems - for example, each <a href="/encoding-settings/encoding-settings-format-and-codecs#audio_codec">audio_codec</a> only supports a limited range of sample rates, and each sample rate is only compatible with a limited range of bitrates. You can't encode 48Khz AAC at 16kbps, or 8000hz MP3 at 320kbps.</p>
+  <p>We recommend that you only use this setting if you have a good reason to do so. Forcing an output sample rate can cause unexpected problems - for example, each <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec">audio_codec</a> only supports a limited range of sample rates, and each sample rate is only compatible with a limited range of bitrates. You can't encode 48Khz AAC at 16kbps, or 8000hz MP3 at 320kbps.</p>
   
   <p> </p>
   
   <p>By default, the input sample rate will be used (i.e. the audio will not be resampled), though sample rates higher than 96000 will be reduced to a max of 96000.</p>
   
-  <p>The FLV video <a class="notranslate" href="/encoding-settings/encoding-settings-format-and-codecs#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code class="notranslate">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
+  <p>The FLV video <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code class="notranslate">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -255,13 +255,13 @@
     ]
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_bitrate">audio_bitrate</a> and <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_quality">audio_quality</a></p>
+  <p><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_bitrate">audio_bitrate</a> and <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_quality">audio_quality</a></p>
   </section><section class="bcls-section"><h2 id="max_audio_sample_rate" class="notranslate">max_audio_sample_rate</h2>
   <code class="notranslate">max_audio_sample_rate:Integer</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Valid Values:</strong> A valid sample rate. Depends on the codec; typically 8000, 11025, 12000, 16000, 22050, 32000, 44100, 48000, 96000</p>
   
@@ -279,7 +279,7 @@
   
   <p>By default, the input sample rate will be used (i.e. the audio will not be resampled), though sample rates higher than 96000 will be reduced to a max of 96000.</p>
   
-  <p>The FLV video <a class="notranslate" href="/encoding-settings/encoding-settings-format-and-codecs#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code class="notranslate">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
+  <p>The FLV video <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code class="notranslate">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -291,13 +291,13 @@
     ]
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a class="notranslate" href="#audio_sample_rate">audio_sample_rate</a>, <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_bitrate">audio_bitrate</a>, and <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_quality">audio_quality</a></p>
+  <p><strong>See Also:</strong> <a class="notranslate" href="#audio_sample_rate">audio_sample_rate</a>, <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_bitrate">audio_bitrate</a>, and <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_quality">audio_quality</a></p>
   </section><section class="bcls-section"><h2 id="audio_channels" class="notranslate">audio_channels</h2>
   <code class="notranslate">audio_channels:Integer</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Default:</strong> 1 if the original file is mono; otherwise, 2.</p>
   
@@ -323,13 +323,13 @@
     ]
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_bitrate">audio_bitrate</a>, <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control#audio_quality">audio_quality</a>, <a href="#input_audio_channels">input_audio_channels</a>, and <a href="#output_audio_channels">output_audio_channels</a></p>
+  <p><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_bitrate">audio_bitrate</a>, <a class="notranslate" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_quality">audio_quality</a>, <a href="#input_audio_channels">input_audio_channels</a>, and <a href="#output_audio_channels">output_audio_channels</a></p>
   </section><section class="bcls-section"><h2 id="audio_bit_depth" class="notranslate">audio_bit_depth</h2>
   <code class="notranslate">audio_bit_depth:Integer</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Default:</strong> 16</p>
   
@@ -359,7 +359,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Valid Values:</strong> ISO 639-1 or 639-2 language code</p>
   
@@ -387,7 +387,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Valid Values:</strong> A hash of channel identifiers and track index values.</p>
   
@@ -427,7 +427,7 @@
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
-  <p><strong>Parent:</strong> <a href="/encoding-settings/encoding-settings-job#outputs"><code class="notranslate">outputs</code></a></p>
+  <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
   
   <p><strong>Valid Values:</strong> A channel layout or integer to define the number of output audio channels.</p>
   
