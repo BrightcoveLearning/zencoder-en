@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Brightcove Beacon Documentation
+title: Brightcove Zencoder Documentation
 email: training@brightcove.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Brightcove Beacon provides video providers the environment for their customers to view videos without having a cable provider subscription.
+  Zencoder offers a fast and reliable transcoding service for video and audio files, as well as live streams. It can produce outputs for the web and a wide variety of devices, and can easily be integrated with your CMS and other applications.
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://zencoder.support.brightcove.com"
 

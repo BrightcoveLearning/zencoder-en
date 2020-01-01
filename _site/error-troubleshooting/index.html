@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Errors and Troubleshooting</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,11 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Errors and Troubleshooting</li>
     </ol>
   </nav>
 </header>
@@ -85,7 +87,11 @@
                 
               
                 
-                  <li><a href="/general-information/forcing-a-sync.html">Forcing a Sync</a></li>
+                  <li><a href="/general-information/faq-codecs-and-formats.html">FAQ: Codecs And Formats</a></li>
+                
+              
+                
+                  <li><a href="/general-information/faq-encoding.html">FAQ: Encoding</a></li>
                 
               
                 
@@ -191,130 +197,48 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Error Codes</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Troubleshooting/Error Handling</div>
-              </div>
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:rgb(65, 196, 181);
+    margin-right: 1rem;
+  }
+  .card-icon i {
+    color: rgb(65, 196, 181);
+  }
+</style>
+
+<article class="bcls-article">
+  <h1>Errors and Troubleshooting</h1>
+  <summary>Help when something is not right.</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-icon">
+        <i class="far fa-exclamation-triangle"></i>
       </div>
-
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
-
-</div>
-
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics in this section</h2>
+        <ul>
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
   
-            <p>This topic provides a summary of HTTP status codes for Zencoder API requests and an index of error codes returned by the Zencoder API. Click on any error to see more details. </p>
-            <article class="bcls-article"><section class="bcls-section"><h2 id="http_status_codes">HTTP status codes</h2>
-
-<p>The following table lists the HTTP response code for Zencoder API requests, in the case of errors, indicates the most likely cause, where possible.</p>
-
-<table class="bcls-table"><caption class="bcls-caption--table">HTTP Response Codes</caption>
-  <thead class="bcls-table__head"><tr><th>Status Code</th>
-      <th>Probable Explanation</th>
-    </tr></thead><tbody class="bcls-table__body"><tr><td><code>200 OK</code></td>
-      <td>Standard success response for actions that do not create a new asset</td>
-    </tr><tr><td><code>201 CREATED</code></td>
-      <td>Standard response for requests that create new assets</td>
-    </tr><tr><td><code>204 NO CONTENT</code></td>
-      <td>Standard response for a request that returns no response</td>
-    </tr><tr><td><code>400 BAD REQUEST</code></td>
-      <td>Invalid JSON in the request body</td>
-    </tr><tr><td><code>401 UNAUTHORIZED</code></td>
-      <td>Missing or invalid API Key</td>
-    </tr><tr><td><code>402 PAYMENT REQUIRED</code></td>
-      <td>Returned when an API request attempts to turn off Zencoder integration mode https://app.zencoder.com/docs/api/accounts/integration on an account where billing has not been setup. You should go to <a href="https://www.zencoder.com">www.zencoder.com</a> and choose a payment plan</td>
-    </tr><tr><td><code>403 FORBIDDEN</code></td>
-      <td><a href="/faq-rate-limiting">rate limit</a> for requests exceeded, or in response to a retry/resubmit API request for resources that have been retried too many times</td>
-    </tr><tr><td><code>404 NOT FOUND</code></td>
-      <td>Incorrect request URL or invalid/old job ID</td>
-    </tr><tr><td><code>406 NOT ACCEPTIBLE</code></td>
-      <td>Returned for attempting to create a non-AWS credential through the API</td>
-    </tr><tr><td><code>409 CONFLICT</code></td>
-      <td>Generally only when trying to retry/resubmit a job that's too old</td>
-    </tr><tr><td><code>422 UNPROCESSIBLE ENTITY</code></td>
-      <td>Returned when an API request cannot be validated</td>
-    </tr><tr><td><code>500 INTERNAL SERVER ERROR</code></td>
-      <td>Either a temporary issue with Zencoder or something wrong with the request</td>
-    </tr><tr><td><code>503 SERVICE UNAVAILABLE</code></td>
-      <td>Zencoder temporarily unavailable, probably during scheduled maintenance</td>
-    </tr><tr><td><code>504 GATEWAY TIMEOUT</code></td>
-      <td>Returned if the Zencoder service is down</td>
-    </tr></tbody></table></section><section class="bcls-section"><h2 id="zencoder_error_codes">Zencoder Error codes</h2>
-
-<div style="display:inline-block;padding:1em;border-left:1px #ccc solid; margin: auto 0;vertical-align:top;">
-<ul><li><a href="/error-troubleshooting/error-akamainetstoragefilesizeerror">AkamaiNetStorageFileSizeError</a></li>
-  <li><a href="/error-troubleshooting/error-checksummismatcherror">ChecksumMismatchError</a></li>
-  <li><a href="/error-troubleshooting/error-dimensiontoosmallerror">DimensionTooSmallError</a></li>
-  <li><a href="/error-troubleshooting/error-downloadaccessdeniederror">DownloadAccessDeniedError</a></li>
-  <li><a href="/error-troubleshooting/error-downloadfailureerror">DownloadFailureError</a></li>
-  <li><a href="/error-troubleshooting/error-downloadtimeouterror">DownloadTimeoutError</a></li>
-  <li><a href="/error-troubleshooting/error-filenotfounderror">FileNotFoundError</a></li>
-  <li><a href="/error-troubleshooting/error-filepermanentlymovederror">FilePermanentlyMovedError</a></li>
-  <li><a href="/error-troubleshooting/error-inaccuratedurationerror">InaccurateDurationError</a></li>
-  <li><a href="/error-troubleshooting/error-incompatiblewithdynamicprofileserror">IncompatibleWithDynamicProfilesError</a></li>
-  <li><a href="/error-troubleshooting/error-inputfilenotfound">InputFileNotFound</a></li>
-  <li><a href="/error-troubleshooting/error-invalidaccesskeyiderror">InvalidAccessKeyIdError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidaudiosettingserror">InvalidAudioSettingsError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidcodeccombinationerror">InvalidCodecCombinationError</a></li>
-  <li><a href="/error-troubleshooting/error-invaliddownloadedfiletypeerror">InvalidDownloadedFileTypeError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidencryptionsettingserror">InvalidEncryptionSettingsError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidfilepatherror">InvalidFilePathError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidformatcodecerror">InvalidFormatCodecError</a></li>
-</ul></div>
-
-<div style="display:inline-block;padding:1em;border-left:1px #ccc solid; margin: auto 0;vertical-align:top;">
-<ul><li><a href="/error-troubleshooting/error-invalidframerateerror">InvalidFrameRateError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidusernameorpassworderror">InvalidUsernameOrPasswordError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidvideobitrateerror">InvalidVideoBitrateError</a></li>
-  <li><a href="/error-troubleshooting/error-invalidvideosettingserror">InvalidVideoSettingsError</a></li>
-  <li><a href="/error-troubleshooting/error-nomediaerror">NoMediaError</a></li>
-  <li><a href="/error-troubleshooting/error-quicktimereferenceerror">QuicktimeReferenceError</a></li>
-  <li><a href="/error-troubleshooting/error-remoteserverproblemerror">RemoteServerProblemError</a></li>
-  <li><a href="/error-troubleshooting/error-rtmpauthfailederror">RTMPAuthFailedError</a></li>
-  <li><a href="/error-troubleshooting/error-rtmpmaxstreamsxidreached">RTMPMaxStreamsXIdReached</a></li>
-  <li><a href="/error-troubleshooting/error-rtmpstreamnamealreadyinuse">RTMPStreamNameAlreadyInUse</a></li>
-  <li><a href="/error-troubleshooting/error-s3bucketnotfounderror">S3BucketNotFoundError</a></li>
-  <li><a href="/error-troubleshooting/error-segmentingerror">SegmentingError</a></li>
-  <li><a href="/error-troubleshooting/error-skippedsourceerror">SkippedSourceError</a></li>
-  <li><a href="/error-troubleshooting/error-thumbnailerror">ThumbnailError</a></li>
-  <li><a href="/error-troubleshooting/error-transcodingerror">TranscodingError</a></li>
-  <li><a href="/error-troubleshooting/error-transferinvalidgranteegroupurlerror">Transfer::InvalidGranteeGroupURLError</a></li>
-  <li><a href="/error-troubleshooting/error-transferinvalidgranteeiderror">Transfer::InvalidGranteeIDError</a></li>
-  <li><a href="/error-troubleshooting/error-truncatedfileerror">TruncatedFileError</a></li>
-  <li><a href="/error-troubleshooting/error-unabletocreatedynamicprofileserror">UnableToCreateDynamicProfilesError</a></li>
-</ul></div>
-
-<div style="display:inline-block;padding:1em;border-left:1px #ccc solid; margin: auto 0;vertical-align:top;">
-<ul><li><a href="/error-troubleshooting/error-unexpecteddownloadproblemerror">UnexpectedDownloadProblemError</a></li>
-  <li><a href="/error-troubleshooting/error-unexpectedffmpegresult">UnexpectedFfmpegResult</a></li>
-  <li><a href="/error-troubleshooting/error-unexpectedmplayerresult">UnexpectedMplayerResult</a></li>
-  <li><a href="/error-troubleshooting/error-unexpectedprogenresult">UnexpectedProgenResult</a></li>
-  <li><a href="/error-troubleshooting/error-unexpectedresulterror">UnexpectedResultError</a></li>
-  <li><a href="/error-troubleshooting/error-unexpecteduploadproblemerror">UnexpectedUploadProblemError</a></li>
-  <li><a href="/error-troubleshooting/error-unexpectedx264result">UnexpectedX264Result</a></li>
-  <li><a href="/error-troubleshooting/error-unreadablefileerror">UnreadableFileError</a></li>
-  <li><a href="/error-troubleshooting/error-unsupportedcodecerror">UnsupportedCodecError</a></li>
-  <li><a href="/error-troubleshooting/error-unsupportedencodingerror">UnsupportedEncodingError</a></li>
-  <li><a href="/error-troubleshooting/error-unsupportedencryptionerror">UnsupportedEncryptionError</a></li>
-  <li><a href="/error-troubleshooting/error-unsupportedtranscodecombinationerror">UnsupportedTranscodeCombinationError</a></li>
-  <li><a href="/error-troubleshooting/error-uploadaccessdeniederror">UploadAccessDeniedError</a></li>
-  <li><a href="/error-troubleshooting/error-uploadfailureerror">UploadFailureError</a></li>
-  <li><a href="/error-troubleshooting/error-uploadservernotfounderror">UploadServerNotFoundError</a></li>
-  <li><a href="/error-troubleshooting/error-uploadtimeouterror">UploadTimeoutError</a></li>
-  <li><a href="/error-troubleshooting/error-workertimeouterror">WorkerTimeoutError</a></li>
-</ul></div>
-</section>
+      </div>
+    </section>
+  </section>
+</article>
 
 <!-- complete bootstrap layout -->
     </div>

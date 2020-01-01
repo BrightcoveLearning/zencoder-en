@@ -1,11 +1,48 @@
 ---
 title: Getting Started
+description: Guides to help you get started using Zencoder.
+icon: '<i class="far fa-location-arrow"></i>'
 parent: Home
 ---
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:{{site.product_color}};
+    margin-right: 1rem;
+  }
+  .card-icon i {
+    color: {{site.product_color}};
+  }
+</style>
+
 <article class="bcls-article">
-  <h1>Getting Started</h1>
-  <summary>These topics will help you get started with Zencoder.</summary>
-  <section class="bcls-section">
-    <h2 id=""></h2>
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-icon">
+        {{ page.icon }}
+      </div>
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics in this section</h2>
+        <ul>
+        {% for item in site.data.navigation %}
+        {% if item.section == page.title %}
+              {% for entry in item.docs %}
+                <li><a href="{{ entry.url }}">{{ entry.name }}</a>
+                {% if entry.docs %}
+                  <ul>
+                    {% for subentry in entry.docs %}
+                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                </li>
+              {% endfor %}
+        {% endif %}
+      {% endfor %}
+  
+      </div>
+    </section>
   </section>
 </article>

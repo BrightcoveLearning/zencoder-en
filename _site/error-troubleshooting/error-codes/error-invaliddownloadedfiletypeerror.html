@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Zencoder Documentation</title>
+  <title></title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,7 +35,7 @@
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">Zencoder Documentation</li>
+      <li class="breadcrumb-item active" aria-current="page"></li>
     </ol>
   </nav>
 </header>
@@ -195,160 +195,24 @@
     </div>
 <!-- bootstrap layout -->
 
-<style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:rgb(65, 196, 181);
-    margin-right: 1rem;
-  }
-  .card-icon i {
-    color: rgb(65, 196, 181);
-  }
-</style>
+<h1>Error: InvalidDownloadedFileTypeError</h1>
+            <p>This topic provides details on the Zencoder API error: <code>InvalidDownloadedFileTypeError</code></p>
+                <article class="bcls-article"><section class="bcls-section"><h2 id="Meaning">Meaning</h2>
 
-<article class="landing-page-wrapper">
-  <section class="landing-page-header" id="landing_page_header">
-			<h1>Brightcove Zencoder Documentation</h1>
+<p>We tried to download a file at the specified address, but instead of a video or audio file, we got back something else, like a HTML or XML document. This could be something like a File Not Found error page, but these pages usually come back with a 404 response code (or some other error code), and this error only happens when the HTTP response code was 2XX, indicating that the website thought this was a successful request. So it may be a typo, a bad input URL, or a misconfigured error page.</p>
+</section><section class="bcls-section"><h2 id="Retry_this_job">Retry this job?</h2>
 
-			<p>Zencoder offers a fast and reliable transcoding service for video and audio files, as well as live streams. It can produce outputs for the web and a wide variety of devices, and can easily be integrated with your CMS and other applications.</p>
-<section class="card-wrapper">
-    
-    <section class="bcls-card" onclick="window.location.href='/getting-started'">
-
-      <div class="card-icon">
-        <i class="far fa-location-arrow"></i>
-      </div>
-
-<div class="card-content">
-  <h2>Getting Started</h2>
-  <ul><li><a href="/getting-started/overview-zencoder.html">Overview: Zencoder</a></li>
-  	<li><a href="/getting-started/quick-start-zencoder.html">Creating an Encoding Job</a></li>
-  	<li><a href="https://app.zencoder.com/request_builder">Create a Job with the Request Builder</a></li>
-  	<li><a href="/getting-started/output-settings.html">Output Settings</a></li>
-    <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
-    <li><a href="/zencoder-api/v2/api-reference/">API Reference</a></li>
-  </ul>
-</div>
+<p>Jobs with this error <strong>should not</strong> be retried. <a href="/error-troubleshooting/when-should-i-retry-failed-jobs">Learn more about retrying jobs.</a></p>
 </section>
-<section class="bcls-card">
-  <div class="card-icon">
-    <i class="far fa-info-circle"></i>
-  </div>
-
-<h2>General Information</h2>
-<h5>API Reference</h5>
-
-<ul><li><a href="https://docs.brightcove.com/zencoder-api/v2/doc/index.html">API Reference</a></li>
-</ul><h5>FAQs</h5>
-
-<ul><li><a href="/faq-basics">FAQ: Basics</a></li>
-	<li><a href="/faq-codecs-and-formats">FAQ: Codecs and Formats</a></li>
-	<li><a href="/faq-encoding">FAQ: Encoding</a></li>
-	<li><a href="/faq-file-transfers">FAQ: File Transfers</a></li>
-	<li><a href="/faq-zencoder-pricing">Zencoder Pricing</a></li>
-	<li><a href="/live-eol-faq">Zencoder Live EOL FAQ</a></li>
-
-	<li><a href="/using-zencoder-s3">Using Zencoder with S3</a></li>
-<ul><li><a href="/api-version-history">API Version History</a></li>
-	<li><a href="/faq-rate-limiting">Rate Limiting</a></li>
-</ul></section>
-<section class="bcls-card"><i class="far fa-qrcode"> </i> 
-
-<h2>Encoding Settings</h2>
-<ul><li><a href="/encoding-settings">Quick Reference</a></li>
-</ul><h5>General</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-job">Job Settings</a></li>
-	<li><a href="/encoding-settings/encoding-settings-general-output-settings">General Output Settings</a></li>
-	<li><a href="/cae-settings">CAE Settings</a></li>
-	<li><a href="/encoding-settings/encoding-settings-conditional-outputs">Conditional Outputs</a></li>
-	<li><a href="/encoding-settings/encoding-settings-notifications">Notifications</a></li>
-	<!--<li><a href="/node/18554">Syndication</a></li>-->
-</ul><h5>General Audio/Video</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-audio">Audio</a></li>
-	<li><a href="/encoding-settings/encoding-settings-audio-processing">Audio Processing</a></li>
-	<li><a href="/encoding-settings/encoding-settings-video">Video</a></li>
-	<li><a href="/encoding-settings/encoding-settings-video-processing">Video Processing</a></li>
-	<li><a href="/encoding-settings/encoding-settings-frame-rate">Frame Rate</a></li>
-	<li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control">Rate Control</a></li>
-	<li><a href="/encoding-settings/encoding-settings-resolution">Resolution</a></li>
-	<li><a href="/encoding-settings/encoding-settings-segmented-streaming">Segmented Streaming</a></li>
-	<li><a href="/encoding-settings/encoding-settings-transmuxing">Transmuxing</a></li>
-	<li><a href="/encoding-settings/encoding-settings-broadcast">Broadcast</a></li>
-</ul><h5>Formats and Codecs</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-format-and-codecs">Formats and Codecs</a></li>
-	<li><a href="/encoding-settings/encoding-settings-aac">AAC</a></li>
-	<li><a href="/encoding-settings/encoding-settings-flv">FLV</a></li>
-	<li><a href="/encoding-settings/encoding-settings-h264">H.264</a></li>
-	<li><a href="/encoding-settings/encoding-settings-hdr10">HDR10</a></li>
-	<li><a href="/encoding-settings/encoding-settings-mp4">MP4</a></li>
-	<li><a href="/encoding-settings/encoding-settings-vp6">VP6</a></li>
-</ul><h5>Assets</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-captions">Captions</a></li>
-	<li><a href="/encoding-settings/encoding-settings-clips">Clips</a></li>
-	<li><a href="/encoding-settings/encoding-settings-thumbnails">Thumbnails</a></li>
-	<li><a href="/encoding-settings/encoding-settings-watermarks">Watermarks</a></li>
-</ul><h5>Content Protection</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-encryption">Encryption</a></li>
-	<li><a href="/encoding-settings/encoding-settings-decryption">Decryption</a></li>
-	<li><a href="/encoding-settings/encoding-settings-drm">DRM</a></li>
-</ul><h5>Sources/Destinations</h5>
-
-<ul><li><a href="/encoding-settings/encoding-settings-aspera">Aspera</a></li>
-	<li><a href="/encoding-settings/encoding-settings-s3-settings">S3 Settings</a></li>
-</ul></section><section class="bcls-card"><i class="fas fa-qrcode"> </i> 
-
-<h2>Encoding Recommendations</h2>
-<ul><li><a href="/cae-guide">CAE Guide</a></li>
-	<li><a href="/advanced-audio-mapping-guide">Advanced Audio Mapping Guide</a></li>
-	<li><a href="/http-live-segmented-streaming-and-playlists">HTTP Live Streaming (HLS)</a></li>
-	<li><a href="/http-live-streaming-using-fragmented-mp4">HTTP Live Streaming using fragmented MP4</a></li>
-	<li><a href="/iosmobile-encoding">iOS/Mobile Encoding</a></li>
-	<li><a href="/html5-encoding">HTML5 Encoding</a></li>
-	<li><a href="/dash-streaming-and-playlists">DASH Streaming and Playlists</a></li>
-	<li><a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming</a></li>
-	<li><a href="/highwinds-smil">Highwinds SMIL</a></li>
-	<li><a href="/using-zencoder-azure">Using Zencoder with Azure</a></li>
-	<li><a href="/creating-mp4-and-hls-outputs-together">Transmuxing: HLS and MP4 Outputs Together</a></li>
-	<li><a href="/hevch265-guide">HEVC/H.265 Guide</a></li>
-	<li><a href="/hdr10-video-output">HDR10 Video Output</a></li>
-	<li><a href="/vp9-guide">VP9 Guide</a></li>
-	<li><a href="/avc-intra-guide">AVC-Intra Guide</a></li>
-	<li><a href="/as11-mxf">AS11 MXF OP1a Guide</a></li>
-	<li><a href="/h264-advanced-guide">H.264 Advanced Guide</a></li>
-	<li><a href="/vp6-advanced-guide">VP6 Advanced Guide</a></li>
-</ul></section><section class="bcls-card"><i class="far fa-handshake-alt"> </i> 
-
-<h2>Advanced Integration</h2>
-<ul><li><a href="/100-integration-reliability">Integration Reliability</a></li>
-	<li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs">When Should I Retry Failed Jobs</a></li>
-	<li><a href="/using-read-only-api-keys">Using Read-only API Keys</a></li>
-	<li><a href="/region-outages">Region Outages</a></li>
-</ul></section></section></article></div>
-      
-    </div>
-</div></div>
-          </div>
-  
-  </div>
-  </div>
-
-
-  </div>
-
-              </section>
-
-                </div>
-  </div>
-
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -356,7 +220,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 30 Dec 2019
+  Page last updated on 29 Dec 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -437,6 +301,8 @@
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/feedback-beacon.js"></script>
 </body>

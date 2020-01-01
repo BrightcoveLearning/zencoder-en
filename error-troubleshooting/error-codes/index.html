@@ -1,0 +1,165 @@
+---
+title: Errors Codes
+description: Error code explanations to help you decide what to do when something goes wrong.
+icon: '<i class="fal fa-bug"></i>'
+parent: Home
+---
+<style>
+.error-list {
+  margin-left: -2rem;
+  font-size: smaller;
+}
+.bcls-table td>code {
+  font-size: .9rem;
+}
+</style>
+
+<article class="bcls-article">
+  <h1>Error Codes</h1>
+  <summary>This topic provides a summary of HTTP status codes for Zencoder API requests and an <a href="#zencoder_error_codes">index of error codes</a> returned by the Zencoder API. Click on any of the <a href="#zencoder_error_codes">error codes</a> to see more details. </summary>
+
+  <section class="bcls-section">
+    <h2 id="http_status_codes">HTTP status codes</h2>
+
+    <p>The following table lists the HTTP response code for Zencoder API requests, in the case of errors, indicates the most likely cause, where possible.</p>
+
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">HTTP Response Codes</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Status Code</th>
+          <th>Probable Explanation</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td class="language-editable"><code>200 OK</code></td>
+          <td class="language-editable">Standard success response for actions that do not create a new asset</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>201 CREATED</code></td>
+          <td class="language-editable">Standard response for requests that create new assets</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>204 NO CONTENT</code></td>
+          <td class="language-editable">Standard response for a request that returns no response</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>400 BAD REQUEST</code></td>
+          <td class="language-editable">Invalid JSON in the request body</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>401 UNAUTHORIZED</code></td>
+          <td class="language-editable">Missing or invalid API Key</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>402 PAYMENT REQUIRED</code></td>
+          <td class="language-editable">Returned when an API request attempts to turn off Zencoder integration mode https://app.zencoder.com/docs/api/accounts/integration on an account where billing has not been setup. You should go to <a href="https://www.zencoder.com">www.zencoder.com</a> and choose a payment plan</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>403 FORBIDDEN</code></td>
+          <td class="language-editable"><a href="/getting-started/faq-rate-limiting">rate limit</a> for requests exceeded, or in response to a retry/resubmit API request for resources that have been retried too many times</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>404 NOT FOUND</code></td>
+          <td class="language-editable">Incorrect request URL or invalid/old job ID</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>406 NOT ACCEPTIBLE</code></td>
+          <td class="language-editable">Returned for attempting to create a non-AWS credential through the API</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>409 CONFLICT</code></td>
+          <td class="language-editable">Generally only when trying to retry/resubmit a job that's too old</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>422 UNPROCESSIBLE ENTITY</code></td>
+          <td class="language-editable">Returned when an API request cannot be validated</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>500 INTERNAL SERVER ERROR</code></td>
+          <td class="language-editable">Either a temporary issue with Zencoder or something wrong with the request</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>503 SERVICE UNAVAILABLE</code></td>
+          <td class="language-editable">Zencoder temporarily unavailable, probably during scheduled maintenance</td>
+        </tr>
+        <tr>
+          <td class="language-editable"><code>504 GATEWAY TIMEOUT</code></td>
+          <td class="language-editable">Returned if the Zencoder service is down</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="zencoder_error_codes">Zencoder Error codes</h2>
+
+    <div style="display:inline-block;padding:1em; margin: auto 0;vertical-align:top;">
+      <ul class="error-list">
+        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror">AkamaiNetStorageFileSizeError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror">ChecksumMismatchError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror">DimensionTooSmallError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror">DownloadAccessDeniedError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror">DownloadFailureError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror">DownloadTimeoutError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror">FileNotFoundError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-filepermanentlymovederror">FilePermanentlyMovedError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror">InaccurateDurationError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror">IncompatibleWithDynamicProfilesError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound">InputFileNotFound</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror">InvalidAccessKeyIdError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror">InvalidAudioSettingsError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror">InvalidCodecCombinationError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror">InvalidDownloadedFileTypeError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror">InvalidEncryptionSettingsError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror">InvalidFilePathError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror">InvalidFormatCodecError</a></li>
+      </ul>
+    </div>
+
+    <div style="display:inline-block;padding:1em; margin: auto 0;vertical-align:top;">
+      <ul class="error-list">
+        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror">InvalidFrameRateError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror">InvalidUsernameOrPasswordError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror">InvalidVideoBitrateError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror">InvalidVideoSettingsError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror">NoMediaError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror">QuicktimeReferenceError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror">RemoteServerProblemError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror">RTMPAuthFailedError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached">RTMPMaxStreamsXIdReached</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse">RTMPStreamNameAlreadyInUse</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror">S3BucketNotFoundError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror">SegmentingError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror">SkippedSourceError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror">ThumbnailError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror">TranscodingError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror">Transfer::InvalidGranteeGroupURLError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror">Transfer::InvalidGranteeIDError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror">TruncatedFileError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror">UnableToCreateDynamicProfilesError</a></li>
+      </ul>
+    </div>
+
+    <div style="display:inline-block;padding:1em; margin: auto 0;vertical-align:top;">
+      <ul class="error-list">
+        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror">UnexpectedDownloadProblemError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult">UnexpectedFfmpegResult</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult">UnexpectedMplayerResult</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult">UnexpectedProgenResult</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror">UnexpectedResultError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror">UnexpectedUploadProblemError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result">UnexpectedX264Result</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror">UnreadableFileError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror">UnsupportedCodecError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror">UnsupportedEncodingError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror">UnsupportedEncryptionError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror">UnsupportedTranscodeCombinationError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror">UploadAccessDeniedError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror">UploadFailureError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror">UploadServerNotFoundError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror">UploadTimeoutError</a></li>
+        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror">WorkerTimeoutError</a></li>
+      </ul>
+    </div>
+  </section>
