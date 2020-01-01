@@ -133,7 +133,7 @@ Audio: AAC, 1-2 channels</p>
 
 <p>This profile plays on the last major set of H.264-based mobile devices: notably, older iPods and some Blackberries. The tradeoff is significantly smaller video: 320x240, at no more than 768kbps.</p>
 
-<p>Older iPhone/iPod devices ask for the "H.264 Baseline Low Complexity" profile. "Low Complexity" isn't actually a H.264 standard – it actually just means "only 1 reference frame". The jury is out on how much Apple devices really enforce this, but for true compatibility, you should probably use Baseline profile and limit reference frames to 1. You can do this with the <a href="/encoding-settings/encoding-settings-h264#h264-reference-frames">h264_reference_frames</a> setting.</p>
+<p>Older iPhone/iPod devices ask for the "H.264 Baseline Low Complexity" profile. "Low Complexity" isn't actually a H.264 standard – it actually just means "only 1 reference frame". The jury is out on how much Apple devices really enforce this, but for true compatibility, you should probably use Baseline profile and limit reference frames to 1. You can do this with the <a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264-reference-frames">h264_reference_frames</a> setting.</p>
 
 <h3>Plays on:</h3>
 
@@ -166,7 +166,7 @@ Audio: AAC, 1-2 channels</p>
 <p><strong>Note</strong></p>
 
 <ul><li>These videos will look terrible, but that's the cost of supporting 3GP phones.</li>
-	<li>In order to deliver 3GP video as an RTMP stream it needs to be "hinted". Set <a href="/encoding-settings/encoding-settings-mp4#hint">hint</a> to <code>true</code> in your API request to enable it.</li>
+	<li>In order to deliver 3GP video as an RTMP stream it needs to be "hinted". Set <a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#hint">hint</a> to <code>true</code> in your API request to enable it.</li>
 </ul><h3>Plays on:</h3>
 
 <p><strong>Hard to say.</strong> There are thousands of types of 3GP devices, and each one is a little different. Consider these a starting point.</p>

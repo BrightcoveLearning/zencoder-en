@@ -465,8 +465,9 @@ parent: Encoding Settings
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap"><code>decoder_bitrate_cap</code></a></td>
           <td><span class="none">none</span></td>
           <td>Max bitrate fed to decoder buffer. Typically used for video intended for streaming, or for targeting specific devices (e.g. <code>Blu-Ray</code>).</td>
-      </tr>
-      <tr><td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"> <code>decoder_buffer_size</code></a></td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"> <code>decoder_buffer_size</code></a></td>
           <td><span class="none">none</span></td>
           <td>Size of the decoder buffer, used in conjunction with <code>bitrate_cap</code>.</td>
         </tr>
@@ -573,8 +574,10 @@ parent: Encoding Settings
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_codec_level"><code>video_codec_level</code></a></td>
           <td>Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels"><code>H.264-levels</code></a>, <a href=" http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels"> <code>HEVC-levels</code></a></td>
-				<td>The video codec level to use (H.264, HEVC).</td>
-			</tr><tr><td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_bframes"> <code>video_bframes</code></a></td>
+          <td>The video codec level to use (H.264, HEVC).</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_bframes"> <code>video_bframes</code></a></td>
           <td>0</td>
           <td>The maximum number of consecutive B-frames (H.264, HEVC)</td>
         </tr>
@@ -1028,22 +1031,22 @@ parent: Encoding Settings
           <td>Make the output publicly readable on S3.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-s3-settings#rrs"><code>rrs</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#rrs"><code>rrs</code></a></td>
           <td>false</td>
           <td>Amazon S3's Reduced Redundancy Storage.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-s3-settings#access_control"><code>access_control</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#access_control"><code>access_control</code></a></td>
           <td><span class="none">none</span></td>
           <td>Fine-grained access control rules for files sent to S3.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-s3-settings#grantee"><code>grantee</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#grantee"><code>grantee</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set the grantee for fine-grained S3 access_control permissions.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-s3-settings#permission"><code>permission</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#permission"><code>permission</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set the permission for a grantee when using fine-grained access_control.</td>
         </tr>
@@ -1063,22 +1066,22 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-notifications#notifications"><code>notifications</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-notifications.html#notifications"><code>notifications</code></a></td>
           <td><span class="none">none</span></td>
           <td>Be notified when a job or output is complete.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-notifications#url"><code>url</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-notifications.html#url"><code>url</code></a></td>
           <td><span class="none">none</span></td>
           <td>Be notified when a job or output is complete.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-notifications#format"><code>format</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-notifications.html#format"><code>format</code></a></td>
           <td><span class="none">none</span></td>
           <td>A format and content type for notifications.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-notifications#headers"><code>headers</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-notifications.html#headers"><code>headers</code></a></td>
           <td><span class="none">none</span></td>
           <td>Headers to pass along on HTTP notifications.</td>
         </tr>
@@ -1103,52 +1106,52 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#min_size"><code>min_size</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_size"><code>min_size</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source dimensions are smaller than the given dimensions.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#max_size"><code>max_size</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_size"><code>max_size</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source dimensions are larger than the given dimensions.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#min_duration"><code>min_duration</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_duration"><code>min_duration</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source duration is shorter than the given duration, in seconds.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#max_duration"><code>max_duration</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_duration"><code>max_duration</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source duration is longer than the given duration, in seconds.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#min_audio_bitrate"><code>min_audio_bitrate</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_audio_bitrate"><code>min_audio_bitrate</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source audio bitrate is less than the specified bitrate (in kbps).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#max_audio_bitrate"><code>max_audio_bitrate</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_audio_bitrate"><code>max_audio_bitrate</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source audio bitrate is greater than the specified bitrate (in kbps).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#min_video_bitrate"><code>min_video_bitrate</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_video_bitrate"><code>min_video_bitrate</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source video bitrate is less than the specified bitrate (in kbps).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#max_video_bitrate"><code>max_video_bitrate</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_video_bitrate"><code>max_video_bitrate</code></a></td>
           <td><span class="none">none</span></td>
           <td>Skip output if the source video bitrate is greater than the specified bitrate (in kbps).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#require_audio"><code>require_audio</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#require_audio"><code>require_audio</code></a></td>
           <td>false</td>
           <td>Skip output if the source file does not include an audio track.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-conditional-outputs#require_video"><code>require_video</code></a></td>
+          <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#require_video"><code>require_video</code></a></td>
           <td>false</td>
           <td>Skip output if the source file does not include a video track.</td>
         </tr>
@@ -1168,114 +1171,114 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#streaming_delivery_format"><code>streaming_delivery_format</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streaming_delivery_format"><code>streaming_delivery_format</code></a></td>
           <td><span class="none">none</span></td>
           <td>Sets the format/protocol configuration for a streamable output.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#streaming_delivery_profile"><code>streaming_delivery_profile</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streaming_delivery_profile"><code>streaming_delivery_profile</code></a></td>
           <td>live</td>
           <td>Sets the specific profile of a streaming delivery format.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#playlist_format"><code>playlist_format</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#playlist_format"><code>playlist_format</code></a></td>
           <td><span class="none">none</span></td>
           <td>Sets the format for a playlist output.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#segment_seconds"><code>segment_seconds</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code>segment_seconds</code></a></td>
           <td>10</td>
           <td>Sets the maximum duration of each segment in a segmented output.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#alternate_audio"><code>alternate_audio</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#alternate_audio"><code>alternate_audio</code></a></td>
           <td><span class="none">none</span></td>
           <td>Provides a set of alternate audio streams for HLS playlists.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#streams"><code>streams</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streams"><code>streams</code></a></td>
           <td><span class="none">none</span></td>
           <td>Provides a list of stream info to be reformatted as a playlist</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#path"><code>path</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#path"><code>path</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies the path to a stream manifest file</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#bandwidth"><code>bandwidth</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#bandwidth"><code>bandwidth</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies the bandwidth of a playlist stream</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#resolution"><code>resolution</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#resolution"><code>resolution</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies the resolution of a playlist stream</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#codecs"><code>codecs</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#codecs"><code>codecs</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies the codecs used in a playlist stream</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#audio"><code>audio</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#audio"><code>audio</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies an alternate audio track for the playlist.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#segment_image_url"><code>segment_image_url</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_image_url"><code>segment_image_url</code></a></td>
           <td><span class="none">none</span></td>
           <td>An image to display on audio-only segments</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#segment_video_snapshots"><code>segment_video_snapshots</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_video_snapshots"><code>segment_video_snapshots</code></a></td>
           <td>false</td>
           <td>When segmenting a video file into audio-only segments, take snapshots of the video as thumbnails for each segment.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#source"><code>source</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#source"><code>source</code></a></td>
           <td><span class="none">none</span></td>
           <td>Specifies the source media for a playlist stream</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#max_hls_protocol_version"><code>max_hls_protocol_version</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#max_hls_protocol_version"><code>max_hls_protocol_version</code></a></td>
           <td>3 for Live outputs, 5 for sample AES encryption; otherwise, 2.</td>
           <td>The maximum HLS protocol to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#hls_optimized_ts"><code>hls_optimized_ts</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#hls_optimized_ts"><code>hls_optimized_ts</code></a></td>
           <td>true</td>
           <td>Optimize TS segment files for HTTP Live Streaming on iOS.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#prepare_for_segmenting"><code>prepare_for_segmenting</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare_for_segmenting"><code>prepare_for_segmenting</code></a></td>
           <td><span class="none">none</span></td>
           <td>Include captions and keyframe timing for segmenting.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#smil-base-url"><code>smil_base_url</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#smil-base-url"><code>smil_base_url</code></a></td>
           <td><span class="none">none</span></td>
           <td>Add &lt;meta base="smil_base_url_value"/&gt; to the &lt;head&gt; section of an SMIL playlist.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#byte_range_segmenting"><code>byte_range_segmenting</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#byte_range_segmenting"><code>byte_range_segmenting</code></a></td>
           <td>false</td>
           <td>Configures HLS segmenting to produce a single output file rather than one file per segment.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#generate_keyframe_manifest"><code>generate_keyframe_manifest</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#generate_keyframe_manifest"><code>generate_keyframe_manifest</code></a></td>
           <td>false</td>
           <td>Generates an HLS keyframe (I-frame) manifest which is required for fast-forward and reverse playback.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#keyframe_manifest_filename"><code>keyframe_manifest_filename</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#keyframe_manifest_filename"><code>keyframe_manifest_filename</code></a></td>
           <td>iframe_index.m3u8</td>
           <td>Override the default filename for the HLS keyframe manifest.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-segmented-streaming#allow_skipped_sources"><code>allow_skipped_sources</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#allow_skipped_sources"><code>allow_skipped_sources</code></a></td>
           <td>false</td>
-          <td>Ignore sources that are <a href="/encoding-settings/encoding-settings-conditional-outputs">conditional outputs</a> which have been skipped.</td>
+          <td>Ignore sources that are <a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">conditional outputs</a> which have been skipped.</td>
         </tr>
       </tbody>
     </table>
@@ -1293,37 +1296,37 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_method"><code>encryption_method</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_method"><code>encryption_method</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set the encryption method to use for encrypting.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_key"><code>encryption_key</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key"><code>encryption_key</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set a single encryption key to use rather than having Zencoder generate one</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_key_url"><code>encryption_key_url</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_url"><code>encryption_key_url</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set a URL to a single encryption key to use rather than having Zencoder generate one</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_key_rotation_period"><code>encryption_key_rotation_period</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_rotation_period"><code>encryption_key_rotation_period</code></a></td>
           <td><span class="none">none</span></td>
           <td>Rotate to a new encryption key after a number of segments</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_key_url_prefix"><code>encryption_key_url_prefix</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_url_prefix"><code>encryption_key_url_prefix</code></a></td>
           <td><span class="none">none</span></td>
           <td>Prepend key URLs with the passed string</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_iv"><code>encryption_iv</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_iv"><code>encryption_iv</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set an initialization vector to use when encrypting</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-encryption#encryption_password"><code>encryption_password</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_password"><code>encryption_password</code></a></td>
           <td><span class="none">none</span></td>
           <td>Sets a password to use for generating an initialization vector</td>
         </tr>
@@ -1343,22 +1346,22 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-decryption#decryption_method"><code>decryption_method</code></a></td>
-          <td>aes-128-cbc (if <a href="/encoding-settings/encoding-settings-decryption#decryption_key"> <code>decryption_key</code></a> or <a href="/encoding-settings/encoding-settings-decryption#decryption_key_url"> <code>decryption_key_url</code></a> are set)</td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_method"><code>decryption_method</code></a></td>
+          <td>aes-128-cbc (if <a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key"> <code>decryption_key</code></a> or <a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key_url"> <code>decryption_key_url</code></a> are set)</td>
           <td>Set the decryption algorithm to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-decryption#decryption_key"><code>decryption_key</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key"><code>decryption_key</code></a></td>
           <td><span class="none">none</span></td>
           <td>Set the decryption key to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-decryption#decryption_key_url"><code>decryption_key_url</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key_url"><code>decryption_key_url</code></a></td>
           <td><span class="none">none</span></td>
           <td>The URL of a decryption key file to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-decryption#decryption_password"><code>decryption_password</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_password"><code>decryption_password</code></a></td>
           <td><span class="none">none</span></td>
           <td>The password used in combination with the key to decrypt the input file.</td>
         </tr>
@@ -1378,113 +1381,117 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#drm"><code>drm</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#drm"><code>drm</code></a></td>
           <td>{}</td>
           <td>Hash of DRM options</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#method"><code>method</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#method"><code>method</code></a></td>
           <td><span class="none">none</span></td>
           <td>The Digital Rights Management (DRM) method used to protect content.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#provider"><code>provider</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#provider"><code>provider</code></a></td>
           <td><span class="none">none</span></td>
           <td>The Digital Rights Management (DRM) provider used.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#key_id"><code>key_id</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#key_id"><code>key_id</code></a></td>
           <td><span class="none">none</span></td>
           <td>Identifier of the key to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#key_guid"><code>key_guid</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#key_guid"><code>key_guid</code></a></td>
           <td><span class="none">none</span></td>
           <td>Identifier of the key to use.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#user_key"><code>user_key</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#user_key"><code>user_key</code></a></td>
           <td><span class="none">none</span></td>
           <td>The user key from the DRM provider.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#server_key"><code>server_key</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#server_key"><code>server_key</code></a></td>
           <td><span class="none">none</span></td>
           <td>The server key from the DRM provider.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#media_id"><code>media_id</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#media_id"><code>media_id</code></a></td>
           <td><span class="none">none</span></td>
           <td>Unique identifier for the media.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#content_id"><code>content_id</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#content_id"><code>content_id</code></a></td>
           <td><span class="none">none</span></td>
           <td>Unique identifier for the content.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#content_key"><code>content_key</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#content_key"><code>content_key</code></a></td>
           <td><span class="none">none</span></td>
           <td>Unique identifier for the content.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#schemas"><code>schemas</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#schemas"><code>schemas</code></a></td>
           <td><span class="none">none</span></td>
           <td>Information about DRM providers when using Common Encryption.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#type"><code>type</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#type"><code>type</code></a></td>
           <td><span class="none">none</span></td>
           <td>Provider type for this DRM schema.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-drm#license_acquisition_url"><code>license_acquisition_url</code></a></td>
+          <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#license_acquisition_url"><code>license_acquisition_url</code></a></td>
           <td><span class="none">none</span></td>
           <td>License acquisition URL for <code>Playready CENC DRM</code> schema.</td>
-			</tr></tbody></table></section><section class=" bcls-section">
-              <h2 id="H264">H.264</h2>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class=" bcls-section">
+    <h2 id="H264">H.264</h2>
 
-              <table class="bcls-table">
-                <thead class="bcls-table__head">
-                  <tr>
-                    <th>Setting</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody class="bcls-table__body">
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#h264_reference_frames"><code>h264_reference_frames</code></a></td>
-                    <td>3</td>
-                    <td>A number of reference frames to use in H.264 video.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#h264_profile">h264_profile</a></td>
-                    <td>baseline&gt;</td>
-                    <td>The H.264 profile to use.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#h264_level"><code>h264_level</code></a></td>
-                    <td>Automatically calculated using <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 level chart</a> based on the output video.</td>
-                    <td>The H.264 level to use.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#h264_bframes"><code>h264_bframes</code></a></td>
-                    <td>0</td>
-                    <td>The maximum number of consecutive B-frames.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#tuning"><code>tuning</code></a></td>
-                    <td><span class="none">none</span></td>
-                    <td>Tune the output video for a specific content type.</td>
-                  </tr>
-                  <tr>
-                    <td><a href="/encoding-settings/encoding-settings-h264#crf"><code>crf</code></a></td>
-                    <td><span class="none">none</span></td>
-                    <td>Bitrate control setting.</td>
-                  </tr>
-                </tbody>
-              </table>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Setting</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_reference_frames"><code>h264_reference_frames</code></a></td>
+          <td>3</td>
+          <td>A number of reference frames to use in H.264 video.</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_profile">h264_profile</a></td>
+          <td>baseline&gt;</td>
+          <td>The H.264 profile to use.</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_level"><code>h264_level</code></a></td>
+          <td>Automatically calculated using <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 level chart</a> based on the output video.</td>
+          <td>The H.264 level to use.</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_bframes"><code>h264_bframes</code></a></td>
+          <td>0</td>
+          <td>The maximum number of consecutive B-frames.</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code>tuning</code></a></td>
+          <td><span class="none">none</span></td>
+          <td>Tune the output video for a specific content type.</td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf"><code>crf</code></a></td>
+          <td><span class="none">none</span></td>
+          <td>Bitrate control setting.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <section class="bcls-section">
     <h2 id="HDR10">HDR10</h2>
@@ -1499,62 +1506,62 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_red_x"><code>master_display.red.x</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_x"><code>master_display.red.x</code></a></td>
           <td>none</td>
           <td>Color volume x setting for red.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_red_y"><code>master_display.red.y</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_y"><code>master_display.red.y</code></a></td>
           <td>none</td>
           <td>Color volume y setting for red.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_green_x"><code>master_display.green.x</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_x"><code>master_display.green.x</code></a></td>
           <td>none.</td>
           <td>Color volume x setting for green.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_green_y"><code>master_display.green.y</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_y"><code>master_display.green.y</code></a></td>
           <td>none.</td>
           <td>Color volume y setting for green.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_blue_x"><code>master_display.blue.x</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_x"><code>master_display.blue.x</code></a></td>
           <td>none.</td>
           <td>Color volume x setting for blue.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_blue_y"><code>master_display.blue.y</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_y"><code>master_display.blue.y</code></a></td>
           <td>none.</td>
           <td>Color volume y setting for blue.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_white_point_x"><code>master_display.white_point.x</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_x"><code>master_display.white_point.x</code></a></td>
           <td>none.</td>
           <td>Color volume x setting for white point.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_white_point_y"><code>master_display.white_point.y</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_y"><code>master_display.white_point.y</code></a></td>
           <td>none.</td>
           <td>Color volume y setting for white point.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_luminance_min"><code>master_display.luminance.min</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_min"><code>master_display.luminance.min</code></a></td>
           <td>none.</td>
           <td>Minimum luminance in nits or candelas per square meter (cd/m2).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#master_display_luminance_max"><code>master_display.luminance.max</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_max"><code>master_display.luminance.max</code></a></td>
           <td>none.</td>
           <td>Maximum luminance in nits or candelas per square meter (cd/m2).</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#max_content_light_level"><code>max_content_light_level</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code>max_content_light_level</code></a></td>
           <td>none.</td>
           <td>Maximum light level for the content as a whole nits or candelas per square meter (cd/m2) - integer values.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-hdr10#max_frame_average_light_level"><code>max_frame_average_light_level</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code>max_frame_average_light_level</code></a></td>
           <td>none.</td>
           <td>Maximum average light level for content frames nits or candelas per square meter (cd/m2) - integer values. Although values up to 10000 are allowed, values in the 100-200 range will generally produce the best results.</td>
         </tr>
@@ -1574,27 +1581,27 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-flv#cue_points"><code>cue_points</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#cue_points"><code>cue_points</code></a></td>
           <td><span class="none">none</span></td>
           <td>Add event or navigation cue points to a FLV video.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-flv#type"><code>type</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#type"><code>type</code></a></td>
           <td><span class="none">none</span></td>
           <td>A cue point type.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-flv#time"><code>time</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#time"><code>time</code></a></td>
           <td><span class="none">none</span></td>
           <td>A cue point time, in seconds.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-flv#name"><code>name</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#name"><code>name</code></a></td>
           <td><span class="none">none</span></td>
           <td>A cue point name.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-flv#data"><code>data</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#data"><code>data</code></a></td>
           <td><span class="none">none</span></td>
           <td>Cue point data.</td>
         </tr>
@@ -1614,67 +1621,67 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_temporal_down_watermark"><code>vp6_temporal_down_watermark</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_temporal_down_watermark"><code>vp6_temporal_down_watermark</code></a></td>
           <td>20</td>
           <td>VP6 temporal down watermark percentage.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_temporal_resampling"><code>vp6_temporal_resampling</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_temporal_resampling"><code>vp6_temporal_resampling</code></a></td>
           <td>True when encoding with a low number of bits per pixel. Otherwise, false.</td>
           <td>Enable or disable VP6 temporal resampling.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_undershoot_pct"><code>vp6_undershoot_pct</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_undershoot_pct"><code>vp6_undershoot_pct</code></a></td>
           <td>90</td>
           <td>Target a slightly lower datarate.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_profile"><code>vp6_profile</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_profile"><code>vp6_profile</code></a></td>
           <td>vp6e</td>
           <td>VP6 profile: vp6s or vp6e.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_compression_mode"><code>vp6_compression_mode</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_compression_mode"><code>vp6_compression_mode</code></a></td>
           <td>good</td>
           <td>VP6 compression mode: <code>good</code> or <code>best</code>.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_2pass_min_section"><code>vp6_2pass_min_section</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_2pass_min_section"><code>vp6_2pass_min_section</code></a></td>
           <td>40</td>
           <td>For two-pass VBR encoding, the lowest datarate that the encoder will allow.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_2pass_max_section"><code>vp6_2pass_max_section</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_2pass_max_section"><code>vp6_2pass_max_section</code></a></td>
           <td>400</td>
           <td>For two-pass VBR encoding, the highest datarate that the encoder will allow.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_stream_prebuffer"><code>vp6_stream_prebuffer</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_stream_prebuffer"><code>vp6_stream_prebuffer</code></a></td>
           <td>6</td>
           <td>Seconds of preload that are necessary before starting playback.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_stream_max_buffer"><code>vp6_stream_max_buffer</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_stream_max_buffer"><code>vp6_stream_max_buffer</code></a></td>
           <td><span class="none">none</span></td>
           <td>Maximum decoder buffer size</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_deinterlace_mode"><code>vp6_deinterlace_mode</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_deinterlace_mode"><code>vp6_deinterlace_mode</code></a></td>
           <td>adaptive</td>
           <td>Deinterlace mode for VP6</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#vp6_denoise_level"><code>vp6_denoise_level</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_denoise_level"><code>vp6_denoise_level</code></a></td>
           <td>0</td>
           <td>Denoise level for VP6</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#alpha_transparency"><code>alpha_transparency</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#alpha_transparency"><code>alpha_transparency</code></a></td>
           <td>false</td>
           <td>Enable alpha transparency. Currently, only supported by VP6.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-vp6#constant_bitrate"><code>constant_bitrate</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#constant_bitrate"><code>constant_bitrate</code></a></td>
           <td>false</td>
           <td>Use constant bitrate (CBR) encoding.</td>
         </tr>
@@ -1694,12 +1701,12 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-mp4#hint"><code>hint</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#hint"><code>hint</code></a></td>
           <td>false</td>
           <td>Enable hinting of MP4 files for RTP/RTSP.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-mp4#mtu_size"><code>mtu_size</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#mtu_size"><code>mtu_size</code></a></td>
           <td>1450</td>
           <td>Set MTU size for MP4 hinting.</td>
         </tr>
@@ -1719,12 +1726,12 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-aac#max_aac_profile"><code>max_aac_profile</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html#max_aac_profile"><code>max_aac_profile</code></a></td>
           <td>he-aac</td>
           <td>What is the most advanced (compressed) AAC profile to allow?</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-aac#force_aac_profile"><code>force_aac_profile</code></a></td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html#force_aac_profile"><code>force_aac_profile</code></a></td>
           <td><span class="none">none</span></td>
           <td>Force the use of a particular AAC profile, rather than letting Zencoder choose the best profile for the bitrate.</td>
         </tr>
@@ -1744,47 +1751,47 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#video_codec_preset"><code>video_codec_preset</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#video_codec_preset"><code>video_codec_preset</code></a></td>
           <td><span class="none">none</span></td>
           <td>Video encoding preset to allow compatibility with specific industry standards.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#format_preset"><code>format_preset</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#format_preset"><code>format_preset</code></a></td>
           <td><span class="none">none</span></td>
           <td>Format preset to allow compatibility with specific industry standards.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts_muxrate"><code>ts_muxrate</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_muxrate"><code>ts_muxrate</code></a></td>
           <td><span class="none">none</span></td>
           <td>The maximum rate in kbps that the transport stream can be muxed. Used with the ts format only.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts_pmt_pid"><code>ts_pmt_pid</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_pmt_pid"><code>ts_pmt_pid</code></a></td>
           <td><span class="none">none</span></td>
           <td>Override the packet id of the Program Map Table.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts-video-pid"><code>ts_video_pid</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts-video-pid"><code>ts_video_pid</code></a></td>
           <td><span class="none">none</span></td>
           <td>Override the packet id of video data.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts_audio_pid"><code>ts_audio_pid</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_audio_pid"><code>ts_audio_pid</code></a></td>
           <td><span class="none">none</span></td>
           <td>Override the packet id of audio data.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts_pcr_pid"><code>ts_pcr_pid</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_pcr_pid"><code>ts_pcr_pid</code></a></td>
           <td><span class="none">none</span></td>
           <td>Override the packet id of the Program Clock Reference.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#ts_cbr"><code>ts_cbr</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_cbr"><code>ts_cbr</code></a></td>
           <td>false</td>
           <td>Create CBR output by stuffing packets at the transport stream layer</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-broadcast#lossless_video"><code>lossless_video</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#lossless_video"><code>lossless_video</code></a></td>
           <td>false</td>
           <td>Enables lossless video encoding if supported by the video codec.</td>
         </tr>
@@ -1804,17 +1811,17 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-aspera#aspera_transfer_policy"><code>aspera_transfer_policy</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#aspera_transfer_policy"><code>aspera_transfer_policy</code></a></td>
           <td>fair</td>
           <td>How to allocate available bandwidth for Aspera file transfers.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-aspera#transfer_minimum_rate"><code>transfer_minimum_rate</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#transfer_minimum_rate"><code>transfer_minimum_rate</code></a></td>
           <td>1000</td>
           <td>A targeted rate in Kbps for data transfer minimums.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-aspera#transfer_maximum_rate"><code>transfer_maximum_rate</code></a></td>
+          <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#transfer_maximum_rate"><code>transfer_maximum_rate</code></a></td>
           <td>250000</td>
           <td>A targeted rate in Kbps for data transfer maximums.</td>
         </tr>
@@ -1834,12 +1841,12 @@ parent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-transmuxing#copy_video"><code>copy_video</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html#copy_video"><code>copy_video</code></a></td>
           <td>false</td>
           <td>Copy the video track of the input file</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/encoding-settings-transmuxing#copy_audio"><code>copy_audio</code></a></td>
+          <td><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html#copy_audio"><code>copy_audio</code></a></td>
           <td>false</td>
           <td>Copy the audio track of the input file</td>
         </tr>

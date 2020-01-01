@@ -38,7 +38,7 @@ parent:
 <aside class="bcls-aside bcls-aside--information">Note: some players do not handle the case where the audio and video stream lengths differ by more than a segment's duration. If you encounter this, try using a shorter segment length.</aside><p><strong>NOTES</strong></p>
 
 <ul><li>A job must have at least one standard or segmented output; creating jobs with only playlist outputs will not work.</li>
-	<li>Playlist outputs will ignore most output options, except for <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url">url</a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#base-url"><code class="notranslate">base_url</code></a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#filename"><code class="notranslate">filename</code></a>, <a href="#streams"><code class="notranslate">streams</code></a>, <a href="/encoding-settings/encoding-settings-s3-settings#public"><code class="notranslate">public</code></a>, and <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code class="notranslate">type</code></a>.</li>
+	<li>Playlist outputs will ignore most output options, except for <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url">url</a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#base-url"><code class="notranslate">base_url</code></a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#filename"><code class="notranslate">filename</code></a>, <a href="#streams"><code class="notranslate">streams</code></a>, <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public"><code class="notranslate">public</code></a>, and <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code class="notranslate">type</code></a>.</li>
 	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package-format">ZIP archive</a>.</li>
 </ul></section><section class="bcls-section"><h2 id="streaming_delivery_format" class="notranslate">streaming_delivery_format</h2>
 <code class="notranslate">streaming_delivery_format:String</code>
@@ -860,7 +860,7 @@ parent:
 
 <p><strong>Description:</strong></p>
 
-<p>When generating the playlist, instead of failing the output if any of the referenced streams have been skipped (as part of the <a href="/encoding-settings/encoding-settings-conditional-outputs">conditional outputs</a> functionality), just leave them out of the playlist.</p>
+<p>When generating the playlist, instead of failing the output if any of the referenced streams have been skipped (as part of the <a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">conditional outputs</a> functionality), just leave them out of the playlist.</p>
 
 <p>To properly ignore skipped sources, the streams for the playlist must have a <a href="#streaming_source"><code class="notranslate">source</code></a> defined.</p>
 

@@ -6,7 +6,7 @@
 
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/integration/100-integration-reliability.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/100-integration-reliability.html</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -27,7 +27,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/api-version-history.html</loc>
+        <loc>https://zencoder.support.brightcove.com/references/api-version-history.html</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -699,7 +699,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/integration/faq-integration-libraries.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/faq-integration-libraries.html</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -783,13 +783,6 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
-        <lastmod>2020-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://zencoder.support.brightcove.com/encoding-settings/</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
@@ -797,21 +790,14 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
-        <lastmod>2020-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
-        <lastmod>2020-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://zencoder.support.brightcove.com/</loc>
+        <lastmod>2020-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -826,6 +812,20 @@
     
     <url>
         <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
+        <lastmod>2020-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
+        <lastmod>2020-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -923,7 +923,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/integration/using-read-only-api-keys.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/using-read-only-api-keys.html</loc>
         <lastmod>2020-01-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
