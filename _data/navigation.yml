@@ -24,12 +24,12 @@
       url: /general-information/faq-codecs-and-formats.html
     - name: 'FAQ: Encoding'
       url: /general-information/faq-encoding.html
-    - name: Integration
-      url: /integration/
-      icon: '<i class="far fa-handshake-alt"></i>'
-      docs:
-        - name: Submitting Device Apps to Stores
-          url: /creating-your-apps/submitting-device-apps-stores.html
+    - name: 'FAQ: File Transfers'
+      url: /general-information/faq-file-transfers.html
+    - name: 'FAQ: Zencoder Pricing'
+      url: /general-information/faq-zencoder-pricing.html
+    - name: Using Zencoder with Google Cloud Storage
+      url: /general-information/using-zencoder-google-cloud-platform.html
 - section: References
   url: /references/
   icon: '<i class="fal fa-books"></i>'
@@ -70,3 +70,9 @@
     url: /references/known-issues.html
   - name: Product Updates
     url: /references/product-updates.html
+- section: Integration
+  url: /integration/
+  icon: '<i class="far fa-handshake-alt"></i>'
+  docs:
+    - name: Submitting Device Apps to Stores
+      url: /creating-your-apps/submitting-device-apps-stores.html

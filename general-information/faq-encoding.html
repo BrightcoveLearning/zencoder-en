@@ -2,10 +2,10 @@
 title: 'FAQ: Encoding'
 parent: General Information
 ---
-<h1>FAQ: Encoding</h1>
-
-<p>This topic answers basic questions about video encoding.</p>
 <article class="bcls-article">
+  <h1>FAQ: Encoding</h1>
+  
+  <summary>This topic answers basic questions about video encoding.</summary>
   <section class="bcls-section">
     <h2 id="Encoding_questions">Encoding questions</h2>
 
@@ -23,7 +23,7 @@ parent: General Information
 
     <p>Beyond that, other settings are really optional. You can probably ignore most of them, and some of them might even be detrimental to the quality of your video. For example, forcing video to a different frame rate can make the video look choppy, and manually setting the audio sample rate can cause encoding errors.</p>
 
-    <p>See our <a href="https://docs.brightcove.com/zencoder-api/v2/doc/index.html">API docs</a> for more.</p>
+    <p>See our <a href="/zencoder-api/v2/api-reference/index.html">API docs</a> for more.</p>
 
     <h3>How do I get the best quality?</h3>
 
@@ -37,7 +37,7 @@ parent: General Information
 
     <p>Fourth, there are a few advanced settings you can try. If your input is highly compressed and blocky, you can use our Deblock filter. If you want to squeeze in 5%-10% more quality at the same bitrate, try setting Denoise to "weak" or "medium".</p>
 
-    <p>Fifth, slow down the encoding. Set Speed to 1 or 2, which will allow our encoder to apply a few psychovisual optimizations that we don't apply on faster encoding.</p>
+    <p>Fifth, slow down the encoding. Set Speed to 1 or 2, which will allow our encoder to apply a few psycho-visual optimizations that we don't apply on faster encoding.</p>
 
     <p>Just remember that these are tradeoffs. Our default encoding, with no additional settings, looks pretty good. At the end of the day, you're making tradeoffs between visual quality, encoding speed, and file size.</p>
 
@@ -47,7 +47,7 @@ parent: General Information
 
     <h3>I am going to submit a lot of jobs, can Zencoder handle it? Should I let you know before I start?</h3>
 
-    <p>Zencoder can definitely handle it. Unless you're going to be running in to our <a href="/faq-rate-limiting">API rate limit</a> of 1,000 job creation requests per minute you shouldn't need to warn us before submitting your jobs.</p>
+    <p>Zencoder can definitely handle it. Unless you're going to be running in to our <a href="/general-information/faq-rate-limiting.html">API rate limit</a> of 1,000 job creation requests per minute you shouldn't need to warn us before submitting your jobs.</p>
 
     <p>In fact, we're more concerned that we might overwhelm your servers if you're sending through a very large volume of jobs. The only delay you should see from Zencoder will be the time it takes to bring the necessary encoding servers online to handle your jobs if the volume exceeds our current capacity. If this happens it should take no more than a few minutes from your initial request before additional capacity is available. After that, the biggest concerns will be how your servers can handle the traffic from Zencoder. If that initial delay will impact your transcoding, get in touch with us before you start submitting so we can bring additional servers online in anticipation.</p>
 
