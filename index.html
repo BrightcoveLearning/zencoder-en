@@ -11,12 +11,19 @@ parent: null
     color: {{ site.product_color }};
     margin-right: 1rem;
   }
+  h5 i.fal,
+  h5 i.fab,
+  h5 i.fas,
+  h5 i.far {
+    font-size: inherit;
+    color: {{ site.product_color }};
+  }
   .card-icon i {
     color: {{ site.product_color }};
   }
   .bcls-card-small ul{
     list-style: none;
-    margin-left: -2.8em;
+    margin-left: -2.9em;
     font-size: small;
   }
 </style>
@@ -78,6 +85,14 @@ parent: null
             <li><a href="/references/release-notes.html">Release Notes</a></li>
             <li><a href="/references/known-issues.html">Known Issues</a></li>
             <li><a href="/references/api-version-history">API Version History</a></li>
+          </ul>
+
+          <h5 style="white-space: nowrap;"><i class="fal fa-exclamation-triangle"></i> Troubleshooting</h5>
+          <ul>
+            <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
+            <li><a href="/error-troubleshooting/region-outages.html">Regional Outages</a></li>
+            <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry a Failed Job</a></li>
+            <li><a href="/error-troubleshooting/index.html">Error Reference</a></li>
           </ul>
         </div>
       </section>

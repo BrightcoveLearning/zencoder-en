@@ -790,7 +790,14 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/</loc>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -804,21 +811,14 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/zencoder-api/v2/api-reference/</loc>
-        <lastmod>2020-01-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
-        <lastmod>2020-01-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -840,6 +840,13 @@
     
     <url>
         <loc>https://zencoder.support.brightcove.com/encoding-guides/iosmobile-encoding.html</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/references/known-issues.html</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
