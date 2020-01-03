@@ -57,8 +57,10 @@
     - name: General
       url: /encoding-settings/general
       docs:
+        - name: Job Settings
+          url: /encoding-settings/general/encoding-settings-job.html
         - name: CAE Settings
-        url: /encoding-settings/general/cae-settings.html
+          url: /encoding-settings/general/cae-settings.html
     - name: General Audio/Video
       url: /references/known-issues.html
     - name: Product Updates
@@ -67,12 +69,8 @@
   url: /encoding-guides/
   icon: '<i class="fas fa-fast-forward"></i>'
   docs:
-    - name: Glossary
-      url: /references/glossary.html
-    - name: Known Issues
-      url: /references/known-issues.html
-    - name: Product Updates
-      url: /references/product-updates.html
+    - name: CAE Guide
+      url: /encoding-guides/cae-guide.html
 - section: Errors/Troubleshooting
   url: /error-troubleshooting/
   icon: '<i class="far fa-exclamation-triangle"></i>'
