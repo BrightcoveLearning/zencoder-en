@@ -37,7 +37,7 @@
       
       
       
-      <li class="breadcrumb-item"><a href="/general-information/">Basics</a></li>
+      <li class="breadcrumb-item"><a href="/general-information/">General Information</a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Supported Video and Audio Formats</li>
     </ol>
@@ -102,6 +102,26 @@
               
                 
                   <li><a href="/general-information/faq-zencoder-pricing.html">FAQ: Zencoder Pricing</a></li>
+                
+              
+                
+                  <li><a href="/general-information/faq-rate-limiting.html">FAQ: Rate Limiting</a></li>
+                
+              
+                
+                  <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats</a></li>
+                
+              
+                
+                  <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-s3.html">Using Zencoder with S3</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-azure.html">Using Zencoder with Google Cloud Storage</a></li>
                 
               
                 
@@ -210,12 +230,14 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Supported Video and Audio Formats</h1>
-<summary>This document lists the supported containers and codecs you can use when you upload videos to Video Cloud</summary>
+<article class="bcls-article">
+  <h1>Supported Video and Audio Formats</h1>
+  <summary>This document lists the supported containers and codecs you can use when you upload videos to Video Cloud.</summary>
+
 <section class="bcls-section">
   <h2 id="terms">Understanding codecs, containers, and file extensions</h2>
 
-  <p>Codecs, containers and file extensions are not equivalent but are often confused with one another. For example, H.264 video does not just mean a file with the extension <code class="notranslate">.mp4</code>. Video files contain both metadata (duration, dimensions, etc.) as well as the encoded and often compressed audio and video data.</p>
+  <p>Codecs, containers and file extensions are not equivalent but are often confused with one another. For example, H.264 video does not just mean a file with the extension <code>.mp4</code>. Video files contain both metadata (duration, dimensions, etc.) as well as the encoded and often compressed audio and video data.</p>
 
   <ul>
     <li>The <em>container</em> format defines how the metadata is stored along with the audio and video data. It does not define the coding or compression of the data.</li>
@@ -243,19 +265,19 @@
   <p>Since <span class="”notranslate”">Brightcove</span> supports so many video input types, it is actually more helpful to talk about the formats we do not support. At the moment, there are only a few. The list below shows the formats <strong><em>not</em></strong> supported for <a href="/zencoder"><span class="”notranslate”">Zencoder</span> </a>, the <span class="”notranslate”">Video Cloud</span> <a href="/uploading-videos-using-upload-module">Upload module</a> and <a href="/dynamic-ingest-api"><span class="notranslate”&gt;Dynamic Ingest API&lt;/span&gt;&lt;/a&gt;, and the &lt;a  data-cke-saved-href=" node=""><span class="”notranslate”">Dynamic Ingest API</span> </span></a>.</p>
 
   <ul>
-    <li><code class="notranslate">Apple Intermediate</code></li>
-    <li><code class="notranslate">HDV 720p60</code></li>
-    <li><code class="notranslate">Go2Meeting3 (G2M3)</code></li>
-    <li><code class="notranslate">Avid Meridien Uncompressed</code></li>
-    <li><code class="notranslate">Windows Media Audio Lossless</code></li>
-    <li><code class="notranslate">CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Zencoder. We are still trying to identify the exact factors that cause problems.</li>
-    <li><code class="notranslate">SWF</code> - partly supported by <span class="”notranslate”">Zencoder</span>; if the <code class="notranslate">SWF</code> contains a video or audio track, those can be processed, but many <code class="notranslate">SWFs</code> do not.</li>
+    <li><code>Apple Intermediate</code></li>
+    <li><code>HDV 720p60</code></li>
+    <li><code>Go2Meeting3 (G2M3)</code></li>
+    <li><code>Avid Meridien Uncompressed</code></li>
+    <li><code>Windows Media Audio Lossless</code></li>
+    <li><code>CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Zencoder. We are still trying to identify the exact factors that cause problems.</li>
+    <li><code>SWF</code> - partly supported by <span class="”notranslate”">Zencoder</span>; if the <code>SWF</code> contains a video or audio track, those can be processed, but many <code>SWFs</code> do not.</li>
   </ul>
   <h3>Special cases</h3>
 
   <ul>
     <li>
-      <aside class="bcls-aside bcls-aside--information">Note: <code class="notranslate">AVdh (DNxHQ)</code> also does not work for <strong>422 10-bit and 444 12-bit sources (only)</strong> - this is a bug, and this note will be removed when it is fixed.</aside>
+      <aside class="bcls-aside bcls-aside--information">Note: <code>AVdh (DNxHQ)</code> also does not work for <strong>422 10-bit and 444 12-bit sources (only)</strong> - this is a bug, and this note will be removed when it is fixed.</aside>
     </li>
     <li>Content encrypted with KMS is supported but requires that you pre-sign your object URLs, ala what is outlined here: <a href="https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/">https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/</a>.
       <p>Steps to implement:</p>

@@ -790,28 +790,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
-        <lastmod>2020-01-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
-        <lastmod>2020-01-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/</loc>
-        <lastmod>2020-01-02</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/</loc>
+        <loc>https://zencoder.support.brightcove.com/references/</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -832,7 +811,35 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/getting-started/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -923,7 +930,7 @@
     </url>
     
     <url>
-        <loc>https://zencoder.support.brightcove.com/general-information/test-jobs-and-integration-mode.html</loc>
+        <loc>https://zencoder.support.brightcove.com/integration/test-jobs-and-integration-mode.html</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -944,7 +951,21 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/using-zencoder-azure.html</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/general-information/using-zencoder-google-cloud-platform.html</loc>
+        <lastmod>2020-01-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/general-information/using-zencoder-s3.html</loc>
         <lastmod>2020-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

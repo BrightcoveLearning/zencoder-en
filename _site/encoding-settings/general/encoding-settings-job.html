@@ -101,6 +101,26 @@
                 
               
                 
+                  <li><a href="/general-information/faq-rate-limiting.html">FAQ: Rate Limiting</a></li>
+                
+              
+                
+                  <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats</a></li>
+                
+              
+                
+                  <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-s3.html">Using Zencoder with S3</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-azure.html">Using Zencoder with Google Cloud Storage</a></li>
+                
+              
+                
                   <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Using Zencoder with Google Cloud Storage</a></li>
                 
               
@@ -231,7 +251,7 @@
   
             <p>This topic contains details for encoding settings related to the overall job.</p>
                 <article class="bcls-article"><section class="bcls-section"><h2 id="api_key" class="notranslate">api_key</h2>
-  <code class="notranslate">api_key:String</code>
+  <code>api_key:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -251,7 +271,7 @@
     "api_key": "bcafecadfecabafedac"
   }</code></pre>
   </section><section class="bcls-section"><h2 id="dynamic_profile_options" class="notranslate">dynamic_profile_options</h2>
-  <code class="notranslate">dynamic_profile_options:Object</code>
+  <code>dynamic_profile_options:Object</code>
   
   <p><strong>API Versions:</strong> V2</p>
   
@@ -259,7 +279,7 @@
   
   <p><strong>Description:</strong></p>
   
-  <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The <code class="notranslate">dynamic_profile_options</code> settings define the way renditions should be created. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details. You must also set <a href="#generate_dynamic_profile">generate_dynamic_profile</a> equal to <code class="notranslate">true</code> to use this feature.</p>
+  <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The <code>dynamic_profile_options</code> settings define the way renditions should be created. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details. You must also set <a href="#generate_dynamic_profile">generate_dynamic_profile</a> equal to <code>true</code> to use this feature.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -281,7 +301,7 @@
     ]
   }</code></pre>
   </section><section class="bcls-section"><h2 id="generate_dynamic_profile" class="notranslate">generate_dynamic_profile</h2>
-  <code class="notranslate">generate_dynamic_profile:Boolean</code>
+  <code>generate_dynamic_profile:Boolean</code>
   
   <p><strong>API Versions:</strong> V2</p>
   
@@ -293,7 +313,7 @@
   
   <p><strong>Description:</strong></p>
   
-  <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. To specify limits on the number of outputs to be generated as well as other profile constraints, CAE job request must also include <a href="#dynamic_profile_options">dynamic_profile_options</a> object. The outputs reserved for CAE use should not include <code class="notranslate">resolution</code>, <code class="notranslate">bitrate</code>, or codec-related parameters. Instead, they should include labels <code class="notranslate">dynamic_profile_rendition</code>. The number of outputs reserved for CAE use must match the number specified as <a href="/encoding-settings/general/cae-settings.html#max_renditions"><code class="notranslate">max_renditions</code></a> in <a href="#dynamic_profile_options"><code class="notranslate">dynamic_profile_options</code></a>.</p>
+  <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. To specify limits on the number of outputs to be generated as well as other profile constraints, CAE job request must also include <a href="#dynamic_profile_options">dynamic_profile_options</a> object. The outputs reserved for CAE use should not include <code>resolution</code>, <code>bitrate</code>, or codec-related parameters. Instead, they should include labels <code>dynamic_profile_rendition</code>. The number of outputs reserved for CAE use must match the number specified as <a href="/encoding-settings/general/cae-settings.html#max_renditions"><code>max_renditions</code></a> in <a href="#dynamic_profile_options"><code>dynamic_profile_options</code></a>.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -315,7 +335,7 @@
     ]
   }</code></pre>
   </section><section class="bcls-section"><h2 id="input" class="notranslate">input</h2>
-  <code class="notranslate">input:String</code>
+  <code>input:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -342,13 +362,13 @@
   
   <p><strong>Notes on S3:</strong></p>
   
-  <p>You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code class="notranslate">http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+  <p>You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
   
   <p>To create keys containing special characters that are not valid in URLs (? or #), you must URL encode them (%3F and %23, respectively). All other characters must not be URL encoded.</p>
   
   <p>If the S3 URL has been pre-signed (containing "Signature", "Expires" and "AWSAccessKeyId" query parameters), then all characters must be URL encoded.</p>
   
-  <p>You may provide the region of the S3 bucket by setting the URL's protocol to <code class="notranslate">s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code class="notranslate">s3+ap-southeast-1://my-bucket/file.mp4</code>.</p>
+  <p>You may provide the region of the S3 bucket by setting the URL's protocol to <code>s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code>s3+ap-southeast-1://my-bucket/file.mp4</code>.</p>
   
   <p><strong>Notes on Azure:</strong></p>
   
@@ -356,7 +376,7 @@
   
   <p><strong>Notes on Cloud Files:</strong></p>
   
-  <p>You can specify the region to use (DFW, ORD or UK) by adding it to the protocol, like <code class="notranslate">cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
+  <p>You can specify the region to use (DFW, ORD or UK) by adding it to the protocol, like <code>cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
   
   <p>Any special characters in the container name must be URL encoded.</p>
   
@@ -383,7 +403,7 @@
   <p><strong>See Also:</strong> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url">url</a></p>
   </div>
   </section><section class="bcls-section"><h2 id="outputs" class="notranslate">outputs</h2>
-  <code class="notranslate">outputs:Array or Hash</code>
+  <code>outputs:Array or Hash</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -417,7 +437,7 @@
     ]
   }</code></pre>
   </section><section class="bcls-section"><h2 id="region" class="notranslate">region</h2>
-  <code class="notranslate">region:String</code>
+  <code>region:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -443,7 +463,7 @@
     "region": "us-virginia"
   }</code></pre>
   </section><section class="bcls-section"><h2 id="test" class="notranslate">test</h2>
-  <code class="notranslate">test:Boolean</code>
+  <code>test:Boolean</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -463,7 +483,7 @@
     "test": true
   }</code></pre>
   </section><section class="bcls-section"><h2 id="private" class="notranslate">private</h2>
-  <code class="notranslate">private:Boolean</code>
+  <code>private:Boolean</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -483,7 +503,7 @@
     "private": true
   }</code></pre>
   </section><section class="bcls-section"><h2 id="download_connections" class="notranslate">download_connections</h2>
-  <code class="notranslate">download_connections:Integer</code>
+  <code>download_connections:Integer</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -495,7 +515,7 @@
   
   <p><strong>Description:</strong></p>
   
-  <p>You can specify the number of connections to use to download an <a href="#input"><code class="notranslate">input</code></a> file. This may speed up download transfer times, depending on the bandwidth at your remote server. Be aware that more connections can place a heavier load on the server. If you have trouble with download timeouts, or want to prevent Zencoder from using too much bandwidth when retrieving a file, set this to 1.</p>
+  <p>You can specify the number of connections to use to download an <a href="#input"><code>input</code></a> file. This may speed up download transfer times, depending on the bandwidth at your remote server. Be aware that more connections can place a heavier load on the server. If you have trouble with download timeouts, or want to prevent Zencoder from using too much bandwidth when retrieving a file, set this to 1.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -503,7 +523,7 @@
     "download_connections": 3
   }</code></pre>
   </section><section class="bcls-section"><h2 id="pass_through" class="notranslate">pass_through</h2>
-  <code class="notranslate">pass_through:String</code>
+  <code>pass_through:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -523,7 +543,7 @@
     "pass_through": "my-custom-pass-through-value"
   }</code></pre>
   </section><section class="bcls-section"><h2 id="mock" class="notranslate">mock</h2>
-  <code class="notranslate">mock:Boolean</code>
+  <code>mock:Boolean</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -543,7 +563,7 @@
     "mock": true
   }</code></pre>
   </section><section class="bcls-section"><h2 id="grouping" class="notranslate">grouping</h2>
-  <code class="notranslate">grouping:String</code>
+  <code>grouping:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -565,7 +585,7 @@
     "grouping": "my-custom-pass-through-value"
   }</code></pre>
   </section><section class="bcls-section"><h2 id="aspera_transfer_policy" class="notranslate">aspera_transfer_policy</h2>
-  <code class="notranslate">aspera_transfer_policy:String</code>
+  <code>aspera_transfer_policy:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -591,9 +611,9 @@
     "aspera_transfer_policy": "fair"
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code class="notranslate">transfer_minimum_rate</code></a> and <a href="#transfer-maximum-rate"><code class="notranslate">transfer_maximum_rate</code></a></p>
+  <p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code>transfer_minimum_rate</code></a> and <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a></p>
   </section><section class="bcls-section"><h2 id="transfer_minimum_rate" class="notranslate">transfer_minimum_rate</h2>
-  <code class="notranslate">transfer_minimum_rate:Number</code>
+  <code>transfer_minimum_rate:Number</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -607,7 +627,7 @@
   
   <p>Sets a transfer rate floor to use during file transfer with Aspera. This does not guarantee the rate will be reached, but if bandwidth is available then file transfer will not go below this speed.</p>
   
-  <p>This must be less than <a href="#input-transfer-maximum-rate"><code class="notranslate">transfer_maximum_rate</code></a>.</p>
+  <p>This must be less than <a href="#input-transfer-maximum-rate"><code>transfer_maximum_rate</code></a>.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -615,9 +635,9 @@
     "transfer_minimum_rate": 2500
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a href="#transfer-maximum-rate"><code class="notranslate">transfer_maximum_rate</code></a> and <a href="#aspera-transfer-policy"><code class="notranslate">aspera_transfer_policy</code></a></p>
+  <p><strong>See Also:</strong> <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a> and <a href="#aspera-transfer-policy"><code>aspera_transfer_policy</code></a></p>
   </section><section class="bcls-section"><h2 id="transfer_maximum_rate" class="notranslate">transfer_maximum_rate</h2>
-  <code class="notranslate">transfer_maximum_rate:String</code>
+  <code>transfer_maximum_rate:String</code>
   
   <p><strong>API Versions:</strong> V1, V2</p>
   
@@ -633,7 +653,7 @@
   
   <p>Setting maximum transfer rate is recommended when encoding a large number of jobs simultaneously, to avoid overwhelming the source and destination servers with traffic.</p>
   
-  <p>This must be greater than <a href="#input-transfer-minimum-rate"><code class="notranslate">transfer_minimum_rate</code></a>.</p>
+  <p>This must be greater than <a href="#input-transfer-minimum-rate"><code>transfer_minimum_rate</code></a>.</p>
   
   <pre class="line-numbers">
   <code class="language-json notranslate">{
@@ -641,9 +661,9 @@
     "transfer_maximum_rate": 25000
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code class="notranslate">transfer_minimum_rate</code></a> and <a href="#aspera-transfer-policy"><code class="notranslate">aspera_transfer_policy</code></a></p>
+  <p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code>transfer_minimum_rate</code></a> and <a href="#aspera-transfer-policy"><code>aspera_transfer_policy</code></a></p>
   </section><section class="bcls-section"><h2 id="expected_md5_checksum" class="notranslate">expected_md5_checksum</h2>
-  <code class="notranslate">expected_md5_checksum:String</code>
+  <code>expected_md5_checksum:String</code>
   
   <p><strong>API Versions:</strong> V2</p>
   
@@ -659,7 +679,7 @@
     "expected_md5_checksum": "d5ed34b6b49f57a4a5f4be72fc0a2cd4"
   }</code></pre>
   </section><section class="bcls-section"><h2 id="credentials" class="notranslate">credentials</h2>
-  <code class="notranslate">credentials:String</code>
+  <code>credentials:String</code>
   
   <p><strong>API Versions:</strong> V2</p>
   
@@ -679,7 +699,7 @@
     "credentials": "ftp_dev_server"
   }</code></pre>
   
-  <p><strong>See Also:</strong> <a href="#input"><code class="notranslate">input</code></a></p>
+  <p><strong>See Also:</strong> <a href="#input"><code>input</code></a></p>
   </section>
 
 <!-- complete bootstrap layout -->

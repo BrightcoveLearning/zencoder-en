@@ -101,6 +101,26 @@
                 
               
                 
+                  <li><a href="/general-information/faq-rate-limiting.html">FAQ: Rate Limiting</a></li>
+                
+              
+                
+                  <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats</a></li>
+                
+              
+                
+                  <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-s3.html">Using Zencoder with S3</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-azure.html">Using Zencoder with Google Cloud Storage</a></li>
+                
+              
+                
                   <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Using Zencoder with Google Cloud Storage</a></li>
                 
               
@@ -215,10 +235,10 @@
     color: rgb(65, 196, 181);
     margin-right: 1rem;
   }
-  h5 i.fal,
-  h5 i.fab,
-  h5 i.fas,
-  h5 i.far {
+  h4 i.fal,
+  h4 i.fab,
+  h4 i.fas,
+  h4 i.far {
     font-size: inherit;
     color: rgb(65, 196, 181);
   }
@@ -229,6 +249,13 @@
     list-style: none;
     margin-left: -2.9em;
     font-size: small;
+  }
+  .bcls-card-small h5{
+    font-size: 1rem;
+  }
+  .bcls-card-small h4 {
+    font-size: 1.1rem;
+    margin-left: -1.5em;
   }
 </style>
 
@@ -256,7 +283,7 @@
           </ul>
         </div>
       </section>
-      <section class="bcls-card-small">
+      <section class="bcls-card-small" onclick="window.location.href='/general-information'">
         <div class="card-icon">
           <i class="far fa-info-circle"></i>
         </div>
@@ -269,14 +296,15 @@
             <li><a href="/general-information/faq-encoding">FAQ: Encoding</a></li>
             <li><a href="/general-information/faq-file-transfers">FAQ: File Transfers</a></li>
             <li><a href="/general-information/faq-zencoder-pricing">Zencoder Pricing</a></li>
+            <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Notifications: Job Finished</a></li>
             <li><a href="/general-information/faq-rate-limiting">Rate Limiting</a></li>
             <li><a href="/general-information/using-zencoder-s3">Using Zencoder with S3</a></li>
             <li><a href="/general-information/using-zencoder-azure">Using Zencoder with Azure</a></li>
-            <li><a href="/general-information/live-eol-faq">Zencoder Live EOL FAQ</a></li>
+            <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Using Zencoder with Google Cloud Platform</a></li>
             </ul>
         </div>
       </section>
-      <section class="bcls-card-small">
+      <section class="bcls-card-small" onclick="window.location.href='/references'">
         <div class="card-icon">
           <i class="fal fa-books"></i>
         </div>
@@ -291,7 +319,7 @@
             <li><a href="/references/api-version-history">API Version History</a></li>
           </ul>
 
-          <h5 style="white-space: nowrap;"><i class="fal fa-exclamation-triangle"></i> Troubleshooting</h5>
+          <h4 style="white-space: nowrap;"><i class="fal fa-exclamation-triangle"></i> Troubleshooting</h4>
           <ul>
             <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
             <li><a href="/error-troubleshooting/region-outages.html">Regional Outages</a></li>
@@ -300,7 +328,7 @@
           </ul>
         </div>
       </section>
-      <section class="bcls-card-small">
+      <section class="bcls-card-small" onclick="window.location.href='/encoding-settings'">
         <div class="card-icon">
           <i class="fal fa-cogs"></i>
         </div>
@@ -368,7 +396,7 @@
           </ul>
         </div>
       </section>
-      <section class="bcls-card-small">
+      <section class="bcls-card-small" onclick="window.location.href='/encoding-settings'">
         <div class="card-icon">
           <i class="fas fa-fast-forward"></i>
         </div>
@@ -377,7 +405,7 @@
           <h2>Encoding Recommendations</h2>
           <ul>
             <li><a href="/encoding-guides/cae-guide.html">CAE Guide</a></li>
-            <li><a href="/encoding-guides/advanced-audio-mapping-guide">Advanced Audio Mapping Guide</a></li>
+            <li><a href="/encoding-guides/advanced-audio-mapping-guide">Audio Mapping Guide</a></li>
             <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists">HTTP Live Streaming (HLS)</a></li>
             <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4">HTTP Live Streaming using fragmented MP4</a></li>
             <li><a href="/encoding-guides/iosmobile-encoding">iOS/Mobile Encoding</a></li>
@@ -397,7 +425,7 @@
           </ul>
         </div>
       </section>
-      <section class="bcls-card-small">
+      <section class="bcls-card-small" onclick="window.location.href='/integration'">
         <div class="card-icon">
           <i class="far fa-handshake-alt"></i>
         </div>

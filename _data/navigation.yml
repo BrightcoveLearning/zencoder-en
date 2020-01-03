@@ -28,6 +28,16 @@
       url: /general-information/faq-file-transfers.html
     - name: 'FAQ: Zencoder Pricing'
       url: /general-information/faq-zencoder-pricing.html
+    - name: 'FAQ: Rate Limiting'
+      url: /general-information/faq-rate-limiting.html
+    - name: Supported Video and Audio Formats
+      url: /general-information/supported-video-and-audio-formats-codecs-and-containers.html
+    - name: Getting Notifications When Videos Are Finished
+      url: /general-information/getting-notifications-when-videos-are-finished.html
+    - name: Using Zencoder with S3
+      url: /general-information/using-zencoder-s3.html
+    - name: Using Zencoder with Google Cloud Storage
+      url: /general-information/using-zencoder-azure.html
     - name: Using Zencoder with Google Cloud Storage
       url: /general-information/using-zencoder-google-cloud-platform.html
 - section: References
@@ -44,9 +54,12 @@
   url: /encoding-settings/
   icon: '<i class="fal fa-cogs"></i>'
   docs:
-    - name: API Reference
-      url: /zencoder-api/v2/api-reference/
-    - name: Known Issues
+    - name: General
+      url: /encoding-settings/general
+      docs:
+        - name: CAE Settings
+        url: /encoding-settings/general/cae-settings.html
+    - name: General Audio/Video
       url: /references/known-issues.html
     - name: Product Updates
       url: /references/product-updates.html

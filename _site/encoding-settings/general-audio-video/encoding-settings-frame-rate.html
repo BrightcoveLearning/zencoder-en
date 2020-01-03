@@ -101,6 +101,26 @@
                 
               
                 
+                  <li><a href="/general-information/faq-rate-limiting.html">FAQ: Rate Limiting</a></li>
+                
+              
+                
+                  <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats</a></li>
+                
+              
+                
+                  <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-s3.html">Using Zencoder with S3</a></li>
+                
+              
+                
+                  <li><a href="/general-information/using-zencoder-azure.html">Using Zencoder with Google Cloud Storage</a></li>
+                
+              
+                
                   <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Using Zencoder with Google Cloud Storage</a></li>
                 
               
@@ -231,11 +251,11 @@
   
             <p>This topic contains details for encoding settings related to the video frame rate.</p>
                 <article class="bcls-article"><section class="bcls-section"><h2 id="frame_rate" class="notranslate">frame_rate</h2>
-<code class="notranslate">frame_rate:Float</code>
+<code>frame_rate:Float</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Default:</strong> The original (input) frame rate.</p>
 
@@ -263,11 +283,11 @@
 
 <p><strong>See Also:</strong> <a href="#max-frame-rate">max_frame_rate</a> and <a href="#decimate">decimate</a></p>
 </section><section class="bcls-section"><h2 id="max_frame_rate" class="notranslate">max_frame_rate</h2>
-<code class="notranslate">max_frame_rate:Float</code>
+<code>max_frame_rate:Float</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -297,11 +317,11 @@
 
 <p><strong>See Also:</strong> <a href="#frame-rate">frame_rate</a> and <a href="#decimate">decimate</a></p>
 </section><section class="bcls-section"><h2 id="decimate" class="notranslate">decimate</h2>
-<code class="notranslate">decimate:Integer</code>
+<code>decimate:Integer</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> A positive integer</p>
 
@@ -329,11 +349,11 @@
 
 <p><strong>See Also:</strong> <a href="#frame-rate">frame_rate</a> and <a href="#max-frame-rate">max_frame_rate</a></p>
 </section><section class="bcls-section"><h2 id="keyframe_interval" class="notranslate">keyframe_interval</h2>
-<code class="notranslate">keyframe_interval:Integer</code>
+<code>keyframe_interval:Integer</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Default:</strong> 250</p>
 
@@ -351,7 +371,7 @@
 
 <p>Note that this is a maximum keyframe interval. Depending on scene transitions and other things, more keyframes may be used to ensure high quality encoding.</p>
 
-<p>For <code class="notranslate">H.264</code> video, keyframes are IDR frames.</p>
+<p>For <code>H.264</code> video, keyframes are IDR frames.</p>
 
 <p>keyframe_interval takes precedence over <a href="#keyframe-rate">keyframe_rate</a>.</p>
 
@@ -367,11 +387,11 @@
 
 <p><strong>See Also:</strong> <a href="#keyframe-rate">keyframe_rate</a></p>
 </section><section class="bcls-section"><h2 id="keyframe_rate" class="notranslate">keyframe_rate</h2>
-<code class="notranslate">keyframe_rate:Float</code>
+<code>keyframe_rate:Float</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Default:</strong> keyframe_interval of 250</p>
 
@@ -383,11 +403,11 @@
 
 <p>Set the number of keyframes per second. So a value of 0.5 would result in one keyframe every two seconds. A value of 3 would result in three keyframes per second.</p>
 
-<p>The default is to control keyframes via <a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a>, with a default value of 250. Depending on the video frame rate, this results in a keyframe every 8-11 seconds.</p>
+<p>The default is to control keyframes via <a href="#keyframe-interval"><code>keyframe_interval</code></a>, with a default value of 250. Depending on the video frame rate, this results in a keyframe every 8-11 seconds.</p>
 
 <p>A greater number of keyframes will increase the size of your output file, but will allow for more precise scrubbing in most players.</p>
 
-<p><a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a> takes precedence over keyframe_rate.</p>
+<p><a href="#keyframe-interval"><code>keyframe_interval</code></a> takes precedence over keyframe_rate.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -399,13 +419,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#fixed-keyframe-interval"><code class="notranslate">fixed_keyframe_interval</code></a>, <a href="#forced-keyframe-interval">forced_keyframe_interval</a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
+<p><strong>See Also:</strong> <a href="#fixed-keyframe-interval"><code>fixed_keyframe_interval</code></a>, <a href="#forced-keyframe-interval">forced_keyframe_interval</a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
 </section><section class="bcls-section"><h2 id="fixed_keyframe_interval" class="notranslate">fixed_keyframe_interval</h2>
-<code class="notranslate">fixed_keyframe_interval:Boolean</code>
+<code>fixed_keyframe_interval:Boolean</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Default:</strong> false</p>
 
@@ -417,9 +437,9 @@
 
 <p><strong>Description:</strong></p>
 
-<p>By default, a specified <a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a> only guarantees the max number of frames between two keyframes. The encoder may decide to place a keyframe before it is required by the keyframe_interval; for example, better compression might be achieved by putting a keyframe at a scene change. Setting this option to true prevents this variability.</p>
+<p>By default, a specified <a href="#keyframe-interval"><code>keyframe_interval</code></a> only guarantees the max number of frames between two keyframes. The encoder may decide to place a keyframe before it is required by the keyframe_interval; for example, better compression might be achieved by putting a keyframe at a scene change. Setting this option to true prevents this variability.</p>
 
-<p>This option only applies when using the <code class="notranslate">H.264</code>, <code class="notranslate">HEVC</code> or VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code class="notranslate">video_codec</code></a>.</p>
+<p>This option only applies when using the <code>H.264</code>, <code>HEVC</code> or VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code>video_codec</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -431,13 +451,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a>, <a href="#forced-keyframe-interval">forced_keyframe_interval</a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
+<p><strong>See Also:</strong> <a href="#keyframe-interval"><code>keyframe_interval</code></a>, <a href="#forced-keyframe-interval">forced_keyframe_interval</a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
 </section><section class="bcls-section"><h2 id="forced_keyframe_interval" class="notranslate">forced_keyframe_interval</h2>
-<code class="notranslate">forced_keyframe_interval:Integer</code>
+<code>forced_keyframe_interval:Integer</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> A positive integer</p>
 
@@ -447,9 +467,9 @@
 
 <p><strong>Description:</strong></p>
 
-<p>Forces keyframes to be created at the specified frame interval (every N frames), while still allowing the encoder to place keyframes elsewhere, such as at scene cuts. As opposed to <a href="#fixed-keyframe-interval"><code class="notranslate">fixed_keyframe_interval</code></a> which only puts keyframes at the specified interval.</p>
+<p>Forces keyframes to be created at the specified frame interval (every N frames), while still allowing the encoder to place keyframes elsewhere, such as at scene cuts. As opposed to <a href="#fixed-keyframe-interval"><code>fixed_keyframe_interval</code></a> which only puts keyframes at the specified interval.</p>
 
-<p>This option only applies when using the <code class="notranslate">H.264</code> or <code class="notranslate">HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code class="notranslate">video_codec</code></a>.</p>
+<p>This option only applies when using the <code>H.264</code> or <code>HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code>video_codec</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -461,13 +481,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a>, <a href="#fixed-keyframe-interval"><code class="notranslate">fixed_keyframe_interval</code></a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
+<p><strong>See Also:</strong> <a href="#keyframe-interval"><code>keyframe_interval</code></a>, <a href="#fixed-keyframe-interval"><code>fixed_keyframe_interval</code></a>, and <a href="#forced-keyframe-rate">forced_keyframe_rate</a></p>
 </section><section class="bcls-section"><h2 id="forced_keyframe_rate" class="notranslate">forced_keyframe_rate</h2>
-<code class="notranslate">forced_keyframe_rate:Floating point number</code>
+<code>forced_keyframe_rate:Floating point number</code>
 
 <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Valid Values:</strong> 0.001 to 100</p>
 
@@ -481,7 +501,7 @@
 
 <p>This option is ignored if <a href="#forced-keyframe-interval">forced_keyframe_interval</a> is specified.</p>
 
-<p>This option only applies when using the <code class="notranslate">H.264</code> or <code class="notranslate">HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code class="notranslate">video_codec</code></a>.</p>
+<p>This option only applies when using the <code>H.264</code> or <code>HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code>video_codec</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -493,13 +513,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#keyframe-interval"><code class="notranslate">keyframe_interval</code></a> and <a href="#fixed-keyframe-interval"><code class="notranslate">fixed_keyframe_interval</code></a></p>
+<p><strong>See Also:</strong> <a href="#keyframe-interval"><code>keyframe_interval</code></a> and <a href="#fixed-keyframe-interval"><code>fixed_keyframe_interval</code></a></p>
 </section><section class="bcls-section"><h2 id="generate_frame_index" class="notranslate">generate_frame_index</h2>
-<code class="notranslate">generate_frame_index:Boolean</code>
+<code>generate_frame_index:Boolean</code>
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Default:</strong> false</p>
 
@@ -515,7 +535,7 @@
 
 <p>This option cannot be used unless the output contains a video stream.</p>
 
-<p>The default index filename 'frame_index.tab' can be overridden with <a href="#frame-index-filename"><code class="notranslate">frame_index_filename</code></a>.</p>
+<p>The default index filename 'frame_index.tab' can be overridden with <a href="#frame-index-filename"><code>frame_index_filename</code></a>.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -528,13 +548,13 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#frame-index-filename"><code class="notranslate">frame_index_filename</code></a></p>
+<p><strong>See Also:</strong> <a href="#frame-index-filename"><code>frame_index_filename</code></a></p>
 </section><section class="bcls-section"><h2 id="frame_index_filename" class="notranslate">frame_index_filename</h2>
-<code class="notranslate">frame_index_filename:String</code>
+<code>frame_index_filename:String</code>
 
 <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code class="notranslate">outputs</code></a></p>
+<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
 <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -544,7 +564,7 @@
 
 <p>Unless specified, the filename used for frame index generation will be 'frame_index.tab'.</p>
 
-<p>This option requires that <a href="#generate-frame-index"><code class="notranslate">generate_frame_index</code></a> is true.</p>
+<p>This option requires that <a href="#generate-frame-index"><code>generate_frame_index</code></a> is true.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -558,7 +578,7 @@
 }
 </code></pre>
 
-<p><strong>See Also:</strong> <a href="#generate-frame-index"><code class="notranslate">generate_frame_index</code></a></p>
+<p><strong>See Also:</strong> <a href="#generate-frame-index"><code>generate_frame_index</code></a></p>
 </section>
 
 <!-- complete bootstrap layout -->

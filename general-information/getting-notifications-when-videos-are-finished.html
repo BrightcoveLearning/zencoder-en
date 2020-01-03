@@ -1,44 +1,29 @@
 ---
-title: 
-parent: 
+title: Getting Notifications When Videos Are Finished
+description: This topic shows you how to get notifications when your Zencoder job is complete.
+parent: General Information
 ---
-<h1>Getting Notifications When Videos Are Finished</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Notifications</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+    <p>After a job or an output file is complete, you can find out about it in several ways.</p>
 
-</div>
+    <ul>
+      <li>We can POST an HTTP request to your application with the details.</li>
+      <li>You can request your notifications using a third-party tool such as <a href="https://ngrok.com">ngrok</a>. This is useful when you are developing locally and Zencoder can’t reach your development server.</li>
+      <li>We can send an email.</li>
+      <li>You can check the Zencoder Dashboard for job status.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="http_email_notifications">Get HTTP/Email notifications</h2>
 
-  
-            <p>This topic shows you how to get notifications when your Zencoder job is complete.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+    <p>To receive HTTP or email notifications, add <a href="/encoding-settings/general/encoding-settings-notifications.html">Notification options</a> to your API request, like this:</p>
 
-<p>After a job or an output file is complete, you can find out about it in several ways.</p>
-
-<ul><li>We can POST an HTTP request to your application with the details.</li>
-	<li>You can request your notifications using a third-party tool such as <a href="https://ngrok.com">ngrok</a>. This is useful when you are developing locally and Zencoder can’t reach your development server.</li>
-	<li>We can send an email.</li>
-	<li>You can check the Zencoder Dashboard for job status.</li>
-</ul></section><section class="bcls-section"><h2 id="http_email_notifications">Get HTTP/Email notifications</h2>
-
-<p>To receive HTTP or email notifications, add <a href="/encoding-settings/general/encoding-settings-notifications.html">Notification options</a> to your API request, like this:</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "api_key": "93h630j1dsyshjef620qlkavnmzui3",
   "input": "s3://bucket-name/file-name.avi",
@@ -70,28 +55,37 @@ parent:
   ]
 }</code></pre>
 
-<p>In this example, when the first output file is completed, two notifications would be sent:</p>
+    <p>In this example, when the first output file is completed, two notifications would be sent:</p>
 
-<ul><li>Email to <code class="notranslate">admin@example.com</code> with information about the output and the input/job.</li>
-	<li>HTTP POST to <code class="notranslate">http://user:password@example.com/zencoder</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
-</ul><p>When the second output file is complete, four more notifications would be sent:</p>
+    <ul>
+      <li>Email to <code>admin@example.com</code> with information about the output and the input/job.</li>
+      <li>HTTP POST to <code>http://user:password@example.com/zencoder</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
+    </ul>
+    <p>When the second output file is complete, four more notifications would be sent:</p>
 
-<ul><li>HTTP POST to <code class="notranslate">http://example.com/zencoder1</code> with a Content-Type header set to 'application/xml' with information about the output and the input.</li>
-	<li>HTTP POST to <code class="notranslate">http://example.com/zencoder2</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
-	<li>Email to <code class="notranslate">admin@example.com</code> with information about the output and the input/job.</li>
-	<li>HTTP POST to <code class="notranslate">http://example.com/zencoder3</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
-</ul><p>When the job is completed, two more notifications would be sent:</p>
+    <ul>
+      <li>HTTP POST to <code>http://example.com/zencoder1</code> with a Content-Type header set to 'application/xml' with information about the output and the input.</li>
+      <li>HTTP POST to <code>http://example.com/zencoder2</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
+      <li>Email to <code>admin@example.com</code> with information about the output and the input/job.</li>
+      <li>HTTP POST to <code>http://example.com/zencoder3</code> with a Content-Type header set to 'application/json' with information about the output and the input/job.</li>
+    </ul>
+    <p>When the job is completed, two more notifications would be sent:</p>
 
-<ul><li>Email to <code class="notranslate">admin@example.com</code> with information about the output and the input.</li>
-	<li>HTTP POST to <code class="notranslate">http://user:password@example.com/zencoder</code> with a Content-Type header set to 'application/json' with information about the output and the input.</li>
-</ul><p><strong>Note:</strong> If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The notification will be attempted up to 20 times, with the delay between attempts doubling each time.</p>
-</section><section class="bcls-section"><h2 id="HTTP_Notifications">HTTP Notifications</h2>
+    <ul>
+      <li>Email to <code>admin@example.com</code> with information about the output and the input.</li>
+      <li>HTTP POST to <code>http://user:password@example.com/zencoder</code> with a Content-Type header set to 'application/json' with information about the output and the input.</li>
+    </ul>
+    <p><strong>Note:</strong> If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The notification will be attempted up to 20 times, with the delay between attempts doubling each time.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="HTTP_Notifications">HTTP Notifications</h2>
 
-<p>Notifications contain rich content with much more information about the job and input and output files. The body of the notification can contain JSON or XML. If uploads fail, notifications will also contain information about <a href="/how-zencoder-saves-your-files-when-uploads-fail">errors and backup servers used</a>.</p>
+    <p>Notifications contain rich content with much more information about the job and input and output files. The body of the notification can contain JSON or XML. If uploads fail, notifications will also contain information about <a href="/how-zencoder-saves-your-files-when-uploads-fail">errors and backup servers used</a>.</p>
 
-<aside class="bcls-aside bcls-aside--information language-editable">Notification handlers on servers built on HTTP2 are not currenly supported. Notifications sent to HTTP2 servers may fail to be delivered without returning any error.</aside><h3>Job Notification Example</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">Notification handlers on servers built on HTTP2 are not currenly supported. Notifications sent to HTTP2 servers may fail to be delivered without returning any error.</aside>
+    <h3>Job Notification Example</h3>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "outputs":[
   {
@@ -191,9 +185,9 @@ parent:
   }
 }</code></pre>
 
-<h3>Output Notification Example</h3>
+    <h3>Output Notification Example</h3>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "output":{
       "height":120,
@@ -257,4 +251,5 @@ parent:
       "md5_checksum":"7f106918e02a69466afa0ee014174143"
   }
 }</code></pre>
-</section>
+  </section>
+</article>

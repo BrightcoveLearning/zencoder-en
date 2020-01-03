@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>References</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,11 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">References</li>
     </ol>
   </nav>
 </header>
@@ -226,27 +228,67 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Error: QuicktimeReferenceError</h1>
-            <p>This topic provides details on the Zencoder API error: <code>QuicktimeReferenceError</code></p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Meaning">Meaning</h2>
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:rgb(65, 196, 181);
+    margin-right: .5rem;
+  }
+  .card-icon i {
+    color: rgb(65, 196, 181);
+  }
+  .card-wrapper {
+  justify-content: start;
+}
+</style>
 
-<p>This error means that the input file references audio or video tracks that aren't actually included in the file. So the file itself is just a placeholder that links to these outside media tracks. Since we don't have access to them – they're probably sitting on a user's hard drive somewhere – we can't process the file. To avoid this, be sure to export self-contained Quicktime files that include all media tracks.</p>
-</section><section class="bcls-section"><h2 id="Workarounds">Workarounds</h2>
-
-<p>Export the Quicktime file as a self-contained Quicktime files that include all media tracks.</p>
-</section><section class="bcls-section"><h2 id="Retry_this_job">Retry this job?</h2>
-
-<p>Jobs with this error <strong>should not</strong> be retried. <a href="/error-troubleshooting/when-should-i-retry-failed-jobs">Learn more about retrying jobs.</a></p>
-</section>
+<article class="bcls-article">
+  <h1><i class="fal fa-books"></i> References</h1>
+  <summary>The API Reference and Other Reference Informattion.</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics in this section</h2>
+        <ul>
+        
+        
+      
+        
+      
+        
+      
+        
+              
+                <li><a href="/zencoder-api/v2/api-reference/">API Reference</a>
+                
+                </li>
+              
+                <li><a href="/references/known-issues.html">Known Issues</a>
+                
+                </li>
+              
+                <li><a href="/references/product-updates.html">Product Updates</a>
+                
+                </li>
+              
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      </div>
+    </section>
+  </section>
+</article>
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav">
-        <h6 class="toc">Page Contents</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
       
     </div>
   </div>
@@ -254,7 +296,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 01 Jan 2020
+  Page last updated on 02 Jan 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -335,8 +377,6 @@
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
-  
-  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/feedback-beacon.js"></script>
 </body>
