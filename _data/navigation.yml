@@ -55,12 +55,18 @@
   icon: '<i class="fal fa-cogs"></i>'
   docs:
     - name: General Settings
-      url: /encoding-settings/general/
+      url: /encoding-settings/general/index.html
       docs:
         - name: Job Settings
           url: /encoding-settings/general/encoding-settings-job.html
+        - name: General Output Settings
+          url: /encoding-settings/general/encoding-settings-general-output-settings.html
         - name: CAE Settings
           url: /encoding-settings/general/cae-settings.html
+        - name: Conditional Outputs Settings
+          url: /encoding-settings/general/encoding-settings-conditional-outputs.html
+        - name: Notifications Settings
+          url: /encoding-settings/general/encoding-settings-notifications.html
     - name: General Audio/Video Settings
       url: /encoding-settings/general-audio-video/
     - name: Formats and Codec Settings
@@ -69,6 +75,8 @@
       url: /encoding-settings/asset/
     - name: Content Protection Settings
       url: /encoding-settings/content-protection/
+    - name: Sources/Destination Settings
+      url: /encoding-settings/sources-destinations/
 - section: Encoding Guides
   url: /encoding-guides/
   icon: '<i class="fas fa-fast-forward"></i>'

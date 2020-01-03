@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Conditional Outputs Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/general/">General Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Conditional Outputs Settings</li>
     </ol>
   </nav>
 </header>
@@ -152,13 +156,19 @@
               
                 
                   <li class="submenu-header">
-                    <a href="/encoding-settings/general/">General Settings</a>
+                    <a href="/encoding-settings/general/index.html">General Settings</a>
                   </li>
                     <ul class="sidenav-subsubmenu" style="display:none;">
                       
                       <li><a href="/encoding-settings/general/encoding-settings-job.html">Job Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">General Output Settings</a></li>
+                      
                       <li><a href="/encoding-settings/general/cae-settings.html">CAE Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">Conditional Outputs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general/encoding-settings-notifications.html">Notifications Settings</a></li>
                       
                     </ul>
                   </li>
@@ -178,6 +188,10 @@
               
                 
                   <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                
+              
+                
+                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
                 
               
             </ul>
@@ -236,51 +250,34 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: Conditional Outputs</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>Conditional Outputs Settings</h1>
+  <summary>This topic contains details for encoding settings related to conditional outputs, allowing you to skip outputs if certain conditions aren't met.</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="min_size" class="notranslate">min_size</h2>
+    <code>min_size:String</code>
 
-</div>
+    <p><strong>API Versions:</strong> V2</p>
 
-  
-            <p>This topic contains details for encoding settings related to conditional outputs, allowing you to skip outputs if certain conditions aren't met.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="min_size" class="notranslate">min_size</h2>
-<code>min_size:String</code>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Example:</strong></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <ul>
+      <li>640x480</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Example:</strong></p>
+    <p>If the source's dimensions are smaller than the requested size, the output will be skipped.</p>
 
-<ul><li>640x480</li>
-</ul><p><strong>Description:</strong></p>
+    <p>Dimensions are calculated by multiplying the height and the width of the source and comparing to the product of provided dimensions.</p>
 
-<p>If the source's dimensions are smaller than the requested size, the output will be skipped.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their dimensions read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<p>Dimensions are calculated by multiplying the height and the width of the source and comparing to the product of provided dimensions.</p>
-
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their dimensions read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -292,28 +289,32 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#max-size">max_size</a></p>
-</section><section class="bcls-section"><h2 id="max_size" class="notranslate">max_size</h2>
-<code>max_size:String</code>
+    <p><strong>See Also:</strong> <a href="#max-size">max_size</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="max_size" class="notranslate">max_size</h2>
+    <code>max_size:String</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>640x480</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>640x480</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's dimensions are larger than the requested size, the output will be skipped.</p>
+    <p>If the source's dimensions are larger than the requested size, the output will be skipped.</p>
 
-<p>Dimensions are calculated by multiplying the height and the width of the source and comparing to the product of provided dimensions.</p>
+    <p>Dimensions are calculated by multiplying the height and the width of the source and comparing to the product of provided dimensions.</p>
 
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their dimensions read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their dimensions read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -325,30 +326,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-size">min_size</a></p>
-</section><section class="bcls-section"><h2 id="min_duration" class="notranslate">min_duration</h2>
-<code>min_duration:Integer</code>
+    <p><strong>See Also:</strong> <a href="#min-size">min_size</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="min_duration" class="notranslate">min_duration</h2>
+    <code>min_duration:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>300</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>300</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's duration is shorter than the requested duration, the output will be skipped.</p>
+    <p>If the source's duration is shorter than the requested duration, the output will be skipped.</p>
 
-<p>Duration must be provided in seconds. To skip an output if the source is shorter than 5 minutes, use '300'.</p>
+    <p>Duration must be provided in seconds. To skip an output if the source is shorter than 5 minutes, use '300'.</p>
 
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their durations read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their durations read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -360,30 +365,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#max-duration">max_duration</a></p>
-</section><section class="bcls-section"><h2 id="max_duration" class="notranslate">max_duration</h2>
-<code>max_duration:Integer</code>
+    <p><strong>See Also:</strong> <a href="#max-duration">max_duration</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="max_duration" class="notranslate">max_duration</h2>
+    <code>max_duration:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>600</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>600</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's duration is longer than the requested duration, the output will be skipped.</p>
+    <p>If the source's duration is longer than the requested duration, the output will be skipped.</p>
 
-<p>Duration must be provided in seconds. To skip an output if the source is longer than 5 minutes, use '300'.</p>
+    <p>Duration must be provided in seconds. To skip an output if the source is longer than 5 minutes, use '300'.</p>
 
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their durations read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their durations read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -395,30 +404,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-duration">min_duration</a></p>
-</section><section class="bcls-section"><h2 id="min_audio_bitrate" class="notranslate">min_audio_bitrate</h2>
-<code>min_audio_bitrate:Integer</code>
+    <p><strong>See Also:</strong> <a href="#min-duration">min_duration</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="min_audio_bitrate" class="notranslate">min_audio_bitrate</h2>
+    <code>min_audio_bitrate:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>128</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>128</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's audio bitrate is less than the specified bitrate (in kbps), the output will be skipped.</p>
+    <p>If the source's audio bitrate is less than the specified bitrate (in kbps), the output will be skipped.</p>
 
-<p><strong>Source files without an audio track or without a recognizable audio bitrate will ignore this setting.</strong> (See <a href="#require-audio"><code>require_audio</code></a> for more options.) To skip an output if the source audio bitrate is less than 128 Kbps, use 128.</p>
+    <p><strong>Source files without an audio track or without a recognizable audio bitrate will ignore this setting.</strong> (See <a href="#require-audio"><code>require_audio</code></a> for more options.) To skip an output if the source audio bitrate is less than 128 Kbps, use 128.</p>
 
-<p><strong>Note:</strong> Due to the nature of audio metadata and inconsistencies between audio types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of audio metadata and inconsistencies between audio types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -430,30 +443,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#max-audio-bitrate"><code>max_audio_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
-</section><section class="bcls-section"><h2 id="max_audio_bitrate" class="notranslate">max_audio_bitrate</h2>
-<code>max_audio_bitrate:Integer</code>
+    <p><strong>See Also:</strong> <a href="#max-audio-bitrate"><code>max_audio_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="max_audio_bitrate" class="notranslate">max_audio_bitrate</h2>
+    <code>max_audio_bitrate:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>160</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>160</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's audio bitrate is greater than the specified bitrate (in kbps), the output will be skipped.</p>
+    <p>If the source's audio bitrate is greater than the specified bitrate (in kbps), the output will be skipped.</p>
 
-<p><strong>Source files without an audio track or without a recognizable audio bitrate will ignore this setting.</strong> (See <a href="#require-audio"><code>require_audio</code></a> for more options.) To skip an output if the source audio bitrate is greater than 160 Kbps, use 160.</p>
+    <p><strong>Source files without an audio track or without a recognizable audio bitrate will ignore this setting.</strong> (See <a href="#require-audio"><code>require_audio</code></a> for more options.) To skip an output if the source audio bitrate is greater than 160 Kbps, use 160.</p>
 
-<p><strong>Note:</strong> Due to the nature of audio metadata and inconsistencies between audio types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of audio metadata and inconsistencies between audio types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -465,30 +482,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-audio-bitrate"><code>min_audio_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
-</section><section class="bcls-section"><h2 id="min_video_bitrate" class="notranslate">min_video_bitrate</h2>
-<code>min_video_bitrate:Integer</code>
+    <p><strong>See Also:</strong> <a href="#min-audio-bitrate"><code>min_audio_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="min_video_bitrate" class="notranslate">min_video_bitrate</h2>
+    <code>min_video_bitrate:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>800</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>800</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's video bitrate is less than the specified bitrate (in kbps), the output will be skipped.</p>
+    <p>If the source's video bitrate is less than the specified bitrate (in kbps), the output will be skipped.</p>
 
-<p><strong>Source files without a video track or without a recognizable video bitrate will ignore this setting.</strong> (See <a href="#require-video"><code>require_video</code></a> for more options.) To skip an output if the source video bitrate is less than 800 Kbps, use 800.</p>
+    <p><strong>Source files without a video track or without a recognizable video bitrate will ignore this setting.</strong> (See <a href="#require-video"><code>require_video</code></a> for more options.) To skip an output if the source video bitrate is less than 800 Kbps, use 800.</p>
 
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -500,30 +521,34 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max-video-bitrate">max_video_bitrate</a> and <a href="#require-video"><code>require_video</code></a></p>
-</section><section class="bcls-section"><h2 id="max_video_bitrate" class="notranslate">max_video_bitrate</h2>
-<code>max_video_bitrate:Integer</code>
+    <p><strong>See Also:</strong> <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max-video-bitrate">max_video_bitrate</a> and <a href="#require-video"><code>require_video</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="max_video_bitrate" class="notranslate">max_video_bitrate</h2>
+    <code>max_video_bitrate:Integer</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Valid Values:</strong> A positive integer</p>
+    <p><strong>Valid Values:</strong> A positive integer</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong></p>
+    <p><strong>Example:</strong></p>
 
-<ul><li>1500</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li>1500</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>If the source's video bitrate is greater than the specified bitrate (in kbps), the output will be skipped.</p>
+    <p>If the source's video bitrate is greater than the specified bitrate (in kbps), the output will be skipped.</p>
 
-<p><strong>Source files without a video track or without a recognizable video bitrate will ignore this setting.</strong> (See <a href="#require-video"><code>require_video</code></a> for more options.) To skip an output if the source video bitrate is greater than 1500 Kbps, use 1500.</p>
+    <p><strong>Source files without a video track or without a recognizable video bitrate will ignore this setting.</strong> (See <a href="#require-video"><code>require_video</code></a> for more options.) To skip an output if the source video bitrate is greater than 1500 Kbps, use 1500.</p>
 
-<p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of video metadata and inconsistencies between video types some source files may have their bitrates read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -535,31 +560,33 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-video-bitrate"><code>min_video_bitrate</code></a> and <a href="#require-video"><code>require_video</code></a></p>
-</section><section class="bcls-section"><h2 id="require_audio" class="notranslate">require_audio</h2>
-<code>require_audio:Boolean</code>
+    <p><strong>See Also:</strong> <a href="#min-video-bitrate"><code>min_video_bitrate</code></a> and <a href="#require-video"><code>require_video</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="require_audio" class="notranslate">require_audio</h2>
+    <code>require_audio:Boolean</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> <code>true</code></p>
+    <p><strong>Example:</strong> <code>true</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>If the source file does not have an audio track, the output will be skipped.</p>
+    <p>If the source file does not have an audio track, the output will be skipped.</p>
 
-<p>To skip an output if the source does not have an audio track, set this option to true.</p>
+    <p>To skip an output if the source does not have an audio track, set this option to true.</p>
 
-<p><strong>Note:</strong> Due to the nature of media metadata and inconsistencies between media types some source files may have their metadata read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of media metadata and inconsistencies between media types some source files may have their metadata read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -572,31 +599,33 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-audio-bitrate"><code>min_audio_bitrate</code></a> and <a href="#require-video"><code>require_video</code></a></p>
-</section><section class="bcls-section"><h2 id="require_video" class="notranslate">require_video</h2>
-<code>require_video:Boolean</code>
+    <p><strong>See Also:</strong> <a href="#min-audio-bitrate"><code>min_audio_bitrate</code></a> and <a href="#require-video"><code>require_video</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="require_video" class="notranslate">require_video</h2>
+    <code>require_video:Boolean</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
+    <p><strong>Parent:</strong> <span class="notranslate">conditionals</span></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> <code>true</code></p>
+    <p><strong>Example:</strong> <code>true</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>If the source file does not have a video track, the output will be skipped.</p>
+    <p>If the source file does not have a video track, the output will be skipped.</p>
 
-<p>To skip an output if the source does not have a video track, set this option to true.</p>
+    <p>To skip an output if the source does not have a video track, set this option to true.</p>
 
-<p><strong>Note:</strong> Due to the nature of media metadata and inconsistencies between media types some source files may have their metadata read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
+    <p><strong>Note:</strong> Due to the nature of media metadata and inconsistencies between media types some source files may have their metadata read incorrectly during inspection, resulting in conditions being applied or ignored incorrectly.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -609,9 +638,9 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#min-video-bitrate"><code>min_video_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
-</section>
-
+    <p><strong>See Also:</strong> <a href="#min-video-bitrate"><code>min_video_bitrate</code></a> and <a href="#require-audio"><code>require_audio</code></a></p>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

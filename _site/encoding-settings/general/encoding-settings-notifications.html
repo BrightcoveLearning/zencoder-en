@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Notifications Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/general/">General Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Notifications Settings</li>
     </ol>
   </nav>
 </header>
@@ -152,13 +156,19 @@
               
                 
                   <li class="submenu-header">
-                    <a href="/encoding-settings/general/">General Settings</a>
+                    <a href="/encoding-settings/general/index.html">General Settings</a>
                   </li>
                     <ul class="sidenav-subsubmenu" style="display:none;">
                       
                       <li><a href="/encoding-settings/general/encoding-settings-job.html">Job Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">General Output Settings</a></li>
+                      
                       <li><a href="/encoding-settings/general/cae-settings.html">CAE Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">Conditional Outputs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general/encoding-settings-notifications.html">Notifications Settings</a></li>
                       
                     </ul>
                   </li>
@@ -178,6 +188,10 @@
               
                 
                   <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                
+              
+                
+                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
                 
               
             </ul>
@@ -236,80 +250,67 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: Notifications</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-          <div class="field--item">Notifications</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>Notifications Settings</h1>
+  <summary>This topic contains details for encoding settings related to notifications.</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-</div>
+    <p>After a job or an output file is completed, you can find out about it in several ways.</p>
 
-  
-            <p>This topic contains details for encoding settings related to notifications.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+    <ul>
+      <li>We can send a <a href="/general-information/getting-notifications-when-videos-are-finished.html">HTTP POST request</a> to your application with the details.</li>
+      <li>We can send an email.</li>
+      <li>You can request your notifications using a third-party tool such as <a href="https://ngrok.com">ngrok</a>. This is useful when you are developing locally and Zencoder can’t reach your development server.</li>
+      <li>You can check the Zencoder Dashboard for job status.</li>
+      <li>You can check job status via a Job show API request.</li>
+    </ul>
+    <p>The first two - outgoing <a href="/general-information/getting-notifications-when-videos-are-finished.html">HTTP</a> or email notifications - are triggered by adding notification options to your Job create API request.</p>
 
-<p>After a job or an output file is completed, you can find out about it in several ways.</p>
+    <p><strong>Notes:</strong></p>
 
-<ul><li>We can send a <a href="/getting-notifications-when-videos-are-finished">HTTP POST request</a> to your application with the details.</li>
-	<li>We can send an email.</li>
-	<li>You can request your notifications using a third-party tool such as <a href="https://ngrok.com">ngrok</a>. This is useful when you are developing locally and Zencoder can’t reach your development server.</li>
-	<li>You can check the Zencoder Dashboard for job status.</li>
-	<li>You can check job status via a Job show API request.</li>
-</ul><p>The first two - outgoing <a href="/getting-notifications-when-videos-are-finished">HTTP</a> or email notifications - are triggered by adding notification options to your Job create API request.</p>
+    <ul>
+      <li>Notifications are limited to 5 per output and job. Output notifications do not count towards the job total. <a href="https://supportportal.brightcove.com/s/login/">Contact us</a> if you need more.</li>
+      <li>Notification payloads may repeat notifications for jobs. You should parse the payload body by job ID then state.</li>
+      <li>Notification handlers on servers built on HTTP2 are not currenly supported. Notifications sent to HTTP2 servers may fail to be delivered without returning any error.</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">For more information on notifications, see <a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a>.
 
-<p><strong>Notes:</strong></p>
+      <p>Also note that, although output notifications contain the current state of the job, you should only rely on <strong>job</strong> notifications to determine when the job is complete.</p>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="notifications">notifications</h2>
+    <code>notifications:Array</code>
 
-<ul><li>Notifications are limited to 5 per output and job. Output notifications do not count towards the job total. <a href="https://support.brightcove.com/en/contact/create">Contact us</a> if you need more.</li>
-	<li>Notification payloads may repeat notifications for jobs. You should parse the payload body by job ID then state.</li>
-  <li>Notification handlers on servers built on HTTP2 are not currenly supported. Notifications sent to HTTP2 servers may fail to be delivered without returning any error.</li>
-</ul><aside class="bcls-aside bcls-aside--information">For more information on notifications, see <a href="/getting-notifications-when-videos-are-finished">Getting Notifications When Videos Are Finished</a>.
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p>Also note that, although output notifications contain the current state of the job, you should only rely on <strong>job</strong> notifications to determine when the job is complete.</p>
-</aside></section><section class="bcls-section"><h2 id="notifications">notifications</h2>
-<code>notifications:Array</code>
+    <p><strong>Valid Values:</strong> An array of notification strings (valid email addresses or URLs), or hashes of <a class="notranslate" href="#notification_url">url</a> and <a class="notranslate" href="#notification_format">format</a>.</p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Valid Values:</strong> An array of notification strings (valid email addresses or URLs), or hashes of <a class="notranslate" href="#notification_url">url</a> and <a class="notranslate" href="#notification_format">format</a>.</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p>Specify one or more HTTP URLs or email addresses to notify with a webhook when a job or output is complete.</p>
 
-<p><strong>Description:</strong></p>
+    <p>For HTTP notifications, the notification API request is sent from Zencoder to your server as a <code>POST</code> to the notification URL, and is either JSON or XML containing two or three values. The first is a Job ID. This ID matches the ID you received when you submitted the initial job request. Second is a status – either ‘finished’, ‘failed’, or ‘cancelled’. If a job contains multiple outputs, this notification also contains the output label you supplied when the job was initially created.</p>
 
-<p>Specify one or more HTTP URLs or email addresses to notify with a webhook when a job or output is complete.</p>
+    <p>HTTP notifications will send JSON or XML (depending on the requested <a class="notranslate" href="#notification_format">format</a>).</p>
 
-<p>For HTTP notifications, the notification API request is sent from Zencoder to your server as a <code>POST</code> to the notification URL, and is either JSON or XML containing two or three values. The first is a Job ID. This ID matches the ID you received when you submitted the initial job request. Second is a status – either ‘finished’, ‘failed’, or ‘cancelled’. If a job contains multiple outputs, this notification also contains the output label you supplied when the job was initially created.</p>
+    <p><strong>Notification Contents</strong> vary depending on the <a href="/general-information/getting-notifications-when-videos-are-finished.html">API version used</a>.</p>
 
-<p>HTTP notifications will send JSON or XML (depending on the requested <a class="notranslate" href="#notification_format">format</a>).</p>
+    <p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The retry schedule is covered in the <a href="/general-information/getting-notifications-when-videos-are-finished.html">notifications guide</a>.</p>
 
-<p><strong>Notification Contents</strong> vary depending on the <a href="/getting-notifications-when-videos-are-finished">API version used</a>.</p>
+    <p><strong>Authorization and Security</strong></p>
 
-<p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The retry schedule is covered in the <a href="/getting-notifications-when-videos-are-finished">notifications guide</a>.</p>
+    <p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action</p>
 
-<p><strong>Authorization and Security</strong></p>
+    <p>For HTTPS, simply specify a URL using <code>https://</code> will force the notification to be sent securely using SSL.</p>
 
-<p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action</p>
+    <p><strong>Note:</strong> API V1 only supports output notifications, not job notifications.</p>
 
-<p>For HTTPS, simply specify a URL using <code>https://</code> will force the notification to be sent securely using SSL.</p>
-
-<p><strong>Note:</strong> API V1 only supports output notifications, not job notifications.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "notifications": [
@@ -334,45 +335,49 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a class="notranslate" href="#notification_url">url</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
-</section><section class="bcls-section"><h2 id="notification_url">url</h2>
-<code>url:String</code>
+    <p><strong>See Also:</strong> <a class="notranslate" href="#notification_url">url</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="notification_url">url</h2>
+    <code>url:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
+    <p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
 
-<p><strong>Valid Values:</strong> A valid HTTP or HTTPS URL to notify, optionally including HTTP Auth credentials</p>
+    <p><strong>Valid Values:</strong> A valid HTTP or HTTPS URL to notify, optionally including HTTP Auth credentials</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Examples:</strong></p>
+    <p><strong>Examples:</strong></p>
 
-<ul><li class="notranslate">https://username:password@example.com/notification/path</li>
-	<li class="notranslate">http://example.com/notification-handler.php</li>
-</ul><p><strong>Description:</strong></p>
+    <ul>
+      <li class="notranslate">https://username:password@example.com/notification/path</li>
+      <li class="notranslate">http://example.com/notification-handler.php</li>
+    </ul>
+    <p><strong>Description:</strong></p>
 
-<p>A URL to <a href="/getting-notifications-when-videos-are-finished">notify</a> when a job is complete.</p>
+    <p>A URL to <a href="/general-information/getting-notifications-when-videos-are-finished.html">notify</a> when a job is complete.</p>
 
-<p>Use the <a class="notranslate" href="#notification_url">url</a> option when specifying <a class="notranslate" href="#notifications">notifications</a> as a hash, including a <a class="notranslate" href="#notification_format">format</a>. If you don't need to specify a format, you can simply include the URL as an item in the notifications array.</p>
+    <p>Use the <a class="notranslate" href="#notification_url">url</a> option when specifying <a class="notranslate" href="#notifications">notifications</a> as a hash, including a <a class="notranslate" href="#notification_format">format</a>. If you don't need to specify a format, you can simply include the URL as an item in the notifications array.</p>
 
-<p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action.</p>
+    <p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action.</p>
 
-<p>For HTTPS, simply specify a URL using <code>https://</code> so a notification would be sent securely using SSL.</p>
+    <p>For HTTPS, simply specify a URL using <code>https://</code> so a notification would be sent securely using SSL.</p>
 
-<p><strong>Notification Contents</strong> vary depending on the <a href="/getting-notifications-when-videos-are-finished">API version used</a>.</p>
+    <p><strong>Notification Contents</strong> vary depending on the <a href="/general-information/getting-notifications-when-videos-are-finished.html">API version used</a>.</p>
 
-<p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The notification will be attempted up to 20 times, with the delay between attempts doubling each time.</p>
+    <p>If Zencoder is unable to successfully connect to the target server when sending a notification, the notification will be queued to try again. The notification will be attempted up to 20 times, with the delay between attempts doubling each time.</p>
 
-<p><strong>Authorization and Security</strong></p>
+    <p><strong>Authorization and Security</strong></p>
 
-<p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action</p>
+    <p>For authenticated HTTP notifications, include a username and password in the notification URL using this syntax: https://username:password@www.example.com/path/to/notification/action</p>
 
-<p>For HTTPS, simply specify a URL using <code>https://</code> will force the notification to be sent securely using SSL.</p>
+    <p>For HTTPS, simply specify a URL using <code>https://</code> will force the notification to be sent securely using SSL.</p>
 
-<p><strong>Notes:</strong> API V1 only supports output notifications, not job notifications.</p>
+    <p><strong>Notes:</strong> API V1 only supports output notifications, not job notifications.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "notifications": [
@@ -391,31 +396,33 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
-</section><section class="bcls-section"><h2 id="notification_format">format</h2>
-<code>format:String</code>
+    <p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="notification_format">format</h2>
+    <code>format:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
+    <p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
 
-<p><strong>Valid Values:</strong> <code>json</code> or <code>xml</code></p>
+    <p><strong>Valid Values:</strong> <code>json</code> or <code>xml</code></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> <code>json</code></p>
+    <p><strong>Example:</strong> <code>json</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>A format and content type for <a class="notranslate" href="#notifications">notifications</a>.</p>
+    <p>A format and content type for <a class="notranslate" href="#notifications">notifications</a>.</p>
 
-<p>By default, HTTP notifications are in JSON, with an HTTP Content-Type of <code>application/json</code>.</p>
+    <p>By default, HTTP notifications are in JSON, with an HTTP Content-Type of <code>application/json</code>.</p>
 
-<p>For XML notifications, set format to 'xml'. This will return notifications in XML format, with an HTTP Content-Type of <code>application/xml</code>.</p>
+    <p>For XML notifications, set format to 'xml'. This will return notifications in XML format, with an HTTP Content-Type of <code>application/xml</code>.</p>
 
-<p><strong>Note:</strong> API V1 notifications do not include an HTTP Content-Type unless you specify a format.</p>
+    <p><strong>Note:</strong> API V1 notifications do not include an HTTP Content-Type unless you specify a format.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "notifications": [
@@ -436,29 +443,31 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
-</section><section class="bcls-section"><h2 id="notification_headers">headers</h2>
-<code>headers:Hash</code>
+    <p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_format">format</a>, and <a class="notranslate" href="#notification_headers">headers</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="notification_headers">headers</h2>
+    <code>headers:Hash</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
+    <p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
 
-<p><strong>Valid Values:</strong> Keys must start with a letter and can contain letters, numbers, and -. Values can contain any string.</p>
+    <p><strong>Valid Values:</strong> Keys must start with a letter and can contain letters, numbers, and -. Values can contain any string.</p>
 
-<p><strong>There is a length limit of 100 characters for each notification header.</strong></p>
+    <p><strong>There is a length limit of 100 characters for each notification header.</strong></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> <code>{'Accept': 'application/json', 'Internal-Id': '12345'}</code></p>
+    <p><strong>Example:</strong> <code>{'Accept': 'application/json', 'Internal-Id': '12345'}</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>By default, HTTP notifications are sent with an HTTP Content-Type, along with a User-Agent. If your application requires additional headers, they can be specified here.</p>
+    <p>By default, HTTP notifications are sent with an HTTP Content-Type, along with a User-Agent. If your application requires additional headers, they can be specified here.</p>
 
-<p>The header is set as the key of the hash, and its value is the value of the hash.</p>
+    <p>The header is set as the key of the hash, and its value is the value of the hash.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "notifications": [
@@ -487,29 +496,31 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_url">url</a>, and <a class="notranslate" href="#notification_format">format</a></p>
-</section><section class="bcls-section"><h2 id="event">event</h2>
-<code>event:String</code>
+    <p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_url">url</a>, and <a class="notranslate" href="#notification_format">format</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="event">event</h2>
+    <code>event:String</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
+    <p><strong>Parent:</strong> <a class="notranslate" href="#notifications">notifications</a></p>
 
-<p><strong>Valid Values:</strong> <code>first_segment_uploaded</code>, <code>seamless_playback</code></p>
+    <p><strong>Valid Values:</strong> <code>first_segment_uploaded</code>, <code>seamless_playback</code></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> <code>{'event': 'seamless_playback'}</code></p>
+    <p><strong>Example:</strong> <code>{'event': 'seamless_playback'}</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Live outputs have additional notification events corresponding to the progress of the file.</p>
+    <p>Live outputs have additional notification events corresponding to the progress of the file.</p>
 
-<p>Notifications can be sent when the first segment of a Live output has been uploaded and when enough segments have been uploaded to enable seamless playback.</p>
+    <p>Notifications can be sent when the first segment of a Live output has been uploaded and when enough segments have been uploaded to enable seamless playback.</p>
 
-<p>Event does not apply to regular job and output notifications, only to those for Live outputs.</p>
+    <p>Event does not apply to regular job and output notifications, only to those for Live outputs.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -526,9 +537,9 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_url">url</a>, and <a class="notranslate" href="#notification_format">format</a></p>
-</section>
-
+    <p><strong>See Also:</strong> <a class="notranslate" href="#notifications">notifications</a>, <a class="notranslate" href="#notification_url">url</a>, and <a class="notranslate" href="#notification_format">format</a></p>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

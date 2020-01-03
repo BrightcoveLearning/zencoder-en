@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Sources/Destination Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,11 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Sources/Destination Settings</li>
     </ol>
   </nav>
 </header>
@@ -246,162 +248,76 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: Captions</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Captions</div>
-          <div class="field--item">Encoding Settings</div>
-              </div>
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:rgb(65, 196, 181);
+    margin-right: .5rem;
+  }
+  .card-icon i {
+    color: rgb(65, 196, 181);
+  }
+  .card-wrapper {
+  justify-content: start;
+}
+.bcls-card h2 {
+  font-size: 1rem;
+}
+.bcls-card ul {
+  font-size: small;
+  margin-left: -3em;
+}
+</style>
+
+<article class="bcls-article">
+  <h1><i class="fal fa-cogs"></i> Sources/Destination Settings</h1>
+  <summary>Source and destination settings for Zencoder jobs.</summary>
+  <section class="card-wrapper">
+    <section class="bcls-card">
+      <div class="card-content">
+        <h2 id="Topics_in_this_section">Topics in Sources/Destination Settings</h2>
+        <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+        
+          
+        
       </div>
-
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
-
-</div>
-
-  
-            <p>This topic contains details for encoding settings related to video captions.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
-
-<p>Zencoder automatically passes captions through from inputs to outputs, for supported formats. You can also specify a caption file (in SCC format) to add to outputs during transcoding.</p>
-
-<aside class="bcls-aside bcls-aside--warning language-editable">Note that captions muxed onto the video track are <strong>not</strong> supported.</aside><p>Input formats supported for captions:</p>
-
-<ul><li class="language-editable">MP4/M4V video files that have caption tracks in CEA-608 format</li>
-	<li class="language-editable">SCC, DFXP, or SAMI files specified with the caption_url option</li>
-</ul><p>Output formats supported for captions:</p>
-
-<ul><li class="language-editable">MP4/M4V files, with caption track in CEA-608 format</li>
-	<li class="language-editable">HLS outputs (segmented outputs with H.264 video in TS format)</li>
-	<li class="language-editable">SCC and DFXP formats are also supported with <code>captions</code> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type">type</a> output</li>
-</ul><p>For HLS, captions must be mapped to the outputs to get proper in-manifest captions. For example:</p>
-<pre class="line-numbers"><code class="language-json">{
-  "label": "Captions",
-  "type": "captions",
-  "segmented": true,
-  "public": true,
-  "filename": "captions.m3u8",
-  "caption_url": "PATH_TO_CAPTION_FILE_HERE",
-  "streaming_delivery_format": "hls"
-}, {
-  "filename": "master_playlist.m3u8",
-  "type": "playlist",
-  "captions": [{
-    "path": "Captions/captions.m3u8",
-    "language": "en",
-    "name": "english"
-  }],
-  "streams": [{
-    "path": "video/video-1800.m3u8",
-    "source": "video-res1",
-    "audio": "64k_audio"
-  }]
-}</code></pre>
-
-<p><strong>Note:</strong> The following restrictions currently apply to caption conversion:</p>
-
-<p>For DFXP inputs:</p>
-
-<ul><li class="language-editable">UTF8 encoding is required for all special characters</li>
-	<li class="language-editable">Only the first language is converted (the first DIV tag)</li>
-	<li class="language-editable">Animation, layout, and region features are not supported</li>
-	<li class="language-editable">Styles can be inline or referenced by ID, but only the tts:textAlign property is applied</li>
-	<li class="language-editable">Nested DIV and P tags are ignored</li>
-	<li class="language-editable">SPAN tags are ignored</li>
-	<li class="language-editable">Explicit breaks may be inserted with BR tags</li>
-	<li class="language-editable">Only a single caption may be on-screen at any time (subsequent captions will end previous ones)</li>
-</ul><p>For SAMI inputs:</p>
-
-<ul><li class="language-editable">Only the first language listed is converted (the first class-selector style)</li>
-	<li class="language-editable">Inline styles are not supported</li>
-	<li class="language-editable">Layout-related styling tags (table, div, etc.) are not supported</li>
-	<li class="language-editable">Explicit breaks may be inserted by using separate P tags</li>
-</ul></section><section class="bcls-section"><h2 id="caption_url">caption_url</h2>
-<code>caption_url:String</code>
-
-<p><strong>API Versions: V1, V2 </strong></p>
-
-<p><strong>Parent: <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> </strong></p>
-
-<p><strong>Valid Values:</strong> A valid URL to an SCC, DFXP, or SAMI caption file to include in the output</p>
-
-<p><strong>Compatible Job Types:</strong> All</p>
-
-<p><strong>Example:</strong> http://example.com/captions.scc</p>
-
-<p><strong>Description:</strong></p>
-
-<p>The URL to an SCC, DFXP, or SAMI caption file to include in the output.</p>
-
-<p>Zencoder supports captions for multiple output video formats:</p>
-
-<ul><li class="language-editable">MP4/M4V files, with caption track in CEA-608 format</li>
-	<li class="language-editable">HLS outputs (segmented outputs with H.264 video in TS format)</li>
-</ul><p> </p>
-
-<p><strong>Note:</strong> Captioning is not currently supported on transmuxed outputs.</p>
-
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "caption_url": "http://example.com/captions.scc"
-    }
-  ]
-}</code></pre>
-
-<p><strong>See Also:</strong> <a href="#skip-captions">skip_captions</a> and <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare-for-segmenting">prepare_for_segmenting</a></p>
-</section><section class="bcls-section"><h2 id="skip_captions">skip_captions</h2>
-<code>skip_captions:Boolean</code>
-
-<p><strong>API Versions:</strong> V1, V2</p>
-
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-<p><strong>Default:</strong> false</p>
-
-<p><strong>Valid Values:</strong> true or false</p>
-
-<p><strong>Compatible Job Types:</strong> All</p>
-
-<p><strong>Example:</strong> true</p>
-
-<p><strong>Description:</strong></p>
-
-<p>Don't add or pass through captions to the output file.</p>
-
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "skip_captions": "true"
-    }
-  ]
-}</code></pre>
-
-<p><strong>See Also:</strong> <a href="#caption-url">caption_url</a> and <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare-for-segmenting">prepare_for_segmenting</a></p>
-</section>
+    </section>
+  </section>
+</article>
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav">
-        <h6 class="toc">Page Contents</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
       
     </div>
   </div>
@@ -409,7 +325,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 01 Jan 2020
+  Page last updated on 03 Jan 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -490,8 +406,6 @@
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
-  
-  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/feedback-beacon.js"></script>
 </body>
