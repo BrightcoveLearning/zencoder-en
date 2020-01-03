@@ -154,7 +154,7 @@
               
                 
                   <li class="submenu-header">
-                    <a href="/encoding-settings/general">General</a>
+                    <a href="/encoding-settings/general/">General Settings</a>
                   </li>
                     <ul class="sidenav-subsubmenu" style="display:none;">
                       
@@ -167,11 +167,19 @@
                 
               
                 
-                  <li><a href="/references/known-issues.html">General Audio/Video</a></li>
+                  <li><a href="/encoding-settings/general-audio-video/">General Audio/Video Settings</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+                
+              
+                
+                  <li><a href="/encoding-settings/asset/">General Media Asset Settings</a></li>
+                
+              
+                
+                  <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
                 
               
             </ul>
@@ -236,15 +244,18 @@
     color:rgb(65, 196, 181);
     margin-right: .5rem;
   }
-  .card-icon i {
-    color: rgb(65, 196, 181);
+  .bcls-card-small ul {
+    font-size: small;
+    list-style: none;
+    margin-left: -3em;
   }
 
 </style>
 
 <article class="bcls-article">
   <h1><i class="fal fa-cogs"></i> Encoding Settings</h1>
-  <summary>Detailed explanation of all encoding settings</summary>
+  <summary>Detailed explanation of all encoding settings.</summary>
+  <p><a href="/encoding-settings/quick-reference.html">Quick Reference</a></p>
   <section class="card-wrapper">
     
       
@@ -257,29 +268,54 @@
     
       
         
-          
-            <section class="bcls-card">
+            <section class="bcls-card-small" onclick="window.location.href='/encoding-settings/general/'">
               <div class="card-content">
-                <h2>(( doc.name ))/h2>
+                <h2>General Settings</h2>
+                <ul>
+                  
+                        <li><a href="/encoding-settings/general/encoding-settings-job.html">Job Settings</a></li>
+                  
+                        <li><a href="/encoding-settings/general/cae-settings.html">CAE Settings</a></li>
+                  
+                </ul>
+              </div>
+            </section>
+        
+            <section class="bcls-card-small" onclick="window.location.href='/encoding-settings/general-audio-video/'">
+              <div class="card-content">
+                <h2>General Audio/Video Settings</h2>
                 <ul>
                   
                 </ul>
               </div>
             </section>
-          
-            <section class="bcls-card">
+        
+            <section class="bcls-card-small" onclick="window.location.href='/encoding-settings/formats-codecs/'">
               <div class="card-content">
-                <h2>(( doc.name ))/h2>
+                <h2>Formats and Codec Settings</h2>
                 <ul>
                   
                 </ul>
               </div>
             </section>
-          
         
-          
+            <section class="bcls-card-small" onclick="window.location.href='/encoding-settings/asset/'">
+              <div class="card-content">
+                <h2>General Media Asset Settings</h2>
+                <ul>
+                  
+                </ul>
+              </div>
+            </section>
         
-          
+            <section class="bcls-card-small" onclick="window.location.href='/encoding-settings/content-protection/'">
+              <div class="card-content">
+                <h2>Content Protection Settings</h2>
+                <ul>
+                  
+                </ul>
+              </div>
+            </section>
         
       
     

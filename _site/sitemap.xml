@@ -790,6 +790,13 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/references/</loc>
         <lastmod>2020-01-03</lastmod>
         <changefreq>daily</changefreq>
@@ -804,6 +811,41 @@
     </url>
     
     <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/assets/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/</loc>
+        <lastmod>2020-01-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://zencoder.support.brightcove.com/encoding-settings/</loc>
         <lastmod>2020-01-03</lastmod>
         <changefreq>daily</changefreq>
@@ -812,13 +854,6 @@
     
     <url>
         <loc>https://zencoder.support.brightcove.com/general-information/</loc>
-        <lastmod>2020-01-03</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/</loc>
         <lastmod>2020-01-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

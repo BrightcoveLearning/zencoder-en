@@ -54,17 +54,21 @@
   url: /encoding-settings/
   icon: '<i class="fal fa-cogs"></i>'
   docs:
-    - name: General
-      url: /encoding-settings/general
+    - name: General Settings
+      url: /encoding-settings/general/
       docs:
         - name: Job Settings
           url: /encoding-settings/general/encoding-settings-job.html
         - name: CAE Settings
           url: /encoding-settings/general/cae-settings.html
-    - name: General Audio/Video
-      url: /references/known-issues.html
-    - name: Product Updates
-      url: /references/product-updates.html
+    - name: General Audio/Video Settings
+      url: /encoding-settings/general-audio-video/
+    - name: Formats and Codec Settings
+      url: /encoding-settings/formats-codecs/
+    - name: General Media Asset Settings
+      url: /encoding-settings/asset/
+    - name: Content Protection Settings
+      url: /encoding-settings/content-protection/
 - section: Encoding Guides
   url: /encoding-guides/
   icon: '<i class="fas fa-fast-forward"></i>'

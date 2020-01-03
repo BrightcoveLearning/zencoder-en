@@ -1,6 +1,6 @@
 ---
 title: Encoding Settings
-description: Detailed explanation of all encoding settings
+description: Detailed explanation of all encoding settings.
 icon: '<i class="fal fa-cogs"></i>'
 parent: Home
 ---
@@ -10,8 +10,10 @@ parent: Home
     color:{{site.product_color}};
     margin-right: .5rem;
   }
-  .card-icon i {
-    color: {{site.product_color}};
+  .bcls-card-small ul {
+    font-size: small;
+    list-style: none;
+    margin-left: -3em;
   }
 
 </style>
@@ -19,22 +21,21 @@ parent: Home
 <article class="bcls-article">
   <h1>{{ page.icon }} {{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
+  <p><a href="/encoding-settings/quick-reference.html">Quick Reference</a></p>
   <section class="card-wrapper">
     {% for item in site.data.navigation %}
       {% if item.section == page.title %}
         {% for subsection in item.docs %}
-          {% for doc in subsection.docs %}
-            <section class="bcls-card">
+            <section class="bcls-card-small" onclick="window.location.href='{{subsection.url}}'">
               <div class="card-content">
-                <h2>(( doc.name ))/h2>
+                <h2>{{ subsection.name }}</h2>
                 <ul>
-                  {% for subdoc in docs.docs %}
-                        <li><a href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
+                  {% for doc in subsection.docs %}
+                        <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
                   {% endfor %}
                 </ul>
               </div>
             </section>
-          {% endfor %}
         {% endfor %}
       {% endif %}
     {% endfor %}
