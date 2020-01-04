@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Video Processing Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/general-audio-video/">General Audio/Video Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Video Processing Settings</li>
     </ol>
   </nav>
 </header>
@@ -184,24 +188,92 @@
                       
                       <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Video Processing Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Broadcast Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Frame Rate Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Rate Control Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Transmuxing Settings</a></li>
+                      
                     </ul>
                   </li>
                 
               
                 
-                  <li><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Format and Codecs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/asset/">General Media Asset Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/assets/">Media Asset Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Clips Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Thumbnails Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Watermarks Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/content-protection/">Content Protection Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Decryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Aspera Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -260,50 +332,31 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: Video Processing</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>Video Processing Settings</h1>
+  <summary>This topic contains details for encoding settings related to video processing.</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="rotate">rotate</h2>
+    <code>rotate:Integer</code>
 
-</div>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-  
-            <p>This topic contains details for encoding settings related to video processing.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="rotate">rotate</h2>
-<code>rotate:Integer</code>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Default:</strong> automatically detected</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Valid Values:</strong> 0, 90, 180, 270. Leave unset if you want auto-rotation.</p>
 
-<p><strong>Default:</strong> automatically detected</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Valid Values:</strong> 0, 90, 180, 270. Leave unset if you want auto-rotation.</p>
+    <p><strong>Example:</strong> 180</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Example:</strong> 180</p>
+    <p>Explicitly rotate a movie. By default, Zencoder will automatically rotate rotated content (including rotated iPhone video), but you can also manually rotate a movie. If you set "rotate" to 0, we will not auto-rotate, so leave this option unset if you want auto-rotation.</p>
 
-<p><strong>Description:</strong></p>
-
-<p>Explicitly rotate a movie. By default, Zencoder will automatically rotate rotated content (including rotated iPhone video), but you can also manually rotate a movie. If you set "rotate" to 0, we will not auto-rotate, so leave this option unset if you want auto-rotation.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -312,28 +365,30 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="deinterlace">deinterlace</h2>
-<code>deinterlace:String</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deinterlace">deinterlace</h2>
+    <code>deinterlace:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> detect</p>
+    <p><strong>Default:</strong> detect</p>
 
-<p><strong>Valid Values:</strong> on, off, detect</p>
+    <p><strong>Valid Values:</strong> on, off, detect</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> on</p>
+    <p><strong>Example:</strong> on</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Determines whether or not to apply a deinterlacing filter. Default is "detect" – if the input file is detected as interlaced, it will be deinterlaced. Set this to "on" to force deinterlacing (which will reduce quality if the input is not interlaced), or "off" to avoid deinterlacing.</p>
+    <p>Determines whether or not to apply a deinterlacing filter. Default is "detect" – if the input file is detected as interlaced, it will be deinterlaced. Set this to "on" to force deinterlacing (which will reduce quality if the input is not interlaced), or "off" to avoid deinterlacing.</p>
 
-<p>Note that Zencoder makes this determination based on file metadata. If interlaced content is re-encoded with an encoder that does not deinterlace the content, or flag it as interlaced, we may not be able to auto-deinterlace the content in "detect" mode.</p>
+    <p>Note that Zencoder makes this determination based on file metadata. If interlaced content is re-encoded with an encoder that does not deinterlace the content, or flag it as interlaced, we may not be able to auto-deinterlace the content in "detect" mode.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -342,26 +397,28 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="sharpen">sharpen</h2>
-<code>sharpen:Boolean</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sharpen">sharpen</h2>
+    <code>sharpen:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Apply a sharpen filter to the video.</p>
+    <p>Apply a sharpen filter to the video.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -370,28 +427,30 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="denoise">denoise</h2>
-<code>denoise:String</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="denoise">denoise</h2>
+    <code>denoise:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Valid Values:</strong> weak, medium, strong, or strongest</p>
+    <p><strong>Valid Values:</strong> weak, medium, strong, or strongest</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> weak</p>
+    <p><strong>Example:</strong> weak</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Apply a denoise filter to the video.</p>
+    <p>Apply a denoise filter to the video.</p>
 
-<p>Valid options are 'weak', 'medium', 'strong', and 'strongest'. Typically reduces file size by 5%-20%, depending on denoising level, bitrate, and source video. Any denoising slows down encoding by about 20%.</p>
+    <p>Valid options are 'weak', 'medium', 'strong', and 'strongest'. Typically reduces file size by 5%-20%, depending on denoising level, bitrate, and source video. Any denoising slows down encoding by about 20%.</p>
 
-<p>Values above 'weak' should be used carefully, though animation can sometimes handle a high level of denoising.</p>
+    <p>Values above 'weak' should be used carefully, though animation can sometimes handle a high level of denoising.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -400,28 +459,30 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="autolevel">autolevel</h2>
-<code>autolevel:Boolean</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="autolevel">autolevel</h2>
+    <code>autolevel:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Apply a color auto-level filter to the video. Note that this filter may cause unexpected color problems in some videos, so use carefully.</p>
+    <p>Apply a color auto-level filter to the video. Note that this filter may cause unexpected color problems in some videos, so use carefully.</p>
 
-<p>The VP6 <a href="./node/17856#video-codec">video_codec</a> does not support the autolevel option.</p>
+    <p>The VP6 <a href="./node/17856#video-codec">video_codec</a> does not support the autolevel option.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -430,26 +491,28 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="deblock">deblock</h2>
-<code>deblock:Boolean</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deblock">deblock</h2>
+    <code>deblock:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Apply a deblocking filter to the video.</p>
+    <p>Apply a deblocking filter to the video.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -458,8 +521,8 @@
     }
   ]
 }</code></pre>
-</section>
-
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

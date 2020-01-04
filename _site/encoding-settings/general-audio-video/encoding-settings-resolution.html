@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>Resolution Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/general-audio-video/">General Audio/Video Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Resolution Settings</li>
     </ol>
   </nav>
 </header>
@@ -184,24 +188,92 @@
                       
                       <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Video Processing Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Broadcast Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Frame Rate Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Rate Control Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Transmuxing Settings</a></li>
+                      
                     </ul>
                   </li>
                 
               
                 
-                  <li><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Format and Codecs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/asset/">General Media Asset Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/assets/">Media Asset Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Clips Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Thumbnails Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Watermarks Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/content-protection/">Content Protection Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Decryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Aspera Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -260,60 +332,44 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: Resolution</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>Resolution Settings</h1>
+  <summary>This topic contains details for encoding settings related to video resolution.</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
 
-</div>
+    <p>You can control the resolution of your output video using one or more resolution settings.</p>
 
-  
-            <p>This topic contains details for encoding settings related to video resolution.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="overview">Overview</h2>
+    <p>1. Start by setting either <a href="#size">size</a>, <a href="#width">width</a>, or <a href="#height">height</a>. <code>width</code> and <code>height</code> take precedence over <code>size</code>. If you do not set any of these, the original video resolution will be preserved.</p>
 
-<p>You can control the resolution of your output video using one or more resolution settings.</p>
+    <p>2. Then determine if you want to increase the size of videos when the input is smaller than your target output (<a href="#upscale">upscale</a>). By default, we will not upscale videos. Often, your video player can upscale videos for you just fine, so there is no need to upscale the video at the point of encoding (which only increases file size).</p>
 
-<p>1. Start by setting either <a href="#size">size</a>, <a href="#width">width</a>, or <a href="#height">height</a>. <code>width</code> and <code>height</code> take precedence over <code>size</code>. If you do not set any of these, the original video resolution will be preserved.</p>
+    <p>3. Finally, select an approach to aspect ratio. If your input video has a different aspect ratio than the resolution that you choose, you can either preserve the original aspect ratio; stretch the video to fit the target aspect ratio; crop the input to match the target aspect ratio; or pad the video with black bars to match the target aspect ratio.</p>
 
-<p>2. Then determine if you want to increase the size of videos when the input is smaller than your target output (<a href="#upscale">upscale</a>). By default, we will not upscale videos. Often, your video player can upscale videos for you just fine, so there is no need to upscale the video at the point of encoding (which only increases file size).</p>
+    <aside class="bcls-aside bcls-aside--information">Note: many video formats require that width and height values be even numbers. If the output format requires this, Zencoder will round down the width, height, or both to meet this requirement where necessary.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="size">size</h2>
+    <code>size:String</code>
 
-<p>3. Finally, select an approach to aspect ratio. If your input video has a different aspect ratio than the resolution that you choose, you can either preserve the original aspect ratio; stretch the video to fit the target aspect ratio; crop the input to match the target aspect ratio; or pad the video with black bars to match the target aspect ratio.</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<aside class="bcls-aside bcls-aside--information">Note: many video formats require that width and height values be even numbers. If the output format requires this, Zencoder will round down the width, height, or both to meet this requirement where necessary.</aside></section><section class="bcls-section"><h2 id="size">size</h2>
-<code>size:String</code>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Valid Values:</strong> WxH, where W and H are the width and height, respectively. Both dimensions should be an integer divisible by 4.</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Valid Values:</strong> WxH, where W and H are the width and height, respectively. Both dimensions should be an integer divisible by 4.</p>
+    <p><strong>Example:</strong> 480x320</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Example:</strong> 480x320</p>
+    <p>The resolution of the output file, expressed as WxH, like 640×480 or 1280×720. Note that <a href="#width">width</a> and <a href="#height">height</a> take precedence over size.</p>
 
-<p><strong>Description:</strong></p>
+    <p>Aspect mode will be preserved by default, so if the input video is 16:9 and a 4:3 output resolution is requested, the output will maintain the 16:9 aspect ratio. This will result in the output dimensions not matching the requested size. Use <a href="#aspect-mode">aspect_mode</a> to control this.</p>
 
-<p>The resolution of the output file, expressed as WxH, like 640×480 or 1280×720. Note that <a href="#width">width</a> and <a href="#height">height</a> take precedence over size.</p>
-
-<p>Aspect mode will be preserved by default, so if the input video is 16:9 and a 4:3 output resolution is requested, the output will maintain the 16:9 aspect ratio. This will result in the output dimensions not matching the requested size. Use <a href="#aspect-mode">aspect_mode</a> to control this.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -323,27 +379,29 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#aspect-mode">aspect_mode</a></p>
-</section><section class="bcls-section"><h2 id="width">width</h2>
-<code>width:Integer</code>
+    <p><strong>See Also:</strong> <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#aspect-mode">aspect_mode</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="width">width</h2>
+    <code>width:Integer</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Valid Values:</strong> Integers divisible by 4.</p>
+    <p><strong>Valid Values:</strong> Integers divisible by 4.</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 480</p>
+    <p><strong>Example:</strong> 480</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Video frame width. If no width is supplied, we will use the original width, or scale to <a href="#size">size</a> or <a href="#height">height</a> setting.</p>
+    <p>Video frame width. If no width is supplied, we will use the original width, or scale to <a href="#size">size</a> or <a href="#height">height</a> setting.</p>
 
-<p>Note that width and <a href="#height">height</a> take precedence over <a href="#size">size</a>.</p>
+    <p>Note that width and <a href="#height">height</a> take precedence over <a href="#size">size</a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -353,27 +411,29 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#size">size</a> and <a href="#height">height</a></p>
-</section><section class="bcls-section"><h2 id="height">height</h2>
-<code>height:Integer</code>
+    <p><strong>See Also:</strong> <a href="#size">size</a> and <a href="#height">height</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="height">height</h2>
+    <code>height:Integer</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Valid Values:</strong> Integers divisible by 4.</p>
+    <p><strong>Valid Values:</strong> Integers divisible by 4.</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 640</p>
+    <p><strong>Example:</strong> 640</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Video frame height. If no height is supplied, we will use the original height, or scale to <a href="#size">size</a> or <a href="#width">width</a> setting.</p>
+    <p>Video frame height. If no height is supplied, we will use the original height, or scale to <a href="#size">size</a> or <a href="#width">width</a> setting.</p>
 
-<p>Note that <a href="#width">width</a> and height take precedence over <a href="#size">size</a>.</p>
+    <p>Note that <a href="#width">width</a> and height take precedence over <a href="#size">size</a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -383,29 +443,31 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#size">size</a> and <a href="#width">width</a></p>
-</section><section class="bcls-section"><h2 id="upscale">upscale</h2>
-<code>upscale:Boolean</code>
+    <p><strong>See Also:</strong> <a href="#size">size</a> and <a href="#width">width</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="upscale">upscale</h2>
+    <code>upscale:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>By default, Zencoder will not increase the <a href="#size">size</a> of (or “upscale”) an input video to match the <a href="#width">width</a> and <a href="#height">height</a> you specify in an API request. Generally, upscaling a video just increases the size, but doesn’t really increase the quality. Your playback device (Flash, HTML5 Video, iPhone, etc.) can increase the size of a video rather than having the encoder do it.</p>
+    <p>By default, Zencoder will not increase the <a href="#size">size</a> of (or “upscale”) an input video to match the <a href="#width">width</a> and <a href="#height">height</a> you specify in an API request. Generally, upscaling a video just increases the size, but doesn’t really increase the quality. Your playback device (Flash, HTML5 Video, iPhone, etc.) can increase the size of a video rather than having the encoder do it.</p>
 
-<p>But if you do want to force Zencoder to increase the size of an input video, set “upscale” to true. If you do, an input video that is smaller than the output resolution will expand to fit the resolution. For example, if your output spec is 480×360, and someone submits a video that is 320×240, the video will be upsized to 480×360 if you set this option to true, and will remain at 320×240 otherwise.</p>
+    <p>But if you do want to force Zencoder to increase the size of an input video, set “upscale” to true. If you do, an input video that is smaller than the output resolution will expand to fit the resolution. For example, if your output spec is 480×360, and someone submits a video that is 320×240, the video will be upsized to 480×360 if you set this option to true, and will remain at 320×240 otherwise.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -414,36 +476,40 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="aspect_mode">aspect_mode</h2>
-<code>aspect_mode:String</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="aspect_mode">aspect_mode</h2>
+    <code>aspect_mode:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> preserve</p>
+    <p><strong>Default:</strong> preserve</p>
 
-<p><strong>Valid Values:</strong> preserve, stretch, crop, or pad</p>
+    <p><strong>Valid Values:</strong> preserve, stretch, crop, or pad</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> crop</p>
+    <p><strong>Example:</strong> crop</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>If the aspect ratio of the input does not match the requested output aspect ratio, what should the output resolution be? “aspect_mode” controls this decision. Note that both the width and height may be modified.</p>
+    <p>If the aspect ratio of the input does not match the requested output aspect ratio, what should the output resolution be? “aspect_mode” controls this decision. Note that both the width and height may be modified.</p>
 
-<p>As an example, assume that an input file is 1280×720 (widescreen 16:9), but the target output is 640×480 (standard 4:3). There are four basic approaches to this problem, and Zencoder supports them all.</p>
+    <p>As an example, assume that an input file is 1280×720 (widescreen 16:9), but the target output is 640×480 (standard 4:3). There are four basic approaches to this problem, and Zencoder supports them all.</p>
 
-<ul><li><strong>preserve</strong>: By default, Zencoder will preserve the aspect ratio of the original file, so if you submit widescreen content and ask for standard resolution, the output file will fit keep the widescreen aspect ratio, and will fit within the output size. Presumably, the player will then add black bars to fill up the frame. In our example, the output file will be 640×360 (widescreen 16×9 that fits within the 640×480 target).</li>
-	<li><strong>stretch</strong>: When the aspect mode is “stretch”, the output video will exactly match the requested width and height, even if it distorts the image. So in our example, the output will be 640×480, but will look vertically stretched. NB: this is not the same as the “upscale” option, above, which governs whether or not a smaller video will be enlarged to a larger frame size.</li>
-	<li><strong>crop</strong>: This option tells Zencoder to “zoom in” to the video to match the output size, by cropping pixels from the top/bottom or left/right. So if the input is widescreen 1280×720, and the output target is standard 640×480, we will crop roughly 160 pixels from the left and from the right of the input file (creating a 4:3 movie), and then resize that down to 640×480. If you’re old enough to remember non-widescreen VHS (like us), this is the old “pan and scan” option.</li>
-	<li><strong>pad</strong>: The pad option tells Zencoder to letterbox the video to match the output frame size exactly. Use this option if your target player doesn’t know how to pad a video; otherwise, you’re just wasting bits by including black bars in the actual file. Following our example, this option would take 1280×720 (16:9) content and convert it to 640×480 (4:3) by creating a 640×360 movie, and then placing 60 pixel black bars at the top and bottom of the movie. So the movie would be 640×480, with black bars at the top and bottom.</li>
-</ul><p>Note that aspect_mode requires that both a <a href="#width">width</a> and a <a href="#height">height</a> are provided (or <a href="#size">size</a>); otherwise, if only one dimension is provided, we will calculate the other dimension proportionately.</p>
+    <ul>
+      <li><strong>preserve</strong>: By default, Zencoder will preserve the aspect ratio of the original file, so if you submit widescreen content and ask for standard resolution, the output file will fit keep the widescreen aspect ratio, and will fit within the output size. Presumably, the player will then add black bars to fill up the frame. In our example, the output file will be 640×360 (widescreen 16×9 that fits within the 640×480 target).</li>
+      <li><strong>stretch</strong>: When the aspect mode is “stretch”, the output video will exactly match the requested width and height, even if it distorts the image. So in our example, the output will be 640×480, but will look vertically stretched. NB: this is not the same as the “upscale” option, above, which governs whether or not a smaller video will be enlarged to a larger frame size.</li>
+      <li><strong>crop</strong>: This option tells Zencoder to “zoom in” to the video to match the output size, by cropping pixels from the top/bottom or left/right. So if the input is widescreen 1280×720, and the output target is standard 640×480, we will crop roughly 160 pixels from the left and from the right of the input file (creating a 4:3 movie), and then resize that down to 640×480. If you’re old enough to remember non-widescreen VHS (like us), this is the old “pan and scan” option.</li>
+      <li><strong>pad</strong>: The pad option tells Zencoder to letterbox the video to match the output frame size exactly. Use this option if your target player doesn’t know how to pad a video; otherwise, you’re just wasting bits by including black bars in the actual file. Following our example, this option would take 1280×720 (16:9) content and convert it to 640×480 (4:3) by creating a 640×360 movie, and then placing 60 pixel black bars at the top and bottom of the movie. So the movie would be 640×480, with black bars at the top and bottom.</li>
+    </ul>
+    <p>Note that aspect_mode requires that both a <a href="#width">width</a> and a <a href="#height">height</a> are provided (or <a href="#size">size</a>); otherwise, if only one dimension is provided, we will calculate the other dimension proportionately.</p>
 
-<p><em>Note: the VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec">video_codec</a> does not support the "pad" aspect_mode. If you ask for "pad" with VP6 video, we will use the default mode of "preserve".</em></p>
+    <p><em>Note: the VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec">video_codec</a> does not support the "pad" aspect_mode. If you ask for "pad" with VP6 video, we will use the default mode of "preserve".</em></p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -452,30 +518,32 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="sample_aspect_ratio">sample_aspect_ratio</h2>
-<code>sample_aspect_ratio:String</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sample_aspect_ratio">sample_aspect_ratio</h2>
+    <code>sample_aspect_ratio:String</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 8:9</p>
+    <p><strong>Example:</strong> 8:9</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>The sample (pixel) aspect ratio to be used for the output video. The size, width, height, and aspect_mode mode options all refer to the encoded pixel dimensions, not the display dimensions.</p>
+    <p>The sample (pixel) aspect ratio to be used for the output video. The size, width, height, and aspect_mode mode options all refer to the encoded pixel dimensions, not the display dimensions.</p>
 
-<p>Sets the aspect ratio to use for sample/pixels of the output video, specified as "8:9", "32:27", or any other ratio of two positive integers, each between 1 and 65535.</p>
+    <p>Sets the aspect ratio to use for sample/pixels of the output video, specified as "8:9", "32:27", or any other ratio of two positive integers, each between 1 and 65535.</p>
 
-<p>Specifying any (valid) value for this setting changes the default 'aspect_mode' from 'preserve' to 'stretch', which means that by default you'll also need to specify a width/height for the encoded output.</p>
+    <p>Specifying any (valid) value for this setting changes the default 'aspect_mode' from 'preserve' to 'stretch', which means that by default you'll also need to specify a width/height for the encoded output.</p>
 
-<p><strong>Note:</strong> It may be useful to use the 'upscale' option in conjunction with this option for predictable output resolutions.</p>
+    <p><strong>Note:</strong> It may be useful to use the 'upscale' option in conjunction with this option for predictable output resolutions.</p>
 
-<p>This option only applies when using the H.264 and HEVC codecs.</p>
+    <p>This option only applies when using the H.264 and HEVC codecs.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -485,25 +553,27 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#aspect-mode">aspect_mode</a>, <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#size">size</a></p>
-</section><section class="bcls-section"><h2 id="force_interlace_headers">force_interlace_headers</h2>
-<code>force_interlace_headers:Boolean</code>
+    <p><strong>See Also:</strong> <a href="#aspect-mode">aspect_mode</a>, <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#size">size</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="force_interlace_headers">force_interlace_headers</h2>
+    <code>force_interlace_headers:Boolean</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Some decoders ask for interlaced content, but will play progressive content just fine. This setting will add "interlaced" headers to the metadata of progressive content, to make it look like it is actually interlaced.</p>
+    <p>Some decoders ask for interlaced content, but will play progressive content just fine. This setting will add "interlaced" headers to the metadata of progressive content, to make it look like it is actually interlaced.</p>
     <p><strong>Note:</strong> Some media inspection tools won't be tricked by this, and will report this content as progressive despite the header information.)</p>
     <p>This option only applies when using the H.264 codec.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -513,9 +583,9 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#aspect-mode">aspect_mode</a>, <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#size">size</a></p>
-</section>
-
+    <p><strong>See Also:</strong> <a href="#aspect-mode">aspect_mode</a>, <a href="#width">width</a>, <a href="#height">height</a>, and <a href="#size">size</a></p>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

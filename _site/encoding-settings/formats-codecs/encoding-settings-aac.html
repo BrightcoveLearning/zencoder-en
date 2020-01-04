@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>AAC Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">AAC Settings</li>
     </ol>
   </nav>
 </header>
@@ -184,24 +188,92 @@
                       
                       <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Video Processing Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Broadcast Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Frame Rate Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Rate Control Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Transmuxing Settings</a></li>
+                      
                     </ul>
                   </li>
                 
               
                 
-                  <li><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Format and Codecs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/asset/">General Media Asset Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/assets/">Media Asset Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Clips Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Thumbnails Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Watermarks Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/content-protection/">Content Protection Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Decryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Aspera Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -260,32 +332,11 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: AAC</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Audio</div>
-          <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
-
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
-
-</div>
-
-  
-            <p>This topic contains details for encoding settings related to AAC audio.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Notes">Notes</h2>
+<article class="bcls-article">
+  <h1>AAC Settings</h1>
+  <summary>This topic contains details for encoding settings related to AAC audio.</summary>
+                  
+                  <section class="bcls-section"><h2 id="Notes">Notes</h2>
 
 <p>You may find that some of your videos the outputs are a few milliseconds longer than the inputs with black frames added at the end. The reason for this is a longer audio duration due to the fact that any time you encode aac, extra audio priming samples are added to the beginning of the audio stream. (See <a href="https://developer.apple.com/library/content/documentation/QuickTime/QTFF/QTFFAppenG/QTFFAppenG.html">this Apple document</a> for more details.) For HLS outputs, we adjust the audio duration to account for the samples.</p>
 </section><section class="bcls-section"><h2 id="max_aac_profile">max_aac_profile</h2>
@@ -361,6 +412,7 @@
 
 <p><strong>See Also:</strong> <a href="#max-aac-profile">max_aac_profile</a></p>
 </section>
+</article>
 
 <!-- complete bootstrap layout -->
     </div>

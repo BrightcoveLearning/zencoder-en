@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>S3 Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">S3 Settings</li>
     </ol>
   </nav>
 </header>
@@ -184,24 +188,92 @@
                       
                       <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Video Processing Settings</a></li>
                       
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Broadcast Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Frame Rate Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Rate Control Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Transmuxing Settings</a></li>
+                      
                     </ul>
                   </li>
                 
               
                 
-                  <li><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Format and Codecs Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/asset/">General Media Asset Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/assets/">Media Asset Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Clips Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Thumbnails Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Watermarks Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/content-protection/">Content Protection Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/content-protection/">Content Protection Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Decryption Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
                 
-                  <li><a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a></li>
+                  <li class="submenu-header">
+                    <a href="/encoding-settings/sources-destinations/">Sources/Destination Settings</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 Settings</a></li>
+                      
+                      <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Aspera Settings</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -260,56 +332,36 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>Encoding Settings: S3 Settings</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>S3 Settings</h1>
+  <summary>This topic contains details for encoding settings related to S3 settings.</summary>
+  <section class="bcls-section">
+    <h2 id="public">public</h2>
+    <code>public:Boolean</code>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-</div>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
 
-  
-            <p>This topic contains details for encoding settings related to S3 settings.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="public">public</h2>
-<code>public:Boolean</code>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p>By default, files put into a S3 bucket are not publicly readable. Instead, we use the canned access policy of <a href="http://docs.amazonwebservices.com/AmazonS3/latest/index.html?RESTAccessPolicy.html">bucket-owner-full-control</a>. This is true even if the bucket itself is publicly readable - a S3 bucket policy is not automatically inherited by new files added to the bucket.</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p>Use the <strong>public</strong> API setting to flag a file output to S3 as being publicly readable. This is done by granting the READ permission to the AllUsers group.</p>
 
-<p><strong>Description:</strong></p>
+    <p>This setting applies to both output video files and output thumbnails. By default, permissions set on an output file also apply to thumbnails. Setting <a href="#access-control">access_control</a> will override this setting.</p>
 
-<p>By default, files put into a S3 bucket are not publicly readable. Instead, we use the canned access policy of <a href="http://docs.amazonwebservices.com/AmazonS3/latest/index.html?RESTAccessPolicy.html">bucket-owner-full-control</a>. This is true even if the bucket itself is publicly readable - a S3 bucket policy is not automatically inherited by new files added to the bucket.</p>
+    <p>An alternative to manual permissions would be to use a <a href="http://awspolicygen.s3.amazonaws.com/policygen.html">bucket policy</a>.</p>
 
-<p>Use the <strong>public</strong> API setting to flag a file output to S3 as being publicly readable. This is done by granting the READ permission to the AllUsers group.</p>
+    <p><a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/">More information</a> from the Amazon S3 docs.</p>
 
-<p>This setting applies to both output video files and output thumbnails. By default, permissions set on an output file also apply to thumbnails. Setting <a href="#access-control">access_control</a> will override this setting.</p>
-
-<p>An alternative to manual permissions would be to use a <a href="http://awspolicygen.s3.amazonaws.com/policygen.html">bucket policy</a>.</p>
-
-<p><a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/">More information</a> from the Amazon S3 docs.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -323,27 +375,29 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
-</section><section class="bcls-section"><h2 id="rrs">rrs</h2>
-<code>rrs:Boolean</code>
+    <p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="rrs">rrs</h2>
+    <code>rrs:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>If you use Amazon S3's Reduced Redundancy Storage you can set this flag and Zencoder will pass the necessary headers to tell S3 to use RRS.</p>
+    <p>If you use Amazon S3's Reduced Redundancy Storage you can set this flag and Zencoder will pass the necessary headers to tell S3 to use RRS.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -352,26 +406,28 @@
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="access_control">access_control</h2>
-<code>access_control:Array</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="access_control">access_control</h2>
+    <code>access_control:Array</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
 
-<p><strong>Valid Values:</strong> An array of hashes containing two settings: grantee and permissions.</p>
+    <p><strong>Valid Values:</strong> An array of hashes containing two settings: grantee and permissions.</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>The <a href="#public">public</a> option grants S3 READ access to all users for a given video or thumbnail. If you want more fine-grained control, use <strong>access_control</strong>. Using this setting will cause the <a href="#public">public</a> option to be ignored. This setting applies to both output video files and output thumbnails. By default, permissions set on an output file also apply to thumbnails.</p>
+    <p>The <a href="#public">public</a> option grants S3 READ access to all users for a given video or thumbnail. If you want more fine-grained control, use <strong>access_control</strong>. Using this setting will cause the <a href="#public">public</a> option to be ignored. This setting applies to both output video files and output thumbnails. By default, permissions set on an output file also apply to thumbnails.</p>
 
-<p>access_control takes an array of access control grants, which each have two settings: <a href="#grantee">grantee</a> and <a href="#permission">permission</a>.</p>
+    <p>access_control takes an array of access control grants, which each have two settings: <a href="#grantee">grantee</a> and <a href="#permission">permission</a>.</p>
 
-<p>An alternative to manual permissions would be to use a <a href="http://awspolicygen.s3.amazonaws.com/policygen.html">bucket policy</a>.</p>
+    <p>An alternative to manual permissions would be to use a <a href="http://awspolicygen.s3.amazonaws.com/policygen.html">bucket policy</a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -386,25 +442,27 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#public">public</a>, <a href="#grantee">grantee</a>, and <a href="#permission">permission</a></p>
-</section><section class="bcls-section"><h2 id="grantee">grantee</h2>
-<code>grantee:String</code>
+    <p><strong>See Also:</strong> <a href="#public">public</a>, <a href="#grantee">grantee</a>, and <a href="#permission">permission</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="grantee">grantee</h2>
+    <code>grantee:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
 
-<p><strong>Valid Values:</strong> A valid S3 grantee (email, ID, or URI)</p>
+    <p><strong>Valid Values:</strong> A valid S3 grantee (email, ID, or URI)</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>A grantee for S3 permissions: user by email address, user by CanonicalUser ID, or a AWS access group (http://acs.amazonaws.com/groups/global/AuthenticatedUsers or http://acs.amazonaws.com/groups/global/AllUsers). See the <a href="http://aws.amazon.com/documentation/s3/">S3 ACL docs</a> for more detail.</p>
+    <p>A grantee for S3 permissions: user by email address, user by CanonicalUser ID, or a AWS access group (http://acs.amazonaws.com/groups/global/AuthenticatedUsers or http://acs.amazonaws.com/groups/global/AllUsers). See the <a href="http://aws.amazon.com/documentation/s3/">S3 ACL docs</a> for more detail.</p>
 
-<p>Used as a part of the <a href="#access-control">access_control</a> setting for fine-grained S3 permissions.</p>
+    <p>Used as a part of the <a href="#access-control">access_control</a> setting for fine-grained S3 permissions.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -434,29 +492,33 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="#permission">permission</a></p>
-</section><section class="bcls-section"><h2 id="permission">permission</h2>
-<code>permission:String</code>
+    <p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="#permission">permission</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="permission">permission</h2>
+    <code>permission:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
 
-<p><strong>Valid Values:</strong> A string or array of strings containing: READ, READ_ACP, WRITE_ACP, or FULL_CONTROL</p>
+    <p><strong>Valid Values:</strong> A string or array of strings containing: READ, READ_ACP, WRITE_ACP, or FULL_CONTROL</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>A permission to give to a S3 permission grantee. See the <a href="http://aws.amazon.com/documentation/s3/">S3 ACL docs</a> for more detail.</p>
+    <p>A permission to give to a S3 permission grantee. See the <a href="http://aws.amazon.com/documentation/s3/">S3 ACL docs</a> for more detail.</p>
 
-<ul><li>READ - read access to a file.</li>
-	<li>READ_ACP - permission to read the Access Control Policy for the given file.</li>
-	<li>WRITE_ACP - permission to write the Access Control Policy for the given file. Equivalent to FULL_CONTROL, since a user with WRITE_ACP could change the ACP for a file.</li>
-	<li>FULL_CONTROL - grants READ, READ_ACP, and WRITE_ACP permissions to a file.</li>
-</ul><p>Used as a part of the <a href="#access-control">access_control</a> setting for fine-grained S3 permissions.</p>
+    <ul>
+      <li>READ - read access to a file.</li>
+      <li>READ_ACP - permission to read the Access Control Policy for the given file.</li>
+      <li>WRITE_ACP - permission to write the Access Control Policy for the given file. Equivalent to FULL_CONTROL, since a user with WRITE_ACP could change the ACP for a file.</li>
+      <li>FULL_CONTROL - grants READ, READ_ACP, and WRITE_ACP permissions to a file.</li>
+    </ul>
+    <p>Used as a part of the <a href="#access-control">access_control</a> setting for fine-grained S3 permissions.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -486,9 +548,9 @@
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="#grantee">grantee</a></p>
-</section>
-
+    <p><strong>See Also:</strong> <a href="#access-control">access_control</a> and <a href="#grantee">grantee</a></p>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

@@ -1,53 +1,35 @@
 ---
-title: 
-parent: 
+title: MP4 Settings
+description: This topic contains details for encoding settings related to MP4 outputs.
+parent: Formats and Codec Settings
+grandparent: Encoding Settings
 ---
-<h1>Encoding Settings: MP4</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-</div>
+  <section class="bcls-section">
+    <h2 id="hint">hint</h2>
+    <code>hint:Boolean</code>
 
-  
-            <p>This topic contains details for encoding settings related to MP4 outputs.</p>
-                <article class="bcls-article">
-<section class="bcls-section">
-<h2 id="hint">hint</h2>
-<code>hint:Boolean</code>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Parent:</strong> output</p>
 
-<p><strong>Parent:</strong> output</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Description:</strong></p>
+    <p>Turn on hinting of MP4 files for RTP/RTSP. The default <a href="#mtu-size">mtu_size</a> is 1450 bytes; use the <a href="#mtu-size">mtu_size</a> option to change this.</p>
 
-<p>Turn on hinting of MP4 files for RTP/RTSP. The default <a href="#mtu-size">mtu_size</a> is 1450 bytes; use the <a href="#mtu-size">mtu_size</a> option to change this.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -56,29 +38,29 @@ parent:
     }
   ]
 }</code></pre>
-</section>
+  </section>
 
-<section class="bcls-section">
-<h2 id="mtu_size">mtu_size</h2>
-<code>mtu_size:Integer</code>
+  <section class="bcls-section">
+    <h2 id="mtu_size">mtu_size</h2>
+    <code>mtu_size:Integer</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> output</p>
+    <p><strong>Parent:</strong> output</p>
 
-<p><strong>Default:</strong> 1450</p>
+    <p><strong>Default:</strong> 1450</p>
 
-<p><strong>Valid Values:</strong> An integer between 100 and 5000</p>
+    <p><strong>Valid Values:</strong> An integer between 100 and 5000</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 2000</p>
+    <p><strong>Example:</strong> 2000</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>MTU size in bytes for MP4 hinting.</p>
+    <p>MTU size in bytes for MP4 hinting.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -87,5 +69,5 @@ parent:
     }
   ]
 }</code></pre>
-</section>
-
+  </section>
+</article>

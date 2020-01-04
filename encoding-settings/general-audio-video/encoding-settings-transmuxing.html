@@ -1,73 +1,67 @@
 ---
-title: 
-parent: 
+title: Transmuxing Settings
+description: This topic contains details for encoding settings related to transmuxing.
+parent: General Audio/Video Settings
+grandparent: Encoding Settings
 ---
-<h1>Encoding Settings: Transmuxing</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-</div>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-  
-            <p>This topic contains details for encoding settings related to transmuxing.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+    <p>Transmuxing is the process of changing the format of a video or audio file while preserving some or all of the streams from the original file.</p>
 
-<p>Transmuxing is the process of changing the format of a video or audio file while preserving some or all of the streams from the original file.</p>
+    <p>Today, Zencoder can transmux H.264 video and AAC/MP3 audio tracks from MP4/MOV formats to MP4/TS (including creating fragmented MP4 or segmented TS output). There are, however, a number of requirements that must be met by the input files to transmux properly:</p>
 
-<p>Today, Zencoder can transmux H.264 video and AAC/MP3 audio tracks from MP4/MOV formats to MP4/TS (including creating fragmented MP4 or segmented TS output). There are, however, a number of requirements that must be met by the input files to transmux properly:</p>
+    <p><strong>Video</strong></p>
 
-<p><strong>Video</strong></p>
+    <ul>
+      <li>MP4/MOV container format</li>
+      <li>H.264 codec</li>
+      <li>No b-frames used</li>
+    </ul>
+    <p><strong>Audio</strong></p>
 
-<ul><li>MP4/MOV container format</li>
-	<li>H.264 codec</li>
-	<li>No b-frames used</li>
-</ul><p><strong>Audio</strong></p>
+    <ul>
+      <li>MP4/MOV container format</li>
+      <li>AAC or MP3 codec</li>
+    </ul>
+    <p><strong>Segmenting/Fragmenting</strong></p>
 
-<ul><li>MP4/MOV container format</li>
-	<li>AAC or MP3 codec</li>
-</ul><p><strong>Segmenting/Fragmenting</strong></p>
+    <ul>
+      <li>Maximum GOP should be less than or equal to the segment duration</li>
+      <li>HE-AAC-V2 may not be used</li>
+    </ul>
+    <p><strong>Other</strong></p>
 
-<ul><li>Maximum GOP should be less than or equal to the segment duration</li>
-	<li>HE-AAC-V2 may not be used</li>
-</ul><p><strong>Other</strong></p>
+    <ul>
+      <li>Most encoding options have no effect on transmuxed files because the streams are not being re-encoded</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="copy_video">copy_video</h2>
+    <code>copy_video:Boolean</code>
 
-<ul><li>Most encoding options have no effect on transmuxed files because the streams are not being re-encoded</li>
-</ul></section><section class="bcls-section"><h2 id="copy_video">copy_video</h2>
-<code>copy_video:Boolean</code>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html">output</a></p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html">output</a></p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Description:</strong></p>
+    <p>Specifying <code>copy_video</code> will take the video track from the input video file and transmux it into the resulting output file.</p>
 
-<p>Specifying <code>copy_video</code> will take the video track from the input video file and transmux it into the resulting output file.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -76,26 +70,28 @@ parent:
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="copy_audio">copy_audio</h2>
-<code>copy_audio:Boolean</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="copy_audio">copy_audio</h2>
+    <code>copy_audio:Boolean</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html">output</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html">output</a></p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Valid Values:</strong> true or false</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> true</p>
+    <p><strong>Example:</strong> true</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Specifying <code>copy_audio</code> will take the audio track from the input video file and transmux it into the resulting output file.</p>
+    <p>Specifying <code>copy_audio</code> will take the audio track from the input video file and transmux it into the resulting output file.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -104,4 +100,5 @@ parent:
     }
   ]
 }</code></pre>
-</section>
+  </section>
+</article>

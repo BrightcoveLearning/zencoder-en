@@ -1,64 +1,50 @@
 ---
-title: 
-parent: 
+title: Aspera Settings
+description: This topic contains details for encoding settings related to Aspera.
+parent: Sources/Destination Settings
+grandparent: Encoding Settings
 ---
-<h1>Encoding Settings: Aspera</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-</div>
+    <p>Aspera provides an alternative, high-speed file transfer protocol as an alternative to protocols like FTP and HTTP.</p>
 
-  
-            <p>This topic contains details for encoding settings related to Aspera.</p>
-                <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+    <p>To use Aspera specify an Aspera <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url"><code>url</code></a> with the path to the file.</p>
 
-<p>Aspera provides an alternative, high-speed file transfer protocol as an alternative to protocols like FTP and HTTP.</p>
+    <aside class="bcls-aside bcls-aside--information"><strong>Note:</strong> Zencoder runs an Aspera Client on the video encoding servers, which connects to your <a href="http://www.asperasoft.com/en/products/server_software_1">Aspera Enterprise or Connect Server</a>, which hosts the files.</aside>
+    <p>This is a similar situation to you running an FTP server to make your files available and Zencoder using an FTP client for file transfer.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="aspera_transfer_policy" class="notranslate">aspera_transfer_policy</h2>
+    <code>aspera_transfer_policy:String</code>
 
-<p>To use Aspera specify an Aspera <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url"><code>url</code></a> with the path to the file.</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<aside class="bcls-aside bcls-aside--information"><strong>Note:</strong> Zencoder runs an Aspera Client on the video encoding servers, which connects to your <a href="http://www.asperasoft.com/en/products/server_software_1">Aspera Enterprise or Connect Server</a>, which hosts the files.</aside><p>This is a similar situation to you running an FTP server to make your files available and Zencoder using an FTP client for file transfer.</p>
-</section><section class="bcls-section"><h2 id="aspera_transfer_policy" class="notranslate">aspera_transfer_policy</h2>
-<code>aspera_transfer_policy:String</code>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>Default:</strong> fair</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Valid Values:</strong> fair or low</p>
 
-<p><strong>Default:</strong> fair</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Valid Values:</strong> fair or low</p>
+    <p><strong>Example:</strong> low</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Example:</strong> low</p>
+    <p>Sets how Zencoder will use the available bandwidth of the encoding server when transferring files to your Aspera server.</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Fair</strong> splits bandwidth evenly between all running jobs on the encoding server.</p>
 
-<p>Sets how Zencoder will use the available bandwidth of the encoding server when transferring files to your Aspera server.</p>
+    <p><strong>Low</strong> uses any available bandwidth on the encoding server, but will give priority to other jobs. Low is useful if you are concerned about overrunning your server with too much traffic.</p>
 
-<p><strong>Fair</strong> splits bandwidth evenly between all running jobs on the encoding server.</p>
+    <p>Note: The High option in Aspera is not supported in Zencoder. By default we will use as much bandwidth as possible, but will not prioritize access to bandwidth for one job over all others on an encoding server.</p>
 
-<p><strong>Low</strong> uses any available bandwidth on the encoding server, but will give priority to other jobs. Low is useful if you are concerned about overrunning your server with too much traffic.</p>
-
-<p>Note: The High option in Aspera is not supported in Zencoder. By default we will use as much bandwidth as possible, but will not prioritize access to bandwidth for one job over all others on an encoding server.</p>
-
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -68,29 +54,31 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code>transfer_minimum_rate</code></a> and <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a></p>
-</section><section class="bcls-section"><h2 id="transfer_minimum_rate" class="notranslate">transfer_minimum_rate</h2>
-<code>transfer_minimum_rate:Number</code>
+    <p><strong>See Also:</strong> <a href="#transfer-minimum-rate"><code>transfer_minimum_rate</code></a> and <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transfer_minimum_rate" class="notranslate">transfer_minimum_rate</h2>
+    <code>transfer_minimum_rate:Number</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
-<p><strong>Default:</strong> 1000</p>
+    <p><strong>Default:</strong> 1000</p>
 
-<p><strong>Valid Values:</strong> 1000-249999</p>
+    <p><strong>Valid Values:</strong> 1000-249999</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 2500</p>
+    <p><strong>Example:</strong> 2500</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Sets a transfer rate floor to use during file transfer with Aspera. This does not guarantee the rate will be reached, but if bandwidth is available then file transfer will not go below this speed.</p>
+    <p>Sets a transfer rate floor to use during file transfer with Aspera. This does not guarantee the rate will be reached, but if bandwidth is available then file transfer will not go below this speed.</p>
 
-<p>This must be less than <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a>.</p>
+    <p>This must be less than <a href="#transfer-maximum-rate"><code>transfer_maximum_rate</code></a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -100,31 +88,33 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#transfer-minimum-rate">transfer_minimum_rate</a> and <a href="#aspera-transfer-policy">aspera_transfer_policy</a></p>
-</section><section class="bcls-section"><h2 id="transfer_maximum_rate">transfer_maximum_rate</h2>
-<code>transfer_maximum_rate:String</code>
+    <p><strong>See Also:</strong> <a href="#transfer-minimum-rate">transfer_minimum_rate</a> and <a href="#aspera-transfer-policy">aspera_transfer_policy</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transfer_maximum_rate">transfer_maximum_rate</h2>
+    <code>transfer_maximum_rate:String</code>
 
-<p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V1, V2</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
 
-<p><strong>Default:</strong> 250000</p>
+    <p><strong>Default:</strong> 250000</p>
 
-<p><strong>Valid Values:</strong> 1001-250000</p>
+    <p><strong>Valid Values:</strong> 1001-250000</p>
 
-<p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-<p><strong>Example:</strong> 25000</p>
+    <p><strong>Example:</strong> 25000</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Sets a transfer rate ceiling to use during file transfer with Aspera. This does not guarantee the rate will be reached, but if bandwidth is available then file transfer will not go above this speed.</p>
+    <p>Sets a transfer rate ceiling to use during file transfer with Aspera. This does not guarantee the rate will be reached, but if bandwidth is available then file transfer will not go above this speed.</p>
 
-<p>Setting maximum transfer rate is recommended when encoding a large number of jobs simultaneously, to avoid overwhelming the source and destination servers with traffic.</p>
+    <p>Setting maximum transfer rate is recommended when encoding a large number of jobs simultaneously, to avoid overwhelming the source and destination servers with traffic.</p>
 
-<p>This must be greater than <a href="#transfer-minimum-rate">transfer_minimum_rate</a>.</p>
+    <p>This must be greater than <a href="#transfer-minimum-rate">transfer_minimum_rate</a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
@@ -134,5 +124,6 @@ parent:
   ]
 }</code></pre>
 
-<p><strong>See Also:</strong> <a href="#transfer-maximum-rate">transfer_maximum_rate</a> and <a href="#aspera-transfer-policy">aspera_transfer_policy</a></p>
-</section>
+    <p><strong>See Also:</strong> <a href="#transfer-maximum-rate">transfer_maximum_rate</a> and <a href="#aspera-transfer-policy">aspera_transfer_policy</a></p>
+  </section>
+</article>
