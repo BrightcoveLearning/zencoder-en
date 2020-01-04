@@ -55,7 +55,7 @@
   icon: '<i class="fal fa-cogs"></i>'
   docs:
     - name: General Settings
-      url: /encoding-settings/general/index.html
+      url: /encoding-settings/general/
       docs:
         - name: Job Settings
           url: /encoding-settings/general/encoding-settings-job.html
@@ -69,6 +69,15 @@
           url: /encoding-settings/general/encoding-settings-notifications.html
     - name: General Audio/Video Settings
       url: /encoding-settings/general-audio-video/
+      docs:
+        - name: Audio Settings
+          url: /encoding-settings/general-audio-video/encoding-settings-audio.html
+        - name: Audio Processing Settings
+          url: /encoding-settings/general-audio-video/encoding-settings-audio-processing.html
+        - name: Video Settings
+          url: /encoding-settings/general-audio-video/encoding-settings-video.html
+        - name: Video Processing Settings
+          url: /encoding-settings/general-audio-video/encoding-settings-video-processing.html
     - name: Formats and Codec Settings
       url: /encoding-settings/formats-codecs/
     - name: General Media Asset Settings
