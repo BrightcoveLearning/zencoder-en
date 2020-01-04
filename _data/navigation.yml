@@ -138,8 +138,18 @@
   url: /encoding-guides/
   icon: '<i class="fas fa-fast-forward"></i>'
   docs:
+    - name: Audio Mapping Guide
+      url: /encoding-guides/advanced-audio-mapping-guide.html
+    - name: AS-11-mxf Guide
+      url: /encoding-guides/as11-mxf.html
+    - name: AVC-Intra Guide
+      url: /encoding-guides/avc-intra-guide.html
     - name: CAE Guide
       url: /encoding-guides/cae-guide.html
+    - name: Transmuxing Guide
+      url: /encoding-guides/creating-mp4-and-hls-outputs-together.html
+    - name: DASH Streaming and Playlists
+      url: /encoding-guides/dash-streaming-and-playlists.html
 - section: Errors/Troubleshooting
   url: /error-troubleshooting/
   icon: '<i class="far fa-exclamation-triangle"></i>'
