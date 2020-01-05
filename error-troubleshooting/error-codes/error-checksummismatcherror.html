@@ -1,27 +1,40 @@
 ---
-title: 
-parent: 
+title: ChecksumMismatchError
+description: 'This topic provides details on the Zencoder API error: <code>ChecksumMismatchError</code>.'
+parent: Error Codes
+grandparent: Errors/Troubleshooting
 ---
-<h1>Error: ChecksumMismatchError</h1>
-            <p>This topic provides details on the Zencoder API error: <code>ChecksumMismatchError</code></p>
-                <article class="bcls-article"><section id="Meaning" class="bcls-section"><h2>Meaning</h2>
 
-<p>The MD5 checksum computed for the input file does not match the checksum supplied to the API.</p>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-<p>There are a variety of possible causes for this problem. The most likely are:</p>
+  <section id="Meaning" class="bcls-section">
+    <h2>Meaning</h2>
 
-<ul><li>The file was corrupted in transit.</li>
-	<li>The checksum supplied to the API was incorrect.</li>
-</ul></section><section id="Workarounds" class="bcls-section"><h2>Workarounds</h2>
+    <p>The MD5 checksum computed for the input file does not match the checksum supplied to the API.</p>
 
-<p>Check to make sure that the checksum you supplied to the API matches the checksum of the file on disk.</p>
+    <p>There are a variety of possible causes for this problem. The most likely are:</p>
 
-<p>If they <em>don't</em> match, please make a new API call with the proper checksum.</p>
+    <ul>
+      <li>The file was corrupted in transit.</li>
+      <li>The checksum supplied to the API was incorrect.</li>
+    </ul>
+  </section>
+  <section id="Workarounds" class="bcls-section">
+    <h2>Workarounds</h2>
 
-<p>If the checksums <em>do</em> match, the file may have been corrupted during transfer. Please resubmit the job.</p>
+    <p>Check to make sure that the checksum you supplied to the API matches the checksum of the file on disk.</p>
 
-<p>In either case, if the retry fails, please contact us.</p>
-</section><section id="Retry_this_job" class="bcls-section"><h2>Retry this job?</h2>
+    <p>If they <em>don't</em> match, please make a new API call with the proper checksum.</p>
 
-<p>Jobs with this error can be retried. <a href="/error-troubleshooting/when-should-i-retry-failed-jobs">Learn more about retrying jobs.</a></p>
-</section>
+    <p>If the checksums <em>do</em> match, the file may have been corrupted during transfer. Please resubmit the job.</p>
+
+    <p>In either case, if the retry fails, please contact us.</p>
+  </section>
+  <section id="Retry_this_job" class="bcls-section">
+    <h2>Retry this job?</h2>
+
+    <p>Jobs with this error can be retried. <a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">Learn more about retrying jobs.</a></p>
+    </section>
+</article>

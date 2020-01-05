@@ -1,5 +1,5 @@
 ---
-title: Errors and Troubleshooting
+title: Errors/Troubleshooting
 description: Help when something is not right.
 icon: '<i class="far fa-exclamation-triangle"></i>'
 parent: Home
@@ -16,7 +16,13 @@ parent: Home
   .card-wrapper {
   justify-content: start;
 }
-
+.bcls-card h1 {
+  font-size: 1rem;
+}
+.bcls-card ul {
+  font-size: small;
+  margin-left: -2rem;
+}
 </style>
 
 <article class="bcls-article">
@@ -27,8 +33,8 @@ parent: Home
       <div class="card-content">
         <h2 id="Topics_in_this_section">Topics in this section</h2>
         <ul>
-        {% for item in site.data.navigation %}
-        {% if item.section == page.title %}
+          {% for item in site.data.navigation %}
+            {% if item.section == page.title %}
               {% for entry in item.docs %}
                 <li><a href="{{ entry.url }}">{{ entry.name }}</a>
                 {% if entry.docs %}
@@ -40,9 +46,9 @@ parent: Home
                 {% endif %}
                 </li>
               {% endfor %}
-        {% endif %}
-      {% endfor %}
-  
+            {% endif %}
+          {% endfor %}
+        </ul>
       </div>
     </section>
   </section>

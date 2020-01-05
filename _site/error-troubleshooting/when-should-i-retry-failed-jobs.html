@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>When to Retry Failed Jobs</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/error-troubleshooting/">Errors/Troubleshooting</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">When to Retry Failed Jobs</li>
     </ol>
   </nav>
 </header>
@@ -303,6 +307,54 @@
                   <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
                 
               
+                
+                  <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                
+              
             </ul>
           
         
@@ -311,15 +363,49 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/references/glossary.html">Glossary</a></li>
+                  <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
                 
               
                 
-                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                
+              
+                
+                  <li class="submenu-header">
+                    <a href="/error-troubleshooting/error-codes">Error Codes</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -348,36 +434,49 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>When Should I Retry Failed Jobs?</h1>
-            <p>Sometimes Zencoder is unable to successfully complete a job. Typically we will return an error explaining the specific reason a job failed. While the majority of these errors are due to issues with the submitted file, occasionally there are situations where resubmitting a job a second time will achieve a better result.</p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+<article class="bcls-article">
+  <h1>When to Retry Failed Jobs</h1>
+  <summary>Sometimes Zencoder is unable to successfully complete a job. Typically we will return an error explaining the specific reason a job failed. While the majority of these errors are due to issues with the submitted file, occasionally there are situations where resubmitting a job a second time will achieve a better result.</summary>
 
-<p>We strive to handle as many files as possible and to transcode them successfully the first time and generally recommend against resubmitting files that fail. Only jobs with the errors listed below should be automatically retried, and we request that you not repeatedly retry jobs that have encountered the same error twice. Instead, please <a href="http://zencoder.com/contact/">contact us</a> with the job ID and we'll gladly investigate the file for you. <strong>Resubmitting jobs indiscriminately is never advised</strong>, and doing so <strong>may result in limitations</strong> being placed on your Zencoder account.</p>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-<p>The reason we ask that you not resubmit all failed files is due of the additional load it places on Zencoder and the resources it consumes. We do not charge for failed jobs, but they fill space on our encoders while we attempt to process them, which can affect our ability to get to other jobs as efficiently as possible. By not resubmitting failed files you help us keep prices down for you while continuing to offer fast, efficient encoding.</p>
-</section><section class="bcls-section"><h2 id="When_to_retry_now">When to retry now</h2>
+    <p>We strive to handle as many files as possible and to transcode them successfully the first time and generally recommend against resubmitting files that fail. Only jobs with the errors listed below should be automatically retried, and we request that you not repeatedly retry jobs that have encountered the same error twice. Instead, please <a href="http://zencoder.com/contact/">contact us</a> with the job ID and we'll gladly investigate the file for you. <strong>Resubmitting jobs indiscriminately is never advised</strong>, and doing so <strong>may result in limitations</strong> being placed on your Zencoder account.</p>
 
-<h3>Errors To Retry Right Away</h3>
+    <p>The reason we ask that you not resubmit all failed files is due of the additional load it places on Zencoder and the resources it consumes. We do not charge for failed jobs, but they fill space on our encoders while we attempt to process them, which can affect our ability to get to other jobs as efficiently as possible. By not resubmitting failed files you help us keep prices down for you while continuing to offer fast, efficient encoding.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="When_to_retry_now">When to retry now</h2>
 
-<p>If you encounter a <a href="/error-troubleshooting/error-transcodingerror">TranscodingError</a> or a <a href="/error-troubleshooting/error-workertimeouterror">WorkerTimeoutError</a>, it may be due to an issue with the encoder that was handling the file. It is not unreasonable in these situations to retry the job once more. If the same error is raised on the second attempt, you will better served by <a href="http://zencoder.com/contact/">contacting us</a> with the Job ID so that we can investigate and get you more information about the cause of the error.</p>
-</section><section class="bcls-section"><h2 id="When_to_retry_later">When to retry later</h2>
+    <h3>Errors To Retry Right Away</h3>
 
-<p>As Zencoder adds support for new codecs and files, we are sometimes able to process files that had previously failed. If any jobs have failed with an <a href="/error-troubleshooting/error-unsupportedcodecerror">UnsupportedCodecError</a> or an <a href="/error-troubleshooting/error-unsupportedencodingerror">UnsupportedEncodingError</a>, they may be processable later if support was added. We announce newly supported formats in our newsletter and on the Zencoder dashboard, so if you see that a codec that Zencoder did not previously support has been added, searching for jobs that encountered these errors will give you a list of files to retry.</p>
-</section><section class="bcls-section"><h2 id="AWS_outage">AWS outage</h2>
+    <p>If you encounter a <a href="/error-troubleshooting/error-transcodingerror">TranscodingError</a> or a <a href="/error-troubleshooting/error-workertimeouterror">WorkerTimeoutError</a>, it may be due to an issue with the encoder that was handling the file. It is not unreasonable in these situations to retry the job once more. If the same error is raised on the second attempt, you will better served by <a href="http://zencoder.com/contact/">contacting us</a> with the Job ID so that we can investigate and get you more information about the cause of the error.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="When_to_retry_later">When to retry later</h2>
 
-<p>In the case of an AWS outage, in some cases jobs are retried automatically and in some cases you must retry the job(s). When an internal issue occurs (such as AWS outage, file transfer failures, etc), jobs are retried automatically.</p>
+    <p>As Zencoder adds support for new codecs and files, we are sometimes able to process files that had previously failed. If any jobs have failed with an <a href="/error-troubleshooting/error-unsupportedcodecerror">UnsupportedCodecError</a> or an <a href="/error-troubleshooting/error-unsupportedencodingerror">UnsupportedEncodingError</a>, they may be processable later if support was added. We announce newly supported formats in our newsletter and on the Zencoder dashboard, so if you see that a codec that Zencoder did not previously support has been added, searching for jobs that encountered these errors will give you a list of files to retry.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="AWS_outage">AWS outage</h2>
 
-<p>When a job fails due to something specific to that job (bad or not reachable source file, wrong specified formats, etc), the job will fail and you will be notified the standard way. It is up to you to retry it (for up to 7 days, after which need to start a new job).</p>
-</section><section class="bcls-section"><h2 id="File_transfer_errors">File transfer errors</h2>
+    <p>In the case of an AWS outage, in some cases jobs are retried automatically and in some cases you must retry the job(s). When an internal issue occurs (such as AWS outage, file transfer failures, etc), jobs are retried automatically.</p>
 
-<p>If Zencoder is unable to successfully transfer a file, while either uploading or downloading, you should be making any changes suggested by the error message before retrying the job. You may need to give Zencoder <a href="/using-zencoder-s3">access to your S3 bucket</a>, confirm the provider user exists if passing credentials in the URL, grant public access to the file, or make sure that <a href="/special-characters-usernames-and-passwords">usernames and passwords in URLs are properly escaped</a>. Once you have confirmed that access to the file is set correctly and that the URL is correct, retry the job.</p>
-</section><section class="bcls-section"><h2 id="If_you_get_another_error">If you get another error</h2>
+    <p>When a job fails due to something specific to that job (bad or not reachable source file, wrong specified formats, etc), the job will fail and you will be notified the standard way. It is up to you to retry it (for up to 7 days, after which need to start a new job).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="File_transfer_errors">File transfer errors</h2>
 
-<p>Any <a href="/error-troubleshooting/error-codes">other errors</a> are typically issues with the file itself - the file may be corrupt, not contain any media that we could detect, or be encrypted in a way that we cannot process. Resubmitting these jobs will be highly unlikely to result in a different outcome.</p>
+    <p>If Zencoder is unable to successfully transfer a file, while either uploading or downloading, you should be making any changes suggested by the error message before retrying the job. You may need to give Zencoder <a href="/using-zencoder-s3">access to your S3 bucket</a>, confirm the provider user exists if passing credentials in the URL, grant public access to the file, or make sure that <a href="/special-characters-usernames-and-passwords">usernames and passwords in URLs are properly escaped</a>. Once you have confirmed that access to the file is set correctly and that the URL is correct, retry the job.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="If_you_get_another_error">If you get another error</h2>
 
-<p>If there are specific files that you come across with other errors than the ones above, which you expect to be handled, you should <a href="http://zencoder.com/contact/">bring it to our attention</a> rather than resubmitting it. We will review the file and explain why we are unable to process the file, or add support to Zencoder if possible.</p>
-</section>
+    <p>Any <a href="/error-troubleshooting/error-codes">other errors</a> are typically issues with the file itself - the file may be corrupt, not contain any media that we could detect, or be encrypted in a way that we cannot process. Resubmitting these jobs will be highly unlikely to result in a different outcome.</p>
 
+    <p>If there are specific files that you come across with other errors than the ones above, which you expect to be handled, you should <a href="http://zencoder.com/contact/">bring it to our attention</a> rather than resubmitting it. We will review the file and explain why we are unable to process the file, or add support to Zencoder if possible.</p>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

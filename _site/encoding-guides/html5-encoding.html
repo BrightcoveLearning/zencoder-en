@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>HTML5 Encoding</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">Encoding Guides</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">HTML5 Encoding</li>
     </ol>
   </nav>
 </header>
@@ -303,6 +307,54 @@
                   <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
                 
               
+                
+                  <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                
+              
             </ul>
           
         
@@ -311,15 +363,49 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/references/glossary.html">Glossary</a></li>
+                  <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
                 
               
                 
-                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                
+              
+                
+                  <li class="submenu-header">
+                    <a href="/error-troubleshooting/error-codes">Error Codes</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -348,57 +434,74 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>HTML5 Encoding</h1>
-            <p>This topic explains how to encode video to be played back using HTML5 &lt;video&gt; tag.</p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Introduction">Introduction</h2>
+<article class="bcls-article">
+  <h1>HTML5 Encoding</h1>
+  <summary>This topic explains how to encode video to be played back using HTML5 video players such as the Brightcove Player.</summary>
 
-<p>The <code>&lt;video&gt;</code> tag in HTML5 is a great thing. It enables native video playback in all current browsers, rather than relying on a plugin like Flash. It opens the door to web video on devices that don't support Flash and enables codecs that previously weren't web playable.</p>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
 
-<p>But if you're publishing video content, browser support can be confusing. To really support web video, how many output versions do you need to create? WebM, Ogg, and MP4? What about iPhone or Android? What about low/medium/high bitrate versions?</p>
+    <p>The <code>&lt;video&gt;</code> tag in HTML5 is a great thing. It enables native video playback in all current browsers, rather than relying on a plugin like Flash. It opens the door to web video on devices that don't support Flash and enables codecs that previously weren't web playable.</p>
 
-<p>There isn't a single answer to this question, so here is a short guide to picking outputs for HTML5 video.</p>
-</section><section class="bcls-section"><h2 id="What_web_formats">What web formats?</h2>
+    <p>But if you're publishing video content, browser support can be confusing. To really support web video, how many output versions do you need to create? WebM, Ogg, and MP4? What about iPhone or Android? What about low/medium/high bitrate versions?</p>
 
-<p>There are three video formats that work natively in some browsers. Unfortunately, no format works in all browsers, so you need to do at least two if you want meaningful HTML5 video support.</p>
+    <p>There isn't a single answer to this question, so here is a short guide to picking outputs for HTML5 video.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="What_web_formats">What web formats?</h2>
 
-<p>Minimally, you must use <strong>MP4 + H.264</strong>, with AAC or MP3. MP4 video plays natively in Safari, Chrome, and IE9 (Vista/Windows 7). It is also your best option for a Flash video fallback, and plays natively on many devices (iOS, Android, Blackberry, PSP, Xbox, PS3, etc.). Use H.264 High Profile for the best quality, or Baseline profile if you want the same video to be playable on mobile devices.</p>
+    <p>There are three video formats that work natively in some browsers. Unfortunately, no format works in all browsers, so you need to do at least two if you want meaningful HTML5 video support.</p>
 
-<p>Beyond that, use either <strong>WebM + VP8</strong> or <strong>Ogg + Theora</strong> with Vorbis audio for other browsers.</p>
+    <p>Minimally, you must use <strong>MP4 + H.264</strong>, with AAC or MP3. MP4 video plays natively in Safari, Chrome, and IE9 (Vista/Windows 7). It is also your best option for a Flash video fallback, and plays natively on many devices (iOS, Android, Blackberry, PSP, Xbox, PS3, etc.). Use H.264 High Profile for the best quality, or Baseline profile if you want the same video to be playable on mobile devices.</p>
 
-<p><strong>Recommendation:</strong> Minimally, MP4 + either WebM or Ogg, or maybe both.</p>
-</section><section class="bcls-section"><h2 id="What_mobile_devices">What mobile devices?</h2>
+    <p>Beyond that, use either <strong>WebM + VP8</strong> or <strong>Ogg + Theora</strong> with Vorbis audio for other browsers.</p>
 
-<p>Again, there is no single mobile profile that works on every mobile device. In fact, there are more varying standards for mobile video than there are for web. But fortunately, a few well-selected recipes can cover most modern mobile devices.</p>
+    <p><strong>Recommendation:</strong> Minimally, MP4 + either WebM or Ogg, or maybe both.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="What_mobile_devices">What mobile devices?</h2>
 
-<p>For full details, check out our guide on <a href="/iosmobile-encoding">encoding video for mobile use</a>.</p>
+    <p>Again, there is no single mobile profile that works on every mobile device. In fact, there are more varying standards for mobile video than there are for web. But fortunately, a few well-selected recipes can cover most modern mobile devices.</p>
 
-<p>1. Most modern mobile devices support MP4/H.264. This includes the whole iOS series (iPhone, iPod, iPad, Apple TV, etc.), most Android devices, modern Blackberry phones, etc. For most of these, be sure to use the H.264 Baseline profile. Use 640x480 or smaller for iOS and Android, and 480x360 or smaller for Blackberry support.</p>
+    <p>For full details, check out our guide on <a href="/iosmobile-encoding">encoding video for mobile use</a>.</p>
 
-<p>Note that the same file that plays on an iPhone can play on the web, via HTML5 (some browsers) or Flash. So if you want to reduce versions, use the same one. But you're stuck with Baseline profile for most mobile devices, and Main/High makes a big difference, so using separate output versions is a good idea if you want the best quality for each device.</p>
+    <p>1. Most modern mobile devices support MP4/H.264. This includes the whole iOS series (iPhone, iPod, iPad, Apple TV, etc.), most Android devices, modern Blackberry phones, etc. For most of these, be sure to use the H.264 Baseline profile. Use 640x480 or smaller for iOS and Android, and 480x360 or smaller for Blackberry support.</p>
 
-<p>2. Use 3GP/MPEG4 for older mobile devices. Most Blackberrys and some Androids also support 3GP, and 3GP generally even plays on iPhone/iPod too (since iOS plays MP4/MPEG-4 and 3GP is just a subset of MP4).</p>
+    <p>Note that the same file that plays on an iPhone can play on the web, via HTML5 (some browsers) or Flash. So if you want to reduce versions, use the same one. But you're stuck with Baseline profile for most mobile devices, and Main/High makes a big difference, so using separate output versions is a good idea if you want the best quality for each device.</p>
 
-<p><strong>Recommendation:</strong> Minimally, MP4, 640x480 or 480x360. Maximally, three MP4 versions (480x360, 640x480, 720p + Main profile) plus one or two 3GP versions (320x240 and maybe 176x144). See our earlier post for <a href="/iosmobile-encoding">specific encoding settings</a>.</p>
-</section><section class="bcls-section"><h2 id="Multiple_bitrates">Multiple bitrates</h2>
+    <p>2. Use 3GP/MPEG4 for older mobile devices. Most Blackberrys and some Androids also support 3GP, and 3GP generally even plays on iPhone/iPod too (since iOS plays MP4/MPEG-4 and 3GP is just a subset of MP4).</p>
 
-<p>Should you use multiple bitrates to deliver larger video to users with fast internet connections, and smaller videos to users with slower internet connections? If your users are watching high-quality video on the web, then the answer is probably "Yes". Consider using 2-3 sizes and bitrates to accomplish this – e.g. one video at 640x360, and another at 1280x720. More on this in a future post.</p>
-</section><section class="bcls-section"><h2 id="Streaming">Streaming</h2>
+    <p><strong>Recommendation:</strong> Minimally, MP4, 640x480 or 480x360. Maximally, three MP4 versions (480x360, 640x480, 720p + Main profile) plus one or two 3GP versions (320x240 and maybe 176x144). See our earlier post for <a href="/iosmobile-encoding">specific encoding settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Multiple_bitrates">Multiple bitrates</h2>
 
-<p>Zencoder supports <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">HTTP Live Streaming</a> for iOS devices, as well as <a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming (Silverlight)</a>.</p>
-</section><section class="bcls-section"><h2 id="Summary">Summary</h2>
+    <p>Should you use multiple bitrates to deliver larger video to users with fast internet connections, and smaller videos to users with slower internet connections? If your users are watching high-quality video on the web, then the answer is probably "Yes". Consider using 2-3 sizes and bitrates to accomplish this – e.g. one video at 640x360, and another at 1280x720. More on this in a future post.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Streaming">Streaming</h2>
 
-<p>1. The minimum for HTML5 video is <strong>MP4 + WebM or Ogg (or both)</strong>, using the MP4 version for Flash fallback.</p>
+    <p>Zencoder supports <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">HTTP Live Streaming</a> for iOS devices, as well as <a href="/microsoft-smooth-streaming">Microsoft Smooth Streaming (Silverlight)</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Summary">Summary</h2>
 
-<p>2. For mobile support, one <strong>H.264/MP4</strong> output can take you a long way. 2-3 enables better quality and wider compatibility.</p>
-</section><section class="bcls-section"><h2 id="Recommendations">Recommendations</h2>
+    <p>1. The minimum for HTML5 video is <strong>MP4 + WebM or Ogg (or both)</strong>, using the MP4 version for Flash fallback.</p>
 
-<p>Here are some suggested configurations. <a href="http://zencoder.com">Zencoder</a> supports all of these formats, and if you're wondering how to create the optimal output profiles using Zencoder, please open a <a href="https://supportportal.brightcove.com/s/login/">support ticket</a>. We're always happy to give you advice.</p>
+    <p>2. For mobile support, one <strong>H.264/MP4</strong> output can take you a long way. 2-3 enables better quality and wider compatibility.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Recommendations">Recommendations</h2>
 
-<p><strong>1. Get it working</strong></p>
+    <p>Here are some suggested configurations. <a href="http://zencoder.com">Zencoder</a> supports all of these formats, and if you're wondering how to create the optimal output profiles using Zencoder, please open a <a href="https://supportportal.brightcove.com/s/login/">support ticket</a>. We're always happy to give you advice.</p>
 
-<ul><li>HTML5, Flash, Mobile: MP4/H.264, Baseline profile, 480x360 or 640x480</li>
-	<li>HTML5: WebM or Ogg</li>
-</ul><pre class="line-numbers">
+    <p><strong>1. Get it working</strong></p>
+
+    <ul>
+      <li>HTML5, Flash, Mobile: MP4/H.264, Baseline profile, 480x360 or 640x480</li>
+      <li>HTML5: WebM or Ogg</li>
+    </ul>
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -413,13 +516,15 @@
     ]
 }</code></pre>
 
-<ul><li>HTML5, Flash: MP4/H.264, High profile</li>
-	<li>HTML5: WebM</li>
-	<li>HTML5: Ogg</li>
-	<li>Mobile: MP4/H.264, Baseline profile, 480x360 or 640x480</li>
-</ul><p><strong>2. Round it out</strong></p>
+    <ul>
+      <li>HTML5, Flash: MP4/H.264, High profile</li>
+      <li>HTML5: WebM</li>
+      <li>HTML5: Ogg</li>
+      <li>Mobile: MP4/H.264, Baseline profile, 480x360 or 640x480</li>
+    </ul>
+    <p><strong>2. Round it out</strong></p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -440,15 +545,17 @@
     ]
 }</code></pre>
 
-<p><strong>3. Support everything</strong></p>
+    <p><strong>3. Support everything</strong></p>
 
-<ul><li>HTML5, Flash: MP4/H.264, High profile</li>
-	<li>HTML5: WebM</li>
-	<li>HTML5: Ogg</li>
-	<li>Mobile: MP4/H.264, Baseline profile, 480x360, for wide compatibility</li>
-	<li>Mobile: MP4/H.264, Main profile, 1280x720, for newer iOS devices (iPhone 4, iPad, Apple TV)</li>
-	<li>Mobile: 3GP/MPEG4, 320x240 and/or 177x144, for non-smartphones*</li>
-</ul><pre class="line-numbers">
+    <ul>
+      <li>HTML5, Flash: MP4/H.264, High profile</li>
+      <li>HTML5: WebM</li>
+      <li>HTML5: Ogg</li>
+      <li>Mobile: MP4/H.264, Baseline profile, 480x360, for wide compatibility</li>
+      <li>Mobile: MP4/H.264, Main profile, 1280x720, for newer iOS devices (iPhone 4, iPad, Apple TV)</li>
+      <li>Mobile: 3GP/MPEG4, 320x240 and/or 177x144, for non-smartphones*</li>
+    </ul>
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -477,8 +584,8 @@
     ]
 }
 </code></pre>
-</section>
-
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

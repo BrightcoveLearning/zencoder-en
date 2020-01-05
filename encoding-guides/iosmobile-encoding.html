@@ -1,44 +1,50 @@
 ---
-title: 
-parent: 
+title: iOS/Mobile Encoding Guide
+description: This topic discusses approaches to encoding videos for mobile devices.
+parent: Encoding Guides
 ---
-<h1>iOS/Mobile Encoding</h1>
-            <p>This topic discusses approaches to encoding videos for mobile devices.</p>
-      <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-<p>The bad news first. There are hundreds of mobile devices out there, and it's basically impossible to support 100.0% of them.</p>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-<p>The good news is that mobile devices are getting better. Gone are the days when 176x144 3GP was synonymous with mobile video. Modern smartphones can actually play high quality video, and smartphone use is increasing. That's not to say that 3GP is over, or that everyone has a smartphone. But smartphone use is growing (at a <a href="http://www.canalys.com/pr/2010/r2010081.html">64% annualized rate</a> as of Q2 2010), and, not surprisingly, smartphone users are more likely to watch video on their phones than their, er, dumb-phone-using friends.</p>
+    <p>The bad news first. There are hundreds of mobile devices out there, and it's basically impossible to support 100.0% of them.</p>
 
-<p>So if you want to support 90%+ of mobile devices, you need at least two video types: 3GP + MPEG-4 for less sophisticated devices, and H.264 + MP4 for smartphones.</p>
+    <p>The good news is that mobile devices are getting better. Gone are the days when 176x144 3GP was synonymous with mobile video. Modern smartphones can actually play high quality video, and smartphone use is increasing. That's not to say that 3GP is over, or that everyone has a smartphone. But smartphone use is growing (at a <a href="http://www.canalys.com/pr/2010/r2010081.html">64% annualized rate</a> as of Q2 2010), and, not surprisingly, smartphone users are more likely to watch video on their phones than their, er, dumb-phone-using friends.</p>
 
-<p>That's good news, really. <strong>One output video can cover all of your smartphone users</strong> – iPhone/iPad/iPod, Android, and (for the most part) Blackberry too. Toss in PSP, PS3, and Xbox 360 for good measure.</p>
+    <p>So if you want to support 90%+ of mobile devices, you need at least two video types: 3GP + MPEG-4 for less sophisticated devices, and H.264 + MP4 for smartphones.</p>
 
-<p>Of course, while one universal smartphone output can take care of most smartphone users, you can do better with multiple mobile outputs. For example, the iPad has a native resolution of 1024x768, fully five times higher than the 480x320 on earlier iPhones. So if you encode your video at 480x320, you'll be missing out on the near-high-def capabilities of the iPad.</p>
+    <p>That's good news, really. <strong>One output video can cover all of your smartphone users</strong> – iPhone/iPad/iPod, Android, and (for the most part) Blackberry too. Toss in PSP, PS3, and Xbox 360 for good measure.</p>
 
-<p>Fortunately, you can target mobile devices well using a handful of standard encoding profiles. Start with the Universal Smartphone Profile for wide compatibility; add in an Advanced Smartphone Profile version for the more advanced devices; and round out your mobile list with a legacy profile for widest compatibility – either our Legacy Smartphone Profile (below), or even a 3GP video for even wider compatibility.</p>
+    <p>Of course, while one universal smartphone output can take care of most smartphone users, you can do better with multiple mobile outputs. For example, the iPad has a native resolution of 1024x768, fully five times higher than the 480x320 on earlier iPhones. So if you encode your video at 480x320, you'll be missing out on the near-high-def capabilities of the iPad.</p>
 
-<p>Note that the following defaults are the starting point for these profiles. <a href="http://zencoder.com">Zencoder</a> uses these settings by default, but you can replicate them easily enough in whatever encoding tool you're using.</p>
+    <p>Fortunately, you can target mobile devices well using a handful of standard encoding profiles. Start with the Universal Smartphone Profile for wide compatibility; add in an Advanced Smartphone Profile version for the more advanced devices; and round out your mobile list with a legacy profile for widest compatibility – either our Legacy Smartphone Profile (below), or even a 3GP video for even wider compatibility.</p>
 
-<p>Defaults:</p>
+    <p>Note that the following defaults are the starting point for these profiles. <a href="http://zencoder.com">Zencoder</a> uses these settings by default, but you can replicate them easily enough in whatever encoding tool you're using.</p>
 
-<p>Video: H.264, Level 3.0, Baseline profile<br />
-Audio: AAC, 1-2 channels</p>
-</section><section class="bcls-section"><h2 id="universal-a">Universal Smartphone Profile</h2>
+    <p>Defaults:</p>
 
-<p>This is a great starting profile for wide compatibility with modern smartphones. Plays on just about everything, though it doesn't take advantage of the higher resolutions and codec complexity possible on the newest crop of devices.</p>
+    <p>Video: H.264, Level 3.0, Baseline profile<br />
+      Audio: AAC, 1-2 channels</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="universal-a">Universal Smartphone Profile</h2>
 
-<h3>Plays on:</h3>
+    <p>This is a great starting profile for wide compatibility with modern smartphones. Plays on just about everything, though it doesn't take advantage of the higher resolutions and codec complexity possible on the newest crop of devices.</p>
 
-<p><strong>iOS:</strong> iPhone, iPad, Apple TV, iPod Touch, iPod Classic, iPod 5.5G<br /><strong>Blackberry:</strong> Bold 9000, Curve 8910, 8900, 8520, Pearl 9XXX, Storm, Storm 2, Torch, Tour, Bold 9650 + 9700<br /><strong>Android:</strong> All (?)<br /><strong>Other:</strong> PSP (3.30+), PS3, Xbox 360, web, Palm Pre<a href="#general-notes">*</a></p>
+    <h3>Plays on:</h3>
 
-<h3>Doesn't play on:</h3>
+    <p><strong>iOS:</strong> iPhone, iPad, Apple TV, iPod Touch, iPod Classic, iPod 5.5G<br /><strong>Blackberry:</strong> Bold 9000, Curve 8910, 8900, 8520, Pearl 9XXX, Storm, Storm 2, Torch, Tour, Bold 9650 + 9700<br /><strong>Android:</strong> All (?)<br /><strong>Other:</strong> PSP (3.30+), PS3, Xbox 360, web, Palm Pre<a href="#general-notes">*</a></p>
 
-<p>iPod 5G, PSP (pre-3.30), Blackberry Curve 9330, 9300, 8530, 83XX, Pearl 8XXX, 88XX</p>
+    <h3>Doesn't play on:</h3>
 
-<h3>Settings:</h3>
+    <p>iPod 5G, PSP (pre-3.30), Blackberry Curve 9330, 9300, 8530, 83XX, Pearl 8XXX, 88XX</p>
 
-<pre class="line-numbers">
+    <h3>Settings:</h3>
+
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -54,19 +60,21 @@ Audio: AAC, 1-2 channels</p>
         }
     ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="universal-b">Universal Smartphone Profile v2</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="universal-b">Universal Smartphone Profile v2</h2>
 
-<p>This profile plays better on iPhone 4, iPad, Apple TV, new iPod Touch, Droid, PS3, and Xbox, by increasing the video resolution. The extra pixels are wasted on older iPhones though, and make for a video that won't play on Blackberry and some Android phones.</p>
+    <p>This profile plays better on iPhone 4, iPad, Apple TV, new iPod Touch, Droid, PS3, and Xbox, by increasing the video resolution. The extra pixels are wasted on older iPhones though, and make for a video that won't play on Blackberry and some Android phones.</p>
 
-<h3>Plays on:</h3>
+    <h3>Plays on:</h3>
 
-<p>Everything above, minus Blackberry and maybe weaker Android devices</p>
+    <p>Everything above, minus Blackberry and maybe weaker Android devices</p>
 
-<h3>Settings:</h3>
+    <h3>Settings:</h3>
 
-<p>Same as the Universal Smartphone Profile (above), but with a size of 640x480</p>
+    <p>Same as the Universal Smartphone Profile (above), but with a size of 640x480</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -82,23 +90,25 @@ Audio: AAC, 1-2 channels</p>
         }
     ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="advanced-a">Advanced Smartphone Profile</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="advanced-a">Advanced Smartphone Profile</h2>
 
-<p>Newer iOS devices allow higher resolutions and higher encoding complexity (which means better compression). In particular, iPad and Apple TV users shouldn't have to watch 480x320 video on their beautiful screens, so it makes sense to provide a higher quality version if you want to provide a good experience to these users.</p>
+    <p>Newer iOS devices allow higher resolutions and higher encoding complexity (which means better compression). In particular, iPad and Apple TV users shouldn't have to watch 480x320 video on their beautiful screens, so it makes sense to provide a higher quality version if you want to provide a good experience to these users.</p>
 
-<h3>Plays on:</h3>
+    <h3>Plays on:</h3>
 
-<p><strong>iOS:</strong> iPhone 4, iPad, Apple TV*, newer iPod Touch<br /><strong>Android:</strong> Nexus One, Droid, maybe others. (YMMV on these, though. Some users report trouble with 720p video.)<br /><strong>Other:</strong> PS3, web</p>
+    <p><strong>iOS:</strong> iPhone 4, iPad, Apple TV*, newer iPod Touch<br /><strong>Android:</strong> Nexus One, Droid, maybe others. (YMMV on these, though. Some users report trouble with 720p video.)<br /><strong>Other:</strong> PS3, web</p>
 
-<h3>Doesn't play on:</h3>
+    <h3>Doesn't play on:</h3>
 
-<p><strong>iOS:</strong> iPod 5G/5.5G/Classic, iPhone 3GS and before, older iPod Touch PSP, old Apple TV*<br /><strong>Blackberry:</strong> all<br /><strong>Android:</strong> others<br /><strong>Other:</strong> PSP, PS3, Xbox 360, web</p>
+    <p><strong>iOS:</strong> iPod 5G/5.5G/Classic, iPhone 3GS and before, older iPod Touch PSP, old Apple TV*<br /><strong>Blackberry:</strong> all<br /><strong>Android:</strong> others<br /><strong>Other:</strong> PSP, PS3, Xbox 360, web</p>
 
-<h3>Settings:</h3>
+    <h3>Settings:</h3>
 
-<p>Note, this is the maximum size. For native iPhone 4 resolution, set the size to 960x640</p>
+    <p>Note, this is the maximum size. For native iPhone 4 resolution, set the size to 960x640</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -116,32 +126,36 @@ Audio: AAC, 1-2 channels</p>
     ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="advanced-b">Advanced Smartphone Profile v2</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="advanced-b">Advanced Smartphone Profile v2</h2>
 
-<p>To support older Apple TV devices, use the Advanced Smartphone Profile setting, plus one of the following:</p>
+    <p>To support older Apple TV devices, use the Advanced Smartphone Profile setting, plus one of the following:</p>
 
-<h3>Settings:</h3>
+    <h3>Settings:</h3>
 
-<p>Advanced Smartphone Profile (above), plus either one of the following:</p>
+    <p>Advanced Smartphone Profile (above), plus either one of the following:</p>
 
-<p><code>size: 960x540</code></p>
+    <p><code>size: 960x540</code></p>
 
-<p>OR</p>
+    <p>OR</p>
 
-<p><code>max_frame_rate: 24</code></p>
-</section><section class="bcls-section"><h2 id="legacy-smartphone">Legacy Smartphone Profile</h2>
+    <p><code>max_frame_rate: 24</code></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="legacy-smartphone">Legacy Smartphone Profile</h2>
 
-<p>This profile plays on the last major set of H.264-based mobile devices: notably, older iPods and some Blackberries. The tradeoff is significantly smaller video: 320x240, at no more than 768kbps.</p>
+    <p>This profile plays on the last major set of H.264-based mobile devices: notably, older iPods and some Blackberries. The tradeoff is significantly smaller video: 320x240, at no more than 768kbps.</p>
 
-<p>Older iPhone/iPod devices ask for the "H.264 Baseline Low Complexity" profile. "Low Complexity" isn't actually a H.264 standard – it actually just means "only 1 reference frame". The jury is out on how much Apple devices really enforce this, but for true compatibility, you should probably use Baseline profile and limit reference frames to 1. You can do this with the <a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264-reference-frames">h264_reference_frames</a> setting.</p>
+    <p>Older iPhone/iPod devices ask for the "H.264 Baseline Low Complexity" profile. "Low Complexity" isn't actually a H.264 standard – it actually just means "only 1 reference frame". The jury is out on how much Apple devices really enforce this, but for true compatibility, you should probably use Baseline profile and limit reference frames to 1. You can do this with the <a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264-reference-frames">h264_reference_frames</a> setting.</p>
 
-<h3>Plays on:</h3>
+    <h3>Plays on:</h3>
 
-<p><strong>Everything above, plus</strong>: iPod 5G, PSP (pre 3.30), Blackberry Curve 9330, 9300, 8530, 83XX, Pearl 8XXX, 88XX, Palm Pre<a href="#general-notes">*</a></p>
+    <p><strong>Everything above, plus</strong>: iPod 5G, PSP (pre 3.30), Blackberry Curve 9330, 9300, 8530, 83XX, Pearl 8XXX, 88XX, Palm Pre<a href="#general-notes">*</a></p>
 
-<h3>Settings:</h3>
+    <h3>Settings:</h3>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -157,24 +171,28 @@ Audio: AAC, 1-2 channels</p>
     }
     ]
 }</code></pre>
-</section><section class="bcls-section"><h2 id="legacy-3gp">Legacy 3GP Profiles</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="legacy-3gp">Legacy 3GP Profiles</h2>
 
-<p>Finally, a 3GP profile or two will extend support to many remaining mobile devices.</p>
+    <p>Finally, a 3GP profile or two will extend support to many remaining mobile devices.</p>
 
-<p>Notably, you can use these on most of the same devices supported above under the Legacy Smartphone Profile. So if you're encoding a 3GP video at 320x240, you might not need to encode another H.264 video at 320x240.</p>
+    <p>Notably, you can use these on most of the same devices supported above under the Legacy Smartphone Profile. So if you're encoding a 3GP video at 320x240, you might not need to encode another H.264 video at 320x240.</p>
 
-<p><strong>Note</strong></p>
+    <p><strong>Note</strong></p>
 
-<ul><li>These videos will look terrible, but that's the cost of supporting 3GP phones.</li>
-	<li>In order to deliver 3GP video as an RTMP stream it needs to be "hinted". Set <a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#hint">hint</a> to <code>true</code> in your API request to enable it.</li>
-</ul><h3>Plays on:</h3>
+    <ul>
+      <li>These videos will look terrible, but that's the cost of supporting 3GP phones.</li>
+      <li>In order to deliver 3GP video as an RTMP stream it needs to be "hinted". Set <a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#hint">hint</a> to <code>true</code> in your API request to enable it.</li>
+    </ul>
+    <h3>Plays on:</h3>
 
-<p><strong>Hard to say.</strong> There are thousands of types of 3GP devices, and each one is a little different. Consider these a starting point.</p>
+    <p><strong>Hard to say.</strong> There are thousands of types of 3GP devices, and each one is a little different. Consider these a starting point.</p>
 
-<h3 id="legacy-3gp-a">Profile A</h3>
+    <h3 id="legacy-3gp-a">Profile A</h3>
 
-<div class="docs-code">
-<pre class="line-numbers">
+    <div class="docs-code">
+      <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -195,9 +213,9 @@ Audio: AAC, 1-2 channels</p>
     ]
 }</code></pre>
 
-<h3 id="legacy-3gp-b">Profile B</h3>
+      <h3 id="legacy-3gp-b">Profile B</h3>
 
-<pre class="line-numbers">
+      <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://bucket-name/file-name.avi",
     "outputs": [
@@ -220,13 +238,16 @@ Audio: AAC, 1-2 channels</p>
     ]
 }</code></pre>
 
-<section class="bcls-section"><h2 id="summary">Summary</h2>
+      <section class="bcls-section">
+        <h2 id="summary">Summary</h2>
 
-<p>If you want to create mobile video, start with the Universal Smartphone Profile. For better quality, supplement this with Advanced Smartphone Profile video. For wider compatibility, add a Legacy profile or two using either MP4 or 3GP. That's it. It only takes 1-3 profiles to support most mobile devices.</p>
-<a name="general-notes" id="general-notes"></a>
+        <p>If you want to create mobile video, start with the Universal Smartphone Profile. For better quality, supplement this with Advanced Smartphone Profile video. For wider compatibility, add a Legacy profile or two using either MP4 or 3GP. That's it. It only takes 1-3 profiles to support most mobile devices.</p>
+        <a name="general-notes" id="general-notes"></a>
 
-<h2>Notes</h2>
+        <h2>Notes</h2>
 
-<p><strong>Palm Pre</strong>: The <a href="http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1752">published specs</a> for Palm Pre are very similar to other smartphones: 480x320 native resolution (with 640x480 supported); H.264, H.263, or MPEG-4 video; MP3 and AAC audio (along with a few other codecs). If these specs are accurate and comprehensive, then the Universal and the Legacy profiles above should work on Palm Pre.</p>
-</section></div>
-</section>
+        <p><strong>Palm Pre</strong>: The <a href="http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1752">published specs</a> for Palm Pre are very similar to other smartphones: 480x320 native resolution (with 640x480 supported); H.264, H.263, or MPEG-4 video; MP3 and AAC audio (along with a few other codecs). If these specs are accurate and comprehensive, then the Universal and the Legacy profiles above should work on Palm Pre.</p>
+      </section>
+    </div>
+  </section>
+</article>

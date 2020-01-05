@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>HLS using fragmented MP4</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">Encoding Guides</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">HLS using fragmented MP4</li>
     </ol>
   </nav>
 </header>
@@ -303,6 +307,54 @@
                   <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
                 
               
+                
+                  <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                
+              
             </ul>
           
         
@@ -311,15 +363,49 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/references/glossary.html">Glossary</a></li>
+                  <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
                 
               
                 
-                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                
+              
+                
+                  <li class="submenu-header">
+                    <a href="/error-troubleshooting/error-codes">Error Codes</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -348,38 +434,12 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>HTTP Live Streaming using fragmented MP4</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Live Streaming</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>HLS using fragmented MP4</h1>
+  <summary>Please refer to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a> for more details on ts outputs and playlists. To choose fragmented MP4 files with HLS outputs, use <code>"format": "m4f"</code> and <code>"streaming_delivery_format": "hls"</code>. We highly recommend setting <code>"byte_range_segmenting": true</code>, to format the media as a single fragmented MP4 file rather than having separate segment files.</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
-
-  <div class="field field--name-field-type field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Type</div>
-              <div class="field--item">Support Doc</div>
-          </div>
-
-</div>
-
-  
-            <p>
-  Please refer to <a href="/http-live-segmented-streaming-and-playlists">HTTP Live (Segmented) Streaming and Playlists</a> for more details on ts outputs and playlists. 
-  To choose fragmented MP4 files with HLS outputs, use "format": "m4f" and "streaming_delivery_format": "hls".  We highly recommend setting "byte_range_segmenting": true, to format the media as a single fragmented MP4 file rather than having separate segment files.
-</p><article class="bcls-article"><section class="bcls-section"><pre class="line-numbers"><code class="language-json">{
+  <section class="bcls-section">
+    <pre class="line-numbers"><code class="language-json">{
   "skip_audio": true,
   "base_url": "s3://my-bucket/",
   "decoder_bitrate_cap": 900,
@@ -395,12 +455,14 @@
   "byte_range_segmenting" : "true",
   "max_hls_protocol_version" : 7
 }</code></pre>
-  </section><section class="bcls-section"><h2 id="encryption">Encryption</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="encryption">Encryption</h2>
     <p>
       Zencoder also supports generating CBCS-encrypted fragmented MP4, HLS outputs with necessary headers for integrating with Fairplay DRM. For each output, specify <a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption</a> options. Once you have those keys, the Zencoder API structure for a single rendition
       is:
     </p>
-<pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json">{
   "input": "http://s3.amazonaws.com/zencodertesting/test.mov",
   "outputs": [
     {
@@ -427,13 +489,17 @@
   ]
 }</code></pre>
     <h3>Notes</h3>
-    <ul><li>It is recommended to do audio only and video only segmented outputs  and use alternate audio while generating playlist.</li>
+    <ul>
+      <li>It is recommended to do audio only and video only segmented outputs and use alternate audio while generating playlist.</li>
       <li>In playlist output DO NOT mix <code>ts</code> and <code>m4f</code> outputs (Causes audio video sync issues).</li>
       <li>Captions with fragmented mp4 HLS outputs are not supported in zencoder yet.</li>
-    </ul></section><section class="bcls-section"><h2 id="complete_example">Complete example</h2>
-  <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
-  <h3>Audio outputs</h3>
-<pre class="line-numbers"><code class="language-json">{
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="complete_example">Complete example</h2>
+    <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
+    <h3>Audio outputs</h3>
+    <pre class="line-numbers"><code class="language-json">{
   "outputs": [
       {
             "public": true,
@@ -465,8 +531,8 @@
         }
     ]
 }</code></pre>
-  <h3>Video outputs</h3>
-<pre class="line-numbers"><code class="language-json">{
+    <h3>Video outputs</h3>
+    <pre class="line-numbers"><code class="language-json">{
  "outputs": [
         {
             "public": true,
@@ -632,8 +698,8 @@
         }
     ]
 }</code></pre>
-  <h3>Playlist outputs</h3>
-<pre class="line-numbers"><code class="language-json">{
+    <h3>Playlist outputs</h3>
+    <pre class="line-numbers"><code class="language-json">{
     "outputs":[
        {
             "public": true,
@@ -706,8 +772,8 @@
         }
     ]
 }</code></pre>
-</section>
-
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

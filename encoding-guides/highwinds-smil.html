@@ -1,17 +1,23 @@
 ---
-title: 
-parent: 
+title: Highwinds SMIL Guide
+description: Highwinds is a fast CDN that offers a wide range of solutions, including adaptive streaming of video. To make using Highwinds adaptive streaming integration easier we have added a method to generate SMIL files.
+parent: Encoding Guides
 ---
-<h1>Highwinds SMIL</h1>
-            <p>Highwinds is a fast CDN that offers a wide range of solutions, including adaptive streaming of video. To make using Highwinds adaptive streaming integration easier we have added a method to generate SMIL files.</p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">Overview</h2>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-<p><a href="http://wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language">SMIL</a> files are XML documents in a special format which are used for describing multimedia presentations. Highwinds uses a subset of SMIL to enable adaptive streaming.</p>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
 
-<section class="bcls-section"><h2 id="SMIL_and_Zencoder">SMIL and Zencoder</h2>
-</section><p>The following is an example of a Highwinds SMIL file which describes a video that has been encoded to multiple bitrates. All paths ("src") given are relative to where the SMIL will be served and all bitrates ("system-bitrate") are in bits per second (bps).</p>
+    <p><a href="http://wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language">SMIL</a> files are XML documents in a special format which are used for describing multimedia presentations. Highwinds uses a subset of SMIL to enable adaptive streaming.</p>
 
-<pre class="line-numbers">
+    <section class="bcls-section">
+      <h2 id="SMIL_and_Zencoder">SMIL and Zencoder</h2>
+    </section>
+    <p>The following is an example of a Highwinds SMIL file which describes a video that has been encoded to multiple bitrates. All paths ("src") given are relative to where the SMIL will be served and all bitrates ("system-bitrate") are in bits per second (bps).</p>
+
+    <pre class="line-numbers">
 <code class="language-xml">
 &lt;smil&gt;
 &lt;head&gt;
@@ -32,11 +38,11 @@ system-bitrate="64000"/&gt;
 &lt;/body&gt;
 &lt;/smil&gt;</code></pre>
 
-<p>Each <code>&lt;video&gt;</code> tag in the above example represents a separate stream that can be served to the user. The first video listed will be streamed to the user until the available bandwidth can be determined, at which time the user will be switched to the appropriate stream.</p>
+    <p>Each <code>&lt;video&gt;</code> tag in the above example represents a separate stream that can be served to the user. The first video listed will be streamed to the user until the available bandwidth can be determined, at which time the user will be switched to the appropriate stream.</p>
 
-<p>Creating a Highwinds SMIL playlist with Zencoder is easy.</p>
+    <p>Creating a Highwinds SMIL playlist with Zencoder is easy.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">
 {
     "api_key": "asdf1234",
@@ -80,23 +86,29 @@ system-bitrate="64000"/&gt;
     ]
 }</code></pre>
 
-<p>When you do this, you will need to include a non-playlist output as well.</p>
+    <p>When you do this, you will need to include a non-playlist output as well.</p>
 
-<ul><li>"type" should be "playlist"</li>
-	<li>"format" should be "highwinds"</li>
-	<li>"url" (or "filename") should have an extension of "smil"</li>
-	<li>"streams" should be an array of JSON objects which each have the keys "bandwidth" and "path"
-	<ul><li>"path" should be the relative path to the mp4 file as it will be served by your server (notice that it doesn't include the leading "mp4:" that appears in the SMIL file)</li>
-		<li>"bandwidth" should be the bitrate of the file in kbps which we will convert to bps when creating the SMIL file</li>
-		<li>"width" is optional and should specify the horizontal resolution of the file</li>
-		<li>"height" is optional and should specify the vertical resolution of the file</li>
-	</ul></li>
-</ul><p>The videos referenced by the playlist can be created separately from the job that generates the playlist, or they can be created as additional outputs on the same job.</p>
-</section><section class="bcls-section"><h2 id="The_Whole_Picture">The Whole Picture</h2>
+    <ul>
+      <li>"type" should be "playlist"</li>
+      <li>"format" should be "highwinds"</li>
+      <li>"url" (or "filename") should have an extension of "smil"</li>
+      <li>"streams" should be an array of JSON objects which each have the keys "bandwidth" and "path"
+        <ul>
+          <li>"path" should be the relative path to the mp4 file as it will be served by your server (notice that it doesn't include the leading "mp4:" that appears in the SMIL file)</li>
+          <li>"bandwidth" should be the bitrate of the file in kbps which we will convert to bps when creating the SMIL file</li>
+          <li>"width" is optional and should specify the horizontal resolution of the file</li>
+          <li>"height" is optional and should specify the vertical resolution of the file</li>
+        </ul>
+      </li>
+    </ul>
+    <p>The videos referenced by the playlist can be created separately from the job that generates the playlist, or they can be created as additional outputs on the same job.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="The_Whole_Picture">The Whole Picture</h2>
 
-<p>Multiple outputs of different bitrates may be specified and referenced by the playlist.</p>
+    <p>Multiple outputs of different bitrates may be specified and referenced by the playlist.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "api_key": "1234abcd",
     "input": "http://example.com/file.mp4",
@@ -195,8 +207,11 @@ system-bitrate="64000"/&gt;
     ]
 }</code></pre>
 
-<p><strong>NOTES</strong></p>
+    <p><strong>NOTES</strong></p>
 
-<ul><li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
-	<li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
-</ul></section>
+    <ul>
+      <li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
+      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
+    </ul>
+  </section>
+</article>

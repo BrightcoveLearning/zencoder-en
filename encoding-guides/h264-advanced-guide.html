@@ -1,53 +1,40 @@
 ---
-title: 
-parent: 
+title: H.264 Advanced Guide
+description: This page documents H.264-specific encoding with Zencoder.
+parent: Encoding Guides
 ---
-<h1>H.264 Advanced Guide</h1>
-<div class="group-third-row taxonomy__tags">
-      <svg class="icon--label" viewBox="0 0 100 100">
-      <use xlink:href="//support.brightcove.com/themes/custom/bcdocs/images/icons.svg#icon--label"></use>
-    </svg>
-    
-  <div class="field field--name-field-topics field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">Topic(s)</div>
-          <div class="field--items">
-              <div class="field--item">Encoding Settings</div>
-              </div>
-      </div>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-  <div class="field field--name-field-apis field--type-entity-reference field--label-visually_hidden">
-    <div class="field--label sr-only">API(s)</div>
-          <div class="field--items">
-              <div class="field--item">Zencoder API</div>
-              </div>
-      </div>
+  <section class="bcls-section">
+    <h2 id="H264_Overview">H.264 Overview</h2>
 
-</div>
+    <p>The dominant video codec today for web and mobile video is H.264. Its compression quality ranks among the best of the modern codecs along with HEVC and VP9.</p>
 
-  
-            <p> <a name="introduction"></a> This page documents H.264-specific encoding with Zencoder. Zencoder encodes H.264 content using a variety of software, but our core encoder is the excellent <a href="http://www.videolan.org/developers/x264.html">x264</a>, the best H.264 encoder available, and one of the best video encoding implementations for any codec. H.264 is the dominant video codec today for web and mobile video. </p> <p><a name="h264"></a></p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="H264_Overview">H.264 Overview</h2>
+    <p>H.264 can be played in 99.9% of web browsers, on many mobile devices (including the iPhone/iPad, Android), as well as many connected television and streaming devices. It is also an excellent codec for desktop video.</p>
 
-<p>The dominant video codec today for web and mobile video is H.264. Its compression quality ranks among the best of the modern codecs along with HEVC and VP9.</p>
+    <p>Zencoder encodes H.264 content using a variety of software, but our core encoder is the excellent <a href="http://www.videolan.org/developers/x264.html">x264</a>, the best H.264 encoder available, and one of the best video encoding implementations for any codec. H.264 is the dominant video codec today for web and mobile video.</p>
 
-<p>H.264 can be played in 99.9% of web browsers, on many mobile devices (including the iPhone/iPad, Android), as well as many connected television and streaming devices. It is also an excellent codec for desktop video.</p>
+    <p>H.264 is typically deployed in the MP4 file container. Valid extensions include .mp4, .m4v (mp4 video), .f4v (mp4 video for Flash) and .ts. Note that <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#flv_and_f4v">.flv</a> is <em>not</em> a recommended file extension for H.264 Flash video — .f4v is preferred.</p>
 
-<p>H.264 is typically deployed in the MP4 file container. Valid extensions include .mp4, .m4v (mp4 video), .f4v (mp4 video for Flash) and .ts. Note that <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#flv_and_f4v">.flv</a> is <em>not</em> a recommended file extension for H.264 Flash video — .f4v is preferred.</p>
+    <p>AAC and MP3 audio codecs are valid alongside H.264.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="H264_and_general_options">H.264 and general options</h2>
 
-<p>AAC and MP3 audio codecs are valid alongside H.264.</p>
-</section><section class="bcls-section"><h2 id="H264_and_general_options">H.264 and general options</h2>
+    <p><strong><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. This is closely related to constant quantizer encoding, though CRF mode generally achieves better compression than constant Q encoding by reducing the quantizer quality on "less important" frames. Read more about <a href="http://mewiki.project357.com/wiki/X264_Settings#crf">crf</a>.</p>
 
-<p><strong><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. This is closely related to constant quantizer encoding, though CRF mode generally achieves better compression than constant Q encoding by reducing the quantizer quality on "less important" frames. Read more about <a href="http://mewiki.project357.com/wiki/X264_Settings#crf">crf</a>.</p>
+    <p>The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality.</p>
 
-<p>The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality.</p>
+    <p>Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
 
-<p>Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
+    <p><strong><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></strong>: The supported H.264 <a href="http://en.wikipedia.org/wiki/H.264#Profiles">profiles</a> are: baseline, main, high, high10, high422, high444. Lower levels are easier to decode, but higher levels offer better compression and extended features. For example, some older phones only supports the Baseline profile, which we use by default. The Main and High profiles are a definite step up in compression, and work fine for web playback. Try High for the best quality, and Baseline for mobile device support. Default: "baseline".</p>
 
-<p><strong><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></strong>: The supported H.264 <a href="http://en.wikipedia.org/wiki/H.264#Profiles">profiles</a> are: baseline, main, high, high10, high422, high444. Lower levels are easier to decode, but higher levels offer better compression and extended features. For example, some older phones only supports the Baseline profile, which we use by default. The Main and High profiles are a definite step up in compression, and work fine for web playback. Try High for the best quality, and Baseline for mobile device support. Default: "baseline".</p>
+    <p><a name="video-codec-level" id="video-codec-level"></a> <strong><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></strong>: constrains the bitrate and macroblocks. Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video's peak bitrate can't exceed 10,000kbps. Only use this setting if you're targeting a specific device that requires it. <a href="http://en.wikipedia.org/wiki/H.264#Levels">List of valid values</a>. Default: 3.</p>
 
-<p><a name="video-codec-level" id="video-codec-level"></a> <strong><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></strong>: constrains the bitrate and macroblocks. Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video's peak bitrate can't exceed 10,000kbps. Only use this setting if you're targeting a specific device that requires it. <a href="http://en.wikipedia.org/wiki/H.264#Levels">List of valid values</a>. Default: 3.</p>
+    <p><a name="tuning" id="tuning"></a> <strong><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></strong>: "tune" the output video to a specific content type. Useful values are "animation" for animated content, "film" for live-action content (not just movies), and "grain" to improve encoding of grainy content. Valid values: film, animation, grain, psnr, ssim, fastdecode, or zerolatency. Default: none.</p>
 
-<p><a name="tuning" id="tuning"></a> <strong><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></strong>: "tune" the output video to a specific content type. Useful values are "animation" for animated content, "film" for live-action content (not just movies), and "grain" to improve encoding of grainy content. Valid values: film, animation, grain, psnr, ssim, fastdecode, or zerolatency. Default: none.</p>
-
-<p><strong><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed">speed</a></strong>: Zencoder supports speed as a range from 1-5 for H.264. A lower speed results in slightly better compression, while a higher speed results in slightly worse compression.</p>
-</section>
+    <p><strong><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed">speed</a></strong>: Zencoder supports speed as a range from 1-5 for H.264. A lower speed results in slightly better compression, while a higher speed results in slightly worse compression.</p>
+  </section>
+</article>

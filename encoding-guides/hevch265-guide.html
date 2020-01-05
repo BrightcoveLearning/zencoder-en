@@ -1,34 +1,44 @@
 ---
-title: 
-parent: 
+title: HEVC/H.265 Guide
+description: Zencoder supports next-generation video playback with the HEVC (H.265) codec. HEVC is the successor to the ubiquitous H.264 codec, and creates high quality outputs with a much lower bitrate than AVC/H.264.
+parent: Encoding Guides
 ---
-<h1>HEVC/H.265 Guide</h1>
-            <p> Zencoder supports next-generation video playback with the HEVC (H.265) codec. HEVC is the successor to the ubiquitous H.264 codec, and creates high quality outputs with a much lower bitrate than AVC/H.264. </p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">HEVC/H.265 Overview</h2>
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
-<p>HEVC (also commonly referred to as H.265) is available to all customers. HEVC is a next-generation video codec that is capable of delivering higher quality content at lower bitrates than its predecessor, H.264.</p>
-</section><section class="bcls-section"><h2 id="Encoding_recommendations">Encoding recommendations</h2>
+  <section class="bcls-section">
+    <h2 id="Overview">HEVC/H.265 Overview</h2>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></code></strong>: constrains the bitrate and coding tree units (CTUs). <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">List of valid values</a>.</p>
+    <p>HEVC (also commonly referred to as H.265) is available to all customers. HEVC is a next-generation video codec that is capable of delivering higher quality content at lower bitrates than its predecessor, H.264.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Encoding_recommendations">Encoding recommendations</h2>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></code></strong>: sets the encoding profile. The currently supported HEVC profiles are: main, main10, main12, main422-10, main422-12, main444-8, main444-10, main444-12. Default: main.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></code></strong>: constrains the bitrate and coding tree units (CTUs). <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">List of valid values</a>.</p>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-reference-frames">video_reference_frames</a></code></strong>: Limits the number of reference frames for HEVC. Default: 3.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></code></strong>: sets the encoding profile. The currently supported HEVC profiles are: main, main10, main12, main422-10, main422-12, main444-8, main444-10, main444-12. Default: main.</p>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-bframes">video_bframes</a></code></strong>: Limits the number of consecutive bframes used for HEVC. Default: 3.</p>
-<p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></code></strong>: Tunes the output video to optimize for a specific encoding priority. Note that for <code>HEVC</code> video, the allowable values for <code>tuning</code> are:</p>
-<ul><li>grain - optimized for film with high levels of grain.</li>
-	<li>psnr - uses "peak signal-to-noise ratio" to optimize video quality.</li>
-	<li>ssim - uses "structural similarity" to optimize video quality.</li>
-	<li>fastdecode - reduces encoding complexity, to allow for easier decoding.</li>
-	<li>zerolatency - x265 will keep an internal buffer of frames to improve quality; this setting removes that buffer, but reduces quality.</li>
-</ul><p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></code></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality. Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-reference-frames">video_reference_frames</a></code></strong>: Limits the number of reference frames for HEVC. Default: 3.</p>
 
-</section><section class="bcls-section"><h2 id="sample_hvec_mp4">Sample: HEVC + MP4</h2>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-bframes">video_bframes</a></code></strong>: Limits the number of consecutive bframes used for HEVC. Default: 3.</p>
+    <p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></code></strong>: Tunes the output video to optimize for a specific encoding priority. Note that for <code>HEVC</code> video, the allowable values for <code>tuning</code> are:</p>
+    <ul>
+      <li>grain - optimized for film with high levels of grain.</li>
+      <li>psnr - uses "peak signal-to-noise ratio" to optimize video quality.</li>
+      <li>ssim - uses "structural similarity" to optimize video quality.</li>
+      <li>fastdecode - reduces encoding complexity, to allow for easier decoding.</li>
+      <li>zerolatency - x265 will keep an internal buffer of frames to improve quality; this setting removes that buffer, but reduces quality.</li>
+    </ul>
+    <p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></code></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality. Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
 
-<p>Below are sample settings for a job that will create an HEVC output (muxed as mp4) with an additional MP4 output for clients that do not yet support HVEC.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sample_hvec_mp4">Sample: HEVC + MP4</h2>
 
-<pre class="line-numbers">
+    <p>Below are sample settings for a job that will create an HEVC output (muxed as mp4) with an additional MP4 output for clients that do not yet support HVEC.</p>
+
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "https://user:pass@bucket-name/file-name.mov",
   "outputs": [
@@ -52,4 +62,5 @@ parent:
       }
   ]
 }</code></pre>
-</section>
+  </section>
+</article>

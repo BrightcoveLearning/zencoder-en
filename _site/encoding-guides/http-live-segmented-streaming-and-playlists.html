@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>HLS Streaming and Playlists</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">Encoding Guides</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">HLS Streaming and Playlists</li>
     </ol>
   </nav>
 </header>
@@ -303,6 +307,54 @@
                   <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
                 
               
+                
+                  <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                
+              
             </ul>
           
         
@@ -311,15 +363,49 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/references/glossary.html">Glossary</a></li>
+                  <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
                 
               
                 
-                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                
+              
+                
+                  <li class="submenu-header">
+                    <a href="/error-troubleshooting/error-codes">Error Codes</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -348,18 +434,16 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>HTTP Live (Segmented) Streaming and Playlists</h1>
-<div class="group-third-row taxonomy__tags">
-    
-</div>
+<article class="bcls-article">
+  <h1>HLS Streaming and Playlists</h1>
+  <summary>HTTP Live Streaming make it easy to adapt your video or audio stream to a user based on their available bandwidth, switching between streams in mid-play as the transfer speed changes. Pulling all of the pieces can be confusing, so we'll show you how to create a few simple segmented files for different bandwidths and a playlist to provide to users on iOS devices so that they can play them.</summary>
 
-  
-            <p> HTTP Live Streaming make it easy to adapt your video or audio stream to a user based on their available bandwidth, switching between streams in mid-play as the transfer speed changes. Pulling all of the pieces can be confusing, so we'll show you how to create a few simple segmented files for different bandwidths and a playlist to provide to users on iOS devices so that they can play them. </p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Segmented_Files">Segmented Files</h2>
+  <section class="bcls-section">
+    <h2 id="Segmented_Files">Segmented Files</h2>
 
-<p>We'll start off by making several segmented files, each targeted at a given bandwidth. With these outputs Zencoder creates a manifest file and segmented video files, which allow the player to download each file individually as it plays the video.</p>
+    <p>We'll start off by making several segmented files, each targeted at a given bandwidth. With these outputs Zencoder creates a manifest file and segmented video files, which allow the player to download each file individually as it plays the video.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "audio_bitrate": 56,
     "audio_sample_rate": 22050,
@@ -375,20 +459,22 @@
     "format": "ts"
 }</code></pre>
 
-<p>The <code>m3u8</code> file created by the above output is a segmented file. Requesting this output, plus the others described below, will create multiple segmented files targeted at different bandwidths.</p>
+    <p>The <code>m3u8</code> file created by the above output is a segmented file. Requesting this output, plus the others described below, will create multiple segmented files targeted at different bandwidths.</p>
 
-<p>This output has a type of "segmented", a format of "ts", and defaults to a video codec of "h264". Each segmented output will have a manifest file in M3U8 format created as its main output, and the segments will be named like the filename of the output. The segmented files will be uploaded along-side the manifest, and named with "-00001" suffixes before the extension. These outputs can be used as-is for standard streaming, simply by referencing the .m3u8 file from the client, and ensuring the segment files are available from the same location as the manifest. Multiple .m3u8 file can also be referenced by a playlist to support adaptive streaming.</p>
-</section><section class="bcls-section"><h2 id="The_Playlist">The Playlist</h2>
+    <p>This output has a type of "segmented", a format of "ts", and defaults to a video codec of "h264". Each segmented output will have a manifest file in M3U8 format created as its main output, and the segments will be named like the filename of the output. The segmented files will be uploaded along-side the manifest, and named with "-00001" suffixes before the extension. These outputs can be used as-is for standard streaming, simply by referencing the .m3u8 file from the client, and ensuring the segment files are available from the same location as the manifest. Multiple .m3u8 file can also be referenced by a playlist to support adaptive streaming.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="The_Playlist">The Playlist</h2>
 
-<p>You can create adaptive-bitrate playlists yourself, or have Zencoder do it as part of a job. To have us create the playlist, just add another output to your job with a type of "playlist" and specify one or more streams with a path (that is relative to the playlist file's location) and the source of the stream, which is the label of the corresponding output. Bandwidth, resolution, and codec can also be specified, but by default these are inferred from the source. The stream information will be formatted into a playlist and uploaded just like any other output.</p>
+    <p>You can create adaptive-bitrate playlists yourself, or have Zencoder do it as part of a job. To have us create the playlist, just add another output to your job with a type of "playlist" and specify one or more streams with a path (that is relative to the playlist file's location) and the source of the stream, which is the label of the corresponding output. Bandwidth, resolution, and codec can also be specified, but by default these are inferred from the source. The stream information will be formatted into a playlist and uploaded just like any other output.</p>
 
-<p>This playlist file references the segmented outputs created above, specifying the bandwidth at which each should be played. Loading this file with a device that supports HLS will allow the stream to be adjusted as available bandwidth changes.</p>
+    <p>This playlist file references the segmented outputs created above, specifying the bandwidth at which each should be played. Loading this file with a device that supports HLS will allow the stream to be adjusted as available bandwidth changes.</p>
 
-<p>The first entry in the streams will be used when a user opens the file and is used as part of a test to determine which stream is most appropriate. The order of the other entries is irrelevant.</p>
+    <p>The first entry in the streams will be used when a user opens the file and is used as part of a test to determine which stream is most appropriate. The order of the other entries is irrelevant.</p>
 
-<p>HLS outputs (with video) that have <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#max-hls-protocol-version">max_hls_protocol_version</a> of 4 or greater will now generate an I-Frame playlist, also known as a "keyframe manifest". By default, the filename is the same as the main manifest file, but with "-iframe-index" appended. For example, for a manifest with the filename "master.m3u8", the keyframe manifest would be named "master-iframe-index.m3u8". This can be overridden using <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#keyframe-manifest-filename">keyframe_manifest_filename</a>. If an HLS playlist output specifies a "source" stream that has a keyframe manifest, then that keyframe manifest will automatically be included into the playlist as an EXT-X-I-FRAMES-ONLY stream.</p>
+    <p>HLS outputs (with video) that have <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#max-hls-protocol-version">max_hls_protocol_version</a> of 4 or greater will now generate an I-Frame playlist, also known as a "keyframe manifest". By default, the filename is the same as the main manifest file, but with "-iframe-index" appended. For example, for a manifest with the filename "master.m3u8", the keyframe manifest would be named "master-iframe-index.m3u8". This can be overridden using <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#keyframe-manifest-filename">keyframe_manifest_filename</a>. If an HLS playlist output specifies a "source" stream that has a keyframe manifest, then that keyframe manifest will automatically be included into the playlist as an EXT-X-I-FRAMES-ONLY stream.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "base_url": "s3://my-bucket/",
     "filename": "playlist.m3u8",
@@ -417,11 +503,13 @@
     ],
     "type": "playlist"
 }</code></pre>
-</section><section class="bcls-section"><h2 id="The_Whole_Picture">The Whole Picture</h2>
+  </section>
+  <section class="bcls-section">
+    <h2 id="The_Whole_Picture">The Whole Picture</h2>
 
-<p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
+    <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/iosmobile-encoding">iOS encoding guide</a>.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
     "input": "s3://zencodertesting/test.mov",
     "output": [
@@ -559,14 +647,16 @@
     ]
 }</code></pre>
 
-<p><strong>NOTES</strong></p>
+    <p><strong>NOTES</strong></p>
 
-<ul><li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
-	<li>While iOS devices will play the adaptive bitrate playlist created, VLC won't, due to errors in handling relative URLs. It will look for the segment files in the same directory as the playlist file, rather than the directory of the manifest file.</li>
-	<li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
-	<li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package-format">ZIP archive</a>.</li>
-</ul></section>
-
+    <ul>
+      <li>The playlist generation currently uses no information from the other outputs in the job, but is simply a way to easily generate a correctly formatted adaptive-bitrate playlist and have it uploaded along with the other files.</li>
+      <li>While iOS devices will play the adaptive bitrate playlist created, VLC won't, due to errors in handling relative URLs. It will look for the segment files in the same directory as the playlist file, rather than the directory of the manifest file.</li>
+      <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> is set to 1.5x the target bitrate of the file. <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-buffer-size">decoder_buffer_size</a> is set to 3.5x to 5x the target bitrate of the file. These settings will help keep a consistent bitrate throughout the file, so that the segmented segments won't vary too much in size and bitrate.</li>
+      <li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package-format">ZIP archive</a>.</li>
+    </ul>
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

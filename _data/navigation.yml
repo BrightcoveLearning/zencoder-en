@@ -150,16 +150,67 @@
       url: /encoding-guides/creating-mp4-and-hls-outputs-together.html
     - name: DASH Streaming and Playlists
       url: /encoding-guides/dash-streaming-and-playlists.html
+    - name: H.264 Advanced Guide
+      url: /encoding-guides/h264-advanced-guide.html
+    - name: HDR10 Video Guide
+      url: /encoding-guides/hdr10-video-output.html
+    - name: HEVC/H.265 Guide
+      url: /encoding-guides/hevch265-guide.html
+    - name: Highwinds SMIL Guide
+      url: /encoding-guides/highwinds-smil.html
+    - name: HTML5 Encoding
+      url: /encoding-guides/html5-encoding.html
+    - name: HLS Streaming and Playlists
+      url: /encoding-guides/http-live-segmented-streaming-and-playlists.html
+    - name: HLS using fragmented MP4
+      url: /encoding-guides/http-live-streaming-using-fragmented-mp4.html
+    - name: iOS/Mobile Encoding Guide
+      url: /encoding-guides/iosmobile-encoding.html
+    - name: Microsoft Smooth Streaming
+      url: /encoding-guides/microsoft-smooth-streaming.html
+    - name: Quality-Based Encoding Modes for Streaming
+      url: /encoding-guides/using-quality-based-encoding-modes-streaming-video.html
+    - name: VP6 Advanced Guide
+      url: /encoding-guides/vp6-advanced-guide.html
+    - name: VP9 Guide
+      url: /encoding-guides/vp9-guide.html
 - section: Errors/Troubleshooting
   url: /error-troubleshooting/
   icon: '<i class="far fa-exclamation-triangle"></i>'
   docs:
-  - name: Glossary
-    url: /references/glossary.html
-  - name: Known Issues
-    url: /references/known-issues.html
-  - name: Product Updates
-    url: /references/product-updates.html
+  - name: Common Problems
+    url: /error-troubleshooting/problems.html
+  - name: Region Outages
+    url: /error-troubleshooting/region-outages.html
+  - name: When to Retry Failed Jobs
+    url: /error-troubleshooting/when-should-i-retry-failed-jobs.html
+  - name: Error Codes
+    url: /error-troubleshooting/error-codes
+    docs: 
+      - name: AkamaiNetStorageFileSizeError
+        url: /error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html
+      - name: ChecksumMismatchError
+        url: /error-troubleshooting/error-codes/error-checksummismatcherror.html
+      - name: DimensionTooSmallError
+        url: /error-troubleshooting/error-codes/error-dimensiontoosmallerror.html
+      - name: DownloadAccessDeniedError
+        url: /error-troubleshooting/error-codes/error-downloadaccessdeniederror.html
+      - name: DownloadFailureError
+        url: /error-troubleshooting/error-codes/error-downloadfailureerror.html
+      - name: DownloadTimeoutError
+        url: /error-troubleshooting/error-codes/error-downloadtimeouterror.html
+      - name: FileNotFoundError
+        url: /error-troubleshooting/error-codes/error-filenotfounderror.html
+      - name: FilePermanentlyMovedError
+        url: /error-troubleshooting/error-codes/error-inaccuratedurationerror.html
+      - name: InaccurateDurationError
+        url: /error-troubleshooting/error-codes/error-inaccuratedurationerror.html
+      - name: IncompatibleWithDynamicProfilesError
+        url: /error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html
+      - name: InputFileNotFound
+        url: /error-troubleshooting/error-codes/error-inputfilenotfound.html
+      - name: InvalidAccessKeyIdError
+        url: /error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'

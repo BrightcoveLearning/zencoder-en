@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title></title>
+  <title>HEVC/H.265 Guide</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,9 +33,13 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
       
       
-      <li class="breadcrumb-item active" aria-current="page"></li>
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">Encoding Guides</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">HEVC/H.265 Guide</li>
     </ol>
   </nav>
 </header>
@@ -303,6 +307,54 @@
                   <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
                 
               
+                
+                  <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                
+              
+                
+                  <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                
+              
             </ul>
           
         
@@ -311,15 +363,49 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/references/glossary.html">Glossary</a></li>
+                  <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
                 
               
                 
-                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                
+              
+                
+                  <li class="submenu-header">
+                    <a href="/error-troubleshooting/error-codes">Error Codes</a>
+                  </li>
+                    <ul class="sidenav-subsubmenu" style="display:none;">
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                      
+                    </ul>
+                  </li>
                 
               
             </ul>
@@ -348,33 +434,42 @@
     </div>
 <!-- bootstrap layout -->
 
-<h1>HEVC/H.265 Guide</h1>
-            <p> Zencoder supports next-generation video playback with the HEVC (H.265) codec. HEVC is the successor to the ubiquitous H.264 codec, and creates high quality outputs with a much lower bitrate than AVC/H.264. </p>
-    <article class="bcls-article"><section class="bcls-section"><h2 id="Overview">HEVC/H.265 Overview</h2>
+<article class="bcls-article">
+  <h1>HEVC/H.265 Guide</h1>
+  <summary>Zencoder supports next-generation video playback with the HEVC (H.265) codec. HEVC is the successor to the ubiquitous H.264 codec, and creates high quality outputs with a much lower bitrate than AVC/H.264.</summary>
 
-<p>HEVC (also commonly referred to as H.265) is available to all customers. HEVC is a next-generation video codec that is capable of delivering higher quality content at lower bitrates than its predecessor, H.264.</p>
-</section><section class="bcls-section"><h2 id="Encoding_recommendations">Encoding recommendations</h2>
+  <section class="bcls-section">
+    <h2 id="Overview">HEVC/H.265 Overview</h2>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></code></strong>: constrains the bitrate and coding tree units (CTUs). <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">List of valid values</a>.</p>
+    <p>HEVC (also commonly referred to as H.265) is available to all customers. HEVC is a next-generation video codec that is capable of delivering higher quality content at lower bitrates than its predecessor, H.264.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Encoding_recommendations">Encoding recommendations</h2>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></code></strong>: sets the encoding profile. The currently supported HEVC profiles are: main, main10, main12, main422-10, main422-12, main444-8, main444-10, main444-12. Default: main.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-level">video_codec_level</a></code></strong>: constrains the bitrate and coding tree units (CTUs). <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">List of valid values</a>.</p>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-reference-frames">video_reference_frames</a></code></strong>: Limits the number of reference frames for HEVC. Default: 3.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-codec-profile">video_codec_profile</a></code></strong>: sets the encoding profile. The currently supported HEVC profiles are: main, main10, main12, main422-10, main422-12, main444-8, main444-10, main444-12. Default: main.</p>
 
-<p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-bframes">video_bframes</a></code></strong>: Limits the number of consecutive bframes used for HEVC. Default: 3.</p>
-<p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></code></strong>: Tunes the output video to optimize for a specific encoding priority. Note that for <code>HEVC</code> video, the allowable values for <code>tuning</code> are:</p>
-<ul><li>grain - optimized for film with high levels of grain.</li>
-	<li>psnr - uses "peak signal-to-noise ratio" to optimize video quality.</li>
-	<li>ssim - uses "structural similarity" to optimize video quality.</li>
-	<li>fastdecode - reduces encoding complexity, to allow for easier decoding.</li>
-	<li>zerolatency - x265 will keep an internal buffer of frames to improve quality; this setting removes that buffer, but reduces quality.</li>
-</ul><p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></code></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality. Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-reference-frames">video_reference_frames</a></code></strong>: Limits the number of reference frames for HEVC. Default: 3.</p>
 
-</section><section class="bcls-section"><h2 id="sample_hvec_mp4">Sample: HEVC + MP4</h2>
+    <p><strong><code><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video-bframes">video_bframes</a></code></strong>: Limits the number of consecutive bframes used for HEVC. Default: 3.</p>
+    <p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning">tuning</a></code></strong>: Tunes the output video to optimize for a specific encoding priority. Note that for <code>HEVC</code> video, the allowable values for <code>tuning</code> are:</p>
+    <ul>
+      <li>grain - optimized for film with high levels of grain.</li>
+      <li>psnr - uses "peak signal-to-noise ratio" to optimize video quality.</li>
+      <li>ssim - uses "structural similarity" to optimize video quality.</li>
+      <li>fastdecode - reduces encoding complexity, to allow for easier decoding.</li>
+      <li>zerolatency - x265 will keep an internal buffer of frames to improve quality; this setting removes that buffer, but reduces quality.</li>
+    </ul>
+    <p><strong><code><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></code></strong>: CRF is a bitrate-control setting, and sets a constant ratefactor. The Zencoder Quality setting determines an appropriate CRF for a given video. So if you set both Quality and CRF, the CRF setting will override Quality. Valid values are 0-51, with lower values being better quality. Generally speaking, you shouldn't have to go below 16; 16 is nearly lossless for most files. Around 24 usually looks pretty good. Around 35 looks pretty compressed.</p>
 
-<p>Below are sample settings for a job that will create an HEVC output (muxed as mp4) with an additional MP4 output for clients that do not yet support HVEC.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sample_hvec_mp4">Sample: HEVC + MP4</h2>
 
-<pre class="line-numbers">
+    <p>Below are sample settings for a job that will create an HEVC output (muxed as mp4) with an additional MP4 output for clients that do not yet support HVEC.</p>
+
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "https://user:pass@bucket-name/file-name.mov",
   "outputs": [
@@ -398,8 +493,8 @@
       }
   ]
 }</code></pre>
-</section>
-
+  </section>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
