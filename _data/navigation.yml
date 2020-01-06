@@ -232,7 +232,9 @@
       - name: InvalidVideoSettingsError
         url: /error-troubleshooting/error-codes/error-invalidvideosettingserror.html
       - name: NoMediaError
-        url: /error-troubleshooting/error-codes/error-invalidvideosettingserror.html
+        url: /error-troubleshooting/error-codes/error-nomediaerror.html
+      - name: QuicktimeReferenceError
+        url: /error-troubleshooting/error-codes/error-quicktimereferenceerror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
