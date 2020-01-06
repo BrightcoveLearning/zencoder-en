@@ -215,6 +215,24 @@
         url: /error-troubleshooting/error-codes/error-invalidaudiosettingserror.html
       - name: InvalidCodecCombinationError
         url: /error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html
+      - name: InvalidDownloadedFileTypeError
+        url: /error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html
+      - name: InvalidEncryptionSettingsError
+        url: /error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html
+      - name: InvalidFilePathError
+        url: /error-troubleshooting/error-codes/error-invalidfilepatherror.html
+      - name: InvalidFormatCodecError
+        url: /error-troubleshooting/error-codes/error-invalidformatcodecerror.html
+      - name: InvalidFrameRateError
+        url: /error-troubleshooting/error-codes/error-invalidframerateerror.html
+      - name: InvalidUsernameOrPasswordError
+        url: /error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html
+      - name: InvalidVideoBitrateError
+        url: /error-troubleshooting/error-codes/error-invalidvideobitrateerror.html
+      - name: InvalidVideoSettingsError
+        url: /error-troubleshooting/error-codes/error-invalidvideosettingserror.html
+      - name: NoMediaError
+        url: /error-troubleshooting/error-codes/error-invalidvideosettingserror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
