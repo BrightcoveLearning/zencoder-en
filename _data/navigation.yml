@@ -211,6 +211,10 @@
         url: /error-troubleshooting/error-codes/error-inputfilenotfound.html
       - name: InvalidAccessKeyIdError
         url: /error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html
+      - name: InvalidAudioSettingsError
+        url: /error-troubleshooting/error-codes/error-invalidaudiosettingserror.html
+      - name: InvalidCodecCombinationError
+        url: /error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
