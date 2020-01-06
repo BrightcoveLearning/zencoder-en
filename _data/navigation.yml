@@ -235,6 +235,24 @@
         url: /error-troubleshooting/error-codes/error-nomediaerror.html
       - name: QuicktimeReferenceError
         url: /error-troubleshooting/error-codes/error-quicktimereferenceerror.html
+      - name: RemoteServerProblemError
+        url: /error-troubleshooting/error-codes/error-remoteserverproblemerror.html
+      - name: RTMPAuthFailedError
+        url: /error-troubleshooting/error-codes/error-rtmpauthfailederror.html
+      - name: RTMPMaxStreamsXIdReached
+        url: /error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html
+      - name: RTMPStreamNameAlreadyInUse
+        url: /error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html
+      - name: S3BucketNotFoundError
+        url: /error-troubleshooting/error-codes/error-s3bucketnotfounderror.html
+      - name: SegmentingError
+        url: /error-troubleshooting/error-codes/error-segmentingerror.html
+      - name: SkippedSourceError
+        url: /error-troubleshooting/error-codes/error-skippedsourceerror.html
+      - name: ThumbnailError
+        url: /error-troubleshooting/error-codes/error-thumbnailerror.html
+      - name: TranscodingError
+        url: /error-troubleshooting/error-codes/error-transcodingerror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
