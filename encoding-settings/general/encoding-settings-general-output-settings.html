@@ -28,13 +28,13 @@ grandparent: Encoding Settings
 <p class="language-editable">By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code>segmented</code> and <code>playlist</code>.</p>
 
 <ul><li class="language-editable"><code>segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
-	<li class="language-editable"><code>captions</code>: <em><strong><a href="/api-version-history">API V2 Only</a></strong></em><br />
+	<li class="language-editable"><code>captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	The captions output type creates a file containing just the captions from the source video, rather than a video with captions added to it. <em>Note: captions type outputs may not be the only outputs for a job.</em><br />
 	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
 	Supported formats for extracting captions from the source video are MP4 and TS. In an MP4 file, the captions may be located in a separate track (in CEA-608 format); otherwise captions in an MP4 or TS file must be embedded in an MPEG2 or AVC video stream, compliant to A/53 or SCTE-128 (CC1 and CC3) standards.<br />
 	Supported output formats for captions type outputs: '<code>mp4</code>', '<code>scc</code>', '<code>webvtt</code>', '<code>vtt</code>', '<code>m3u8</code>', '<code>dfxp</code>'.</li>
 	<li class="language-editable"><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
-	<li class="language-editable"><code>transfer-only</code>: <em><strong><a href="/api-version-history">API V2 Only</a></strong></em><br />
+	<li class="language-editable"><code>transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	A <code>transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
 	A <code>transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
@@ -133,7 +133,7 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
 <p class="language-editable">To create keys containing special characters that are not valid in URLs (? or #), you must URL encode them (%3F and %23, respectively). All other characters must not be URL encoded.</p>
 
@@ -147,17 +147,17 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Notes on Google Cloud Storage:</strong></p>
 
-<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/special-characters-usernames-and-passwords">properly escaped</a>.</p>
+<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/general-information/special-characters-usernames-and-passwords.html">properly escaped</a>.</p>
 
 <p class="language-editable">GCS bucket names that include dots are not supported.</p>
 
 <p class="language-editable"><strong>Notes on Azure:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable"><strong>Notes on FTP:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable">We try to write from the root of your server, so use an absolute path for your URL to ensure that we can write to your server successfully.</p>
 
@@ -231,7 +231,7 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
 <p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code>s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code>s3+ap-southeast-1://my-bucket/</code>.</p>
 
@@ -243,17 +243,17 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Notes on Google Cloud Storage:</strong></p>
 
-<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/special-characters-usernames-and-passwords">properly escaped</a>.</p>
+<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/general-information/special-characters-usernames-and-passwords.html">properly escaped</a>.</p>
 
 <p class="language-editable">GCS bucket names that include dots are not supported.</p>
 
 <p class="language-editable"><strong>Notes on Azure:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable"><strong>Notes on FTP:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable">We try to write from the root of your server, so use an absolute path for your URL to ensure that we can write to your server successfully.</p>
 

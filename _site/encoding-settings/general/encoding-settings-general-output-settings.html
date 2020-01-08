@@ -85,7 +85,7 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/general-information/vc-custom-fields.html">FAQ: Basics</a></li>
+                  <li><a href="/general-information/faq-basics.html">FAQ: Basics</a></li>
                 
               
                 
@@ -113,7 +113,15 @@
                 
               
                 
+                  <li><a href="/general-information/overview-context-aware-encoding.html">Overview: Context Aware Encoding</a></li>
+                
+              
+                
                   <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">How Zencoder Saves Files When Uploads Fail</a></li>
                 
               
                 
@@ -144,7 +152,7 @@
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/references/release-notes.html">Product Updates</a></li>
                 
               
             </ul>
@@ -446,6 +454,48 @@
                       
                       <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">TranscodingError</a></li>
                       
+                      <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">Transfer::InvalidGranteeGroupURLError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">Transfer::InvalidGranteeIDError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">TruncatedFileError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">UnableToCreateDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">UnexpectedDownloadProblemError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">UnexpectedFfmpegResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">UnexpectedMplayerResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">UnexpectedProgenResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">UnexpectedResultError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">UnexpectedUploadProblemError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">UnexpectedX264Result</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">UnreadableFileError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">UnsupportedCodecError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">UnsupportedEncodingError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">UnsupportedEncryptionError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">UnsupportedTranscodeCombinationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">UploadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">UploadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">UploadServerNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">UploadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">WorkerTimeoutError</a></li>
+                      
                     </ul>
                   </li>
                 
@@ -458,7 +508,19 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/creating-your-apps/submitting-device-apps-stores.html">Submitting Device Apps to Stores</a></li>
+                  <li><a href="/integration/faq-integration-libraries.html">Integration libraries</a></li>
+                
+              
+                
+                  <li><a href="/integration/100-integration-reliability.html">100% Integration Reliability</a></li>
+                
+              
+                
+                  <li><a href="/integration/test-jobs-and-integration-mode.html">Test Jobs and Integration Mode</a></li>
+                
+              
+                
+                  <li><a href="/integration/using-read-only-api-keys.html">Using Read-only API Keys</a></li>
                 
               
             </ul>
@@ -500,13 +562,13 @@
 <p class="language-editable">By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code>segmented</code> and <code>playlist</code>.</p>
 
 <ul><li class="language-editable"><code>segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
-	<li class="language-editable"><code>captions</code>: <em><strong><a href="/api-version-history">API V2 Only</a></strong></em><br />
+	<li class="language-editable"><code>captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	The captions output type creates a file containing just the captions from the source video, rather than a video with captions added to it. <em>Note: captions type outputs may not be the only outputs for a job.</em><br />
 	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
 	Supported formats for extracting captions from the source video are MP4 and TS. In an MP4 file, the captions may be located in a separate track (in CEA-608 format); otherwise captions in an MP4 or TS file must be embedded in an MPEG2 or AVC video stream, compliant to A/53 or SCTE-128 (CC1 and CC3) standards.<br />
 	Supported output formats for captions type outputs: '<code>mp4</code>', '<code>scc</code>', '<code>webvtt</code>', '<code>vtt</code>', '<code>m3u8</code>', '<code>dfxp</code>'.</li>
 	<li class="language-editable"><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
-	<li class="language-editable"><code>transfer-only</code>: <em><strong><a href="/api-version-history">API V2 Only</a></strong></em><br />
+	<li class="language-editable"><code>transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	A <code>transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
 	A <code>transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
@@ -605,7 +667,7 @@
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
 <p class="language-editable">To create keys containing special characters that are not valid in URLs (? or #), you must URL encode them (%3F and %23, respectively). All other characters must not be URL encoded.</p>
 
@@ -619,17 +681,17 @@
 
 <p class="language-editable"><strong>Notes on Google Cloud Storage:</strong></p>
 
-<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/special-characters-usernames-and-passwords">properly escaped</a>.</p>
+<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/general-information/special-characters-usernames-and-passwords.html">properly escaped</a>.</p>
 
 <p class="language-editable">GCS bucket names that include dots are not supported.</p>
 
 <p class="language-editable"><strong>Notes on Azure:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable"><strong>Notes on FTP:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable">We try to write from the root of your server, so use an absolute path for your URL to ensure that we can write to your server successfully.</p>
 
@@ -703,7 +765,7 @@
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/using-zencoder-s3">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
 <p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code>s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code>s3+ap-southeast-1://my-bucket/</code>.</p>
 
@@ -715,17 +777,17 @@
 
 <p class="language-editable"><strong>Notes on Google Cloud Storage:</strong></p>
 
-<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/special-characters-usernames-and-passwords">properly escaped</a>.</p>
+<p class="language-editable">GCS access keys can be found under the "Interoperable Access" section in the <a href="https://storage.cloud.google.com/m">Google APIs console</a>. Access keys must be <a href="/general-information/special-characters-usernames-and-passwords.html">properly escaped</a>.</p>
 
 <p class="language-editable">GCS bucket names that include dots are not supported.</p>
 
 <p class="language-editable"><strong>Notes on Azure:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable"><strong>Notes on FTP:</strong></p>
 
-<p class="language-editable">If the URL contains authentication with special characters, <a href="/special-characters-usernames-and-passwords">make sure that they are properly escaped</a>.</p>
+<p class="language-editable">If the URL contains authentication with special characters, <a href="/general-information/special-characters-usernames-and-passwords.html">make sure that they are properly escaped</a>.</p>
 
 <p class="language-editable">We try to write from the root of your server, so use an absolute path for your URL to ensure that we can write to your server successfully.</p>
 

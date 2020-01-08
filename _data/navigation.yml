@@ -19,7 +19,7 @@
   url: /general-information/
   docs:
     - name: 'FAQ: Basics'
-      url: /general-information/vc-custom-fields.html
+      url: /general-information/faq-basics.html
     - name: 'FAQ: Codecs And Formats'
       url: /general-information/faq-codecs-and-formats.html
     - name: 'FAQ: Encoding'
@@ -32,8 +32,12 @@
       url: /general-information/faq-rate-limiting.html
     - name: Supported Video and Audio Formats
       url: /general-information/supported-video-and-audio-formats-codecs-and-containers.html
+    - name: 'Overview: Context Aware Encoding'
+      url: /general-information/overview-context-aware-encoding.html
     - name: Getting Notifications When Videos Are Finished
       url: /general-information/getting-notifications-when-videos-are-finished.html
+    - name: How Zencoder Saves Files When Uploads Fail
+      url: /general-information/how-zencoder-saves-your-files-when-uploads-fail.html
     - name: Using Zencoder with S3
       url: /general-information/using-zencoder-s3.html
     - name: Using Zencoder with Google Cloud Storage
@@ -49,7 +53,7 @@
     - name: Known Issues
       url: /references/known-issues.html
     - name: Product Updates
-      url: /references/product-updates.html
+      url: /references/release-notes.html
 - section: Encoding Settings
   url: /encoding-settings/
   icon: '<i class="fal fa-cogs"></i>'
@@ -253,9 +257,57 @@
         url: /error-troubleshooting/error-codes/error-thumbnailerror.html
       - name: TranscodingError
         url: /error-troubleshooting/error-codes/error-transcodingerror.html
+      - name: Transfer::InvalidGranteeGroupURLError
+        url: /error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html
+      - name: Transfer::InvalidGranteeIDError
+        url: /error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html
+      - name: TruncatedFileError
+        url: /error-troubleshooting/error-codes/error-truncatedfileerror.html
+      - name: UnableToCreateDynamicProfilesError
+        url: /error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html
+      - name: UnexpectedDownloadProblemError
+        url: /error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html
+      - name: UnexpectedFfmpegResult
+        url: /error-troubleshooting/error-codes/error-unexpectedffmpegresult.html
+      - name: UnexpectedMplayerResult
+        url: /error-troubleshooting/error-codes/error-unexpectedmplayerresult.html
+      - name: UnexpectedProgenResult
+        url: /error-troubleshooting/error-codes/error-unexpectedprogenresult.html
+      - name: UnexpectedResultError
+        url: /error-troubleshooting/error-codes/error-unexpectedresulterror.html
+      - name: UnexpectedUploadProblemError
+        url: /error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html
+      - name: UnexpectedX264Result
+        url: /error-troubleshooting/error-codes/error-unexpectedx264result.html
+      - name: UnreadableFileError
+        url: /error-troubleshooting/error-codes/error-unreadablefileerror.html
+      - name: UnsupportedCodecError
+        url: /error-troubleshooting/error-codes/error-unsupportedcodecerror.html
+      - name: UnsupportedEncodingError
+        url: /error-troubleshooting/error-codes/error-unsupportedencodingerror.html
+      - name: UnsupportedEncryptionError
+        url: /error-troubleshooting/error-codes/error-unsupportedencryptionerror.html
+      - name: UnsupportedTranscodeCombinationError
+        url: /error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html
+      - name: UploadAccessDeniedError
+        url: /error-troubleshooting/error-codes/error-uploadaccessdeniederror.html
+      - name: UploadFailureError
+        url: /error-troubleshooting/error-codes/error-uploadfailureerror.html
+      - name: UploadServerNotFoundError
+        url: /error-troubleshooting/error-codes/error-uploadservernotfounderror.html
+      - name: UploadTimeoutError
+        url: /error-troubleshooting/error-codes/error-uploadtimeouterror.html
+      - name: WorkerTimeoutError
+        url: /error-troubleshooting/error-codes/error-workertimeouterror.html
 - section: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
   docs:
-    - name: Submitting Device Apps to Stores
-      url: /creating-your-apps/submitting-device-apps-stores.html
+    - name: Integration libraries
+      url: /integration/faq-integration-libraries.html
+    - name: 100% Integration Reliability
+      url: /integration/100-integration-reliability.html
+    - name: Test Jobs and Integration Mode
+      url: /integration/test-jobs-and-integration-mode.html
+    - name: Using Read-only API Keys
+      url: /integration/using-read-only-api-keys.html

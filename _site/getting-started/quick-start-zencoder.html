@@ -85,7 +85,7 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/general-information/vc-custom-fields.html">FAQ: Basics</a></li>
+                  <li><a href="/general-information/faq-basics.html">FAQ: Basics</a></li>
                 
               
                 
@@ -113,7 +113,15 @@
                 
               
                 
+                  <li><a href="/general-information/overview-context-aware-encoding.html">Overview: Context Aware Encoding</a></li>
+                
+              
+                
                   <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                
+              
+                
+                  <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">How Zencoder Saves Files When Uploads Fail</a></li>
                 
               
                 
@@ -144,7 +152,7 @@
                 
               
                 
-                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  <li><a href="/references/release-notes.html">Product Updates</a></li>
                 
               
             </ul>
@@ -446,6 +454,48 @@
                       
                       <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">TranscodingError</a></li>
                       
+                      <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">Transfer::InvalidGranteeGroupURLError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">Transfer::InvalidGranteeIDError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">TruncatedFileError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">UnableToCreateDynamicProfilesError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">UnexpectedDownloadProblemError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">UnexpectedFfmpegResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">UnexpectedMplayerResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">UnexpectedProgenResult</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">UnexpectedResultError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">UnexpectedUploadProblemError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">UnexpectedX264Result</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">UnreadableFileError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">UnsupportedCodecError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">UnsupportedEncodingError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">UnsupportedEncryptionError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">UnsupportedTranscodeCombinationError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">UploadAccessDeniedError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">UploadFailureError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">UploadServerNotFoundError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">UploadTimeoutError</a></li>
+                      
+                      <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">WorkerTimeoutError</a></li>
+                      
                     </ul>
                   </li>
                 
@@ -458,7 +508,19 @@
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/creating-your-apps/submitting-device-apps-stores.html">Submitting Device Apps to Stores</a></li>
+                  <li><a href="/integration/faq-integration-libraries.html">Integration libraries</a></li>
+                
+              
+                
+                  <li><a href="/integration/100-integration-reliability.html">100% Integration Reliability</a></li>
+                
+              
+                
+                  <li><a href="/integration/test-jobs-and-integration-mode.html">Test Jobs and Integration Mode</a></li>
+                
+              
+                
+                  <li><a href="/integration/using-read-only-api-keys.html">Using Read-only API Keys</a></li>
                 
               
             </ul>
@@ -485,7 +547,7 @@
 
     <p>All operations are carried out using the Zencoder API. Although there is a <a href="https://app.zencoder.com/request_builder">Request Builder</a> that you can use to try out some basic API requests, you will likely soon move on to accessing API directly. In this guide, you can modify and use the cURL commands shown below, or a REST API client such as <a href="https://www.getpostman.com">Postman</a>.</p>
 
-    <p>If you are not familiar with cURL, see <a href="/concepts-set-curl">Set up cURL</a>.</p>
+    <p>If you are not familiar with cURL, see <a href="https://support.brightcove.com/concepts-set-curl">Set up cURL</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Make_a_request">Make a request</h2>
@@ -506,7 +568,7 @@
 
     <h3>More Information</h3>
 
-    <p>The request may (and usually would) include output settings for the job, including an output destination, notification settings, and transcoding settings. In this simple exercise, we will skip this, but you can find more information in the <a href="/encoding-settings">Encoding Settings</a>.</p>
+    <p>The request may (and usually would) include output settings for the job, including an output destination, notification settings, and transcoding settings. In this simple exercise, we will skip this, but you can find more information in the <a href="/encoding-settings/">Encoding Settings</a>.</p>
 
     <p>We currently support downloading files using <a href="/encoding-settings/general/encoding-settings-job.html#input">HTTP/HTTPS, S3, Cloud Files, FTP/FTPS, SFTP, and Aspera</a>.</p>
 
@@ -552,7 +614,7 @@
     ]
   }</code></pre>
 
-    <p><strong>Note:</strong> A job may still fail because the <a href="/error-troubleshooting/error-filenotfounderror">input file does not exist</a>, the <a href="/error-troubleshooting/error-uploadservernotfounderror">output location is invalid</a>, the file itself is <a href="/error-troubleshooting/error-nomediaerror">not a valid video or audio file</a>, or <a href="/error-troubleshooting/error-codes">other reasons</a>.</p>
+    <p><strong>Note:</strong> A job may still fail because the <a href="/error-troubleshooting/error-codes/error-filenotfounderror.html>input file does not exist</a>, the <a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html>output location is invalid</a>, the file itself is <a href="/error-troubleshooting/error-codes/error-nomediaerror.html>not a valid video or audio file</a>, or <a href="/error-troubleshooting/error-codes">other reasons</a>.</p>
   </section>
 </article>
 <!-- complete bootstrap layout -->
