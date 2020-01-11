@@ -24,7 +24,7 @@ parent: Home
   <p><a href="/encoding-settings/quick-reference.html">Quick Reference</a></p>
   <section class="card-wrapper">
     {% for item in site.data.navigation %}
-      {% if item.section == page.title %}
+      {% if item.name == page.title %}
         {% for subsection in item.docs %}
             <section class="bcls-card-small" onclick="window.location.href='{{subsection.url}}'">
               <div class="card-content">

@@ -1,6 +1,8 @@
-- section: Home
+- section: 
+  name: Home
   url: /
-- section: Getting Started
+- section: 
+  name: Getting Started
   url: /getting-started/
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
@@ -14,21 +16,22 @@
       url: /getting-started/output-settings.html
     - name: Creating Multiple Outputs
       url: /getting-started/creating-multiple-outputs.html
-- section: General Information
-  icon: '<i class="fal fa-draw-circle"></i>'
+- section: 
+  name: General Information
+  icon: '<i class="far fa-info-circle"></i>'
   url: /general-information/
   docs:
-    - name: 'FAQ: Basics'
+    - name: 'Basics'
       url: /general-information/faq-basics.html
-    - name: 'FAQ: Codecs And Formats'
+    - name: 'Codecs And Formats'
       url: /general-information/faq-codecs-and-formats.html
-    - name: 'FAQ: Encoding'
+    - name: 'Encoding'
       url: /general-information/faq-encoding.html
-    - name: 'FAQ: File Transfers'
+    - name: 'File Transfers'
       url: /general-information/faq-file-transfers.html
-    - name: 'FAQ: Zencoder Pricing'
+    - name: 'Zencoder Pricing'
       url: /general-information/faq-zencoder-pricing.html
-    - name: 'FAQ: Rate Limiting'
+    - name: 'Rate Limiting'
       url: /general-information/faq-rate-limiting.html
     - name: Supported Video and Audio Formats
       url: /general-information/supported-video-and-audio-formats-codecs-and-containers.html
@@ -44,7 +47,8 @@
       url: /general-information/using-zencoder-azure.html
     - name: Using Zencoder with Google Cloud Storage
       url: /general-information/using-zencoder-google-cloud-platform.html
-- section: References
+- section: 
+  name: References
   url: /references/
   icon: '<i class="fal fa-books"></i>'
   docs:
@@ -54,7 +58,8 @@
       url: /references/known-issues.html
     - name: Product Updates
       url: /references/release-notes.html
-- section: Encoding Settings
+- section: 
+  name: Encoding Settings
   url: /encoding-settings/
   icon: '<i class="fal fa-cogs"></i>'
   docs:
@@ -71,7 +76,7 @@
           url: /encoding-settings/general/encoding-settings-conditional-outputs.html
         - name: Notifications Settings
           url: /encoding-settings/general/encoding-settings-notifications.html
-    - name: General Audio/Video Settings
+    - name: Audio/Video Settings
       url: /encoding-settings/general-audio-video/
       docs:
         - name: Audio Settings
@@ -138,7 +143,8 @@
           url: /encoding-settings/sources-destinations/encoding-settings-s3-settings.html
         - name: Aspera Settings
           url: /encoding-settings/sources-destinations/encoding-settings-aspera.html
-- section: Encoding Guides
+- section: 
+  name: Encoding Guides
   url: /encoding-guides/
   icon: '<i class="fas fa-fast-forward"></i>'
   docs:
@@ -178,7 +184,8 @@
       url: /encoding-guides/vp6-advanced-guide.html
     - name: VP9 Guide
       url: /encoding-guides/vp9-guide.html
-- section: Errors/Troubleshooting
+- section: 
+  name: Errors/Troubleshooting
   url: /error-troubleshooting/
   icon: '<i class="far fa-exclamation-triangle"></i>'
   docs:
@@ -299,7 +306,8 @@
         url: /error-troubleshooting/error-codes/error-uploadtimeouterror.html
       - name: WorkerTimeoutError
         url: /error-troubleshooting/error-codes/error-workertimeouterror.html
-- section: Integration
+- section: 
+  name: Integration
   url: /integration/
   icon: '<i class="far fa-handshake-alt"></i>'
   docs:

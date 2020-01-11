@@ -15,7 +15,10 @@ parent: Home
   }
   .card-wrapper {
   justify-content: start;
-}
+  }
+  .bcls-card ul li {
+    font-size: small;
+  }
 </style>
 
 <article class="bcls-article">
@@ -27,7 +30,7 @@ parent: Home
         <h2 id="Topics_in_this_section">Topics in this section</h2>
         <ul>
         {% for item in site.data.navigation %}
-        {% if item.section == page.title %}
+        {% if item.name == page.title %}
               {% for entry in item.docs %}
                 <li><a href="{{ entry.url }}">{{ entry.name }}</a>
                 {% if entry.docs %}
@@ -41,6 +44,7 @@ parent: Home
               {% endfor %}
         {% endif %}
       {% endfor %}
+  
       </div>
     </section>
   </section>
