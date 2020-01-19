@@ -53,7 +53,7 @@
   icon: '<i class="fal fa-books"></i>'
   docs:
     - name: 'API Reference'
-      url: '/zencoder-api/v2/api-reference/'
+      url: '/references/reference.html'
     - name: 'Known Issues'
       url: '/references/known-issues.html'
     - name: 'Product Updates'
