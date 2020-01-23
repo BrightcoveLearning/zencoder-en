@@ -33,7 +33,7 @@ parent: General Information
       <li>
         <p style="font-weight:bold">What is an encoding job?</p>
 
-        <p>An encoding job is the process of taking an input video or audio file and converting it to one or more output formats. You can start an encoding job through the <a href="/zencoder-api/v2/api-reference/">API</a> or using the <a href="https://app.zencoder.com/request_builder">Request Builder</a> in your account. In the encoding process, <span class="notranslate">Zencoder</span> first downloads the input file from wherever it is hosted. We then convert the file to the specified output settings and upload the output files to either our own servers, or to a specific location that you set (often the same hosting server as the input file).</p>
+        <p>An encoding job is the process of taking an input video or audio file and converting it to one or more output formats. You can start an encoding job through the <a href="/references/reference.html">API</a> or using the <a href="https://app.zencoder.com/request_builder">Request Builder</a> in your account. In the encoding process, <span class="notranslate">Zencoder</span> first downloads the input file from wherever it is hosted. We then convert the file to the specified output settings and upload the output files to either our own servers, or to a specific location that you set (often the same hosting server as the input file).</p>
       </li>
       <li>
         <p style="font-weight:bold">What programming languages is <span class="notranslate">Zencoder</span> compatible with?</p>
@@ -66,11 +66,11 @@ parent: General Information
       <li>
         <p style="font-weight:bold">Do I need an integration library?</p>
 
-        <p>No. At the minimum, integrating with <span class="notranslate">Zencoder</span> is just sending a HTTP request with a JSON or XML body. You can do this from the <a href="/zencoder-api/v2/api-reference/index.html#api-Jobs-Create_a_Job">command line with curl</a>. Get a <code>201 Created</code> back, and you've just integrated with <span class="notranslate">Zencoder</span>.</p>
+        <p>No. At the minimum, integrating with <span class="notranslate">Zencoder</span> is just sending a HTTP request with a JSON or XML body. You can do this from the <a href="/references/reference.htmlindex.html#api-Jobs-Create_a_Job">command line with curl</a>. Get a <code>201 Created</code> back, and you've just integrated with <span class="notranslate">Zencoder</span>.</p>
 
         <p>Beyond that, you might want to receive output_notification via HTTP. Give us a URL, and we'll POST job status back to you. You just need a URL on your site set up to receive a HTTP POST with a JSON or XML body.</p>
 
-        <p>Finally, you might want to use our API to <a href="/zencoder-api/v2/api-reference/index.html#api-Jobs-Create_a_Job">do other things with encoding jobs</a>, like working_with_jobs, working_with_jobs, or working_with_jobs. That's just HTTP requests too.</p>
+        <p>Finally, you might want to use our API to <a href="/references/reference.htmlindex.html#api-Jobs-Create_a_Job">do other things with encoding jobs</a>, like working_with_jobs, working_with_jobs, or working_with_jobs. That's just HTTP requests too.</p>
       </li>
       <li>
         <p style="font-weight:bold">What does an integration library do?</p>
