@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Zencoder offers a fast and reliable transcoding service for video and audio files, as well as live streams. It can produce outputs for the web and a wide variety of devices, and can easily be integrated with your CMS and other applications.
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://zencoder.support.brightcove.com"
+search_id: "017969773216783359937:6sd3di5mwuw"
 
 # Build settings
 # theme: minima
