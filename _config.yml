@@ -36,6 +36,9 @@ port: 8000
 product: Zencoder
 color: rgb(51, 51, 51)
 product_color: rgb(65, 196, 181)
+product_icon: "logo-bc-zencoder.svg"
+search_id: "017969773216783359937:chdh4nuxqmh"
+feedbackify_id: "15027"
 defaults:
   -
     scope:
