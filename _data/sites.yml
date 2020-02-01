@@ -1,6 +1,9 @@
 - Home:
   name: Documentation Home
   url: 'https://support.brightcove.com' 
+- Audience:
+  name: Brightcove Audience
+  url: 'https://audience.support.brightcove.com' 
 - Beacon:
   name: Brightcove Beacon
   url: 'https://beacon.support.brightcove.com' 
