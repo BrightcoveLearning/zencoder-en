@@ -574,7 +574,17 @@ grandparent: Encoding Settings
 
       <p><strong>Description:</strong></p>
 
-      <p>Quality vs rate tuning parameter.</p>
+      <p>
+        By setting <code>quality_rate_tune</code> to a positive number from 1 to 40, CAE profiles will have higher video quality at the cost of higher bitrates. Similarly, given a number in the range from -1 to -40 one can lower the bitrates, at the cost of decreasing video quality.
+      </p>
+
+      <p>
+        For example, with -10 one can expect approximately 10% lower bitrates. With 10, bitrates will in general increase around 10%. These numbers are approximations, since CAE for positive values of <code>quality_rate_tune</code> takes extra precautions in ensuring very high video quality, and there may be other parameters that limit the bitrates such as granularity and number of renditions.
+      </p>
+
+      <p>
+        Since typical content and desired video quality vs bandwidth vary greatly, it may be advisable to experiment with different values.
+      </p>
 
       <pre class="line-numbers">
         <code class="language-json">{
