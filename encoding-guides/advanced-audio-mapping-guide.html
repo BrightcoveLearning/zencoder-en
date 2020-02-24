@@ -30,6 +30,32 @@ parent: Encoding Guides
     </ul>
   </section>
   <section class="bcls-section">
+    <h2 id="Multiple_outputs_from_source_multiple_tracks">Create multiple outputs from a source with multiple audio tracks</h2>
+    <p>A fairly common use case is to have a source video with multiple audio tracks, and you want to output multiple audio files, each having one of the audio tracks. Here is the best way to configure the outputs for this:</p>
+<pre class="line-numbers"><code class="language-json">outputs: [
+  {
+  label: "Output 1",
+  url: "your hosting server for outputs/output1.mp4",
+  skip_video: true,
+  "input_audio_service_types":{"1": "main"},
+  "select_audio_service_type": "main"
+  },
+  {
+  label: "Output 2",
+  url: "your hosting server for outputs/output2.mp4",
+  skip_video: true,
+  "input_audio_service_types":{"2": "main"},
+  "select_audio_service_type": "main"
+  },
+  {
+  label: "Output 3",
+  url: "your hosting server for outputs/output3.mp4",
+  skip_video: true,
+  "input_audio_service_types":{"3": "main"},
+  "select_audio_service_type": "main"
+  } ... </code></pre>
+  </section>
+  <section class="bcls-section">
     <h2 id="Audio_mapping_options">Audio mapping options</h2>
 
     <ul>
