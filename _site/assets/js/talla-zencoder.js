@@ -1,10 +1,10 @@
-var appID = "00c26be3-4421-41e6-bb00-1dee68740f67" // token for anonymous profile
+var appID = "00c26be3-4421-41e6-bb00-1dee68740f67"; // token for anonymous profile
 var token =
-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE';
 // -----
   Talla.config = Talla.init( 
     appID,
-    Talla.OptionJWTCredentials(token), Talla.OptionBotName("​Zencoder​ by Brightcove"),
+    Talla.OptionJWTCredentials(token), Talla.OptionBotName("Zencoder​ by Brightcove"),
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('#000000'), 
     Talla.OptionDisplayName('​Zencoder Support​'),
@@ -14,5 +14,9 @@ var token =
     Talla.OptionOpenIcon('​https://support.brightcove.com/sites/default/files/favicon-64.png​'),
     Talla.OptionBotIcon('​https://support.brightcove.com/sites/default/files/favicon-64.png​'),
     Talla.OptionAutodetectSession
+  );
+Talla.config.display(Talla.OptionQuickLoadBeacon, Talla.OptionDetectParent(function() { 
+      return document.querySelector('#talla_parent');
+    }
   )
-Talla.config.display(Talla.OptionQuickLoadBeacon, Talla.OptionDetectParent(function() { return document.querySelector('#talla_parent') }))
+);
