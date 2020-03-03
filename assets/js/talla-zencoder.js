@@ -15,8 +15,8 @@ var token =
     Talla.OptionKnowledgeGroups(['2233f970-dfad-4c06-bb6e-fdf4ddba4506']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA(" Search"),
-    Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site//search.png'),
-    Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site//search.png'),
+    Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
+    Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession
   );
 Talla.config.display(Talla.OptionQuickLoadBeacon, Talla.OptionDetectParent(function() {
