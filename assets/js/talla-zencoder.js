@@ -19,8 +19,6 @@ var token =
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession
   );
-Talla.config.display(Talla.OptionQuickLoadBeacon, Talla.OptionDetectParent(function() {
-      return document.querySelector('#talla_parent');
-    }
-  )
-);
+ function displayChat() {
+   Talla.chat.managedDisplay(Talla.OptionDetectParent (() => { return document.querySelector('#talla-chat')} ));
+ }
