@@ -21,5 +21,5 @@ var token =
 Talla.chat = Talla.config.configure(Talla.OptionLoadChat);
 // function to load up the chat
  function displayChat() {
-   Talla.chat.managedDisplay(Talla.OptionDetectParent(() => { return document.querySelector('#talla-chat')} ));
+   Talla.chat.managedDisplay(Talla.OptionDetectParent(() => { return document.querySelector('#talla_chat')} ));
  }
