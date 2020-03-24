@@ -9,7 +9,7 @@ var token =
     Talla.OptionBotName("Zencoder Doc Search"),
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('rgb(65, 196, 181)'),
-    Talla.OptionDisplayName('Search Docs'),
+    Talla.OptionDisplayName('Search Zencoder Docs'),
     Talla.OptionKnowledgeGroups(['2233f970-dfad-4c06-bb6e-fdf4ddba4506']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA("Search Zencoder Docs"),

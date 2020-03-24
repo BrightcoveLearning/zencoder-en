@@ -13,7 +13,7 @@ var token =
     Talla.OptionBotName("Zencoder Doc Search"),
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('{{ site.product_color }}'),
-    Talla.OptionDisplayName('Search Docs'),
+    Talla.OptionDisplayName('Search {{ site.product }} Docs'),
     Talla.OptionKnowledgeGroups(['2233f970-dfad-4c06-bb6e-fdf4ddba4506']),
     Talla.OptionWideBeacon(true),
     Talla.OptionBeaconCTA("Search Zencoder Docs"),
