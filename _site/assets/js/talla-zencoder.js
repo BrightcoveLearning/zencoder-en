@@ -17,6 +17,9 @@ var token =
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession
   );
+// configure to load up as custom placement
+Talla.chat = Talla.config.configure(Talla.OptionLoadChat);
+// function to load up the chat
  function displayChat() {
    Talla.chat.managedDisplay(Talla.OptionDetectParent(() => { return document.querySelector('#talla-chat')} ));
  }
