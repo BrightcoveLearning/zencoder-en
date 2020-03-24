@@ -2,23 +2,25 @@
 layout: null
 ---
 
-var appID = "00c26be3-4421-41e6-bb00-1dee68740f67"; // token for anonymous profile
+var appID = "00c26be3-4421-41e6-bb00-1dee68740f67"; 
+// token for anonymous profile
 var token =
 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE';
 // -----
   Talla.config = Talla.init(
     appID,
-    Talla.OptionJWTCredentials(token), Talla.OptionBotName("Zencoder by Brightcove"),
+    Talla.OptionJWTCredentials(token), 
+    Talla.OptionBotName("Zencoder Doc Search"),
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('{{ site.product_color }}'),
-    Talla.OptionDisplayName('Zencoder Support'),
+    Talla.OptionDisplayName('Search Docs'),
     Talla.OptionKnowledgeGroups(['2233f970-dfad-4c06-bb6e-fdf4ddba4506']),
     Talla.OptionWideBeacon(true),
-    Talla.OptionBeaconCTA("Search"),
+    Talla.OptionBeaconCTA("Search Zencoder Docs"),
     Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession
   );
  function displayChat() {
-   Talla.chat.managedDisplay(Talla.OptionDetectParent (() => { return document.querySelector('#talla-chat')} ));
+   Talla.chat.managedDisplay(Talla.OptionDetectParent(() => { return document.querySelector('#talla-chat')} ));
  }

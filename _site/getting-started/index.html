@@ -580,7 +580,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
   <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
   <div id="search_box" class="gcse-search"></div>
-  <div id="talla_parent" style="display: inline-block;margin-left: 2rem;"></div>
+  <p style="float:right;">
+<button onclick="javascript:displayChat()"> &nbsp; experimental feature - ignore...</button> </p>
+
+  <div id="talla_parent" style="display: inline-block;margin-left: 2rem;position:relative">
+    <div id="talla_chat" style="width: 366px; height: 45%; display: none; position: fixed; top: 9rem; right: 10%; z-index: 999999;">
+    </div>
+  </div>
 </div>
 
 <style>
@@ -752,7 +758,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:chdh4nuxqmh"></script>
   <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
   <script src="/assets/js/talla-zencoder.js"></script>
-  <!-- <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tallafix.js"></script> -->
+  <!-- <script src="/assets/js/tallafix.js"></script> -->
 </body>
 
 </html>
