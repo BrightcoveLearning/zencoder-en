@@ -2,21 +2,21 @@
 layout: null
 ---
 
-var appID = "00c26be3-4421-41e6-bb00-1dee68740f67"; 
+var appID = "{{ site.talla_appID }}"; 
 // token for anonymous profile
 var token =
-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE';
+'{{ site.talla_token }}';
 // -----
   Talla.config = Talla.init(
     appID,
     Talla.OptionJWTCredentials(token), 
-    Talla.OptionBotName("Zencoder Doc Search"),
+    Talla.OptionBotName("{{ site.product }} Doc Search"),
     Talla.OptionAnonymous(true),
     Talla.OptionThemeColor('{{ site.product_color }}'),
     Talla.OptionDisplayName('Search {{ site.product }} Docs'),
-    Talla.OptionKnowledgeGroups(['2233f970-dfad-4c06-bb6e-fdf4ddba4506']),
+    Talla.OptionKnowledgeGroups(['{{ site.talla_knowledgegroup }}']),
     Talla.OptionWideBeacon(true),
-    Talla.OptionBeaconCTA("Search Zencoder Docs"),
+    Talla.OptionBeaconCTA("Search {{ site.product }} Docs"),
     Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession

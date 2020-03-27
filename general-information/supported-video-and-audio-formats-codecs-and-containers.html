@@ -33,9 +33,9 @@ parent: General Information
 <section class="bcls-section">
   <h2 id="supported_source_formats">Supported source video types</h2>
 
-  <p>Since <span class="”notranslate”">Brightcove</span> generally handles the complexity of creating renditions with codecs and formats appropriate to different platforms, browsers, and device apps, what concerns you most is what kinds of source videos we can transcode for you.</p>
+  <p>Since Brightcove generally handles the complexity of creating renditions with codecs and formats appropriate to different platforms, browsers, and device apps, what concerns you most is what kinds of source videos we can transcode for you.</p>
 
-  <p>Since <span class="”notranslate”">Brightcove</span> supports so many video input types, it is actually more helpful to talk about the formats we do not support. At the moment, there are only a few. The list below shows the formats <strong><em>not</em></strong> supported for <a href="/"><span class="”notranslate”">Zencoder</span>.</p>
+  <p>Since Brightcove supports so many video input types, it is actually more helpful to talk about the formats we do not support. At the moment, there are only a few. The list below shows the formats <strong><em>not</em></strong> supported for <a href="/">Zencoder</a>.</p>
 
   <ul>
     <li><code>Apple Intermediate</code></li>
@@ -44,7 +44,7 @@ parent: General Information
     <li><code>Avid Meridien Uncompressed</code></li>
     <li><code>Windows Media Audio Lossless</code></li>
     <li><code>CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Zencoder. We are still trying to identify the exact factors that cause problems.</li>
-    <li><code>SWF</code> - partly supported by <span class="”notranslate”">Zencoder</span>; if the <code>SWF</code> contains a video or audio track, those can be processed, but many <code>SWFs</code> do not.</li>
+    <li><code>SWF</code> - partly supported by <span class="notranslate">Zencoder</span>; if the <code>SWF</code> contains a video or audio track, those can be processed, but many <code>SWFs</code> do not.</li>
   </ul>
   <h3>Special cases</h3>
 
@@ -63,7 +63,7 @@ parent: General Information
       </ol>
     </li>
   </ul>
-  <p>Aside from those listed above, we believe we support pretty much all known video formats. If you have problems with another video format, please <a href="https://help.brightcove.com/en/contact">Contact <span class="”notranslate”">Brightcove</span> Support</a> and also let <a href="mailto:docs@brightcove.com"><span class="”notranslate”">Brightcove</span> Learning Services</a> know.</p>
+  <p>Aside from those listed above, we believe we support pretty much all known video formats. If you have problems with another video format, please <a href="https://help.brightcove.com/en/contact">Contact Brightcove Support</a> and also let <a href="mailto:docs@brightcove.com">Brightcove Learning Services</a> know.</p>
 </section>
 <section class="bcls-section">
   <h2 id="audio_concerns">Audio formats</h2>
@@ -72,7 +72,6 @@ parent: General Information
 
   <p>On the ingestion side, most formats are supported, except when they get over 8 channels of audio. (And the audio must either be configured as a single multichannel track, or multiple mono tracks.)</p>
 
-  <aside class="bcls-aside bcls-aside--information">Note: For Video Cloud ingestion, if your sources have multi-channel audio, you need to have support create custom audio renditions to correctly map the channels.</aside>
   <h3>Encoding and transcoding</h3>
 
   <p>For Dolby, both AC3 and EAC3 are supported, up to 5.1 channels. Many other non-Dolby formats are supported as well, including AAC.</p>
@@ -81,7 +80,7 @@ parent: General Information
 
   <p>AAC, in mono or stereo. 5.1 channel audio support depends on browser capability - currently only Safari and Edge support it.</p>
 
-  <h3>Playback (in the SDK Native Players)</h3>
+  <h3>Playback (in the Brightcove SDK Native Players)</h3>
 
   <p>AAC, in mono or stereo. 5.1 channel audio is supported by iOS, and believed to be supported by Andriod, but that has not been tested.</p>
 
