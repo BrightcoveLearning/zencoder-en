@@ -511,13 +511,13 @@ grandparent: Encoding Settings
     <p><strong>Compatible Job Types:</strong> All</p>
 
     <p><strong>Example:</strong></p>
-
+{% raw %}
     <ul>
       <li>thumbnail_{{number}}</li>
       <li>{{number}}_{{width}}x{{height}}-thumbnail</li>
     </ul>
     <p><strong>Description:</strong></p>
-
+{% endraw %}
     <p>Thumbnail files can be given a filename based on several attributes. Attributes include number, padded-number, width, height, and size. It is not necessary to add a file extension, as it will be added by Zencoder based on the “format” option.</p>
 
     <p>number or padded-number must be used, all others are optional. padded-number uses 4 spots (0000, 0001, etc).</p>
