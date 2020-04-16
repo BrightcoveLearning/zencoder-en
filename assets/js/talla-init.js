@@ -22,8 +22,9 @@ var token =
     Talla.OptionAutodetectSession,
     //---- NEW-----Redirects to portal
     Talla.OptionRequestSubmittedCallback( function(widget, data) {
-      window.open("https://supportportal.brightcove.com/s/login/?language=en_US&startURL=%2Fs%2F&ec=302") )
-    });
+      window.open("https://supportportal.brightcove.com/s/login/?language=en_US&startURL=%2Fs%2F&ec=302")
+    })
+  );
 // configure to load up as custom placement
 Talla.chat = Talla.config.configure(Talla.OptionLoadChat);
 // function to load up the chat
