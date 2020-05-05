@@ -570,17 +570,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/",
       "oldURL": "/index"
   },
 
@@ -595,47 +585,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
       "oldURL": "/index"
   },
 
@@ -645,7 +595,57 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -662,6 +662,11 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-guides/microsoft-smooth-streaming.html",
       "oldURL": "/microsoft-smooth-streaming"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/support/online-training-courses.html",
+      "oldURL": "/online-training-courses"
   },
 
   {
@@ -707,6 +712,11 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/region-outages.html",
       "oldURL": "/region-outages"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/support/register-training.html",
+      "oldURL": "/register-training"
   },
 
   {
