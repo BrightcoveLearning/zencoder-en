@@ -838,7 +838,7 @@ components:
       title: Dynamic Profile Options
       type: object
       description: |-
-         'hash of options for CAE (Context Aware Encoding) jobs. With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The dynamic_profile_options settings define the way renditions should be created. See [CAE Settings](https://support.brightcove.com/zencoder-cae-settings) for details. You must also set generate_dynamic_profile equal to true to use this feature.'
+         'hash of options for CAE (Context Aware Encoding) jobs. With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The dynamic_profile_options settings define the way renditions should be created. See [CAE Settings](/encoding-settings/general/cae-settings.html) for details. You must also set generate_dynamic_profile equal to true to use this feature.'
       properties:
         min_renditions:
           type: integer
@@ -962,7 +962,7 @@ components:
         video_configurations:
           type: array
           description: |-
-            'An array of structures describing resolutions, frame rates and associated codec settings that should be preferentially or mandatorily generated as part of the CAE encoding. See the [CAE encoding guide](https://support.brightcove.com/zencoder-cae-settings#video_configurations) for details.'
+            'An array of structures describing resolutions, frame rates and associated codec settings that should be preferentially or mandatorily generated as part of the CAE encoding. See the [CAE encoding guide](/encoding-settings/general/cae-settings.html#video_configurations) for details.'
           items:
             type: object
     Notification:
@@ -1001,7 +1001,7 @@ components:
         dynamic_profile_rendition:
           type: integer
           description: |-
-            'The `dynamic_profile_rendition` setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When `dynamic_profile_rendition` is set, there is no need to specify encoding settings such as resolution, bitrate, etc. (See the [CAE Guide](https://support.brightcove.com/zencoder-cae-guide) for the full list of settings that are automatically set by CAE.)'
+            'The `dynamic_profile_rendition` setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When `dynamic_profile_rendition` is set, there is no need to specify encoding settings such as resolution, bitrate, etc. (See the [CAE Guide](/encoding-guides/cae-guide.html) for the full list of settings that are automatically set by CAE.)'
         url:
           type: string
           description: A S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure or HTTP URL where Zencoder will put the transcoded file
@@ -1026,7 +1026,7 @@ components:
         device_profile:
           type: string
           description: |-
-            'A device profile to use for mobile device compatibility. See the [encoding guide](https://support.brightcove.com/zencoder-encoding-settings-general-output-settings#device_profile) for the details of the different profiles.'
+            'A device profile to use for mobile device compatibility. See the [encoding guide](/encoding-settings/general/encoding-settings-general-output-settings.html#device_profile) for the details of the different profiles.'
           enum:
             - mobile/advanced
             - mobile/baseline
@@ -2172,7 +2172,7 @@ components:
         key_id:
           type: string
           description: |-
-            '32 hexadecimal characters (with optional dashes for UUID formatting). Identifier of the key to use. This is specified with all bytes in standard (big-endian) order..Some DRM services return key IDs in little-endian order formatted as a GUID; to specify the key in that format see [key_guid]{https://support.brightcove.com/zencoder-encoding-settings-drm#key_guid}.'
+            '32 hexadecimal characters (with optional dashes for UUID formatting). Identifier of the key to use. This is specified with all bytes in standard (big-endian) order..Some DRM services return key IDs in little-endian order formatted as a GUID; to specify the key in that format see [key_guid]{/encoding-settings/content-protection/encoding-settings-drm.html#key_guid}.'
         key_guid:
           type: string
           description: |-
@@ -2259,28 +2259,28 @@ components:
           description: |-
             If the source's audio bitrate is less than the specified bitrate (in kbps), the output will be skipped.
 
-            **Source files without an audio track or without a recognizable audio bitrate will ignore this setting.** (See [require_audio](https://support.brightcove.com/zencoder-encoding-settings-conditional-outputs#require-audio) for more options.) To skip an output if the source audio bitrate is less than 128 Kbps, use 128.
+            **Source files without an audio track or without a recognizable audio bitrate will ignore this setting.** (See [require_audio](/encoding-settings/general/encoding-settings-conditional-outputs.html#require-audio) for more options.) To skip an output if the source audio bitrate is less than 128 Kbps, use 128.
           example: 128
         max_audio_bitrate:
           type: integer
           description: |-
             If the source's audio bitrate is greater than the specified bitrate (in kbps), the output will be skipped.
 
-            '**Source files without an audio track or without a recognizable audio bitrate will ignore this setting.** (See [require_audio](https://support.brightcove.com/zencoder-encoding-settings-conditional-outputs#require-audio) for more options.) To skip an output if the source audio bitrate is greater than 160 Kbps, use 160.'
+            '**Source files without an audio track or without a recognizable audio bitrate will ignore this setting.** (See [require_audio](encoding-settings/general/encoding-settings-conditional-outputs.html#require-audio) for more options.) To skip an output if the source audio bitrate is greater than 160 Kbps, use 160.'
           example: 160
         min_video_bitrate:
           type: integer
           description: |-
             If the source's video bitrate is less than the specified bitrate (in kbps), the output will be skipped.
 
-            '**Source files without a video track or without a recognizable video bitrate will ignore this setting.** (See [require_video](https://support.brightcove.com/zencoder-encoding-settings-conditional-outputs#require-video) for more options.) To skip an output if the source video bitrate is less than 800 Kbps, use 800.'
+            '**Source files without a video track or without a recognizable video bitrate will ignore this setting.** (See [require_video](encoding-settings/general/encoding-settings-conditional-outputs.html#require-video) for more options.) To skip an output if the source video bitrate is less than 800 Kbps, use 800.'
           example: 800
         max_video_bitrate:
           type: integer
           description: |-
             If the source's video bitrate is greater than the specified bitrate (in kbps), the output will be skipped.
 
-            '**Source files without a video track or without a recognizable video bitrate will ignore this setting.** (See [require_video](https://support.brightcove.com/zencoder-encoding-settings-conditional-outputs#require-video) for more options.) To skip an output if the source video bitrate is greater than 2000 Kbps, use 2000.'
+            '**Source files without a video track or without a recognizable video bitrate will ignore this setting.** (See [require_video](encoding-settings/general/encoding-settings-conditional-outputs.html#require-video) for more options.) To skip an output if the source video bitrate is greater than 2000 Kbps, use 2000.'
           example: 2000
         require_audio:
           type: boolean
