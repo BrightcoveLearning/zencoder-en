@@ -196,7 +196,7 @@
   - name: 'When to Retry Failed Jobs'
     url: '/error-troubleshooting/when-should-i-retry-failed-jobs.html'
   - name: 'Error Codes'
-    url: '/error-troubleshooting/error-codes'
+    url: '/error-troubleshooting/error-codes/index.html'
     docs: 
       - name: 'AkamaiNetStorageFileSizeError'
         url: '/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html'
