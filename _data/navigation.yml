@@ -319,3 +319,14 @@
       url: '/integration/test-jobs-and-integration-mode.html'
     - name: 'Using Read-only API Keys'
       url: '/integration/using-read-only-api-keys.html'
+- section: 
+  name: 'Support'
+  url: '/support/'
+  icon: '<i class="far fa-question-circle"></i>'
+  docs:
+    - name: 'Opening a Support Case'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: 'Viewing the Brightcove System Status Page'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: 'Brightcove Answers'
+      url: '/support/brightcove-answer.html'
