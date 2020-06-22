@@ -1,6 +1,6 @@
 ---
 title: HDR10 Video Guide
-description: This topic provides details for Zencoder support of high-dynamic-range (HDR) video.
+description: This topic provides details for Zencoder support of High Dynamic Range (HDR) video formats.
 parent: Encoding Guides
 ---
 <h1>{{ page.title }}</h1>
@@ -8,192 +8,214 @@ parent: Encoding Guides
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
+    <h2 id="Overview">Overview</h2>
 
-    <p>Zencoder supports high-dynamic-range (HDR) video, initially adding options to produce HDR10 outputs from HDR color-graded masters.</p>
+    <p>The term High Dynamic Range (HDR) video generally refers to a <em>family of video formats</em>, characterized by wider ranges of pixel values, particular types of Electo-Optical Transfer Characteristics (OETFs), color spaces, and specialized metadata carried along with the encoded video streams. Such formats are commonly used in production and delivery of UltraHD video content.</p>
 
-    <p>Other HDR formats such as PQ10, HLG, and Dolby Vision are not currently supported.</p>
-
-    <p>HDR10 is commonly defined as video using the ITU-R Rec. BT.2020 color space, SMPTE ST-2084 or <span class="notranslate”>Perceptual Quantizer (PQ) Opto-Electronic Transfer Function</span> (OETF), along with SMPTE ST-2086 mastering display color metadata and CEA 861.3 content light level metadata. HDR10 streams are most commonly encoded using H.265/HEVC codec, operating in Main10 profile, and carrying all these metadata within elementary streams.</p>
-
-<p>If you plan to target Apple devices with HDR content, the <a href=" https://developer.apple.com/library/content/documentation/General/Reference/HLSAuthoringSpec/Requirements.html">HLS Authoring Specification for Apple Devices</a> document contains useful guidance.</p> </section> <section class="bcls-section">
-        <h2 id="requirements">Requirements</h2>
-
-        <p>You must meet the following requirements to produce HDR10 outputs using Zencoder.</p>
-
-        <ul>
-          <li>Source files must already be color-graded and in the Rec. 2020 color space.</li>
-          <li>Ideally, the source files will be high-quality masters or mezzanines using intra-frame codecs. Formats such as Apple ProRes 4444, Avid DNxHD, and JPEG 2000 (J2K) in OP1a MXF are examples of supported mastering formats. Source file video bit depths should be 10-bit or 12-bit.</li>
-          <li>For 4K source files, the target resolution should be DCI 4K (4096x2160), UHD-1 (3840x2160), or 1080p HD (1920x1080), with a frame rate of 23.976, 24, 25, 29.97, 30, 50, 59.94, 60, 100, or 120 fps. For optimal results, source file video should not be interlaced.</li>
-          <li>Mastering display metadata must be provided as described <a href="#api_options">below</a>.</li>
-          <li>While Zencoder will attempt to convert most video formats to HDR10 when mastering display metadata is provided, it does not convert from SDR to HDR, or from HDR to SDR. For example, if a Rec. 709 SDR source file is used to create an HDR10 output, it will appear darker than expected.</li>
-        </ul>
+    <p>Specific types of HDR video formats currently supported by Zencoder are listed in the table below.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Support HDR Formats</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>HDR format</th>
+          <th>Pixel depth</th>
+          <th>Pixel range</th>
+          <th>Primary colors</th>
+          <th>Color space</th>
+          <th>OETF</th>
+          <th>Mastering display metadata</th>
+          <th>Content light level metadata</th>
+          <th>Dynamic metadata</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limited</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C'<sub>B</sub>C'<sub>R</sub> <sup><strong><a href="#note1-5"></a>[1-5]</a></strong></sup></td>
+          <td>HLG <sup><strong><a href="#note1-7">[1-7]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limited</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C'<sub>B</sub>C'<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limited</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C'<sub>B</sub>C'<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9">[1-9]</a></strong></sup></td>
+          <td>CAE 861.3 <sup><strong><a href="#note1-10">[1-10]</a></strong></sup></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1 <sup><strong><a href="#note1-2">[1-2]</a></strong></sup></td>
+          <td>10</td>
+          <td>limited</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C'<sub>B</sub>C'<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9">[1-9]</a></strong></sup></td>
+          <td>CAE 861.3 <sup><strong><a href="#note1-10">[1-10]</a></strong></sup></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11">[1-11]</a></strong></sup></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5 <sup><strong><a href="#note1-3">[1-3]</a></strong></sup></td>
+          <td>10</td>
+          <td>full</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>IC<sub>t</sub>C<sub>p</sub> <sup><strong><a href="#note1-6">[1-6]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11">[1-11]</a></strong></sup></td>
+        </tr>
+    </table>
+    <h3>Notes</h3>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> HLG10, PQ10, and HDR10 refer to HDR formats defined by the <a href="https://ultrahdforum.org/guidelines/">UltraHD Forum Guidelines</a></li>
+      <li id="note1-2"><sup><strong>[1-2]</strong></sup> DolbyVision 8.1 refers to DolbyVision Profile 8, with signal compatibility ID 1, defined by the <a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">DolbyVision Profiles and Levels</a> specification</li>
+      <li id="note1-3"><sup><strong>[1-3]</strong></sup> DolbyVision 5 refers to DolbyVision Profile 5, defined by the <a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">DolbyVision Profiles and Levels</a> specification</li>
+      <li id="note1-4"><sup><strong>[1-4]</strong></sup> BT.2020 refers to the colorimetry system defined by <a href="https://www.itu.int/rec/R-REC-BT.2020/en">ITU-R Rec. BT.2020</a></li>
+      <li id="note1-5"><sup><strong>[1-5]</strong></sup> Y'C'<sub>B</sub>C'<sub>R</sub> refers to the Y'C'<sub>B</sub>C'<sub>R</sub> non-constant luminance color space defined by <a href="https://www.itu.int/rec/R-REC-BT.2020/en">ITU-R Rec. BT.2020</a></li>
+      <li id="note1-6"><sup><strong>[1-6]</strong></sup> IC<sub>t</sub>C<sub>p</sub> refers to the IC<sub>t</sub>C<sub>p</sub> color space defined by <a href="https://www.itu.int/rec/R-REC-BT.2100/en">ITU-R Rec. BT.2100</a></li>
+      <li id="note1-7"><sup><strong>[1-7]</strong></sup> HLG refers to the Hybrid Log Gamma (HLG) transfer function defined by <a href="https://www.itu.int/rec/R-REC-BT.2100/en">ITU-R Rec. BT.2100</a></li>
+      <li id="note1-8"><sup><strong>[1-8]</strong></sup> PQ refers to the Perceptual Quantizer (PQ) transfer function defined by <a href="https://www.itu.int/rec/R-REC-BT.2100/en">ITU-R Rec. BT.2100</a></li>
+      <li id="note1-9"><sup><strong>[1-9]</strong></sup> SMPTE 2086 refers to the master display characteristics defined by <a href="https://ieeexplore.ieee.org/document/8353899">SMPTE ST 2086</a></li>
+      <li id="note1-10"><sup><strong>[1-10]</strong></sup> CAE 861.3 refers to the content light level parameters defined by <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a></li>
+      <li id="note1-11"><sup><strong>[1-11]</strong></sup> SMPTE 2094-10 refers to the DolbyVision dynamic metadata defined by <a href="https://ieeexplore.ieee.org/document/7513370">SMPTE ST 2094-10</a></li>
+    </ul>
+    <p>Information about specifics of carriage of such formats within video codec bitstreams, container formats, as well as DASH and HLS streaming systems, can be found in following documents:
+    <ul>
+      <li><a href="https://www.itu.int/rec/T-REC-H.265">HEVC standard</a></li>
+      <li><a href="https://ultrahdforum.org/guidelines/">UltraHD Forum Guidelines</a></li>
+      <li><a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">DolbyVision Profiles and Levels</a></li>
+      <li><a href="https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices">HLS Authoring Guidelines for Apple Devices</a></li>
+      <li><a href="https://dashif.org/docs/DASH-IF-IOP-v4.0-clean.pdf">Guidelines for Implementation: DASH-IF Interoperability Points </a></li>
+      <li><a href="https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5001-b-final_v2.pdf">CTA-5001-B: Web Applications Video Ecosystem: Content Specification </a></li>
+    </ul>
+    </p>
   </section>
   <section class="bcls-section">
-    <h2 id="api_options">API options</h2>
-
-    <p>There are two ways to communicate HDR10 output settings to Zencoder:</p>
-    <ol>
-      <li>If all the requirerd HDR10 metadata is in the source video, set <code>preserve_hdr_metadata</code> to <code>true</code>. The HDR10 metadata will be passed through to the encoder, and you will not need to include <code>master_display</code> and <code>light_level</code> settings.</li>
-      <li>You can also specify the <code>master_display</code> and <code>light_level</code> settings in the request body, as detailed below.</li>
-    </ol>
-    <p>There are a number of options that are new or otherwise relevant to creating HDR10 outputs. The most important are those related to the SMPTE ST-2086 mastering display color volume, white point, and luminance.</p>
-
-    <aside class="bcls-aside bcls-aside--information">Note that Zencoder will enable HDR encoding when master_display options are specified for an output.</aside>
-    <section class="bcls-subsection">
-      <h3>Color volume and white point settings</h3>
-
-      <p>The following options are specified in <span class="notranslate”>CIE 1931 x/y chromaticity units</span>, as floating point values:</p>
-
-<ul><li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display">master_display </a> </code> <ul>
-          <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red">red</a></code>
-
-            <ul>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_x">x</a></code></li>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_y">y</a></code></li>
-            </ul>
-          </li>
-          <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green">green</a></code>
-            <ul>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_x">x</a></code></li>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_x">y</a></code></li>
-            </ul>
-          </li>
-          <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue">blue</a></code>
-            <ul>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_x">x</a></code></li>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_x">y</a></code></li>
-            </ul>
-          </li>
-          <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point">white_point</a></code>
-            <ul>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_x">x</a></code></li>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_x">y</a></code></li>
-            </ul>
-          </li>
-          </ul>
-          </li>
-          </ul>
-          <p>The x coordinates shall be in the range <code>[0.0001-0.7400]</code> and the y coordinates shall be in the range <code>[0.0001-0.8400]</code>.</p>
-    </section>
-    <section class="bcls-subsection">
-      <h3>Luminance</h3>
-
-      <p>The following options are specified in <code>nits</code> or <span class="notranslate”>candelas per square meter (cd/m2)</span> as floating point values:</p>
-
-<ul><li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display">master_display </a> </code> <ul>
-          <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance">luminance</a></code>
-
-            <ul>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_min">min</a></code></li>
-              <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_max">max</a></code></li>
-            </ul>
-          </li>
-          </ul>
-          </li>
-          </ul>
-          <p>The <code>master_display:luminance:max</code> value should be in the range <code>[5.0-10000.0]</code>, and <code>master_display:luminance:min</code> value should be in the range <code>[0.0001-5.0]</code>.</p>
-    </section>
-    <section class="bcls-subsection">
-      <h3>Light level</h3>
-
-      <p>Light level metadata is also specified in <code>nits</code>, though as integers rather than floats. These parameters are defined in CEA 861.3, as well as ITU-T Rec. H.265, Annex 3.35.</p>
-
-      <ul>
-        <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">max_content_light_level</a></code></li>
-        <li><code><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level">max_frame_average_light_level</a></code></li>
-      </ul>
-      <p>The <code>max_content_light_level</code> and <code>max_frame_average_light_level</code> value should be in the range <code>[0-10000]</code>. Values of <code>max_frame_average_light_level</code> around 100 generally produce the best results, however.</p>
-    </section>
-    <section class="bcls-subsection">
-      <h3>Other output settings with specific values/ranges for HDR</h3>
-
-      <p>There are some other general video output settings that must specific values or a specific range of values for HDR10.</p>
-
-      <table class="bcls-table">
-        <caption class="bcls-caption--table">Video Settings for HDR10</caption>
-        <thead class="bcls-table__head">
-          <tr>
-            <th>Setting</th>
-            <th>Value(s) for HDR10</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td><code>video_codec</code></td>
-            <td><code>hevc</code></td>
-          </tr>
-          <tr>
-            <td><code>video_codec_profile</code></td>
-            <td><code>main10</code></td>
-          </tr>
-          <tr>
-            <td><code>video_codec_level</code></td>
-            <td>up to <code>5.1</code></td>
-          </tr>
-          <tr>
-            <td><code>video_codec_tier</code></td>
-            <td><code>high</code></td>
-          </tr>
-          <tr>
-            <td><code>video_bit_depth</code></td>
-            <td>automatically set to <code>10</code> by using the profile <code>main10</code></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="bcls-subsection">
-      <h4>Notes</h4>
-
-      <ol>
-        <li>Transmuxing HEVC source files (including HDR10) is currently not supported and will result in an error.
-          <ol>
-            <li>HLS and DASH outputs need separate encodes.</li>
-          </ol>
-        </li>
-        <li>If a source file is HDR and <code>master_display</code> options are not provided, Zencoder will treat the source file as SDR, so the output coloring may not be accurate.</li>
-        <li>For segmented outputs, include these settings in <strong>each</strong> of the video outputs.
-          <ul>
-            <li>DASH: <a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
-            <li>HLS: <a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HTTP Live Streaming using fragmented MP4</a></li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+    <h2 id="supported_operations">Supported operations</h2>
+    <p>Zencoder currently performs only <em>direct transcoding operations</em> with videos in HDR formats. That is, if input video is color-graded and encoded in a particular HDR format, the same color-grading and HDR-format related metadata will be preserved in the output(s).</p>
+    <p>Conversions between different types of HDR formats or conversions between Standard Dynamic Range (SDR) and HDR formats currently are not supported. In principle, conversions between HDR formats are non-trivial operations that may impact artistic intent and/or introduce visible artifacts. For these reasons, we recommend such conversion operations to be done professionally in post-production.</p>
+    <p>Encoding of videos in HDR formats currently requires the use of HEVC video codec, operating in Main10 profile, and using 10-bit pixels. Such codec, profile and bit-depth parameters must be defined for all HDR outputs. The use of other codecs/profiles/bit-depths with HDR formats currently is not supported.</p>
+    <p>Encoding of videos in DolbyVision formats further requires the use of ISOBMFF (MP4) container formats for outputs. The use of other container formats with DolbyVision currently is not supported.</p>
+    <p>Encoding of HDR formats in Zencoder is supported for both static and dynamic outputs, generated by using <a href="https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html">Brightcove Context-Aware Encoding (CAE)</a> technology. The use of CAE technology enables more efficient encoding and it is recommended by <a href="https://ultrahdforum.org/guidelines/">UltraHD Forum Guidelines</a> for encoding of UltraHD / HDR content. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="Sample_request">Sample request</h2>
+    <h2 id="requirements">Requirements for input files</h2>
 
-    <p>Below is a sample request for an HDR10 output:</p>
+    <p>The input video files should be high-quality masters or mezzanines carrying properly color-graded HDR visual content and provided with all necessary metadata needed to describe HDR format being used.</p>
+    <p>Examples of such files could be:</p>
+    <ul>
+      <li>HLG10, PQ10, and HDR10 - compliant video streams encoded using HEVC codec, and carrying all necessary HDR information within such streams</li>
+      <li>Post-production intra-coded mezzanines (e.g. Apple ProRes 4444, Avid DNxHD, or JPEG 2000 (J2K) in OP1a MXF), accompanied by extra information about type of HDR format being used and any additional metadata (e.g. master display and content light level metadata) needed to describe it</li>
+      <li>HEVC-encoded DolbyVision streams, accompanied by “RPU” files carrying the associated dynamic metadata.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters">Specifying HDR format parameters</h2>
 
-    <pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://mybucket/hdr_master.mov",
+    <p>In cases when input mezzanine contains all metadata associated with the HDR format, all such information can be propagated to the outputs by using the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code>preserve_hdr_metadata</code></a> parameter.</p>
+    <p>This method is illustrated by following example:</p>
+    <pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "preserve_hdr_metadata": true
+    } 
+  ] 
+}</code></pre>
+    <p>This method should work well with HEVC-encoded HDR10, PQ10, anf HLG10 mezzanines.</p>
+    <p>In cases when input mezzanine does not describe HDR format exactly, or carries only partial information, an explicit specification of HDR format parameters should be used.</p>
+    <p>In such cases, Zencoder should receive the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a> parameter, describing the exact type of HDR format being used, along with several additional parameters that may be required to pass the associated metadata. Below table lists possible values of <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a> parameter and additional parameters that must be specified.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">hdr_format Details</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th rowspan="2">HDR format</th>
+          <th colspan="4">Zencoder API parameters / values</th>
+        </tr>
+        <tr>
+        <tr><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a></tr>
+        <tr><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code>master_display</code></a></tr>
+        <tr><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code>max_content_light_level</code></a>, <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code>max_frame_average_light_level</code></a></tr>
+        <tr><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code>dolby_vision_rpu_url</code></a></tr>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10</td>
+          <td><code>hlg</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10</td>
+          <td><code>pq</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10</td>
+          <td><code>hdr10</code></td>
+          <td>required</td>
+          <td>required</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1</td>
+          <td><code>dv8.1</code></td>
+          <td>required</td>
+          <td>required</td>
+          <td>required</td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5</td>
+          <td><code>dv5</code></td>
+          <td></td>
+          <td></td>
+          <td>required</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For example, encoding of an HDR10 video with <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code>master_display</code></a> and <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">content light level</a> metadata parameters communicated externally can be performed by using following command:</p>
+<pre class="line-numbers"><code class="language-json">{
+  "input": "s3://mybucket/prores_hdr_master.mov",
   "outputs": [
     {
-      "video_codec": "hevc",
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
       "video_bit_depth": 10,
+      "hdr_format": "hdr10",
       "master_display": {
-        "red": {
-          "x": 0.708,
-          "y": 0.292
-        },
-        "green": {
-          "x": 0.17,
-          "y": 0.797
-        },
-        "blue": {
-          "x": 0.131,
-          "y": 0.046
-        },
-        "white_point": {
-          "x": 0.31273,
-          "y": 0.329
-        },
-        "luminance": {
-          "max": 1000,
-          "min": 0.0001
-        }
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
       },
       "max_content_light_level": 1000,
       "max_frame_average_light_level": 180
@@ -201,5 +223,51 @@ parent: Encoding Guides
   ]
 }
 </code></pre>
+    <p>This method is appropriate when working with post-production mezzanines, using codecs such as Apple ProRes 4444, Avid DNxHD, or JPEG 2000 (J2K) in OP1a MXF, etc.</p>
+    <p>Similarly, when transcoding DolbyVision content, the dynamic metadata (“RPU” file) associated with DolbyVision Content can be communicated externally by using <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code>dolby_vision_rpu_url</code></a> parameter:</p>
+<pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/dv5_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "video_color_range": "full",
+     "hdr_format": "dv5",
+     "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
+    } 
+  ] 
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</h2>
+    <p>
+      When using <a href="/encoding-guides/cae-guide.html">Brightcove Context-Aware Encoding (CAE)</a> technology, all codec- and HDR format-related parameters can be specified either as
+      <ul>
+        <li>parameters of outputs labeled as <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code>dynamic_profile_rendition</code></a>, or</li>
+        <li>parameters of the <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a> object</li>
+      </ul>
+    </p>
+    <p>The second method is more compact and preferred. An example illustrating the use of the second method is provided below:</p>
+<pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "generate_dynamic_profile": true,
+  "dynamic_profile_options": 
+  {
+    "max_renditions": 6,
+    "video_codec": "hevc", 
+    "video_codec_profile": "main10", 
+    "video_bit_depth": 10,
+    "preserve_hdr_metadata": true,
+  }
+  "outputs": [ 
+    {"dynamic_profile_rendition": 1}, 
+    {"dynamic_profile_rendition": 2}, 
+    {"dynamic_profile_rendition": 3}, 
+    {"dynamic_profile_rendition": 4}, 
+    {"dynamic_profile_rendition": 5}, 
+    {"dynamic_profile_rendition": 6} 
+  ] 
+}</code></pre>
   </section>
 </article>

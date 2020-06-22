@@ -302,9 +302,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                         <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
                         
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">HDR10 Settings</a></li>
                         
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">H.264 Settings</a></li>
                         
                         <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
                         
@@ -634,81 +634,110 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <article class="bcls-article">
   <summary>This topic contains details for encoding settings related to HDR10 video outputs.</summary>
 
-  <section class="bcls-section"><h2 id="Introduction">Introduction</h2>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>For details on the HDR formats that Zencoder supports and recommendations on the HDR format parameters, see the <a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preserve_hdr_metadata">preserve_hdr_metadata</h2>
+    <code>master_display:Boolean</code>
 
-<p>Zencoder supports high-dynamic-range (HDR) video, initially adding options to produce HDR10 outputs from HDR color-graded masters.</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p>In addition to this topic, you should also look at <a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Output</a> for additional information and specific <a href="/encoding-settings/general-audio-video/encoding-settings-video.html">video encoding settings</a> that are required for HDR10 outputs.</p>
-</section><section class="bcls-section"><h2 id="master_display">preserve_hdr_metadata</h2>
-<code>master_display:Boolean</code>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>Default:</strong> false</p>
 
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Default:</strong> false</p>
+    <p><strong>Description:</strong></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p>When set to true, this parameter instructs Zencoder to import (most or all) HDR-related metadata from input file and pass them to the output.</p>
+    <p>For example, transcoding of HEVC-encoded video streams in HDR10, PQ10, or HLG10 formats can be accomplished by using the following job request: </p>
 
-<p><strong>Description:</strong></p>
+    <pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "preserve_hdr_metadata": true
+    } 
+  ] 
+}</code></pre>
+    <p>This parameter may also be used in combination with other parameters, specifying HDR-related metadata directly. For example, below JSON job request shows how <a href="#preserve_hdr_metadata"><code>preserve_hdr_metadata</code></a> parameter may also be used for carrying over <a href="#master_display"><code>master display</code></a> and <a href="#max_content_light_level"><code>content light level</code></a> metadata from HEVC-encoded DolbyVision 8.1 streams, while DolbyVision dynamic metadata (<code>RPU</code> file) is communicated separately by using the dolby_vision_rpu_url parameter:</p>
+    <pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/dv81_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10",
+     "video_bit_depth": 10, 
+     "hdr_format": "dv8.1", 
+     "preserve_hdr_metadata": true,
+     "dolby_vision_rpu_url": "s3://mubucket/dv81_master_rpu.rpu"
+    } 
+  ] 
+}</code></pre>
+    <p>
+      See also:
+    <ul>
+      <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+    </ul>
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="hdr_format">hdr_format</h2>
+    <code>hdr_format:String</code>
 
-<p>If all the requirerd HDR10 metadata is in the source video, set <code>preserve_hdr_metadata</code> to <code>true</code>. The HDR10 metadata will be passed through to the encoder, and you will not need to include <code>master_display</code> and <code>light_level</code> settings listed below.</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://mybucket/hdr_master.mov",
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Valid values:</strong> <code>hdr10</code>, <code>pq</code>, <code>hlg</code>, <code>dv5</code>, <code>dv8.1</code></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Specifies the type of an HDR format that is being used to produce output(s).</p>
+
+    <p>This parameter should be used in cases when input files do not carry HDR format-related metadata, and hence both format type and all associated metadata need to be specified directly.</p>
+
+    <p>For example, a PQ color graded content provided as J2K encoded MFX can be converted to PQ10 output stream by following job request:</p>
+
+    <pre class="line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/j2k_master.mfx", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "hdr_format": "pq"
+    } 
+   ] 
+}</code></pre>
+
+    <p>Or. if the same J2K MXF master represents HDR10 content, and comes with additional files describing its <a href="#master_display">master display</a> and <a href="#max_content_light_level">content light level</a> metadata parameters, then encoding of it in HDR10 HEVC stream can be accomplished by using following job request:</p>
+    <pre class="line-numbers"><code class="language-json">{
+  "input": "s3://mybucket/j2k_master.mfx",
   "outputs": [
     {
-      "video_codec": "hevc",
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
       "video_bit_depth": 10,
-      <span class="bcls-highlight">"preserve_hdr_metadata": true</span>
-    }
-  ]
-}
-</code></pre>
-</section><section class="bcls-section"><h2 id="master_display">master_display</h2>
-<code>master_display:Object</code>
-
-<p><strong>API Versions:</strong> V2</p>
-
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-<p><strong>Default:</strong> none</p>
-
-<p><strong>Compatible Job Types:</strong> vod</p>
-
-<p><strong>Description:</strong></p>
-
-<p>Hash containing color volume and luminance settings for HDR outputs.</p>
-
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://mybucket/hdr_master.mov",
-  "outputs": [
-    {
-      "video_codec": "hevc",
-      "video_bit_depth": 10,
-      <span class="bcls-highlight">"master_display"</span>: {
-        "red": {
-          "x": 0.708,
-          "y": 0.292
-        },
-        "green": {
-          "x": 0.17,
-          "y": 0.797
-        },
-        "blue": {
-          "x": 0.131,
-          "y": 0.046
-        },
-        "white_point": {
-          "x": 0.31273,
-          "y": 0.329
-        },
-        "luminance": {
-          "max": 1000,
-          "min": 0.0001
-        }
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
       },
       "max_content_light_level": 1000,
       "max_frame_average_light_level": 180
@@ -716,22 +745,282 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_red">red</h2>
-<code>red:Object</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p>
+      See also:
+    <ul>
+      <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+    </ul>
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display">master_display</h2>
+    <code>master_display:Object</code>
 
-<p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p>Hash containing color volume setting for red.</p>
+    <p><strong>Description:</strong></p>
 
-<pre class="line-numbers">
+    <p>Structure describing the color volume (the color primaries, white point, and luminance range) of the display that was used in mastering of video content. Specific values used in this structure are defined by <a href="https://ieeexplore.ieee.org/document/8353899">SMPTE ST 2086</a> standard.</p>
+
+    <p>Master display metadata is mandatory and must be carried out to the outputs when encoding of videos in HDR-10 and DolbyVision 8.1 formats.</p>
+
+    <p>The example below shows how the master display metadata can be specified:</p>
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://mybucket/j2k_master.mfx",
+  "outputs": [
+    {
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
+      "video_bit_depth": 10,
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
+      },
+      "max_content_light_level": 1000,
+      "max_frame_average_light_level": 180
+    }
+  ]
+}</code></pre>
+
+    <p>
+      See also:
+    <ul>
+      <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+      <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+    </ul>
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="max_content_light_level">max_content_light_level</h2>
+    <code>max_content_light_level:Number</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Valid Values:</strong> <code>0-10000</code></p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> <code>1000</code></p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Describes maximum pixel (and red, green, and blue channel)-wise light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code>MaxCLL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
+
+    <p>The example below shows how <a href="#max_content_light_level">max_content_light_level</a>, and <a href="#max_frame_average_light_level">max_frame_average_light_level</a>  metadata can be specified:</p>
+
+<pre class=" line-numbers"><code class="language-json">{
+  "input": "s3://mybucket/j2k_master.mfx",
+  "outputs": [
+    {
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
+      "video_bit_depth": 10,
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
+      },
+      "max_content_light_level": 1000,
+      "max_frame_average_light_level": 180
+    }
+  ]
+}</code></pre>
+
+    <p>
+      See also:
+      <ul>
+        <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+      </ul>
+    </p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="max_frame_average_light_level">max_frame_average_light_level</h2>
+    <code>max_frame_average_light_level:Number</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> <code>180</code></p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Describes maximum frame-average (and maximum red-, green-, and blue- channel-wise) light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code>MaxFALL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
+
+    <p>Both the <a href="#max_content_light_level">max_content_light_level</a> and <a href="#max_frame_average_light_level">max_frame_average_light_level</a> parameters are mandatory and must be included in the outputs when encoding videos in HDR-10 format.</p>
+
+    <p>The example below shows how <a href="#max_content_light_level">max_content_light_level</a>, and <a href="#max_frame_average_light_level">max_frame_average_light_level</a>  metadata can be specified:</p>
+
+<pre class=" line-numbers"><code class="language-json">{
+  "input": "s3://mybucket/j2k_master.mfx",
+  "outputs": [
+    {
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
+      "video_bit_depth": 10,
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
+      },
+      "max_content_light_level": 1000,
+      "max_frame_average_light_level": 180
+    }
+  ]
+}</code></pre>
+
+    <p>
+      See also:
+      <ul>
+        <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+      </ul>
+    </p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="dolby_vision_rpu_url">dolby_vision_rpu_url</h2>
+    <code>dolby_vision_rpu_url:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>This parameter is currently required when transcoding videos in DolbyVision 5 and DolbyVision 8.1 formats.</p> 
+    <p> Usage example: </p>
+
+<pre class=" line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/dv5_master.mp4", 
+  "outputs": [ 
+   { 
+    "video_codec": "hevc", 
+    "video_codec_profile": "main10", 
+    "video_bit_depth": 10,
+    "hdr_format": "dv5",
+    "video_color_range": "full",
+    "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
+   } 
+  ] 
+}</code></pre>
+
+    <p>
+      See also:
+      <ul>
+        <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+      </ul>
+    </p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="video_color_range">video_color_range</h2>
+    <code>video_color_range:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Valid values:</strong> <code>limited</code>, <code>full</code></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Indicates the dynamic range of pixel values. For example, for 8-bit pixels, <code>limited</code> implies that Y (luma) pixel values will stay in the range from 16 to 235, while <code>full</code> implies that Y (luma) pixel values will be in range from 0 to 255.</p>
+
+    <p>The vast majority of content is currently produced and encoded using <code>limited</code> pixels. However <code>full</code>-range pixels may also be sometimes used. For example, 10-bit-wide full-range pixels are used in the DolbyVision 5 format.</p>
+    <p> Usage example: </p>
+
+<pre class=" line-numbers"><code class="language-json">{ 
+  "input": "s3://mybucket/dv5_master.mp4", 
+  "outputs": [ 
+   { 
+    "video_codec": "hevc", 
+    "video_codec_profile": "main10", 
+    "video_bit_depth": 10,
+    "hdr_format": "dv5",
+    "video_color_range": "full",
+    "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
+   } 
+  ] 
+}</code></pre>
+
+    <p>
+      See also:
+      <ul>
+        <li><a href="/encoding-guides/hdr10-video-output.html#Overview">HDR formats overview</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters">Specifying HDR format parameters</a></li>
+        <li><a href="/encoding-guides/hdr10-video-output.html#specifying_hdr_format_parameters_with_cae">Specifying HDR format parameters with CAE</a></li>
+      </ul>
+    </p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="master_display_red">red</h2>
+    <code>red:Object</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Hash containing color volume setting for red.</p>
+
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -766,26 +1055,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_red_x">x</h2>
-<code>x:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_red_x">x</h2>
+    <code>x:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_red">master_display:red</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_red">master_display:red</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.708</code></p>
+    <p><strong>Example:</strong> <code>0.708</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume x setting for red.</p>
+    <p>Color volume x setting for red.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -820,26 +1111,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_red_y">y</h2>
-<code>y:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_red_y">y</h2>
+    <code>y:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_red">master_display:red</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_red">master_display:red</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.292</code></p>
+    <p><strong>Example:</strong> <code>0.292</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume y setting for red.</p>
+    <p>Color volume y setting for red.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -874,22 +1167,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_green">green</h2>
-<code>green:Object</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_green">green</h2>
+    <code>green:Object</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Hash containing color volume setting for green.</p>
+    <p>Hash containing color volume setting for green.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -924,26 +1219,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_green_x">x</h2>
-<code>x:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_green_x">x</h2>
+    <code>x:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_green">master_display:green</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_green">master_display:green</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.17</code></p>
+    <p><strong>Example:</strong> <code>0.17</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume x setting for green.</p>
+    <p>Color volume x setting for green.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -978,26 +1275,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_green_y">y</h2>
-<code>y:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_green_y">y</h2>
+    <code>y:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_green">master_display:green</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_green">master_display:green</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.797</code></p>
+    <p><strong>Example:</strong> <code>0.797</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume y setting for green.</p>
+    <p>Color volume y setting for green.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1032,22 +1331,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_blue">blue</h2>
-<code>blue:Object</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_blue">blue</h2>
+    <code>blue:Object</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Hash containing color volume setting for blue.</p>
+    <p>Hash containing color volume setting for blue.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1082,26 +1383,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_blue_x">x</h2>
-<code>x:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_blue_x">x</h2>
+    <code>x:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_blue">master_display:blue</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_blue">master_display:blue</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.131</code></p>
+    <p><strong>Example:</strong> <code>0.131</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume x setting for blue.</p>
+    <p>Color volume x setting for blue.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1136,26 +1439,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_blue_y">y</h2>
-<code>y:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_blue_y">y</h2>
+    <code>y:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_blue">master_display:blue</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_blue">master_display:blue</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.046</code></p>
+    <p><strong>Example:</strong> <code>0.046</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume y setting for blue.</p>
+    <p>Color volume y setting for blue.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1190,22 +1495,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_white_point">white_point</h2>
-<code>white_point:Object</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_white_point">white_point</h2>
+    <code>white_point:Object</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Hash containing color volume setting for white_point.</p>
+    <p>Hash containing color volume setting for white_point.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1240,26 +1547,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_white_point_x">x</h2>
-<code>x:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_white_point_x">x</h2>
+    <code>x:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_white_point">master_display:white_point</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_white_point">master_display:white_point</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.31273</code></p>
+    <p><strong>Example:</strong> <code>0.31273</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume x setting for white_point.</p>
+    <p>Color volume x setting for white_point.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1294,26 +1603,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_white_point_y">y</h2>
-<code>y:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_white_point_y">y</h2>
+    <code>y:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_white_point">master_display:white_point</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_white_point">master_display:white_point</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.329</code></p>
+    <p><strong>Example:</strong> <code>0.329</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Color volume y setting for white_point.</p>
+    <p>Color volume y setting for white_point.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1348,22 +1659,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_luminance">luminance</h2>
-<code>luminance:Object</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_luminance">luminance</h2>
+    <code>luminance:Object</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display">master_display</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Hash containing luminance settings.</p>
+    <p>Hash containing luminance settings.</p>
 
-<pre class="line-numbers">
+    <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
@@ -1398,27 +1711,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_luminance_min">min</h2>
-<code>min:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_luminance_min">min</h2>
+    <code>min:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_luminance">master_display:luminance</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_luminance">master_display:luminance</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>0.0001-5.0</code></p>
+    <p><strong>Valid Values:</strong> <code>0.0001-5.0</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>0.0001</code></p>
+    <p><strong>Example:</strong> <code>0.0001</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Minimum luminance in <span class="notranslate”>nits or candelas per square meter (cd/m2)</span>.</p>
+    <p>Minimum luminance in <span class="notranslate</code>>nits or candelas per square meter (cd/m2)</span>.</p>
 
-<pre class="line-numbers">
-<code class="language-json">{
+<pre class=" line-numbers">
+        <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1452,27 +1767,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="master_display_luminance_max">max</h2>
-<code>max:Number</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="master_display_luminance_max">max</h2>
+    <code>max:Number</code>
 
-<p><strong>API Versions:</strong> V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
-<p><strong>Parent:</strong> <a href="#master_display_luminance">master_display:luminance</a></p>
+    <p><strong>Parent:</strong> <a href="#master_display_luminance">master_display:luminance</a></p>
 
-<p><strong>Default:</strong> none</p>
+    <p><strong>Default:</strong> none</p>
 
-<p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
+    <p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
 
-<p><strong>Compatible Job Types:</strong> vod</p>
+    <p><strong>Compatible Job Types:</strong> vod</p>
 
-<p><strong>Example:</strong> <code>1000</code></p>
+    <p><strong>Example:</strong> <code>1000</code></p>
 
-<p><strong>Description:</strong></p>
+    <p><strong>Description:</strong></p>
 
-<p>Maximum luminance in <span class="notranslate”>nits or candelas per square meter (cd/m2)</span>.</p>
+    <p>Maximum luminance in <span class="notranslate</code>>nits or candelas per square meter (cd/m2)</span>.</p>
 
-<pre class="line-numbers">
-<code class="language-json">{
+<pre class=" line-numbers">
+        <code class="language-json">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1506,117 +1823,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }
 </code></pre>
-</section><section class="bcls-section"><h2 id="video_bit_depth">max_content_light_level</h2>
-<code>max_content_light_level:Number</code>
-
-<p><strong>API Versions:</strong> V2</p>
-
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-<p><strong>Default:</strong> none</p>
-
-<p><strong>Valid Values:</strong> <code>0-10000</code></p>
-
-<p><strong>Compatible Job Types:</strong> vod</p>
-
-<p><strong>Example:</strong> <code>1000</code></p>
-
-<p><strong>Description:</strong></p>
-
-<p>Maximum light level for the content as a whole <span class="notranslate”>nits or candelas per square meter (cd/m2) - integer values</span>.</p>
-
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://mybucket/hdr_master.mov",
-  "outputs": [
-    {
-      "video_codec": "hevc",
-      "video_bit_depth": 10,
-      "master_display": {
-        "red": {
-          "x": 0.708,
-          "y": 0.292
-        },
-        "green": {
-          "x": 0.17,
-          "y": 0.797
-        },
-        "blue": {
-          "x": 0.131,
-          "y": 0.046
-        },
-        "white_point": {
-          "x": 0.31273,
-          "y": 0.329
-        },
-        "luminance": {
-          "max": 1000,
-          "min": 0.0001
-        }
-      },
-      <span class="bcls-highlight">"max_content_light_level": 1000,</span>
-      "max_frame_average_light_level": 180
-    }
-  ]
-}
-</code></pre>
-</section><section class="bcls-section"><h2 id="video_bit_depth">max_frame_average_light_level</h2>
-<code>max_frame_average_light_level:Number</code>
-
-<p><strong>API Versions:</strong> V2</p>
-
-<p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-<p><strong>Default:</strong> none</p>
-
-<p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
-
-<p><strong>Compatible Job Types:</strong> vod</p>
-
-<p><strong>Example:</strong> <code>180</code></p>
-
-<p><strong>Description:</strong></p>
-
-<p>Maximum average light level for content frames <span class="notranslate”>nits or candelas per square meter (cd/m2) - integer values</span>. Although values up to 10000 are allowed, values in the 100-200 range will generally produce the best results.</p>
-
-<pre class="line-numbers">
-<code class="language-json">{
-  "input": "s3://mybucket/hdr_master.mov",
-  "outputs": [
-    {
-      "video_codec": "hevc",
-      "video_bit_depth": 10,
-      "master_display": {
-        "red": {
-          "x": 0.708,
-          "y": 0.292
-        },
-        "green": {
-          "x": 0.17,
-          "y": 0.797
-        },
-        "blue": {
-          "x": 0.131,
-          "y": 0.046
-        },
-        "white_point": {
-          "x": 0.31273,
-          "y": 0.329
-        },
-        "luminance": {
-          "max": 1000,
-          "min": 0.0001
-        }
-      },
-      "max_content_light_level": 1000,
-      <span class="bcls-highlight">"max_frame_average_light_level": 180</span>
-    }
-  ]
-}
-</code></pre>
-</section>
+  </section>
+  
+  
 </article>
-
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
