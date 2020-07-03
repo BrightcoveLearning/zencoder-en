@@ -655,11 +655,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Compatible Job Types:</strong> VOD</p>
 
-    <p><strong>Example:</strong> 3</p>
+    <p><strong>Example:</strong> <code>["h264", "hevc"]</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>The minimum number of renditions to generate.</p>
+    <p>For mixed-codec outputs, an array of the codecs to create renditions for. Currently, the allowed item values are <code>h264</code> and <code>hevc</code>.</p>
 
   <pre class="line-numbers"><code class="language-json">{
     "dynamic_profile_options": {
@@ -677,7 +677,64 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       }
     }
   }</code></pre>
-  </section><section class="bcls-section">
+  </section>
+  <section class="bcls-section">
+    <h2 id="video_codec_options" class="notranslate">video_codec_options</h2>
+    <code>video_codecs:Object</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+
+    <p><strong>Default Value:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> VOD</p>
+
+    <p><strong>Example:</strong></p>
+<pre class="line-numbers"><code class="language-json">"video_codec_options": {
+  "h264": {
+    "min_renditions": 2,
+    "max_resolution": { "width": 1280, "height": 720 }
+  },
+  "hevc": {
+    "min_renditions": 2,
+    "max_resolution": { "width": 1920, "height": 1080 }
+  }
+}</code></pre>
+
+    <p><strong>Description:</strong></p>
+
+    <p>For mixed-codec outputs, an object specifying the options for each codec. Each property is an object with the name <code>h264</code> or <code>hevc</code>, its properties are the set the constraints for renditions for that codec. The allowed properties for these objects are:</p>
+
+    <ul>
+      <li><code>min_renditions</code> required</li>
+      <li><code>min_bitrate</code></li>
+      <li><code>max_bitrate</code></li>
+      <li><code>max_first_rendition_bitrate</code></li>
+      <li><code>min_resolution</code></li>
+      <li><code>max_resolution</code></li>
+      <li><code>max_first_rendition_resolution</code></li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: these settings are also used at the global level. When you are using settings both at the global and per-codec levels, the values must be compatible. For example, max_renditions set at the global level must be greater than or equal to the sum of min_rendition values set at the per-codec level.</aside>
+
+  <pre class="line-numbers"><code class="language-json">{
+    "dynamic_profile_options": {
+      "max_renditions": 6,
+      "video_codecs" : ["h264", "hevc"'],
+      "video_codec_options": {
+        "h264": {
+          "min_renditions": 2,
+          "max_resolution": { "width": 1280, "height": 720 }
+        },
+        "hevc": {
+          "min_renditions": 2,
+          "max_resolution": { "width": 1920, "height": 1080 }
+        }
+      }
+    }
+  }</code></pre>
+  </section>
+  <section class="bcls-section">
     <h2 id="min_renditions" class="notranslate">min_renditions</h2>
     <code>min_renditions:Integer</code>
 
@@ -1584,7 +1641,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 02 Jul 2020
+  Page last updated on 03 Jul 2020
 </div>
 
 
