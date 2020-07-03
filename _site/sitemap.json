@@ -40,6 +40,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/cae-settings-stage.html",
+      "oldURL": "/cae-settings-stage"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/cae-settings.html",
       "oldURL": "/cae-settings"
   },
@@ -575,17 +580,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "newURL": "https://zencoder.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -595,42 +590,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
       "oldURL": "/index"
   },
 
@@ -640,17 +600,62 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/",
+      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
       "oldURL": "/index"
   },
 
