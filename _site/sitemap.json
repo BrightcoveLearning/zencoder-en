@@ -50,6 +50,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/support/contact-sales.html",
+      "oldURL": "/contact-sales"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-guides/creating-mp4-and-hls-outputs-together.html",
       "oldURL": "/creating-mp4-and-hls-outputs-together"
   },
@@ -580,27 +585,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/",
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/general-information/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "newURL": "https://zencoder.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -610,17 +600,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "newURL": "https://zencoder.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
       "oldURL": "/index"
   },
 
@@ -630,7 +615,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/support/",
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/general-information/",
       "oldURL": "/index"
   },
 
@@ -645,17 +635,32 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
