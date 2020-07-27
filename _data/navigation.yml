@@ -162,7 +162,7 @@
       url: '/encoding-guides/dash-streaming-and-playlists.html'
     - name: 'H.264 Advanced Guide'
       url: '/encoding-guides/h264-advanced-guide.html'
-    - name: 'HDR Video Guide'
+    - name: 'Supported HDR Video Formats'
       url: '/encoding-guides/hdr10-video-output.html'
     - name: 'HEVC/H.265 Guide'
       url: '/encoding-guides/hevch265-guide.html'
