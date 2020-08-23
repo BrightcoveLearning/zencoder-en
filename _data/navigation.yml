@@ -1,9 +1,9 @@
 - section: 
   name: 'Home'
-  url: '/'
+  url: '/index.html'
 - section: 
   name: 'Getting Started'
-  url: '/getting-started/'
+  url: '/getting-started/index.html'
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
     - name: 'Overview'
@@ -19,7 +19,7 @@
 - section: 
   name: 'General Information'
   icon: '<i class="far fa-info-circle"></i>'
-  url: '/general-information/'
+  url: '/general-information/index.html'
   docs:
     - name: 'Basics'
       url: '/general-information/faq-basics.html'
@@ -49,7 +49,7 @@
       url: '/general-information/using-zencoder-google-cloud-platform.html'
 - section: 
   name: 'References'
-  url: '/references/'
+  url: '/references/index.html'
   icon: '<i class="fal fa-books"></i>'
   docs:
     - name: 'API Reference'
@@ -60,11 +60,11 @@
       url: '/references/release-notes.html'
 - section: 
   name: 'Encoding Settings'
-  url: '/encoding-settings/'
+  url: '/encoding-settings/index.html'
   icon: '<i class="fal fa-cogs"></i>'
   docs:
     - name: 'General Settings'
-      url: '/encoding-settings/general/'
+      url: '/encoding-settings/general/index.html'
       docs:
         - name: 'Job Settings'
           url: '/encoding-settings/general/encoding-settings-job.html'
@@ -77,7 +77,7 @@
         - name: 'Notifications Settings'
           url: '/encoding-settings/general/encoding-settings-notifications.html'
     - name: 'Audio/Video Settings'
-      url: '/encoding-settings/general-audio-video/'
+      url: '/encoding-settings/general-audio-video/index.html'
       docs:
         - name: 'Audio Settings'
           url: '/encoding-settings/general-audio-video/encoding-settings-audio.html'
@@ -100,7 +100,7 @@
         - name: 'Transmuxing Settings'
           url: '/encoding-settings/general-audio-video/encoding-settings-transmuxing.html'
     - name: 'Formats and Codec Settings'
-      url: '/encoding-settings/formats-codecs/'
+      url: '/encoding-settings/formats-codecs/index.html'
       docs:
         - name: 'Format and Codecs Settings'
           url: '/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html'
@@ -117,7 +117,7 @@
         - name: 'VP6 Settings'
           url: '/encoding-settings/formats-codecs/encoding-settings-vp6.html'
     - name: 'Media Asset Settings'
-      url: '/encoding-settings/assets/'
+      url: '/encoding-settings/assets/index.html'
       docs:
         - name: 'Captions Settings'
           url: '/encoding-settings/assets/encoding-settings-captions.html'
@@ -128,7 +128,7 @@
         - name: 'Watermarks Settings'
           url: '/encoding-settings/assets/encoding-settings-watermarks.html'
     - name: 'Content Protection Settings'
-      url: '/encoding-settings/content-protection/'
+      url: '/encoding-settings/content-protection/index.html'
       docs:
         - name: 'Encryption Settings'
           url: '/encoding-settings/content-protection/encoding-settings-encryption.html'
@@ -137,7 +137,7 @@
         - name: 'DRM Settings'
           url: '/encoding-settings/content-protection/encoding-settings-drm.html'
     - name: 'Sources/Destination Settings'
-      url: '/encoding-settings/sources-destinations/'
+      url: '/encoding-settings/sources-destinations/index.html'
       docs:
         - name: 'S3 Settings'
           url: '/encoding-settings/sources-destinations/encoding-settings-s3-settings.html'
@@ -145,7 +145,7 @@
           url: '/encoding-settings/sources-destinations/encoding-settings-aspera.html'
 - section: 
   name: 'Encoding Guides'
-  url: '/encoding-guides/'
+  url: '/encoding-guides/index.html'
   icon: '<i class="fas fa-fast-forward"></i>'
   docs:
     - name: 'Audio Mapping Guide'
@@ -186,7 +186,7 @@
       url: '/encoding-guides/vp9-guide.html'
 - section: 
   name: 'Errors/Troubleshooting'
-  url: '/error-troubleshooting/'
+  url: '/error-troubleshooting/index.html'
   icon: '<i class="far fa-exclamation-triangle"></i>'
   docs:
   - name: 'Common Problems'
@@ -308,7 +308,7 @@
         url: '/error-troubleshooting/error-codes/error-workertimeouterror.html'
 - section: 
   name: 'Integration'
-  url: '/integration/'
+  url: '/integration/index.html'
   icon: '<i class="far fa-handshake-alt"></i>'
   docs:
     - name: 'Integration libraries'
@@ -321,7 +321,7 @@
       url: '/integration/using-read-only-api-keys.html'
 - section: 
   name: 'Support'
-  url: '/support/'
+  url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
