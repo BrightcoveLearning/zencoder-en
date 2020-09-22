@@ -43,7 +43,7 @@
       url: '/general-information/how-zencoder-saves-your-files-when-uploads-fail.html'
     - name: 'Using Zencoder with S3'
       url: '/general-information/using-zencoder-s3.html'
-    - name: 'Using Zencoder with Google Cloud Storage'
+    - name: 'Using Zencoder with Azure'
       url: '/general-information/using-zencoder-azure.html'
     - name: 'Using Zencoder with Google Cloud Storage'
       url: '/general-information/using-zencoder-google-cloud-platform.html'
