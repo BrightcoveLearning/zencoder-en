@@ -662,7 +662,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>We'll start by creating 2 H.264 files, targeting high and low bitrates.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "label": "low",
     "format": "mp4",
     "video_bitrate": 200,
@@ -707,7 +707,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Each of the H.264 video and the audio outputs above have <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#label"><code translate="No">labels</code></a> in their API options. These labels can be used in conjunction with the <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a> option to tell Zencoder to use the video created by the output with the given label, rather than the input file. Since the H.264 files are already at good settings for HLS, no additional encoding is necessary.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "source": "low",
     "format": "ts",
     "copy_audio": "true",
@@ -759,7 +759,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Now that we've gone over each of the major output sections, let's pull it together in to a single API request.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
     {

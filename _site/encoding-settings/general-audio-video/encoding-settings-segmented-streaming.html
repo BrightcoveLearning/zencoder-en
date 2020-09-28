@@ -687,7 +687,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>For 'dash' outputs, this will also change the default segment_seconds to 2, enforce fixed keyframe intervals, include an MPD manifest, and create a directory structure with initialization and segment files.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -727,7 +727,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>on_demand - Will set the <code translate="No">DASH</code> profile to "urn:mpeg:dash:profile:isoff-on-demand:2011" and encode media as single fragmented files for each stream rather than segmenting them. Otherwise the same as live profile.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -759,7 +759,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Sets format for a playlist (rendition manifest) output.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">
+<code class="language-json" translate="No">
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -790,7 +790,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Sets the maximum duration of each segment in a segmented output.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -827,7 +827,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong><code translate="No">source</code> (optional):</strong> The label on a media output of the same job. This can be used to set the codec for renditions that use this audio stream.</li>
     </ul>
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -873,7 +873,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Provides a list of stream info to be reformatted as a playlist.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -911,7 +911,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code translate="No">HLS</code></a>, <a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a>, and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists.</em></p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -951,7 +951,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code translate="No">HLS</code></a> and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists, unless a <a href="#streaming_source">source</a> is provided.</em></p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -987,7 +987,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Specifies the resolution of a playlist stream. Overrides resolution determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">
+<code class="language-json" translate="No">
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1025,7 +1025,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Specifies the codecs used in a playlist stream. Overrides codecs determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1063,7 +1063,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Specifies an alternate audio track for the playlist.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1111,7 +1111,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>When creating audio-only segments, use the specified image file as a thumbnail for each segment.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1144,7 +1144,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>This option has no effect if segment_image_file is set.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1173,7 +1173,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <aside class="bcls-aside bcls-aside--warning"><code translate="No">source</code> is <strong>not</strong> compatible with SMIL outputs.</aside>
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1217,7 +1217,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HTTP Live Streaming</a> outputs.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1276,7 +1276,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HTTP Live Streaming</a> outputs.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1310,7 +1310,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">HLS</code> versions 1-3 use an integer for <code translate="No">duration</code> in <code translate="No">HLS</code> playlists. Versions 4 and later use a floating point number.</aside>
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1343,7 +1343,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>Note:</strong> Captions can not currently be added to <code translate="No">HLS</code> outputs when transmuxing.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1388,7 +1388,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>Note</strong>: only functions on an output of type playlist, with a format of highwinds.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "output": [
     {
@@ -1434,7 +1434,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Requires <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> set to 4 or higher.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1472,7 +1472,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Enabled by default if <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> is set 4 or greater.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1507,7 +1507,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>This option requires that <a href="#generate_keyframe_manifest">generate_keyframe_manifest</a> is true, or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> is 4 or greater.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1545,7 +1545,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <aside class="bcls-aside bcls-aside--warning"><code translate="No">allow_skipped_sources</code> is <strong>not</strong> compatible with SMIL output. SMIL will <strong>not</strong> recognize skipped sources.</aside>
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

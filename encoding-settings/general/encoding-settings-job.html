@@ -25,7 +25,7 @@ grandparent: Encoding Settings
     <p>The API key for your Zencoder account. You can find your API key at <a href="https://app.zencoder.com/api">https://app.zencoder.com/api</a>. You can also regenerate your API key on that page.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "api_key": "bcafecadfecabafedac"
   }</code></pre>
@@ -43,7 +43,7 @@ grandparent: Encoding Settings
     <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The <code translate="No">dynamic_profile_options</code> settings define the way renditions should be created. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details. You must also set <a href="#generate_dynamic_profile">generate_dynamic_profile</a> equal to <code translate="No">true</code> to use this feature.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "generate_dynamic_profile": true,
     <span class="bcls-highlight">"dynamic_profile_options": {
@@ -79,7 +79,7 @@ grandparent: Encoding Settings
     <p>With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. To specify limits on the number of outputs to be generated as well as other profile constraints, CAE job request must also include <a href="#dynamic_profile_options">dynamic_profile_options</a> object. The outputs reserved for CAE use should not include <code translate="No">resolution</code>, <code translate="No">bitrate</code>, or codec-related parameters. Instead, they should include labels <code translate="No">dynamic_profile_rendition</code>. The number of outputs reserved for CAE use must match the number specified as <a href="/encoding-settings/general/cae-settings.html#max_renditions"><code translate="No">max_renditions</code></a> in <a href="#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a>.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     <span class="bcls-highlight">"generate_dynamic_profile": true,</span>
     "dynamic_profile_options": {
@@ -162,7 +162,7 @@ grandparent: Encoding Settings
     <p>This is a similar situation to you running an FTP server to make your files available and Zencoder using an FTP client for file transfer.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "http://example.com/path/to/input.avi"
   }</code></pre>
 
@@ -198,7 +198,7 @@ grandparent: Encoding Settings
     <p>If you don't specify an output location, the file will be temporarily hosted by Zencoder. After 24 hours the file will no longer be available.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -233,7 +233,7 @@ grandparent: Encoding Settings
     <p>A more specific region can be used to target a specific AWS region: us-virginia, us-oregon, us-n-california, eu-dublin, asia-singapore, asia-tokyo, sa-saopaulo, and australia-sydney.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "region": "us-virginia"
   }</code></pre>
@@ -255,7 +255,7 @@ grandparent: Encoding Settings
     <p>Enable test mode for a job ("Integration Mode"). In Integration Mode, all encoded files will be shortened to 5 seconds, and you will not be charged for the job.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "test": true
   }</code></pre>
@@ -277,7 +277,7 @@ grandparent: Encoding Settings
     <p>Privacy mode will enforce certain API parameters to protect your content from unauthorized views and obfuscate any potentially sensitive information. Zencoder employees will not view private files for any reason.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "private": true
   }</code></pre>
@@ -299,7 +299,7 @@ grandparent: Encoding Settings
     <p>You can specify the number of connections to use to download an <a href="#input"><code translate="No">input</code></a> file. This may speed up download transfer times, depending on the bandwidth at your remote server. Be aware that more connections can place a heavier load on the server. If you have trouble with download timeouts, or want to prevent Zencoder from using too much bandwidth when retrieving a file, set this to 1.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "download_connections": 3
   }</code></pre>
@@ -321,7 +321,7 @@ grandparent: Encoding Settings
     <p>Optional information to store alongside this job.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "pass_through": "my-custom-pass-through-value"
   }</code></pre>
@@ -343,7 +343,7 @@ grandparent: Encoding Settings
     <p>Mocks a job request, returning the normal response without actually creating a job. Job and output IDs will be null.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "mock": true
   }</code></pre>
@@ -367,7 +367,7 @@ grandparent: Encoding Settings
     <p>Report groupings can be used to track minute usage for each of your projects, clients, or departments.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "grouping": "my-custom-pass-through-value"
   }</code></pre>
@@ -395,7 +395,7 @@ grandparent: Encoding Settings
     <p>Note: The High option in Aspera is not supported in Zencoder. By default we will use as much bandwidth as possible, but will not prioritize access to bandwidth for one job over all others on an encoding server.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "aspera_transfer_policy": "fair"
   }</code></pre>
@@ -421,7 +421,7 @@ grandparent: Encoding Settings
     <p>This must be less than <a href="#input-transfer-maximum-rate"><code translate="No">transfer_maximum_rate</code></a>.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "transfer_minimum_rate": 2500
   }</code></pre>
@@ -449,7 +449,7 @@ grandparent: Encoding Settings
     <p>This must be greater than <a href="#input-transfer-minimum-rate"><code translate="No">transfer_minimum_rate</code></a>.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "transfer_maximum_rate": 25000
   }</code></pre>
@@ -469,7 +469,7 @@ grandparent: Encoding Settings
     <p>The expected MD5 checksum of the input file. If the file's checksum does not match the provided checksum the job will fail.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "expected_md5_checksum": "d5ed34b6b49f57a4a5f4be72fc0a2cd4"
   }</code></pre>
@@ -491,7 +491,7 @@ grandparent: Encoding Settings
     <p>This can be used for FTP, SFTP, FTPS, S3, GCS or CF.</p>
 
     <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "ftp://ftp.example.com/file.mp4",
     "credentials": "ftp_dev_server"
   }</code></pre>

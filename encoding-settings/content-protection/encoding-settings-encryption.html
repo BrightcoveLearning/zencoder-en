@@ -37,7 +37,7 @@ grandparent: Encoding Settings
     <p>Set the encryption method to use for encrypting.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -66,7 +66,7 @@ grandparent: Encoding Settings
     <p>Set a single encryption key to use rather than having Zencoder generate one. Passing an encryption key is not compatible with key rotation. Zencoder will generate and return the encryption keys if using key rotation.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -97,7 +97,7 @@ grandparent: Encoding Settings
     <p>This will be included as the URL to the key file in HLS manifests and no encryption key files will be included with the output. If the encryption_key is not also specified, Zencoder will attempt to download this file and use it to encrypt the output.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -126,7 +126,7 @@ grandparent: Encoding Settings
     <p>When Zencoder is generating encryption keys, use a different key for each set of segments, rotating to a new key after this many segments.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -155,7 +155,7 @@ grandparent: Encoding Settings
     <p>When an encryption_key_url is not specified, prepend this to the encryption key filenames before including them in the manifest. Otherwise the keys are assumed to be accessible from the same path as the manifest file. If a question mark is used in the string the prefix it will be used as-is, otherwise a slash will be added to the end of the prefix (unless it already ends with a slash).</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -184,7 +184,7 @@ grandparent: Encoding Settings
     <p>Set an initialization vector to use when encrypting, as a 16-octet hexadecimal string. On segmented outputs if this is not specified, the segments will be encrypted with incrementing IV values, starting at zero (consistent with HLS specifications).</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -213,7 +213,7 @@ grandparent: Encoding Settings
     <p>Sets a password to use for generating an initialization vector. Not supported for segmented outputs. Non-segmented outputs require either encryption_iv or encryption_password.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

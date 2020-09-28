@@ -34,7 +34,7 @@ grandparent: Encoding Settings
     <ul><li>avci_50 is AVC 10-bit intra-frame only compression. 50 Mbit/s, High 10 Intra Profile, Level 3.2, 4. See SMTP RP 2027:2007.</li>
       <li>avci_100 is AVC 10-bit intra-frame only compression. 100 Mbit/s, High 4:2:2 Intra Profile, Level 4.1. See SMTP RP 2027:2007.</li>
     </ul><pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -67,7 +67,7 @@ grandparent: Encoding Settings
       <li>ts_cablelabs produces CableLabs compliant MPEG-TS streams.</li>
       <li>as11_hd is AVC-Intra 100 video, 4 or 16 channels of PCM audio in an MXF-OP1A container.</li>
     </ul><pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -95,7 +95,7 @@ grandparent: Encoding Settings
     <p>The maximum rate in kbps that the transport stream can be muxed. Used with the ts format only.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -128,7 +128,7 @@ grandparent: Encoding Settings
     <p>Override the packet id of the Program Map Table. Only for use with broadcast ts.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -161,7 +161,7 @@ grandparent: Encoding Settings
     <p>Override the packet id of video data. Only for use with broadcast ts.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -196,7 +196,7 @@ grandparent: Encoding Settings
       <p>Override the packet id of audio data. Only for use with broadcast ts.</p>
 
       <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -229,7 +229,7 @@ grandparent: Encoding Settings
       <p>Override the packet id of the Program Clock Reference. Only for use with broadcast ts.</p>
 
       <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -266,7 +266,7 @@ grandparent: Encoding Settings
       <p>This is required for fully compliant broadcast streams but may create significantly larger files. Only for use with broadcast ts.</p>
 
       <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -305,7 +305,7 @@ grandparent: Encoding Settings
       <p>Cannot be used with <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#video_bitrate"><code translate="No">video_bitrate</code></a>.</p>
 
       <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

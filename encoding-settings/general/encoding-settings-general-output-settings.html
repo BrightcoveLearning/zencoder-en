@@ -38,7 +38,7 @@ grandparent: Encoding Settings
 	A <code translate="No">transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
 	A <code translate="No">transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -66,7 +66,7 @@ grandparent: Encoding Settings
 <p class="language-editable">An optional label for the output. As of API v2, labels must be unique (case insensitive) per job when used on multiple outputs.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -90,7 +90,7 @@ grandparent: Encoding Settings
 <p class="language-editable">The <code translate="No">dynamic_profile_rendition</code> setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When <code translate="No">dynamic_profile_rendition</code> is set, there is no need to specify encoding settings such as <code translate="No">resolution</code>, <code translate="No">bitrate</code>, etc. (See the <a href="/encoding-settings/general/cae-settings.html">CAE Guide</a> for the full list of settings that are automatically set by CAE.)</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "generate_dynamic_profile": true,
   "dynamic_profile_options":{ "max_renditions": 6 },
@@ -176,7 +176,7 @@ grandparent: Encoding Settings
 <p class="language-editable">You can reference your Akamai NetStorage Keyname and Key as <strong>External Server</strong> <a href="#credentials">credentials</a> by setting the <strong>External Server User</strong> field to the Akamai NetStorage Keyname and the <strong>External Server Password</strong> to the Akamai NetStorage Key.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -266,7 +266,7 @@ grandparent: Encoding Settings
 <p class="language-editable">We officially support HTTP upload to S3, GCS, Cloud Files, and Akamai.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -298,7 +298,7 @@ grandparent: Encoding Settings
 <p class="language-editable">To create keys containing special characters that are not valid in URLs (? or #), you must URL encode them (%3F and %23, respectively). All other characters must not be URL encoded.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -326,7 +326,7 @@ grandparent: Encoding Settings
 <p class="language-editable">The filename of a packaged output. If the extension matches a valid <a class="notranslate" href="#package-format">package_format</a>, this will set the default value for package_format as well. When specified, this value is used in combination with <a class="notranslate" href="#base-url">base_url</a> to generate an output URL, rather than <a class="notranslate" href="#filename">filename</a>. If <a class="notranslate" href="#filename">filename</a> is not specified, it will default to the same as <code translate="No">package_filename</code>, but with the correct file extension for the media type.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -358,7 +358,7 @@ grandparent: Encoding Settings
 <p class="language-editable"><strong>Note:</strong> When thumbnails are included in the package file, the paths within the package will be returned through the API as their URL, rather than a full URL.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -397,7 +397,7 @@ grandparent: Encoding Settings
 	<li class="language-editable"><code translate="No">v2/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
 	<li class="language-editable"><code translate="No">v2/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
 </ul><pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -429,7 +429,7 @@ grandparent: Encoding Settings
 <p class="language-editable">If you enable "<code translate="No">strict</code>" mode, we will not correct encoding settings like these. Instead, we will fail the job, because we cannot meet your target spec.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -457,7 +457,7 @@ grandparent: Encoding Settings
 <p class="language-editable">Passing <code translate="No">skip_video</code> will strip or remove the video track from the input and the resulting file will only contain audio.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -485,7 +485,7 @@ grandparent: Encoding Settings
 <p class="language-editable">Passing <code translate="No">skip_audio</code> will strip or remove the audio track from the input and the resulting file will only contain video.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -511,7 +511,7 @@ grandparent: Encoding Settings
 <p class="language-editable">Using source in conjunction with a <a class="notranslate" href="#type">type</a> of "transfer-only" allows transferring a single output video to a second <a class="notranslate" href="#url">url</a>. Useful for sending a single video to multiple destinations.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "output": [
     {
@@ -547,7 +547,7 @@ grandparent: Encoding Settings
 <p class="language-editable"><strong>Note:</strong> The most "precise" credentials specified take precedence. For instance, credentials passed in the URL will take precedence over the credentials parameter, just as the credentials parameter takes precedence over default credentials.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -574,7 +574,7 @@ grandparent: Encoding Settings
 <p class="language-editable">Generates an MD5 checksum for the generated output file.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -605,7 +605,7 @@ grandparent: Encoding Settings
 <p class="language-editable">This may speed up transfer times, depending on the bandwidth at your remote server. Be aware that more connections can place a heavier load on the server. If you have trouble with upload timeouts, or want to prevent Zencoder from using too much bandwidth when uploading files, set this to 1.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -644,7 +644,7 @@ grandparent: Encoding Settings
 </ul></aside><p class="language-editable">Headers will be ignored when an output location is not specified.</p>
 
 <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

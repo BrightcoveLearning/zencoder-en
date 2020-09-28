@@ -32,7 +32,7 @@ grandparent: Encoding Settings
     <p>Frame rates above 60 are not allowed for resolutions greater than HD (i.e. 1920x1080).</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -68,7 +68,7 @@ grandparent: Encoding Settings
     <p>Second, setting frame rate to a fixed number may actually increase the frame rate of the output video beyond the frame rate of the input, which would result in an unneeded increase in file size (or decrease in quality).</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -102,7 +102,7 @@ grandparent: Encoding Settings
     <p>The output video will have a frame_rate that is equal to the input frame rate divided by the decimate value. So if the input is 24 fps, and you set decimate to 4, the output would be 6 fps (24 / 4).</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -142,7 +142,7 @@ grandparent: Encoding Settings
     <p>keyframe_interval takes precedence over <a href="#keyframe-rate">keyframe_rate</a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -178,7 +178,7 @@ grandparent: Encoding Settings
     <p><a href="#keyframe-interval"><code translate="No">keyframe_interval</code></a> takes precedence over keyframe_rate.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -212,7 +212,7 @@ grandparent: Encoding Settings
     <p>This option only applies when using the <code translate="No">H.264</code>, <code translate="No">HEVC</code> or VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code translate="No">video_codec</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -244,7 +244,7 @@ grandparent: Encoding Settings
     <p>This option only applies when using the <code translate="No">H.264</code> or <code translate="No">HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code translate="No">video_codec</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -278,7 +278,7 @@ grandparent: Encoding Settings
     <p>This option only applies when using the <code translate="No">H.264</code> or <code translate="No">HEVC</code> <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec"><code translate="No">video_codec</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -314,7 +314,7 @@ grandparent: Encoding Settings
     <p>The default index filename 'frame_index.tab' can be overridden with <a href="#frame-index-filename"><code translate="No">frame_index_filename</code></a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -345,7 +345,7 @@ grandparent: Encoding Settings
     <p>This option requires that <a href="#generate-frame-index"><code translate="No">generate_frame_index</code></a> is true.</p>
 
     <pre class="line-numbers">
-<code class="language-json notranslate">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

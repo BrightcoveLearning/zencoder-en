@@ -35,7 +35,7 @@ grandparent: Encoding Settings
   <p>The FLV video <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code translate="No">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -71,7 +71,7 @@ grandparent: Encoding Settings
   <p>The FLV video <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a> only supports sample rates of 11025, 22050, and 44100. By default, we will only use these for FLV video, and will move other sample rates to the nearest rate compatible with FLV. Enable <code translate="No">strict_mode</code> if you want incompatible sample rates to result in a failing job instead of auto-correcting to a valid sample_rate.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -103,7 +103,7 @@ grandparent: Encoding Settings
   <p>Note that mono AAC audio sometimes erroneously self-reports as stereo when inspected. We recommend using iTunes to get the true number of channels for AAC audio. Note that 5.1 channel audio output is also supported. For that, you would use and <code translate="No"><a href="#output_audio_channels">output_audio_channels</a></code> instead.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -133,7 +133,7 @@ grandparent: Encoding Settings
   <p>The number of bits in each sample: 16, 24, 32.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -163,7 +163,7 @@ grandparent: Encoding Settings
   <p>Note: Currently supported for MP4, MKV, and WEBM format outputs, as well as DASH streaming delivery outputs.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -196,7 +196,7 @@ grandparent: Encoding Settings
   <p>Valid audio channel identifiers: "FL", "FR", "FC", "LFE", "BL", "BR", "DL", "DR".</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
@@ -242,7 +242,7 @@ grandparent: Encoding Settings
   <p><strong>Note:</strong> this option takes precedence over <a href="#audio_channels">audio_channels</a>.</p>
   
   <pre class="line-numbers">
-  <code class="language-json notranslate">{
+  <code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
