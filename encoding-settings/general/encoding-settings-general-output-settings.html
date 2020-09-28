@@ -8,12 +8,12 @@ grandparent: Encoding Settings
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
 
-<section class="bcls-section"><h2 class="notranslate" id="type">type</h2>
+<section class="bcls-section"><h2 translate="No" id="type">type</h2>
 <code translate="No">type:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> standard</p>
 
@@ -35,8 +35,8 @@ grandparent: Encoding Settings
 	Supported output formats for captions type outputs: '<code translate="No">mp4</code>', '<code translate="No">scc</code>', '<code translate="No">webvtt</code>', '<code translate="No">vtt</code>', '<code translate="No">m3u8</code>', '<code translate="No">dfxp</code>'.</li>
 	<li class="language-editable"><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
 	<li class="language-editable"><code translate="No">transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
-	A <code translate="No">transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
-	A <code translate="No">transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
+	A <code translate="No">transfer-only</code> output skips encoding and sends the original video to a <a translate="No" href="#url">url</a>.<br />
+	A <code translate="No">transfer-only</code> output can also use <a translate="No" href="#source">source</a> to transfer the video from another output to the specified <a translate="No" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
 <code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
@@ -47,13 +47,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a> and <a class="notranslate" href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="label">label</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#source">source</a> and <a translate="No" href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="label">label</h2>
 <code translate="No">label:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A string</p>
 
@@ -75,13 +75,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="dynamic_profile_rendition">dynamic_profile_rendition</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="dynamic_profile_rendition">dynamic_profile_rendition</h2>
 <code translate="No">dynamic_profile_rendition:Integer</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -104,13 +104,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="url">url</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="url">url</h2>
 <code translate="No">url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure, or HTTP address.</p>
 
@@ -118,16 +118,16 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Example:</strong></p>
 
-<ul><li class="notranslate">s3://my-output-bucket/final.mp4</li>
-	<li class="notranslate">cf://username:api_key@container/object</li>
-	<li class="notranslate">cf+uk://username:api_key@container/object</li>
-	<li class="notranslate">gcs://access_key:secret_key@gcs-bucket/object</li>
-	<li class="notranslate">ftp://user:password@ftp.example.com/final.mp4</li>
-	<li class="notranslate">sftp://user:password@sftp.example.com/final.mp4</li>
-	<li class="notranslate">aspera://user:password@host:ssh-port/path/to/file.mp4</li>
+<ul><li translate="No">s3://my-output-bucket/final.mp4</li>
+	<li translate="No">cf://username:api_key@container/object</li>
+	<li translate="No">cf+uk://username:api_key@container/object</li>
+	<li translate="No">gcs://access_key:secret_key@gcs-bucket/object</li>
+	<li translate="No">ftp://user:password@ftp.example.com/final.mp4</li>
+	<li translate="No">sftp://user:password@sftp.example.com/final.mp4</li>
+	<li translate="No">aspera://user:password@host:ssh-port/path/to/file.mp4</li>
 </ul><p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">A full URL, including a filename, to which the output file will be uploaded. Please see <a class="notranslate" href="#base-url">base_url</a> for more information about providers.</p>
+<p class="language-editable">A full URL, including a filename, to which the output file will be uploaded. Please see <a translate="No" href="#base-url">base_url</a> for more information about providers.</p>
 
 <p class="language-editable">We officially support HTTP upload to S3, GCS, Cloud Files, and Akamai.</p>
 
@@ -185,13 +185,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#secondary-url">secondary_url</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="secondary_url">secondary_url</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#secondary-url">secondary_url</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="secondary_url">secondary_url</h2>
 <code translate="No">secondary_url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure, or HTTP URL.</p>
 
@@ -203,15 +203,15 @@ grandparent: Encoding Settings
 
 <h4>For VOD Jobs</h4>
 
-<p class="language-editable">A full URL, including a filename, to which the output file will be uploaded if transfer to <a class="notranslate" href="#url">url</a> fails.</p>
+<p class="language-editable">A full URL, including a filename, to which the output file will be uploaded if transfer to <a translate="No" href="#url">url</a> fails.</p>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#url">url</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="base_url">base_url</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#url">url</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="base_url">base_url</h2>
 <code translate="No">base_url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid S3, Cloud Files, GCS, Aspera, FTP, FTPS, or SFTP URL, without a filename.</p>
 
@@ -219,12 +219,12 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Example:</strong></p>
 
-<ul><li class="notranslate">s3://my-output-bucket/</li>
-	<li class="notranslate">cf://username:api_key@container/</li>
-	<li class="notranslate">gcs://access_key:secret_key@gcs-bucket/</li>
-	<li class="notranslate">ftp://user:password@ftp.example.com/path/to</li>
-	<li class="notranslate">http://s3.amazonaws.com/my-output-bucket/</li>
-	<li class="notranslate">aspera://user:password@host:ssh-port/path/to/</li>
+<ul><li translate="No">s3://my-output-bucket/</li>
+	<li translate="No">cf://username:api_key@container/</li>
+	<li translate="No">gcs://access_key:secret_key@gcs-bucket/</li>
+	<li translate="No">ftp://user:password@ftp.example.com/path/to</li>
+	<li translate="No">http://s3.amazonaws.com/my-output-bucket/</li>
+	<li translate="No">aspera://user:password@host:ssh-port/path/to/</li>
 </ul><p class="language-editable"><strong>Description:</strong></p>
 
 <p class="language-editable">A base S3, Cloud Files, GCS, FTP, FTPS, or SFTP directory URL where the transcoded file will be uploaded, without a filename. If <a href="#filename">filename</a> is not specified, a random filename plus an appropriate extension will be generated.</p>
@@ -275,13 +275,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#filename">filename</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="filename">filename</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#filename">filename</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="filename">filename</h2>
 <code translate="No">filename:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid video or audio filename.</p>
 
@@ -307,13 +307,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#base-url">base_url</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="package_filename">package_filename</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#base-url">base_url</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="package_filename">package_filename</h2>
 <code translate="No">package_filename:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> A valid package filename.</p>
 
@@ -323,7 +323,7 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">The filename of a packaged output. If the extension matches a valid <a class="notranslate" href="#package-format">package_format</a>, this will set the default value for package_format as well. When specified, this value is used in combination with <a class="notranslate" href="#base-url">base_url</a> to generate an output URL, rather than <a class="notranslate" href="#filename">filename</a>. If <a class="notranslate" href="#filename">filename</a> is not specified, it will default to the same as <code translate="No">package_filename</code>, but with the correct file extension for the media type.</p>
+<p class="language-editable">The filename of a packaged output. If the extension matches a valid <a translate="No" href="#package-format">package_format</a>, this will set the default value for package_format as well. When specified, this value is used in combination with <a translate="No" href="#base-url">base_url</a> to generate an output URL, rather than <a translate="No" href="#filename">filename</a>. If <a translate="No" href="#filename">filename</a> is not specified, it will default to the same as <code translate="No">package_filename</code>, but with the correct file extension for the media type.</p>
 
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -335,13 +335,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#base-url">base_url</a> and <a href="#filename">filename</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="package_format">package_format</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#base-url">base_url</a> and <a href="#filename">filename</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="package_format">package_format</h2>
 <code translate="No">package_format:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Valid Values:</strong> <code translate="No">zip</code> and <code translate="No">tar</code></p>
 
@@ -351,9 +351,9 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">Creates a <code translate="No">zip</code> or <code translate="No">tar</code> file containing all the media files of an output, and uploads this single package rather than all the individual files. Thumbnails without a separate <a class="notranslate" href="#base-url">base_url</a> will be included in sub-directories inside the package file as well.</p>
+<p class="language-editable">Creates a <code translate="No">zip</code> or <code translate="No">tar</code> file containing all the media files of an output, and uploads this single package rather than all the individual files. Thumbnails without a separate <a translate="No" href="#base-url">base_url</a> will be included in sub-directories inside the package file as well.</p>
 
-<p class="language-editable">If <a class="notranslate" href="#package_filename">package_filename</a> not specified, the package filename will be generated based on <a href="#filename">filename</a> (but with the package format as an extension). See <a class="notranslate" href="#package_filename">package_filename</a> for details on URL handling.</p>
+<p class="language-editable">If <a translate="No" href="#package_filename">package_filename</a> not specified, the package filename will be generated based on <a href="#filename">filename</a> (but with the package format as an extension). See <a translate="No" href="#package_filename">package_filename</a> for details on URL handling.</p>
 
 <p class="language-editable"><strong>Note:</strong> When thumbnails are included in the package file, the paths within the package will be returned through the API as their URL, rather than a full URL.</p>
 
@@ -367,8 +367,8 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#package_filename">package_filename</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="device_profile">device_profile</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#package_filename">package_filename</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="device_profile">device_profile</h2>
 <code translate="No">device_profile:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
@@ -406,13 +406,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="strict">strict</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="strict">strict</h2>
 <code translate="No">strict:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
@@ -437,12 +437,12 @@ grandparent: Encoding Settings
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 class="notranslate" id="skip_video">skip_video</h2>
+</section><section class="bcls-section"><h2 translate="No" id="skip_video">skip_video</h2>
 <code translate="No">skip_video:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
@@ -465,12 +465,12 @@ grandparent: Encoding Settings
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 class="notranslate" id="skip_audio">skip_audio</h2>
+</section><section class="bcls-section"><h2 translate="No" id="skip_audio">skip_audio</h2>
 <code translate="No">skip_audio:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
@@ -493,12 +493,12 @@ grandparent: Encoding Settings
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 class="notranslate" id="source">source</h2>
+</section><section class="bcls-section"><h2 translate="No" id="source">source</h2>
 <code translate="No">source:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -508,7 +508,7 @@ grandparent: Encoding Settings
 
 <p class="language-editable">References a label on another output and uses the video created by that output for processing instead of the input file.</p>
 
-<p class="language-editable">Using source in conjunction with a <a class="notranslate" href="#type">type</a> of "transfer-only" allows transferring a single output video to a second <a class="notranslate" href="#url">url</a>. Useful for sending a single video to multiple destinations.</p>
+<p class="language-editable">Using source in conjunction with a <a translate="No" href="#type">type</a> of "transfer-only" allows transferring a single output video to a second <a translate="No" href="#url">url</a>. Useful for sending a single video to multiple destinations.</p>
 
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -526,13 +526,13 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a href="#label">label</a> and <a class="notranslate" href="#type">type</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="credentials">credentials</h2>
+<p class="language-editable"><strong>See Also:</strong> <a href="#label">label</a> and <a translate="No" href="#type">type</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="credentials">credentials</h2>
 <code translate="No">credentials:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+<p class="language-editable"><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -540,7 +540,7 @@ grandparent: Encoding Settings
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">References the nickname of <a class="notranslate" href="https://app.zencoder.com/account/credentials">saved credentials</a> to use for transfer.</p>
+<p class="language-editable">References the nickname of <a translate="No" href="https://app.zencoder.com/account/credentials">saved credentials</a> to use for transfer.</p>
 
 <p class="language-editable">Credentials can only be used with URLs that match their type; for example, S3 credentials paired with an FTP URL will be rejected.</p>
 
@@ -557,8 +557,8 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-<p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#url">url</a> and <a class="notranslate" href="#base-url">base_url</a></p>
-</section><section class="bcls-section"><h2 class="notranslate" id="generate_md5_checksum">generate_md5_checksum</h2>
+<p class="language-editable"><strong>See Also:</strong> <a translate="No" href="#url">url</a> and <a translate="No" href="#base-url">base_url</a></p>
+</section><section class="bcls-section"><h2 translate="No" id="generate_md5_checksum">generate_md5_checksum</h2>
 <code translate="No">generate_md5_checksum:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
@@ -582,7 +582,7 @@ grandparent: Encoding Settings
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 class="notranslate" id="parallel_upload_limit">parallel_upload_limit</h2>
+</section><section class="bcls-section"><h2 translate="No" id="parallel_upload_limit">parallel_upload_limit</h2>
 <code translate="No">parallel_upload_limit:Integer</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
@@ -621,7 +621,7 @@ grandparent: Encoding Settings
     }
   ]
 }</code></pre>
-</section><section class="bcls-section"><h2 class="notranslate" id="headers">headers</h2>
+</section><section class="bcls-section"><h2 translate="No" id="headers">headers</h2>
 <code translate="No">headers:Hash</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
