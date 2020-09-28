@@ -646,7 +646,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>This topic contains details for encoding settings related to general output settings (applying to all outputs).</summary>
 
 <section class="bcls-section"><h2 class="notranslate" id="type">type</h2>
-<code>type:String</code>
+<code translate="No">type:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -654,26 +654,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Default:</strong> standard</p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>standard</code>, <code>segmented</code>, <code>captions</code>, <code>playlist</code>, and <code>transfer-only</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">standard</code>, <code translate="No">segmented</code>, <code translate="No">captions</code>, <code translate="No">playlist</code>, and <code translate="No">transfer-only</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>segmented</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">segmented</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code>segmented</code> and <code>playlist</code>.</p>
+<p class="language-editable">By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code translate="No">segmented</code> and <code translate="No">playlist</code>.</p>
 
-<ul><li class="language-editable"><code>segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
-	<li class="language-editable"><code>captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
+<ul><li class="language-editable"><code translate="No">segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
+	<li class="language-editable"><code translate="No">captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	The captions output type creates a file containing just the captions from the source video, rather than a video with captions added to it. <em>Note: captions type outputs may not be the only outputs for a job.</em><br />
 	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
 	Supported formats for extracting captions from the source video are MP4 and TS. In an MP4 file, the captions may be located in a separate track (in CEA-608 format); otherwise captions in an MP4 or TS file must be embedded in an MPEG2 or AVC video stream, compliant to A/53 or SCTE-128 (CC1 and CC3) standards.<br />
-	Supported output formats for captions type outputs: '<code>mp4</code>', '<code>scc</code>', '<code>webvtt</code>', '<code>vtt</code>', '<code>m3u8</code>', '<code>dfxp</code>'.</li>
+	Supported output formats for captions type outputs: '<code translate="No">mp4</code>', '<code translate="No">scc</code>', '<code translate="No">webvtt</code>', '<code translate="No">vtt</code>', '<code translate="No">m3u8</code>', '<code translate="No">dfxp</code>'.</li>
 	<li class="language-editable"><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
-	<li class="language-editable"><code>transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
-	A <code>transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
-	A <code>transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
+	<li class="language-editable"><code translate="No">transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
+	A <code translate="No">transfer-only</code> output skips encoding and sends the original video to a <a class="notranslate" href="#url">url</a>.<br />
+	A <code translate="No">transfer-only</code> output can also use <a class="notranslate" href="#source">source</a> to transfer the video from another output to the specified <a class="notranslate" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
@@ -686,7 +686,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a> and <a class="notranslate" href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="label">label</h2>
-<code>label:String</code>
+<code translate="No">label:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -696,7 +696,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>iphone4</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">iphone4</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
@@ -714,7 +714,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="dynamic_profile_rendition">dynamic_profile_rendition</h2>
-<code>dynamic_profile_rendition:Integer</code>
+<code translate="No">dynamic_profile_rendition:Integer</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
@@ -724,7 +724,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">The <code>dynamic_profile_rendition</code> setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When <code>dynamic_profile_rendition</code> is set, there is no need to specify encoding settings such as <code>resolution</code>, <code>bitrate</code>, etc. (See the <a href="/encoding-settings/general/cae-settings.html">CAE Guide</a> for the full list of settings that are automatically set by CAE.)</p>
+<p class="language-editable">The <code translate="No">dynamic_profile_rendition</code> setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When <code translate="No">dynamic_profile_rendition</code> is set, there is no need to specify encoding settings such as <code translate="No">resolution</code>, <code translate="No">bitrate</code>, etc. (See the <a href="/encoding-settings/general/cae-settings.html">CAE Guide</a> for the full list of settings that are automatically set by CAE.)</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -743,7 +743,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#source">source</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="url">url</h2>
-<code>url:String</code>
+<code translate="No">url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -770,15 +770,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code translate="No">http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
 <p class="language-editable">To create keys containing special characters that are not valid in URLs (? or #), you must URL encode them (%3F and %23, respectively). All other characters must not be URL encoded.</p>
 
-<p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code>s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code>s3+ap-southeast-1://my-bucket/file.mp4</code>.</p>
+<p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code translate="No">s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code translate="No">s3+ap-southeast-1://my-bucket/file.mp4</code>.</p>
 
 <p class="language-editable"><strong>Notes on Cloud Files:</strong></p>
 
-<p class="language-editable">You can specify the region to use (DFW, ORD, or UK) by adding it to the protocol, like <code>cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
+<p class="language-editable">You can specify the region to use (DFW, ORD, or UK) by adding it to the protocol, like <code translate="No">cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
 
 <p class="language-editable">Any special characters in the container name must be URL encoded.</p>
 
@@ -808,7 +808,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Notes on Akamai NetStorage via HTTPS:</strong></p>
 
-<p class="language-editable">Zencoder can upload content to Akamai NetStorage either via FTP or HTTPS. To upload content via HTTPS, construct an output url like <code>https://[Host]-nsu.akamaihd.net/[CPCode]/[path]/[file.ext]</code>.</p>
+<p class="language-editable">Zencoder can upload content to Akamai NetStorage either via FTP or HTTPS. To upload content via HTTPS, construct an output url like <code translate="No">https://[Host]-nsu.akamaihd.net/[CPCode]/[path]/[file.ext]</code>.</p>
 
 <p class="language-editable">You can reference your Akamai NetStorage Keyname and Key as <strong>External Server</strong> <a href="#credentials">credentials</a> by setting the <strong>External Server User</strong> field to the Akamai NetStorage Keyname and the <strong>External Server Password</strong> to the Akamai NetStorage Key.</p>
 
@@ -824,7 +824,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#secondary-url">secondary_url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="secondary_url">secondary_url</h2>
-<code>secondary_url:String</code>
+<code translate="No">secondary_url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
@@ -844,7 +844,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#url">url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="base_url">base_url</h2>
-<code>base_url:String</code>
+<code translate="No">base_url:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -868,13 +868,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
-<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code>http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
+<p class="language-editable">You must <a href="/general-information/using-zencoder-s3.html">grant <strong>write</strong> permissions to Zencoder on the output bucket</a> before submitting a job to Zencoder. Please note that it is the S3 bucket, and not the S3 "path" which needs write permission. For example, an asset at <code translate="No">http://s3.amazonaws.com/my_files/0000/video.mp4</code> needs write access added to "my_files" (the bucket name), not "my_files/0000" (the path).</p>
 
-<p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code>s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code>s3+ap-southeast-1://my-bucket/</code>.</p>
+<p class="language-editable">You may provide the region of the S3 bucket by setting the URL's protocol to <code translate="No">s3+region-name</code>, where "region-name" is defined by <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">this document</a>. For example, to access a file from a bucket in the Asia Pacific (Singapore) region, set the URL to <code translate="No">s3+ap-southeast-1://my-bucket/</code>.</p>
 
 <p class="language-editable"><strong>Notes on Cloud Files:</strong></p>
 
-<p class="language-editable">You can specify the region to use (DFW, ORD, or UK) by adding it to the protocol, like <code>cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
+<p class="language-editable">You can specify the region to use (DFW, ORD, or UK) by adding it to the protocol, like <code translate="No">cf+ord://username:api_key@container/object</code>. Currently the only Cloud Files regions supported are DFW, ORD and UK. The DFW region will be used by default.</p>
 
 <p class="language-editable">Any special characters in the container name must be URL encoded.</p>
 
@@ -914,7 +914,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#filename">filename</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="filename">filename</h2>
-<code>filename:String</code>
+<code translate="No">filename:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -928,7 +928,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">The <code>filename</code> of a finished file. If you supply a <code>filename</code> but not a <code>base_url</code>, we will store the file with this filename in a S3 bucket temporarily for you to download.</p>
+<p class="language-editable">The <code translate="No">filename</code> of a finished file. If you supply a <code translate="No">filename</code> but not a <code translate="No">base_url</code>, we will store the file with this filename in a S3 bucket temporarily for you to download.</p>
 
 <p class="language-editable"><strong>Notes on S3:</strong></p>
 
@@ -946,7 +946,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#base-url">base_url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="package_filename">package_filename</h2>
-<code>package_filename:String</code>
+<code translate="No">package_filename:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -960,7 +960,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">The filename of a packaged output. If the extension matches a valid <a class="notranslate" href="#package-format">package_format</a>, this will set the default value for package_format as well. When specified, this value is used in combination with <a class="notranslate" href="#base-url">base_url</a> to generate an output URL, rather than <a class="notranslate" href="#filename">filename</a>. If <a class="notranslate" href="#filename">filename</a> is not specified, it will default to the same as <code>package_filename</code>, but with the correct file extension for the media type.</p>
+<p class="language-editable">The filename of a packaged output. If the extension matches a valid <a class="notranslate" href="#package-format">package_format</a>, this will set the default value for package_format as well. When specified, this value is used in combination with <a class="notranslate" href="#base-url">base_url</a> to generate an output URL, rather than <a class="notranslate" href="#filename">filename</a>. If <a class="notranslate" href="#filename">filename</a> is not specified, it will default to the same as <code translate="No">package_filename</code>, but with the correct file extension for the media type.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -974,21 +974,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#base-url">base_url</a> and <a href="#filename">filename</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="package_format">package_format</h2>
-<code>package_format:String</code>
+<code translate="No">package_format:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
 <p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>zip</code> and <code>tar</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">zip</code> and <code translate="No">tar</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>zip</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">zip</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">Creates a <code>zip</code> or <code>tar</code> file containing all the media files of an output, and uploads this single package rather than all the individual files. Thumbnails without a separate <a class="notranslate" href="#base-url">base_url</a> will be included in sub-directories inside the package file as well.</p>
+<p class="language-editable">Creates a <code translate="No">zip</code> or <code translate="No">tar</code> file containing all the media files of an output, and uploads this single package rather than all the individual files. Thumbnails without a separate <a class="notranslate" href="#base-url">base_url</a> will be included in sub-directories inside the package file as well.</p>
 
 <p class="language-editable">If <a class="notranslate" href="#package_filename">package_filename</a> not specified, the package filename will be generated based on <a href="#filename">filename</a> (but with the package format as an extension). See <a class="notranslate" href="#package_filename">package_filename</a> for details on URL handling.</p>
 
@@ -1006,33 +1006,33 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#package_filename">package_filename</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="device_profile">device_profile</h2>
-<code>device_profile:String</code>
+<code translate="No">device_profile:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>mobile/advanced</code>, <code>mobile/baseline</code>, <code>mobile/legacy</code>, <code>v1/mobile/advanced</code>, <code>v1/mobile/baseline</code>, <code>v1/mobile/legacy</code>, <code>v2/mobile/advanced</code>, <code>v2/mobile/baseline</code>, and <code>v2/mobile/legacy</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">mobile/advanced</code>, <code translate="No">mobile/baseline</code>, <code translate="No">mobile/legacy</code>, <code translate="No">v1/mobile/advanced</code>, <code translate="No">v1/mobile/baseline</code>, <code translate="No">v1/mobile/legacy</code>, <code translate="No">v2/mobile/advanced</code>, <code translate="No">v2/mobile/baseline</code>, and <code translate="No">v2/mobile/legacy</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>mobile/advanced</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">mobile/advanced</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
 <p class="language-editable">Zencoder's device profiles are shortcuts to a set of options that target the playback capability of a particular device or set of devices. Setting a device profile will do nothing more than change the default values used in the API call. That means you can completely override individual settings of a profile to suit your particular needs very easily.</p>
 
-<p class="language-editable">Versioned device profiles are available and listed below. Specifying a version (<code>v1/mobile/baseline</code>) will ensure that you'll always get the same profile, while non-version specific profiles (<code>mobile/baseline</code>) may be changed over time as better options become available.</p>
+<p class="language-editable">Versioned device profiles are available and listed below. Specifying a version (<code translate="No">v1/mobile/baseline</code>) will ensure that you'll always get the same profile, while non-version specific profiles (<code translate="No">mobile/baseline</code>) may be changed over time as better options become available.</p>
 
 <p class="language-editable">Profiles and their default values:</p>
 
-<ul><li class="language-editable"><code>mobile/advanced</code>: <code>{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li class="language-editable"><code>mobile/baseline</code>: <code>{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
-	<li class="language-editable"><code>mobile/legacy</code>: <code>{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
-	<li class="language-editable"><code>v1/mobile/advanced</code>: <code>{"size": "1280x720", "audio_bitrate": 128, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li class="language-editable"><code>v1/mobile/baseline</code>: <code>{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500}</code></li>
-	<li class="language-editable"><code>v1/mobile/legacy</code>: <code>{"size": "320x240", "audio_bitrate": 24, "max_audio_sample_rate": 16000, "max_frame_rate": 15, "max_video_bitrate": 192, "video_bitrate": 192, "bitrate_cap": 192, "upscale": true, "aspect_mode": "pad", "format": "3gp", "video_codec": "mpeg4"}</code></li>
-	<li class="language-editable"><strong>v2/mobile/advanced</strong>: <code>{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li class="language-editable"><code>v2/mobile/baseline</code>: <code>{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
-	<li class="language-editable"><code>v2/mobile/legacy</code>: <code>{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
+<ul><li class="language-editable"><code translate="No">mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li class="language-editable"><code translate="No">mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
+	<li class="language-editable"><code translate="No">mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
+	<li class="language-editable"><code translate="No">v1/mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 128, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li class="language-editable"><code translate="No">v1/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500}</code></li>
+	<li class="language-editable"><code translate="No">v1/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 24, "max_audio_sample_rate": 16000, "max_frame_rate": 15, "max_video_bitrate": 192, "video_bitrate": 192, "bitrate_cap": 192, "upscale": true, "aspect_mode": "pad", "format": "3gp", "video_codec": "mpeg4"}</code></li>
+	<li class="language-editable"><strong>v2/mobile/advanced</strong>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li class="language-editable"><code translate="No">v2/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
+	<li class="language-editable"><code translate="No">v2/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
 </ul><pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
@@ -1045,25 +1045,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">format</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="strict">strict</h2>
-<code>strict:Boolean</code>
+<code translate="No">strict:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
 <p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p class="language-editable"><strong>Default:</strong> <code>false</code></p>
+<p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>true</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">true</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">Enable "<code>strict</code>" mode. By default, we will try to correct encoding problems for you. This is called "<code>compatible</code>" mode. For example, if you set a video bitrate that is too low for our encoder, we will automatically correct and use the lowest possible bitrate. So if you ask for a bitrate of 150kbps, but the encoder can't do anything lower than 200kbps, we will automatically encode the video at 200kbps for you.</p>
+<p class="language-editable">Enable "<code translate="No">strict</code>" mode. By default, we will try to correct encoding problems for you. This is called "<code translate="No">compatible</code>" mode. For example, if you set a video bitrate that is too low for our encoder, we will automatically correct and use the lowest possible bitrate. So if you ask for a bitrate of 150kbps, but the encoder can't do anything lower than 200kbps, we will automatically encode the video at 200kbps for you.</p>
 
-<p class="language-editable">If you enable "<code>strict</code>" mode, we will not correct encoding settings like these. Instead, we will fail the job, because we cannot meet your target spec.</p>
+<p class="language-editable">If you enable "<code translate="No">strict</code>" mode, we will not correct encoding settings like these. Instead, we will fail the job, because we cannot meet your target spec.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -1075,15 +1075,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
 </section><section class="bcls-section"><h2 class="notranslate" id="skip_video">skip_video</h2>
-<code>skip_video:Boolean</code>
+<code translate="No">skip_video:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
 <p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p class="language-editable"><strong>Default:</strong> <code>false</code></p>
+<p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -1091,7 +1091,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">Passing <code>skip_video</code> will strip or remove the video track from the input and the resulting file will only contain audio.</p>
+<p class="language-editable">Passing <code translate="No">skip_video</code> will strip or remove the video track from the input and the resulting file will only contain audio.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -1103,15 +1103,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
 </section><section class="bcls-section"><h2 class="notranslate" id="skip_audio">skip_audio</h2>
-<code>skip_audio:Boolean</code>
+<code translate="No">skip_audio:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
 <p class="language-editable"><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-<p class="language-editable"><strong>Default:</strong> <code>false</code></p>
+<p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -1119,7 +1119,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Description:</strong></p>
 
-<p class="language-editable">Passing <code>skip_audio</code> will strip or remove the audio track from the input and the resulting file will only contain video.</p>
+<p class="language-editable">Passing <code translate="No">skip_audio</code> will strip or remove the audio track from the input and the resulting file will only contain video.</p>
 
 <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -1131,7 +1131,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
 </section><section class="bcls-section"><h2 class="notranslate" id="source">source</h2>
-<code>source:String</code>
+<code translate="No">source:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
@@ -1139,7 +1139,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>parent</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">parent</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
@@ -1165,7 +1165,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a href="#label">label</a> and <a class="notranslate" href="#type">type</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="credentials">credentials</h2>
-<code>credentials:String</code>
+<code translate="No">credentials:String</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
@@ -1173,7 +1173,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>s3_production</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">s3_production</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
@@ -1196,13 +1196,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>See Also:</strong> <a class="notranslate" href="#url">url</a> and <a class="notranslate" href="#base-url">base_url</a></p>
 </section><section class="bcls-section"><h2 class="notranslate" id="generate_md5_checksum">generate_md5_checksum</h2>
-<code>generate_md5_checksum:Boolean</code>
+<code translate="No">generate_md5_checksum:Boolean</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V2</p>
 
-<p class="language-editable"><strong>Default:</strong> <code>false</code></p>
+<p class="language-editable"><strong>Default:</strong> <code translate="No">false</code></p>
 
-<p class="language-editable"><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+<p class="language-editable"><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
@@ -1220,7 +1220,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
 </section><section class="bcls-section"><h2 class="notranslate" id="parallel_upload_limit">parallel_upload_limit</h2>
-<code>parallel_upload_limit:Integer</code>
+<code translate="No">parallel_upload_limit:Integer</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -1235,7 +1235,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p class="language-editable"><strong>Description:</strong></p>
 
 <p class="language-editable">The maximum number of simultaneous uploads made when uploading multipart outputs, primarily HLS segments.</p>
-<code>parallel_upload_limit</code> <strong>must be set for individual outputs, not the entire job.</strong>
+<code translate="No">parallel_upload_limit</code> <strong>must be set for individual outputs, not the entire job.</strong>
 
 <p class="language-editable"> </p>
 
@@ -1259,7 +1259,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
 </section><section class="bcls-section"><h2 class="notranslate" id="headers">headers</h2>
-<code>headers:Hash</code>
+<code translate="No">headers:Hash</code>
 
 <p class="language-editable"><strong>API Versions:</strong> V1, V2</p>
 
@@ -1267,16 +1267,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p class="language-editable"><strong>Compatible Job Types:</strong> All</p>
 
-<p class="language-editable"><strong>Example:</strong> <code>{ "Content-Type": "binary/octet-stream" }</code></p>
+<p class="language-editable"><strong>Example:</strong> <code translate="No">{ "Content-Type": "binary/octet-stream" }</code></p>
 
 <p class="language-editable"><strong>Description:</strong></p>
 
 <p class="language-editable">HTTP headers to send with your file when we upload it. This feature is currently supported when using S3, GCS and Cloud Files.</p>
 
-<p class="language-editable">Zencoder supports setting a limited subset of these headers: <code>Cache-Control</code>, <code>Content-Disposition</code>, <code>Content-Encoding</code>, <code>Content-Type</code>, <code>Expires</code>, <code>x-amz-acl</code>, <code>x-amz-storage-class</code>, <code>x-amz-server-side-encryption</code>, <code>x-amz-meta-*</code>, x-goog-acl and <code>x-goog-meta-*</code>.</p>
+<p class="language-editable">Zencoder supports setting a limited subset of these headers: <code translate="No">Cache-Control</code>, <code translate="No">Content-Disposition</code>, <code translate="No">Content-Encoding</code>, <code translate="No">Content-Type</code>, <code translate="No">Expires</code>, <code translate="No">x-amz-acl</code>, <code translate="No">x-amz-storage-class</code>, <code translate="No">x-amz-server-side-encryption</code>, <code translate="No">x-amz-meta-*</code>, x-goog-acl and <code translate="No">x-goog-meta-*</code>.</p>
 
 <aside class="bcls-aside bcls-aside--information">Notes:
-<ul><li class="language-editable">To use <a href="https://aws.amazon.com/blogs/aws/aws-storage-update-new-lower-cost-s3-storage-option-glacier-price-reduction/">S3's Standard_IA feature</a>, you will need to set the <code>x-amz-storage-class</code> header to the appropriate value. These values change and are controlled by AWS and Google, so you will need to get correct values from them.</li>
+<ul><li class="language-editable">To use <a href="https://aws.amazon.com/blogs/aws/aws-storage-update-new-lower-cost-s3-storage-option-glacier-price-reduction/">S3's Standard_IA feature</a>, you will need to set the <code translate="No">x-amz-storage-class</code> header to the appropriate value. These values change and are controlled by AWS and Google, so you will need to get correct values from them.</li>
 	<li class="language-editable">The "goog" headers are supported for GCS output URLs, but not for URLs on S3.</li>
 </ul></aside><p class="language-editable">Headers will be ignored when an output location is not specified.</p>
 

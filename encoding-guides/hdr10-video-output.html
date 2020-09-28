@@ -134,7 +134,7 @@ parent: Encoding Guides
   <section class="bcls-section">
     <h2 id="specifying_hdr_format_parameters">Specifying HDR format parameters</h2>
 
-    <p>In cases when input mezzanine contains all metadata associated with the HDR format, all such information can be propagated to the outputs by using the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code>preserve_hdr_metadata</code></a> parameter.</p>
+    <p>In cases when input mezzanine contains all metadata associated with the HDR format, all such information can be propagated to the outputs by using the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a> parameter.</p>
     <p>This method is illustrated by following example:</p>
     <pre class="line-numbers"><code class="language-json">{ 
   "input": "s3://mybucket/hdr_master.mp4", 
@@ -149,7 +149,7 @@ parent: Encoding Guides
 }</code></pre>
     <p>This method should work well with HEVC-encoded HDR10, PQ10, anf HLG10 mezzanines.</p>
     <p>In cases when input mezzanine does not describe HDR format exactly, or carries only partial information, an explicit specification of HDR format parameters should be used.</p>
-    <p>In such cases, Zencoder should receive the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a> parameter, describing the exact type of HDR format being used, along with several additional parameters that may be required to pass the associated metadata. Below table lists possible values of <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a> parameter and additional parameters that must be specified.</p>
+    <p>In such cases, Zencoder should receive the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> parameter, describing the exact type of HDR format being used, along with several additional parameters that may be required to pass the associated metadata. Below table lists possible values of <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> parameter and additional parameters that must be specified.</p>
     <table class="bcls-table">
       <caption class="bcls-caption--table">hdr_format Details</caption>
       <thead class="bcls-table__head">
@@ -158,44 +158,44 @@ parent: Encoding Guides
           <th colspan="4">Zencoder API parameters / values</th>
         </tr>
         <tr>
-        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code>hdr_format</code></a></td>
-        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code>master_display</code></a></td>
-        <td style="padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code>max_content_light_level</code></a>, <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code>max_frame_average_light_level</code></a></td>
-        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code>dolby_vision_rpu_url</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a></td>
+        <td style="padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code translate="No">max_content_light_level</code></a>, <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a></td>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td>HLG10</td>
-          <td><code>hlg</code></td>
+          <td><code translate="No">hlg</code></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>PQ10</td>
-          <td><code>pq</code></td>
+          <td><code translate="No">pq</code></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>HDR10</td>
-          <td><code>hdr10</code></td>
+          <td><code translate="No">hdr10</code></td>
           <td>required</td>
           <td>required</td>
           <td></td>
         </tr>
         <tr>
           <td>DolbyVision 8.1</td>
-          <td><code>dv8.1</code></td>
+          <td><code translate="No">dv8.1</code></td>
           <td>required</td>
           <td>required</td>
           <td>required</td>
         </tr>
         <tr>
           <td>DolbyVision 5</td>
-          <td><code>dv5</code></td>
+          <td><code translate="No">dv5</code></td>
           <td></td>
           <td></td>
           <td>required</td>
@@ -203,7 +203,7 @@ parent: Encoding Guides
       </tbody>
     </table>
 
-    <p>For example, encoding of an HDR10 video with <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code>master_display</code></a> and <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">content light level</a> metadata parameters communicated externally can be performed by using following command:</p>
+    <p>For example, encoding of an HDR10 video with <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a> and <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">content light level</a> metadata parameters communicated externally can be performed by using following command:</p>
 <pre class="line-numbers"><code class="language-json">{
   "input": "s3://mybucket/prores_hdr_master.mov",
   "outputs": [
@@ -226,7 +226,7 @@ parent: Encoding Guides
 }
 </code></pre>
     <p>This method is appropriate when working with post-production mezzanines, using codecs such as Apple ProRes 4444, Avid DNxHD, or JPEG 2000 (J2K) in OP1a MXF, etc.</p>
-    <p>Similarly, when transcoding DolbyVision content, the dynamic metadata (“RPU” file) associated with DolbyVision Content can be communicated externally by using <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code>dolby_vision_rpu_url</code></a> parameter:</p>
+    <p>Similarly, when transcoding DolbyVision content, the dynamic metadata (“RPU” file) associated with DolbyVision Content can be communicated externally by using <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a> parameter:</p>
 <pre class="line-numbers"><code class="language-json">{ 
   "input": "s3://mybucket/dv5_master.mp4", 
   "outputs": [ 
@@ -246,8 +246,8 @@ parent: Encoding Guides
     <p>
       When using <a href="/encoding-guides/cae-guide.html">Brightcove Context-Aware Encoding (CAE)</a> technology, all codec- and HDR format-related parameters can be specified either as
       <ul>
-        <li>parameters of outputs labeled as <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code>dynamic_profile_rendition</code></a>, or</li>
-        <li>parameters of the <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a> object</li>
+        <li>parameters of outputs labeled as <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a>, or</li>
+        <li>parameters of the <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a> object</li>
       </ul>
     </p>
     <p>The second method is more compact and preferred. An example illustrating the use of the second method is provided below:</p>

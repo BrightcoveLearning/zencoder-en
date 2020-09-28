@@ -653,75 +653,75 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="process">Process</h2>
 
-    <p>CAE is enabled on a Zencoder Job by setting <code><a href="/encoding-settings/general/encoding-settings-job.html#generate_dynamic_profile"><code>generate_dynamic_profile</code></a></code> to true and adding <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code>dynamic_profile_rendition</code></a> values to Outputs of the Job. In addition, you can add <a href="/encoding-settings/general/cae-settings.html"><code>dynamic_profile_options</code></a>, but this is not required. After downloading and inspecting the Input source file for the Job, Zencoder runs the CAE dynamic profile generator on the source file. The resulting dynamic profile ladder settings are added to each corresponding Output before they are encoded. The following settings are automatically set for Outputs with a dynamic_profile_rendition value:</p>
+    <p>CAE is enabled on a Zencoder Job by setting <code translate="No"><a href="/encoding-settings/general/encoding-settings-job.html#generate_dynamic_profile"><code translate="No">generate_dynamic_profile</code></a></code> to true and adding <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a> values to Outputs of the Job. In addition, you can add <a href="/encoding-settings/general/cae-settings.html"><code translate="No">dynamic_profile_options</code></a>, but this is not required. After downloading and inspecting the Input source file for the Job, Zencoder runs the CAE dynamic profile generator on the source file. The resulting dynamic profile ladder settings are added to each corresponding Output before they are encoded. The following settings are automatically set for Outputs with a dynamic_profile_rendition value:</p>
 
     <ul>
-      <li><code>width</code></li>
-      <li><code>height</code></li>
-      <li><code>frame_rate</code></li>
-      <li><code>video_codec</code></li>
-      <li><code>video_codec_profile</code></li>
-      <li><code>video_codec_tier</code></li>
-      <li><code>video_codec_level</code></li>
-      <li><code>video_reference_frames</code></li>
-      <li><code>video_bframes</code></li>
-      <li><code>video_bitrate</code></li>
-      <li><code>decoder_bitrate_cap</code></li>
-      <li><code>decoder_buffer_size</code></li>
-      <li><code>keyframe_rate</code></li>
-      <li><code>fixed_keyframe_interval</code></li>
+      <li><code translate="No">width</code></li>
+      <li><code translate="No">height</code></li>
+      <li><code translate="No">frame_rate</code></li>
+      <li><code translate="No">video_codec</code></li>
+      <li><code translate="No">video_codec_profile</code></li>
+      <li><code translate="No">video_codec_tier</code></li>
+      <li><code translate="No">video_codec_level</code></li>
+      <li><code translate="No">video_reference_frames</code></li>
+      <li><code translate="No">video_bframes</code></li>
+      <li><code translate="No">video_bitrate</code></li>
+      <li><code translate="No">decoder_bitrate_cap</code></li>
+      <li><code translate="No">decoder_buffer_size</code></li>
+      <li><code translate="No">keyframe_rate</code></li>
+      <li><code translate="No">fixed_keyframe_interval</code></li>
     </ul>
     <p><strong>Mixed codec outputs:</strong> you can output mixed HEVC/H.264 renditions for HEVC inputs. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details.</p>
-    <p>Other Outputs without a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"> <code>dynamic_profile_rendition</code></a> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
+    <p>Other Outputs without a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"> <code translate="No">dynamic_profile_rendition</code></a> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="guidelines_for_configuring_dynamic_profile_options">Guidelines for configuring <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code>dynamic_profile_options</code></a></h2>
+    <h2 id="guidelines_for_configuring_dynamic_profile_options">Guidelines for configuring <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_options</code></a></h2>
 
     <h3>Number of Renditions</h3>
 
-    <p>The minimum and maximum number of renditions to create is controlled with the <a href="/encoding-settings/general/cae-settings.html#min_renditions">min_renditions</a> and <a href="/encoding-settings/general/cae-settings.html#max_renditions">max_renditions</a> settings. For best performance, it is recommended to leave a certain gap between these limits (e.g. set <code>min_renditions</code> to 2 and <code>max_renditions</code> to 10), allowing CAE profile generator to select number most suitable for each content. For easy to encode content, it may produce fewer renditions, while for more complex content it may produce more. It is also recommended to set min_renditions to be as small as possible, to allow for saving bandwidth when more renditions are unnecessary.</p>
+    <p>The minimum and maximum number of renditions to create is controlled with the <a href="/encoding-settings/general/cae-settings.html#min_renditions">min_renditions</a> and <a href="/encoding-settings/general/cae-settings.html#max_renditions">max_renditions</a> settings. For best performance, it is recommended to leave a certain gap between these limits (e.g. set <code translate="No">min_renditions</code> to 2 and <code translate="No">max_renditions</code> to 10), allowing CAE profile generator to select number most suitable for each content. For easy to encode content, it may produce fewer renditions, while for more complex content it may produce more. It is also recommended to set min_renditions to be as small as possible, to allow for saving bandwidth when more renditions are unnecessary.</p>
 
     <h3>Resolutions</h3>
 
-    <p>By default, CAE uses a ladder of about 30 standard resolutions, ranging from <code>192x108</code> to <code>7680x4320</code>. It can be limited on either the low or high end by using the <a href="/encoding-settings/general/cae-settings.html#min_resolution">min_resolution</a> and <a href="/encoding-settings/general/cae-settings.html#max_resolution">max_resolution</a> settings. Alternately, a custom list of resolutions and associated codec settings can be provided in the <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code>video_configurations</code></a> setting.</p>
+    <p>By default, CAE uses a ladder of about 30 standard resolutions, ranging from <code translate="No">192x108</code> to <code translate="No">7680x4320</code>. It can be limited on either the low or high end by using the <a href="/encoding-settings/general/cae-settings.html#min_resolution">min_resolution</a> and <a href="/encoding-settings/general/cae-settings.html#max_resolution">max_resolution</a> settings. Alternately, a custom list of resolutions and associated codec settings can be provided in the <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a> setting.</p>
 
     <h3>GOP length</h3>
 
-    <p>The <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code>keyframe_rate</code></a> setting controls the maximum <code>GOP</code> length of the encoded content. Set this to correspond with <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code>segment_seconds</code></a> for HLS/DASH encoding. Otherwise a value of 0.5 is recommended, corresponding to a 2-second <code>GOP</code> length.</p>
+    <p>The <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a> setting controls the maximum <code translate="No">GOP</code> length of the encoded content. Set this to correspond with <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a> for HLS/DASH encoding. Otherwise a value of 0.5 is recommended, corresponding to a 2-second <code translate="No">GOP</code> length.</p>
 
     <h3>Bitrate coverage</h3>
 
-    <p>The limits of the bitrates to be used can controlled by the <a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code>min_bitrate</code></a> and <a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code>max_bitrate</code></a> settings. This will instruct CAE to allocate at least <a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code>min_bitrate</code></a> Kbps for the first rendition and constrain the last rendition to at most <a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code>max_bitrate</code></a> Kbps.</p>
+    <p>The limits of the bitrates to be used can controlled by the <a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code translate="No">min_bitrate</code></a> and <a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code translate="No">max_bitrate</code></a> settings. This will instruct CAE to allocate at least <a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code translate="No">min_bitrate</code></a> Kbps for the first rendition and constrain the last rendition to at most <a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code translate="No">max_bitrate</code></a> Kbps.</p>
 
-    <p>To ensure the rendition bitrates are spaced appropriately, use the <a href="/encoding-settings/general/cae-settings.html#min_granularity"><code>min_granularity</code></a> and <a href="/encoding-settings/general/cae-settings.html#max_granularity"><code>max_granularity</code></a> settings. For example, these can be used to make sure the step from one bitrate up to the next is not less than a 50% increase in bitrate or more than a 100% increase in bitrate. Please note that most streaming authoring guidelines recommend granularity doesn’t exceed 100%.</p>
+    <p>To ensure the rendition bitrates are spaced appropriately, use the <a href="/encoding-settings/general/cae-settings.html#min_granularity"><code translate="No">min_granularity</code></a> and <a href="/encoding-settings/general/cae-settings.html#max_granularity"><code translate="No">max_granularity</code></a> settings. For example, these can be used to make sure the step from one bitrate up to the next is not less than a 50% increase in bitrate or more than a 100% increase in bitrate. Please note that most streaming authoring guidelines recommend granularity doesn’t exceed 100%.</p>
 
     <h3>Startup latency, reliability at poor network conditions</h3>
 
-    <p>To ensure the bitrate ladder always starts with a low enough bitrate, use the <a href="/encoding-settings/general/cae-settings.html#max_first_rendition_bitrate"><code>max_first_rendition_bitrate</code></a> setting. The lower the first rendition bitrate is set, the less likely a video player will need to buffer due to low connection speeds. Additionally, if the streaming manifest indicates to load the lowest bitrate first, this will also directly affect startup latency.</p>
+    <p>To ensure the bitrate ladder always starts with a low enough bitrate, use the <a href="/encoding-settings/general/cae-settings.html#max_first_rendition_bitrate"><code translate="No">max_first_rendition_bitrate</code></a> setting. The lower the first rendition bitrate is set, the less likely a video player will need to buffer due to low connection speeds. Additionally, if the streaming manifest indicates to load the lowest bitrate first, this will also directly affect startup latency.</p>
 
     <h3>Support for legacy devices</h3>
 
-    <p>To support older devices that are only capable of <code><code>Baseline</code></code> profile H.264 playback, use the <a href="/encoding-settings/general/cae-settings.html#select_baseline_profile_configuration"><code>select_baseline_profile_configuration</code></a> setting. When this is set, at least one rendition will be encoded with <code>Baseline</code> profile. Additional constraints (codec profile, level, number of reference frames, b-frames, etc.) can be controlled with a custom <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code>video_configurations</code></a> setting.</p>
-    <p>Note that <code>select_baseline_profile_configuration</code> is <code>true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
+    <p>To support older devices that are only capable of <code translate="No"><code translate="No">Baseline</code></code> profile H.264 playback, use the <a href="/encoding-settings/general/cae-settings.html#select_baseline_profile_configuration"><code translate="No">select_baseline_profile_configuration</code></a> setting. When this is set, at least one rendition will be encoded with <code translate="No">Baseline</code> profile. Additional constraints (codec profile, level, number of reference frames, b-frames, etc.) can be controlled with a custom <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a> setting.</p>
+    <p>Note that <code translate="No">select_baseline_profile_configuration</code> is <code translate="No">true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
 
     <h3>VBR variability control</h3>
 
-    <p>The maximum peak bitrates can be controlled with the <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code>bitrate_cap_to_bitrate_ratio</code></a> and <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_offset">bitrate_cap_offset</a> settings. If a bitrate “<code>R</code>” is selected for a rendition, then the <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap">decoder_bitrate_cap</a> is calculated as:</p>
+    <p>The maximum peak bitrates can be controlled with the <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code translate="No">bitrate_cap_to_bitrate_ratio</code></a> and <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_offset">bitrate_cap_offset</a> settings. If a bitrate “<code translate="No">R</code>” is selected for a rendition, then the <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap">decoder_bitrate_cap</a> is calculated as:</p>
 
     <pre class="line-numbers">
-  <code class="language-javascript notranslate"><code>decoder_bitrate_cap = R * bitrate_cap_to_bitrate_ratio + bitrate_cap_offset</code></code></pre>
+  <code class="language-javascript notranslate"><code translate="No">decoder_bitrate_cap = R * bitrate_cap_to_bitrate_ratio + bitrate_cap_offset</code></code></pre>
 
-    <p>Similarly, the decoder buffer limits can be controlled with the <a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code>buffer_size_to_bitrate_ratio</code></a> and <a href="/encoding-settings/general/cae-settings.html#buffer_size_offset"><code>buffer_size_offset</code></a> settings. The <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"><code>decoder_buffer_size</code></a> is calculated as:</p>
+    <p>Similarly, the decoder buffer limits can be controlled with the <a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code translate="No">buffer_size_to_bitrate_ratio</code></a> and <a href="/encoding-settings/general/cae-settings.html#buffer_size_offset"><code translate="No">buffer_size_offset</code></a> settings. The <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"><code translate="No">decoder_buffer_size</code></a> is calculated as:</p>
 
     <pre class="line-numbers">
   <code class="language-javascript notranslate">decoder_buffer_size = R * buffer_size_to_bitrate_ratio + buffer_size_offset</code></pre>
 
-    <p>Note that peak bitrate and buffer limits may also be constrained by the codec profile and/or level settings. Some general device compatibility issues can be avoided by limiting <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code>bitrate_cap_to_bitrate_ratio</code></a> to 2.0 or below, and <a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code>buffer_size_to_bitrate_ratio</code></a> to <code>2.0 * GOP length</code> (in seconds).</p>
+    <p>Note that peak bitrate and buffer limits may also be constrained by the codec profile and/or level settings. Some general device compatibility issues can be avoided by limiting <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code translate="No">bitrate_cap_to_bitrate_ratio</code></a> to 2.0 or below, and <a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code translate="No">buffer_size_to_bitrate_ratio</code></a> to <code translate="No">2.0 * GOP length</code> (in seconds).</p>
   </section>
   <section class="bcls-section">
     <h2 id="CAE_and_Segmented_outputs">CAE and segmented outputs</h2>
 
-    <p>CAE is compatible with segmented outputs in Zencoder. On the <code>Output</code> rendition settings, set the <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code>type</code></a> as <code>segmented</code> and the appropriate <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code>segment_seconds</code></a> value. Also, <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code>keyframe_rate</code></a> and <a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code>fixed_keyframe_interval</code></a> settings must be set in <code>dynamic_profile_options</code>.</p>
+    <p>CAE is compatible with segmented outputs in Zencoder. On the <code translate="No">Output</code> rendition settings, set the <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a> as <code translate="No">segmented</code> and the appropriate <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a> value. Also, <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a> and <a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code translate="No">fixed_keyframe_interval</code></a> settings must be set in <code translate="No">dynamic_profile_options</code>.</p>
 
     <h3>CAE - HLS example</h3>
 

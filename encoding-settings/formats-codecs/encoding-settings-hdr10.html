@@ -15,7 +15,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="preserve_hdr_metadata">preserve_hdr_metadata</h2>
-    <code>master_display:Boolean</code>
+    <code translate="No">master_display:Boolean</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -41,7 +41,7 @@ grandparent: Encoding Settings
     } 
   ] 
 }</code></pre>
-    <p>This parameter may also be used in combination with other parameters, specifying HDR-related metadata directly. For example, below JSON job request shows how <a href="#preserve_hdr_metadata"><code>preserve_hdr_metadata</code></a> parameter may also be used for carrying over <a href="#master_display"><code>master display</code></a> and <a href="#max_content_light_level"><code>content light level</code></a> metadata from HEVC-encoded DolbyVision 8.1 streams, while DolbyVision dynamic metadata (<code>RPU</code> file) is communicated separately by using the dolby_vision_rpu_url parameter:</p>
+    <p>This parameter may also be used in combination with other parameters, specifying HDR-related metadata directly. For example, below JSON job request shows how <a href="#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a> parameter may also be used for carrying over <a href="#master_display"><code translate="No">master display</code></a> and <a href="#max_content_light_level"><code translate="No">content light level</code></a> metadata from HEVC-encoded DolbyVision 8.1 streams, while DolbyVision dynamic metadata (<code translate="No">RPU</code> file) is communicated separately by using the dolby_vision_rpu_url parameter:</p>
     <pre class="line-numbers"><code class="language-json">{ 
   "input": "s3://mybucket/dv81_master.mp4", 
   "outputs": [ 
@@ -66,13 +66,13 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="hdr_format">hdr_format</h2>
-    <code>hdr_format:String</code>
+    <code translate="No">hdr_format:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
-    <p><strong>Valid values:</strong> <code>hdr10</code>, <code>pq</code>, <code>hlg</code>, <code>dv5</code>, <code>dv8.1</code></p>
+    <p><strong>Valid values:</strong> <code translate="No">hdr10</code>, <code translate="No">pq</code>, <code translate="No">hlg</code>, <code translate="No">dv5</code>, <code translate="No">dv8.1</code></p>
 
     <p><strong>Default:</strong> none</p>
 
@@ -132,11 +132,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display">master_display</h2>
-    <code>master_display:Object</code>
+    <code translate="No">master_display:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Default:</strong> none</p>
 
@@ -183,23 +183,23 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="max_content_light_level">max_content_light_level</h2>
-    <code>max_content_light_level:Number</code>
+    <code translate="No">max_content_light_level:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0-10000</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0-10000</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>1000</code></p>
+    <p><strong>Example:</strong> <code translate="No">1000</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Describes maximum pixel (and red, green, and blue channel)-wise light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code>MaxCLL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
+    <p>Describes maximum pixel (and red, green, and blue channel)-wise light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code translate="No">MaxCLL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
 
     <p>The example below shows how <a href="#max_content_light_level">max_content_light_level</a>, and <a href="#max_frame_average_light_level">max_frame_average_light_level</a>  metadata can be specified:</p>
 
@@ -237,23 +237,23 @@ grandparent: Encoding Settings
 
   <section class="bcls-section">
     <h2 id="max_frame_average_light_level">max_frame_average_light_level</h2>
-    <code>max_frame_average_light_level:Number</code>
+    <code translate="No">max_frame_average_light_level:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">5.0-10000.0</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>180</code></p>
+    <p><strong>Example:</strong> <code translate="No">180</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Describes maximum frame-average (and maximum red-, green-, and blue- channel-wise) light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code>MaxFALL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
+    <p>Describes maximum frame-average (and maximum red-, green-, and blue- channel-wise) light level across video sequence. Expressed in candellas per meter squared. This value can be set 0, implying that such bound is unknown or not imposed. This parameter, also known as <code translate="No">MaxFALL</code> is defined by the <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a> standard.</p>
 
     <p>Both the <a href="#max_content_light_level">max_content_light_level</a> and <a href="#max_frame_average_light_level">max_frame_average_light_level</a> parameters are mandatory and must be included in the outputs when encoding videos in HDR-10 format.</p>
 
@@ -293,11 +293,11 @@ grandparent: Encoding Settings
 
   <section class="bcls-section">
     <h2 id="dolby_vision_rpu_url">dolby_vision_rpu_url</h2>
-    <code>dolby_vision_rpu_url:String</code>
+    <code translate="No">dolby_vision_rpu_url:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Default:</strong> none</p>
 
@@ -335,13 +335,13 @@ grandparent: Encoding Settings
 
   <section class="bcls-section">
     <h2 id="video_color_range">video_color_range</h2>
-    <code>video_color_range:String</code>
+    <code translate="No">video_color_range:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a>, <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
-    <p><strong>Valid values:</strong> <code>limited</code>, <code>full</code></p>
+    <p><strong>Valid values:</strong> <code translate="No">limited</code>, <code translate="No">full</code></p>
 
     <p><strong>Default:</strong> none</p>
 
@@ -349,9 +349,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Indicates the dynamic range of pixel values. For example, for 8-bit pixels, <code>limited</code> implies that Y (luma) pixel values will stay in the range from 16 to 235, while <code>full</code> implies that Y (luma) pixel values will be in range from 0 to 255.</p>
+    <p>Indicates the dynamic range of pixel values. For example, for 8-bit pixels, <code translate="No">limited</code> implies that Y (luma) pixel values will stay in the range from 16 to 235, while <code translate="No">full</code> implies that Y (luma) pixel values will be in range from 0 to 255.</p>
 
-    <p>The vast majority of content is currently produced and encoded using <code>limited</code> pixels. However <code>full</code>-range pixels may also be sometimes used. For example, 10-bit-wide full-range pixels are used in the DolbyVision 5 format.</p>
+    <p>The vast majority of content is currently produced and encoded using <code translate="No">limited</code> pixels. However <code translate="No">full</code>-range pixels may also be sometimes used. For example, 10-bit-wide full-range pixels are used in the DolbyVision 5 format.</p>
     <p> Usage example: </p>
 
 <pre class=" line-numbers"><code class="language-json">{ 
@@ -381,7 +381,7 @@ grandparent: Encoding Settings
 
   <section class="bcls-section">
     <h2 id="master_display_red">red</h2>
-    <code>red:Object</code>
+    <code translate="No">red:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -433,7 +433,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_red_x">x</h2>
-    <code>x:Number</code>
+    <code translate="No">x:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -441,11 +441,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.7400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.708</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.708</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -489,7 +489,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_red_y">y</h2>
-    <code>y:Number</code>
+    <code translate="No">y:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -497,11 +497,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.8400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.292</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.292</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -545,7 +545,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_green">green</h2>
-    <code>green:Object</code>
+    <code translate="No">green:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -597,7 +597,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_green_x">x</h2>
-    <code>x:Number</code>
+    <code translate="No">x:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -605,11 +605,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.7400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.17</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.17</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -653,7 +653,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_green_y">y</h2>
-    <code>y:Number</code>
+    <code translate="No">y:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -661,11 +661,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.8400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.797</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.797</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -709,7 +709,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_blue">blue</h2>
-    <code>blue:Object</code>
+    <code translate="No">blue:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -761,7 +761,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_blue_x">x</h2>
-    <code>x:Number</code>
+    <code translate="No">x:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -769,11 +769,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.7400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.131</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.131</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -817,7 +817,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_blue_y">y</h2>
-    <code>y:Number</code>
+    <code translate="No">y:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -825,11 +825,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.8400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.046</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.046</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -873,7 +873,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_white_point">white_point</h2>
-    <code>white_point:Object</code>
+    <code translate="No">white_point:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -925,7 +925,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_white_point_x">x</h2>
-    <code>x:Number</code>
+    <code translate="No">x:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -933,11 +933,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.7400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.7400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.31273</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.31273</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -981,7 +981,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_white_point_y">y</h2>
-    <code>y:Number</code>
+    <code translate="No">y:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -989,11 +989,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-0.8400</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-0.8400</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.329</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.329</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -1037,7 +1037,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_luminance">luminance</h2>
-    <code>luminance:Object</code>
+    <code translate="No">luminance:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -1089,7 +1089,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_luminance_min">min</h2>
-    <code>min:Number</code>
+    <code translate="No">min:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -1097,11 +1097,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>0.0001-5.0</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">0.0001-5.0</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>0.0001</code></p>
+    <p><strong>Example:</strong> <code translate="No">0.0001</code></p>
 
     <p><strong>Description:</strong></p>
 
@@ -1145,7 +1145,7 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="master_display_luminance_max">max</h2>
-    <code>max:Number</code>
+    <code translate="No">max:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -1153,11 +1153,11 @@ grandparent: Encoding Settings
 
     <p><strong>Default:</strong> none</p>
 
-    <p><strong>Valid Values:</strong> <code>5.0-10000.0</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">5.0-10000.0</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod</p>
 
-    <p><strong>Example:</strong> <code>1000</code></p>
+    <p><strong>Example:</strong> <code translate="No">1000</code></p>
 
     <p><strong>Description:</strong></p>
 

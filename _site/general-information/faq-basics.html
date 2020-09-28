@@ -704,7 +704,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         <p style="font-weight:bold">Do I need an integration library?</p>
 
-        <p>No. At the minimum, integrating with <span class="notranslate">Zencoder</span> is just sending a HTTP request with a JSON or XML body. You can do this from the <a href="/references/reference.html#api-Jobs-Create_a_Job">command line with curl</a>. Get a <code>201 Created</code> back, and you've just integrated with <span class="notranslate">Zencoder</span>.</p>
+        <p>No. At the minimum, integrating with <span class="notranslate">Zencoder</span> is just sending a HTTP request with a JSON or XML body. You can do this from the <a href="/references/reference.html#api-Jobs-Create_a_Job">command line with curl</a>. Get a <code translate="No">201 Created</code> back, and you've just integrated with <span class="notranslate">Zencoder</span>.</p>
 
         <p>Beyond that, you might want to receive output_notification via HTTP. Give us a URL, and we'll POST job status back to you. You just need a URL on your site set up to receive a HTTP POST with a JSON or XML body.</p>
 
@@ -769,9 +769,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
         <p>Each account is allowed 60 requests per minute, with the exception of job creation requests, which are limited to 1,000 requests per minute, and output progress requests, which are limited to 60 requests per minute per output.</p>
 
-        <p>Each HTTP response contains a header called " <code>X-<span class="notranslate">Zencoder</span>-Rate-Remaining</code>". This header lists the number of calls you can make to a given resource within the current time frame.</p>
+        <p>Each HTTP response contains a header called " <code translate="No">X-<span class="notranslate">Zencoder</span>-Rate-Remaining</code>". This header lists the number of calls you can make to a given resource within the current time frame.</p>
 
-        <p>If you exceed your quota, <span class="notranslate">Zencoder</span> will return a 403 error with a body of " <code>403 Forbidden (Rate Limit Exceeded)</code>". We'll also send back an additional header, " <code>Retry-After</code>", which contains the number of seconds until your quota is reset.</p>
+        <p>If you exceed your quota, <span class="notranslate">Zencoder</span> will return a 403 error with a body of " <code translate="No">403 Forbidden (Rate Limit Exceeded)</code>". We'll also send back an additional header, " <code translate="No">Retry-After</code>", which contains the number of seconds until your quota is reset.</p>
       </li>
       <li><a href="/general-information/faq-rate-limiting.html#why">Why are API requests rate limited?</a>
         <p>We limit API requests to a reasonable number in order to ensure that one customer's use of <span class="notranslate">Zencoder</span> does not adversely affect other customers. Without rate limiting, one customer could flood our system with requests in a way that would prevent another customer from being able to use the system. This happens periodically by accident when customers are first working with an API - a simple programming error could flood the API with requests that the customer doesn't mean to send.</p>

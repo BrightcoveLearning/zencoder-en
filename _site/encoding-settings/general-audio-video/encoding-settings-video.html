@@ -647,7 +647,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 class="notranslate" id="video_bit_depth">video_bit_depth</h2>
-    <code>video_bit_depth:Number</code>
+    <code translate="No">video_bit_depth:Number</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -679,7 +679,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 class="notranslate" id="video_reference_frames">video_reference_frames</h2>
-    <code>video_reference_frames:String</code>
+    <code translate="No">video_reference_frames:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -687,7 +687,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Default:</strong> 3</p>
 
-    <p><strong>Valid Values:</strong> 0-16, <code>auto</code></p>
+    <p><strong>Valid Values:</strong> 0-16, <code translate="No">auto</code></p>
 
     <p><strong>Compatible Job Types:</strong> vod, live</p>
 
@@ -717,13 +717,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 class="notranslate" id="video_codec_profile">video_codec_profile</h2>
-    <code>video_codec_profile:String</code>
+    <code translate="No">video_codec_profile:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> H.264: <code>baseline</code>, HEVC: <code>main</code>, VP9: 0</p>
+    <p><strong>Default:</strong> H.264: <code translate="No">baseline</code>, HEVC: <code translate="No">main</code>, VP9: 0</p>
 
     <p><strong>Valid Values:</strong> codec-dependent</p>
 
@@ -736,8 +736,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Sets the encoding profile used by the video codec.</p>
 
     <ul>
-      <li>H.264 profiles: <code>baseline</code>, <code>main</code>, <code>high</code>, <code>high10</code>, <code>high422</code>, <code>high444</code>.</li>
-      <li>HEVC profiles: <code>main</code>, <code>main10</code>, <code>main12</code>, <code>main422-10</code>, <code>main422-12</code>, <code>main444-8</code>, <code>main444-10</code>, <code>main444-12</code>.</li>
+      <li>H.264 profiles: <code translate="No">baseline</code>, <code translate="No">main</code>, <code translate="No">high</code>, <code translate="No">high10</code>, <code translate="No">high422</code>, <code translate="No">high444</code>.</li>
+      <li>HEVC profiles: <code translate="No">main</code>, <code translate="No">main10</code>, <code translate="No">main12</code>, <code translate="No">main422-10</code>, <code translate="No">main422-12</code>, <code translate="No">main444-8</code>, <code translate="No">main444-10</code>, <code translate="No">main444-12</code>.</li>
       <li>VP9 profiles: 0, 1, 2, 3.
 
       </li>
@@ -756,7 +756,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 class="notranslate" id="video_codec_level">video_codec_level</h2>
-    <code>video_codec_level:String</code>
+    <code translate="No">video_codec_level:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -788,7 +788,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 class="notranslate" id="video_bframes">video_bframes</h2>
-    <code>video_bframes:Integer</code>
+    <code translate="No">video_bframes:Integer</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
@@ -828,25 +828,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 class="notranslate" id="color_metadata">color_metadata</h2>
-    <code>color_metadata:String</code>
+    <code translate="No">color_metadata:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a class="notranslate" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> <code>preserve</code></p>
+    <p><strong>Default:</strong> <code translate="No">preserve</code></p>
 
-    <p><strong>Valid Values:</strong> <code>preserve</code> or <code>discard</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">preserve</code> or <code translate="No">discard</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> <code>discard</code></p>
+    <p><strong>Example:</strong> <code translate="No">discard</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>This option is currently supported on H.264, HEVC and VP9 outputs. If the input video has matrix coefficients, transfer characteristics, and color primaries metadata, Zencoder will <code>preserve</code> those settings by default.</p>
+    <p>This option is currently supported on H.264, HEVC and VP9 outputs. If the input video has matrix coefficients, transfer characteristics, and color primaries metadata, Zencoder will <code translate="No">preserve</code> those settings by default.</p>
 
-    <p>To ensure that this metadata is not embedded in outputs, set <code>color_metadata</code> to <code>discard</code>.</p>
+    <p>To ensure that this metadata is not embedded in outputs, set <code translate="No">color_metadata</code> to <code translate="No">discard</code>.</p>
 
     <pre class="line-numbers">
 <code class="language-json">{

@@ -661,7 +661,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <p><img alt="GCS Credentials" class="guides_screenshot" src="/assets/images/general-information/gcs-credentials.png" /></p>
   
-  <p>Under <strong>Add Credentials</strong>, select <strong>Google Cloud Storage</strong>. Then, populate the <code>Google Cloud Storage Access Key ID</code> and <code>Secret Access Key</code> parameters with your newly generated credentials. Be sure to click "Default credentials for transfers with gcs" -- this will ensure that any input or output URLs that specify the <code>gcs://</code> protocol will use these credentials.</p>
+  <p>Under <strong>Add Credentials</strong>, select <strong>Google Cloud Storage</strong>. Then, populate the <code translate="No">Google Cloud Storage Access Key ID</code> and <code translate="No">Secret Access Key</code> parameters with your newly generated credentials. Be sure to click "Default credentials for transfers with gcs" -- this will ensure that any input or output URLs that specify the <code translate="No">gcs://</code> protocol will use these credentials.</p>
   </section>
   
   <section id="Transcoding" class="bcls-section">
@@ -669,7 +669,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <!-- <p>Armed with a set of GCS credentials and some stored content to transcode, the next step is to start running jobs in GCE (Google Computing Engine). By setting the <a href="/node/17878#region">region</a> parameter, you can control which cloud region transcoding jobs will be run in on a job-by-job basis. The new region names for GCE are "us-central-gce" and "eu-west-gce".</p> -->
   
-  <p>The example below shows a working job which pulls an input video from GCS, creates renditions for HTTP Live Streaming, and sends the output streams to GCS. You can test this out by changing <code>my-bucket</code> to an existing GCS bucket that you own and pasting this into the <a href="https://app.zencoder.com/request_builder">Request Builder</a>.</p>
+  <p>The example below shows a working job which pulls an input video from GCS, creates renditions for HTTP Live Streaming, and sends the output streams to GCS. You can test this out by changing <code translate="No">my-bucket</code> to an existing GCS bucket that you own and pasting this into the <a href="https://app.zencoder.com/request_builder">Request Builder</a>.</p>
   
   <h3>Example HLS Job Using GCS</h3>
   

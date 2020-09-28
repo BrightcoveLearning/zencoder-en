@@ -26,17 +26,17 @@ grandparent: Encoding Settings
 
     <ul>
       <li>A job must have at least one standard or segmented output; creating jobs with only playlist outputs will not work.</li>
-      <li>Playlist outputs will ignore most output options, except for <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url">url</a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#base-url"><code>base_url</code></a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#filename"><code>filename</code></a>, <a href="#streams"><code>streams</code></a>, <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public"><code>public</code></a>, and <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code>type</code></a>.</li>
+      <li>Playlist outputs will ignore most output options, except for <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url">url</a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#base-url"><code translate="No">base_url</code></a>, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#filename"><code translate="No">filename</code></a>, <a href="#streams"><code translate="No">streams</code></a>, <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public"><code translate="No">public</code></a>, and <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a>.</li>
       <li>If a segmented output is uploaded to temporary storage, it will be uploaded as a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package-format">ZIP archive</a>.</li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="streaming_delivery_format" class="notranslate">streaming_delivery_format</h2>
-    <code>streaming_delivery_format:String</code>
+    <code translate="No">streaming_delivery_format:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> dash</p>
 
@@ -65,11 +65,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="streaming_delivery_profile" class="notranslate">streaming_delivery_profile</h2>
-    <code>streaming_delivery_profile:String</code>
+    <code translate="No">streaming_delivery_profile:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Default:</strong> live</p>
 
@@ -81,14 +81,14 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Sets the profile of the streaming delivery format, ensuring options are selected for compatibility with the profile. Valid options depend on the selected <a href="#streaming_delivery_format"><code>streaming_delivery_format</code></a>.</p>
+    <p>Sets the profile of the streaming delivery format, ensuring options are selected for compatibility with the profile. Valid options depend on the selected <a href="#streaming_delivery_format"><code translate="No">streaming_delivery_format</code></a>.</p>
 
-    <p>For <code>dash</code> outputs, the currently supported profiles are:</p>
+    <p>For <code translate="No">dash</code> outputs, the currently supported profiles are:</p>
 
     <ul>
-      <li>live - Will set the <code>DASH</code> profile to "urn:mpeg:dash:profile:isoff-live:2011" and use a single <code>SegmentTemplate</code> for each <code>AdaptationSet</code>. For DRM, it will use an 8-byte IV, and for <code>PlayReady</code> will use version 1.1, including a PSSH atom in the media.</li>
-      <li>hbbtv_1.5 - Will set the <code>DASH</code> profile to "urn:hbbtv:dash:profile:isoff-live:2012" and include required attributes for audio and video representations. For DRM, it will use a 16-byte IV, and for <code>PlayReady</code> will use version 1.0, excluding PSSH atoms.</li>
-      <li>on_demand - Will set the <code>DASH</code> profile to "urn:mpeg:dash:profile:isoff-on-demand:2011" and encode media as single fragmented files for each stream rather than segmenting them. Otherwise the same as live profile.</li>
+      <li>live - Will set the <code translate="No">DASH</code> profile to "urn:mpeg:dash:profile:isoff-live:2011" and use a single <code translate="No">SegmentTemplate</code> for each <code translate="No">AdaptationSet</code>. For DRM, it will use an 8-byte IV, and for <code translate="No">PlayReady</code> will use version 1.1, including a PSSH atom in the media.</li>
+      <li>hbbtv_1.5 - Will set the <code translate="No">DASH</code> profile to "urn:hbbtv:dash:profile:isoff-live:2012" and include required attributes for audio and video representations. For DRM, it will use a 16-byte IV, and for <code translate="No">PlayReady</code> will use version 1.0, excluding PSSH atoms.</li>
+      <li>on_demand - Will set the <code translate="No">DASH</code> profile to "urn:mpeg:dash:profile:isoff-on-demand:2011" and encode media as single fragmented files for each stream rather than segmenting them. Otherwise the same as live profile.</li>
     </ul>
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -102,17 +102,17 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#streaming_delivery_format"><code>streaming_delivery_format</code></a></p>
+    <p><strong>See Also:</strong> <a href="#streaming_delivery_format"><code translate="No">streaming_delivery_format</code></a></p>
   </section>
   <section class="bcls-section">
     <h2 id="playlist_format" class="notranslate">playlist_format</h2>
-    <code>playlist_format:String</code>
+    <code translate="No">playlist_format:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Valid Values:</strong> <code>dash</code>, <code>mpd</code>, <code>hls</code>, <code>m3u</code>, <code>m3u8</code>, <code>ism</code>, <code>mss</code>, <code>highwinds</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">dash</code>, <code translate="No">mpd</code>, <code translate="No">hls</code>, <code translate="No">m3u</code>, <code translate="No">m3u8</code>, <code translate="No">ism</code>, <code translate="No">mss</code>, <code translate="No">highwinds</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -135,15 +135,15 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="segment_seconds" class="notranslate">segment_seconds</h2>
-    <code>segment_seconds:Float</code>
+    <code translate="No">segment_seconds:Float</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Default:</strong> 10</p>
 
-    <p><strong>Valid Values:</strong> Numbers between 1.0 and 3600.0; values less than 2.0 are only allowed when <a href="#byte_range_segmenting"><code>byte_range_segmenting</code></a> is enabled. Because very short segments have been found to cause playback issues, the final segment may be longer than the specified value.</p>
+    <p><strong>Valid Values:</strong> Numbers between 1.0 and 3600.0; values less than 2.0 are only allowed when <a href="#byte_range_segmenting"><code translate="No">byte_range_segmenting</code></a> is enabled. Because very short segments have been found to cause playback issues, the final segment may be longer than the specified value.</p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -166,11 +166,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="alternate_audio" class="notranslate">alternate_audio</h2>
-    <code>alternate_audio:Hash</code>
+    <code translate="No">alternate_audio:Hash</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> Hash of alternate audio groups, each of which is an array of audio stream rendition hashes</p>
 
@@ -178,17 +178,17 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Provides a set of alternate audio streams for <code>HLS</code> playlists. <strong>Requires <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a> to be 4 or greater.</strong></p>
+    <p>Provides a set of alternate audio streams for <code translate="No">HLS</code> playlists. <strong>Requires <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> to be 4 or greater.</strong></p>
 
-    <p>This option will insert <code>EXT-X-MEDIA</code> tags into the playlist. If <code>name</code> is not set, then a name will be generated based on the given <code>language</code>.</p>
+    <p>This option will insert <code translate="No">EXT-X-MEDIA</code> tags into the playlist. If <code translate="No">name</code> is not set, then a name will be generated based on the given <code translate="No">language</code>.</p>
 
     <p><strong>Valid Options for Alternate Audio Renditions</strong></p>
 
     <ul>
-      <li><strong><code>language</code>:</strong> The ISO 639 code for the language of the audio track, like "en", "es", or "zh".</li>
-      <li><strong><code>name</code> (optional):</strong> The name of the alternate audio group. If name is not set, this will default to the language name.</li>
-      <li><strong><code>path</code> (optional):</strong> An optional path to the M3U8 playlist for this audio rendition. If the path is not set, this alternate audio stream describes the audio contained in the source stream.</li>
-      <li><strong><code>source</code> (optional):</strong> The label on a media output of the same job. This can be used to set the codec for renditions that use this audio stream.</li>
+      <li><strong><code translate="No">language</code>:</strong> The ISO 639 code for the language of the audio track, like "en", "es", or "zh".</li>
+      <li><strong><code translate="No">name</code> (optional):</strong> The name of the alternate audio group. If name is not set, this will default to the language name.</li>
+      <li><strong><code translate="No">path</code> (optional):</strong> An optional path to the M3U8 playlist for this audio rendition. If the path is not set, this alternate audio stream describes the audio contained in the source stream.</li>
+      <li><strong><code translate="No">source</code> (optional):</strong> The label on a media output of the same job. This can be used to set the codec for renditions that use this audio stream.</li>
     </ul>
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -222,11 +222,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="streams" class="notranslate">streams</h2>
-    <code>streams:Array</code>
+    <code translate="No">streams:Array</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> Array of hashes containing playlist stream info</p>
 
@@ -258,11 +258,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="path" class="notranslate">path</h2>
-    <code>path:String</code>
+    <code translate="No">path:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing an absolute or relative path to a manifest file</p>
 
@@ -272,7 +272,7 @@ grandparent: Encoding Settings
 
     <p>Specifies the path to a stream manifest file.</p>
 
-    <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code>HLS</code></a>, <a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a>, and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists.</em></p>
+    <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code translate="No">HLS</code></a>, <a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a>, and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists.</em></p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -296,11 +296,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="bandwidth" class="notranslate">bandwidth</h2>
-    <code>bandwidth:Integer</code>
+    <code translate="No">bandwidth:Integer</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> Positive integer values in Kbps</p>
 
@@ -312,7 +312,7 @@ grandparent: Encoding Settings
 
     <p>Specifies the bandwidth of a playlist stream. Overrides bandwidth determined from a <a href="#streaming_source">source</a>.</p>
 
-    <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code>HLS</code></a> and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists, unless a <a href="#streaming_source">source</a> is provided.</em></p>
+    <p><em>Note: Required for each stream for <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code translate="No">HLS</code></a> and <a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL</a> playlists, unless a <a href="#streaming_source">source</a> is provided.</em></p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -336,11 +336,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="resolution" class="notranslate">resolution</h2>
-    <code>resolution:String</code>
+    <code translate="No">resolution:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing width and height as: 800x600</p>
 
@@ -348,7 +348,7 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Specifies the resolution of a playlist stream. Overrides resolution determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code>source</code></a>.</p>
+    <p>Specifies the resolution of a playlist stream. Overrides resolution determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a>.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">
@@ -374,11 +374,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="codecs" class="notranslate">codecs</h2>
-    <code>codecs:String</code>
+    <code translate="No">codecs:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing codecs in HTML5 format, such as: mp4a.40.2</p>
 
@@ -386,7 +386,7 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Specifies the codecs used in a playlist stream. Overrides codecs determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code>source</code></a>.</p>
+    <p>Specifies the codecs used in a playlist stream. Overrides codecs determined from a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a>.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -412,11 +412,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="audio" class="notranslate">audio</h2>
-    <code>audio:String</code>
+    <code translate="No">audio:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing the name of the audio GROUP-ID to use. This value must have been defined as an <a href="#alternate_audio">alternate_audio</a> grouping. The <a href="#codecs">codecs</a> setting should reflect all codecs of the alternate audio group.</p>
 
@@ -462,11 +462,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="segment_image_url" class="notranslate">segment_image_url</h2>
-    <code>segment_image_url:String (URL)</code>
+    <code translate="No">segment_image_url:String (URL)</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -487,11 +487,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="segment_video_snapshots" class="notranslate">segment_video_snapshots</h2>
-    <code>segment_video_snapshots:Boolean</code>
+    <code translate="No">segment_video_snapshots:Boolean</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Default:</strong> false</p>
 
@@ -521,11 +521,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="source" class="notranslate">source</h2>
-    <code>source:String</code>
+    <code translate="No">source:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -533,9 +533,9 @@ grandparent: Encoding Settings
 
     <p>References a label on a media output of the same job, to fill in the corresponding data in the playlist.</p>
 
-    <p>For <code>HLS</code>, the <a href="#bandwidth">bandwidth</a>, <a href="#codecs">codecs</a>, and <a href="#resolution">resolution</a> values are inferred from the source by default. Any <a href="#bandwidth">bandwidth</a>, <a href="#codecs">codecs</a>, or <a href="#resolution">resolution</a> values specified for the same stream will override the inferred values.</p>
+    <p>For <code translate="No">HLS</code>, the <a href="#bandwidth">bandwidth</a>, <a href="#codecs">codecs</a>, and <a href="#resolution">resolution</a> values are inferred from the source by default. Any <a href="#bandwidth">bandwidth</a>, <a href="#codecs">codecs</a>, or <a href="#resolution">resolution</a> values specified for the same stream will override the inferred values.</p>
 
-    <aside class="bcls-aside bcls-aside--warning"><code>source</code> is <strong>not</strong> compatible with SMIL outputs.</aside>
+    <aside class="bcls-aside bcls-aside--warning"><code translate="No">source</code> is <strong>not</strong> compatible with SMIL outputs.</aside>
     <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
@@ -558,11 +558,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="max_hls_protocol_version" class="notranslate">max_hls_protocol_version</h2>
-    <code>max_hls_protocol_version:Integer</code>
+    <code translate="No">max_hls_protocol_version:Integer</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Default:</strong> 5 for sample AES encryption; otherwise, 2.</p>
 
@@ -574,9 +574,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Sets the maximum <code>HLS</code> protocol version to use. Special features will be used as available.</p>
+    <p>Sets the maximum <code translate="No">HLS</code> protocol version to use. Special features will be used as available.</p>
 
-    <p>This option should be greater or equal to <a href="#hls_protocol_version"><code>hls_protocol_version</code></a> when provided.</p>
+    <p>This option should be greater or equal to <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> when provided.</p>
 
     <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HTTP Live Streaming</a> outputs.</p>
 
@@ -613,21 +613,21 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#hls_protocol_version"><code>hls_protocol_version</code></a></p>
+    <p><strong>See Also:</strong> <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a></p>
   </section>
   <section class="bcls-section">
     <h2 id="hls_protocol_version" class="notranslate">hls_protocol_version</h2>
-    <code>hls_protocol_version:Integer</code>
+    <code translate="No">hls_protocol_version:Integer</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
-    <p><strong>Default:</strong> Automatic according to <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a> setting</p>
+    <p><strong>Default:</strong> Automatic according to <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> setting</p>
 
     <p><strong>Valid Values:</strong> 2-5</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note: <code>HLS</code> versions 6 and 7 are not fully supported; if you specify them for <code>hls_protocol_version</code> the only effect will be to remove deprecated features from the playlist.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">HLS</code> versions 6 and 7 are not fully supported; if you specify them for <code translate="No">hls_protocol_version</code> the only effect will be to remove deprecated features from the playlist.</aside>
     <p><strong>Compatible Job Types:</strong> All</p>
 
     <p><strong>Example:</strong> 3</p>
@@ -636,7 +636,7 @@ grandparent: Encoding Settings
 
     <p>Sets the HLS protocol version to use. Special features will be used as available.</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note: HLS versions 1-3 use an integer for <code>duration</code> in HLS playlists. Versions 4 and later use a floating point number.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: HLS versions 1-3 use an integer for <code translate="No">duration</code> in HLS playlists. Versions 4 and later use a floating point number.</aside>
     <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HTTP Live Streaming</a> outputs.</p>
 
     <pre class="line-numbers">
@@ -650,29 +650,29 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a></p>
+    <p><strong>See Also:</strong> <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a></p>
   </section>
   <section class="bcls-section">
     <h2 id="hls_optimized_ts" class="notranslate">hls_optimized_ts</h2>
-    <code>hls_optimized_ts:Boolean</code>
+    <code translate="No">hls_optimized_ts:Boolean</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a> / <a href="#streams">streams</a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
-    <p><strong>Default:</strong> <code>true</code></p>
+    <p><strong>Default:</strong> <code translate="No">true</code></p>
 
-    <p><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Optimizes TS segment files for <code>HTTP Live Streaming</code> on iOS devices.</p>
+    <p>Optimizes TS segment files for <code translate="No">HTTP Live Streaming</code> on iOS devices.</p>
 
-    <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code>HTTP Live Streaming</code></a> outputs.</p>
+    <p><strong>Note:</strong> Only applies to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html"><code translate="No">HTTP Live Streaming</code></a> outputs.</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note: <code>HLS</code> versions 1-3 use an integer for <code>duration</code> in <code>HLS</code> playlists. Versions 4 and later use a floating point number.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">HLS</code> versions 1-3 use an integer for <code translate="No">duration</code> in <code translate="No">HLS</code> playlists. Versions 4 and later use a floating point number.</aside>
     <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
@@ -686,25 +686,25 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="prepare_for_segmenting" class="notranslate">prepare_for_segmenting</h2>
-    <code>prepare_for_segmenting:String or Array</code>
+    <code translate="No">prepare_for_segmenting:String or Array</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Valid Values:</strong> <code>hls</code>, <code>mss</code>, <code>dash</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">hls</code>, <code translate="No">mss</code>, <code translate="No">dash</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> <code>hls,dash</code></p>
+    <p><strong>Example:</strong> <code translate="No">hls,dash</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>If you plan to transmux an output to <code>HLS</code>, MSS, and/or <code>DASH</code> after encoding it with captions to MP4, set this option to true to include captions and keyframe timing for segmenting. This allows the segmented versions to include HLS-compatible captions despite transmuxing, and provides for segmenting at consistent time intervals.</p>
+    <p>If you plan to transmux an output to <code translate="No">HLS</code>, MSS, and/or <code translate="No">DASH</code> after encoding it with captions to MP4, set this option to true to include captions and keyframe timing for segmenting. This allows the segmented versions to include HLS-compatible captions despite transmuxing, and provides for segmenting at consistent time intervals.</p>
 
     <p>Specify the type of segmented output(s) that this output will later be transmuxed to create, so that Zencoder can prepare the captions and keyframes as necessary.</p>
 
-    <p><strong>Note:</strong> Captions can not currently be added to <code>HLS</code> outputs when transmuxing.</p>
+    <p><strong>Note:</strong> Captions can not currently be added to <code translate="No">HLS</code> outputs when transmuxing.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -720,11 +720,11 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="smil-base-url" class="notranslate">smil-base-url</h2>
-    <code>smil_base_url:String</code>
+    <code translate="No">smil_base_url:String</code>
 
     <p><strong>API Versions:</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -777,15 +777,15 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="byte_range_segmenting" class="notranslate">byte_range_segmenting</h2>
-    <code>byte_range_segmenting:Boolean</code>
+    <code translate="No">byte_range_segmenting:Boolean</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Default:</strong> <code>false</code></p>
+    <p><strong>Default:</strong> <code translate="No">false</code></p>
 
-    <p><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -793,9 +793,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Configures <code>HLS</code> segmenting to produce a single output file rather than one file per segment.</p>
+    <p>Configures <code translate="No">HLS</code> segmenting to produce a single output file rather than one file per segment.</p>
 
-    <p>Requires <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code>hls_protocol_version</code></a> set to 4 or higher.</p>
+    <p>Requires <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> set to 4 or higher.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -809,31 +809,31 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a></p>
+    <p><strong>See Also:</strong> <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a></p>
   </section>
   <section class="bcls-section">
     <h2 id="generate_keyframe_manifest" class="notranslate">generate_keyframe_manifest</h2>
-    <code>generate_keyframe_manifest:Boolean</code>
+    <code translate="No">generate_keyframe_manifest:Boolean</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Default:</strong> <code>false</code></p>
+    <p><strong>Default:</strong> <code translate="No">false</code></p>
 
-    <p><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> <code>true</code></p>
+    <p><strong>Example:</strong> <code translate="No">true</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Generates an <code>HLS</code> keyframe (I-frame) manifest which is required for fast-forward and reverse playback.</p>
+    <p>Generates an <code translate="No">HLS</code> keyframe (I-frame) manifest which is required for fast-forward and reverse playback.</p>
 
-    <p>The default keyframe manifest filename is the same as the playlist filename, but with '-iframe-index' added (so for a 'master.m3u8' playlist, the keyframe manifest would be 'master-iframe-index.m3u8'). The keyframe manifest filename can be overridden with <a href="#keyframe_manifest_filename"><code>keyframe_manifest_filename</code></a>.</p>
+    <p>The default keyframe manifest filename is the same as the playlist filename, but with '-iframe-index' added (so for a 'master.m3u8' playlist, the keyframe manifest would be 'master-iframe-index.m3u8'). The keyframe manifest filename can be overridden with <a href="#keyframe_manifest_filename"><code translate="No">keyframe_manifest_filename</code></a>.</p>
 
-    <p>Enabled by default if <a href="#max_hls_protocol_version"><code>max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code>hls_protocol_version</code></a> is set 4 or greater.</p>
+    <p>Enabled by default if <a href="#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a> or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> is set 4 or greater.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -848,27 +848,27 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#keyframe_manifest_filename"><code>keyframe_manifest_filename</code></a></p>
+    <p><strong>See Also:</strong> <a href="#keyframe_manifest_filename"><code translate="No">keyframe_manifest_filename</code></a></p>
   </section>
   <section class="bcls-section">
     <h2 id="keyframe_manifest_filename" class="notranslate">keyframe_manifest_filename</h2>
-    <code>keyframe_manifest_filename:String</code>
+    <code translate="No">keyframe_manifest_filename:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Default:</strong> <code>iframe_index.m3u8</code></p>
+    <p><strong>Default:</strong> <code translate="No">iframe_index.m3u8</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> <code>my_iframe_index.m3u8</code></p>
+    <p><strong>Example:</strong> <code translate="No">my_iframe_index.m3u8</code></p>
 
     <p><strong>Description:</strong></p>
 
     <p>Unless specified, the filename used for the keyframe manifest is the same as the playlist filename, but with '-iframe-index' appended. For example, for the playlist 'master.m3u8', the keyframe manifest would be 'master-iframe-index.m3u8'.</p>
 
-    <p>This option requires that <a href="#generate_keyframe_manifest">generate_keyframe_manifest</a> is true, or <a href="#hls_protocol_version"><code>hls_protocol_version</code></a> is 4 or greater.</p>
+    <p>This option requires that <a href="#generate_keyframe_manifest">generate_keyframe_manifest</a> is true, or <a href="#hls_protocol_version"><code translate="No">hls_protocol_version</code></a> is 4 or greater.</p>
 
     <pre class="line-numbers">
 <code class="language-json notranslate">{
@@ -887,27 +887,27 @@ grandparent: Encoding Settings
   </section>
   <section class="bcls-section">
     <h2 id="allow_skipped_sources" class="notranslate">allow_skipped_sources</h2>
-    <code>allow_skipped_sources:Boolean</code>
+    <code translate="No">allow_skipped_sources:Boolean</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code>outputs</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Default:</strong> <code>false</code></p>
+    <p><strong>Default:</strong> <code translate="No">false</code></p>
 
-    <p><strong>Valid Values:</strong> <code>true</code> or <code>false</code></p>
+    <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> <code>true</code></p>
+    <p><strong>Example:</strong> <code translate="No">true</code></p>
 
     <p><strong>Description:</strong></p>
 
     <p>When generating the playlist, instead of failing the output if any of the referenced streams have been skipped (as part of the <a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">conditional outputs</a> functionality), just leave them out of the playlist.</p>
 
-    <p>To properly ignore skipped sources, the streams for the playlist must have a <a href="#streaming_source"><code>source</code></a> defined.</p>
+    <p>To properly ignore skipped sources, the streams for the playlist must have a <a href="#streaming_source"><code translate="No">source</code></a> defined.</p>
 
-    <aside class="bcls-aside bcls-aside--warning"><code>allow_skipped_sources</code> is <strong>not</strong> compatible with SMIL output. SMIL will <strong>not</strong> recognize skipped sources.</aside>
+    <aside class="bcls-aside bcls-aside--warning"><code translate="No">allow_skipped_sources</code> is <strong>not</strong> compatible with SMIL output. SMIL will <strong>not</strong> recognize skipped sources.</aside>
     <pre class="line-numbers">
 <code class="language-json notranslate">{
   "input": "s3://zencodertesting/test.mov",
@@ -929,6 +929,6 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code>source</code></a></p>
+    <p><strong>See Also:</strong> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a></p>
   </section>
 </article>

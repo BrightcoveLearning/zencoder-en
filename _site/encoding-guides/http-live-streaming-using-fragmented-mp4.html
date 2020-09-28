@@ -643,7 +643,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>HLS using fragmented MP4</h1>
 <article class="bcls-article">
-  <summary>Please refer to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a> for more details on ts outputs and playlists. To choose fragmented MP4 files with HLS outputs, use <code>"format": "m4f"</code> and <code>"streaming_delivery_format": "hls"</code>. We highly recommend setting <code>"byte_range_segmenting": true</code>, to format the media as a single fragmented MP4 file rather than having separate segment files.</summary>
+  <summary>Please refer to <a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a> for more details on ts outputs and playlists. To choose fragmented MP4 files with HLS outputs, use <code translate="No">"format": "m4f"</code> and <code translate="No">"streaming_delivery_format": "hls"</code>. We highly recommend setting <code translate="No">"byte_range_segmenting": true</code>, to format the media as a single fragmented MP4 file rather than having separate segment files.</summary>
 
   <section class="bcls-section">
     <pre class="line-numbers"><code class="language-json">{
@@ -698,7 +698,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Notes</h3>
     <ul>
       <li>It is recommended to do audio only and video only segmented outputs and use alternate audio while generating playlist.</li>
-      <li>In playlist output DO NOT mix <code>ts</code> and <code>m4f</code> outputs (Causes audio video sync issues).</li>
+      <li>In playlist output DO NOT mix <code translate="No">ts</code> and <code translate="No">m4f</code> outputs (Causes audio video sync issues).</li>
       <li>Captions with fragmented mp4 HLS outputs are not supported in zencoder yet.</li>
     </ul>
   </section>

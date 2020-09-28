@@ -654,23 +654,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="video_codecs" class="notranslate">video_codecs</h2>
-    <code>video_codecs:Array</code>
+    <code translate="No">video_codecs:Array</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
-    <p><strong>Valid Array Item Values:</strong> <code>h264</code>, <code>hevc</code></p>
+    <p><strong>Valid Array Item Values:</strong> <code translate="No">h264</code>, <code translate="No">hevc</code></p>
 
     <p><strong>Default Value:</strong> none</p>
 
     <p><strong>Compatible Job Types:</strong> VOD</p>
 
-    <p><strong>Example:</strong> <code>["h264", "hevc"]</code></p>
+    <p><strong>Example:</strong> <code translate="No">["h264", "hevc"]</code></p>
 
     <p><strong>Description:</strong></p>
 
-    <p>For mixed-codec outputs, an array of the codecs to create renditions for. Currently, the allowed item values are <code>h264</code> and <code>hevc</code>.</p>
+    <p>For mixed-codec outputs, an array of the codecs to create renditions for. Currently, the allowed item values are <code translate="No">h264</code> and <code translate="No">hevc</code>.</p>
 
   <pre class="line-numbers"><code class="language-json">{
     "dynamic_profile_options": {
@@ -691,11 +691,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="video_codec_options" class="notranslate">video_codec_options</h2>
-    <code>video_codecs:Object</code>
+    <code translate="No">video_codecs:Object</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Default Value:</strong> none</p>
 
@@ -715,16 +715,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Description:</strong></p>
 
-    <p>For mixed-codec outputs, an object specifying the options for each codec. Each property is an object with the name <code>h264</code> or <code>hevc</code>, its properties are the set the constraints for renditions for that codec. The allowed properties for these objects are:</p>
+    <p>For mixed-codec outputs, an object specifying the options for each codec. Each property is an object with the name <code translate="No">h264</code> or <code translate="No">hevc</code>, its properties are the set the constraints for renditions for that codec. The allowed properties for these objects are:</p>
 
     <ul>
-      <li><code>min_renditions</code> required</li>
-      <li><code>min_bitrate</code></li>
-      <li><code>max_bitrate</code></li>
-      <li><code>max_first_rendition_bitrate</code></li>
-      <li><code>min_resolution</code></li>
-      <li><code>max_resolution</code></li>
-      <li><code>max_first_rendition_resolution</code></li>
+      <li><code translate="No">min_renditions</code> required</li>
+      <li><code translate="No">min_bitrate</code></li>
+      <li><code translate="No">max_bitrate</code></li>
+      <li><code translate="No">max_first_rendition_bitrate</code></li>
+      <li><code translate="No">min_resolution</code></li>
+      <li><code translate="No">max_resolution</code></li>
+      <li><code translate="No">max_first_rendition_resolution</code></li>
     </ul>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: these settings are also used at the global level. When you are using settings both at the global and per-codec levels, the values must be compatible. For example, max_renditions set at the global level must be greater than or equal to the sum of min_rendition values set at the per-codec level.</aside>
 
@@ -747,11 +747,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="min_renditions" class="notranslate">min_renditions</h2>
-    <code>min_renditions:Integer</code>
+    <code translate="No">min_renditions:Integer</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
     <p><strong>Valid Values:</strong> 1-15</p>
 
@@ -777,11 +777,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <section class="bcls-section">
       <h2 id="max_renditions" class="notranslate">max_renditions</h2>
-      <code>max_renditions:Integer</code>
+      <code translate="No">max_renditions:Integer</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1-15</p>
 
@@ -807,11 +807,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="min_resolution" class="notranslate">min_resolution</h2>
-      <code>min_resolution:Object</code>
+      <code translate="No">min_resolution:Object</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 16x16 - 8192x8192</p>
 
@@ -841,11 +841,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="max_resolution" class="notranslate">max_resolution</h2>
-      <code>max_resolution:Object</code>
+      <code translate="No">max_resolution:Object</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 16x16 - 8192x8192</p>
 
@@ -879,11 +879,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="max_frame_rate" class="notranslate">max_frame_rate</h2>
-      <code>max_frame_rate:Number</code>
+      <code translate="No">max_frame_rate:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 0.1 - 120</p>
 
@@ -910,11 +910,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="keyframe_rate" class="notranslate">keyframe_rate</h2>
-      <code>keyframe_rate:Number</code>
+      <code translate="No">keyframe_rate:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 0.5, 1.0</p>
 
@@ -941,11 +941,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="fixed_frame_rate" class="notranslate">fixed_frame_rate</h2>
-      <code>fixed_frame_rate:Boolean</code>
+      <code translate="No">fixed_frame_rate:Boolean</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> true or false</p>
 
@@ -972,11 +972,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="min_bitrate" class="notranslate">min_bitrate</h2>
-      <code>min_bitrate:Number</code>
+      <code translate="No">min_bitrate:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 40 - 400</p>
 
@@ -1003,11 +1003,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="max_bitrate" class="notranslate">max_bitrate</h2>
-      <code>max_bitrate:Number</code>
+      <code translate="No">max_bitrate:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 400 - 40000</p>
 
@@ -1035,11 +1035,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="max_first_rendition_bitrate" class="notranslate">max_first_rendition_bitrate</h2>
-      <code>max_first_rendition_bitrate:Number</code>
+      <code translate="No">max_first_rendition_bitrate:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 40 - 1000</p>
 
@@ -1068,11 +1068,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="min_granularity" class="notranslate">min_granularity</h2>
-      <code>min_granularity:Number</code>
+      <code translate="No">min_granularity:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1 - 100 (%)</p>
 
@@ -1099,11 +1099,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="max_granularity" class="notranslate">max_granularity</h2>
-      <code>max_granularity:Number</code>
+      <code translate="No">max_granularity:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1 - 100 (%)</p>
 
@@ -1131,11 +1131,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="video_codec" class="notranslate">video_codec</h2>
-      <code>video_codec:String</code>
+      <code translate="No">video_codec:String</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> h264, hevc</p>
 
@@ -1162,11 +1162,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="bitrate_cap_to_bitrate_ratio" class="notranslate">bitrate_cap_to_bitrate_ratio</h2>
-      <code>bitrate_cap_to_bitrate_ratio:Number</code>
+      <code translate="No">bitrate_cap_to_bitrate_ratio:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1.0 - 2.0</p>
 
@@ -1193,11 +1193,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="buffer_size_to_bitrate_ratio" class="notranslate">buffer_size_to_bitrate_ratio</h2>
-      <code>buffer_size_to_bitrate_ratio:Number</code>
+      <code translate="No">buffer_size_to_bitrate_ratio:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1.0 - 4.0</p>
 
@@ -1225,11 +1225,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="bitrate_cap_offset" class="notranslate">bitrate_cap_offset</h2>
-      <code>bitrate_cap_offset:Number</code>
+      <code translate="No">bitrate_cap_offset:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Default Value:</strong> 64 [KBPS]</p>
 
@@ -1256,11 +1256,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="buffer_size_offset" class="notranslate">buffer_size_offset</h2>
-      <code>buffer_size_offset:Number</code>
+      <code translate="No">buffer_size_offset:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Default Value:</strong> 85 [KBPS]</p>
 
@@ -1288,11 +1288,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="quality_rate_tune" class="notranslate">quality_rate_tune</h2>
-      <code>quality_rate_tune:Number</code>
+      <code translate="No">quality_rate_tune:Number</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Valid Values:</strong> -40.0 - 40.0</p>
 
@@ -1305,11 +1305,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p><strong>Description:</strong></p>
 
       <p>
-        By setting <code>quality_rate_tune</code> to a positive number from 1 to 40, CAE profiles will have higher video quality at the cost of higher bitrates. Similarly, given a number in the range from -1 to -40 one can lower the bitrates, at the cost of decreasing video quality.
+        By setting <code translate="No">quality_rate_tune</code> to a positive number from 1 to 40, CAE profiles will have higher video quality at the cost of higher bitrates. Similarly, given a number in the range from -1 to -40 one can lower the bitrates, at the cost of decreasing video quality.
       </p>
 
       <p>
-        For example, with -10 one can expect approximately 10% lower bitrates. With 10, bitrates will in general increase around 10%. These numbers are approximations, since CAE for positive values of <code>quality_rate_tune</code> takes extra precautions in ensuring very high video quality, and there may be other parameters that limit the bitrates such as granularity and number of renditions.
+        For example, with -10 one can expect approximately 10% lower bitrates. With 10, bitrates will in general increase around 10%. These numbers are approximations, since CAE for positive values of <code translate="No">quality_rate_tune</code> takes extra precautions in ensuring very high video quality, and there may be other parameters that limit the bitrates such as granularity and number of renditions.
       </p>
 
       <p>
@@ -1329,11 +1329,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="select_baseline_profile_configuration" class="notranslate">select_baseline_profile_configuration</h2>
-      <code>select_baseline_profile_configuration:Boolean</code>
+      <code translate="No">select_baseline_profile_configuration:Boolean</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Default Value:</strong> true</p>
 
@@ -1343,7 +1343,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
       <p><strong>Description:</strong></p>
 
-      <p>At least one rendition used in the profile will be baseline profile. Note that <code>select_baseline_profile_configuration</code> is <code>true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
+      <p>At least one rendition used in the profile will be baseline profile. Note that <code translate="No">select_baseline_profile_configuration</code> is <code translate="No">true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
 
       <pre class="line-numbers">
         <code class="language-json">{
@@ -1358,11 +1358,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="video_configurations" class="notranslate">video_configurations</h2>
-      <code>video_configurations:Array</code>
+      <code translate="No">video_configurations:Array</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Default:</strong> Profile generator uses lists of standard resolutions for all known aspect ratios. Whenever possible, aspect ratio, sample aspect ratio and framerate of the source is preserved in output configurations.</p>
 
@@ -1399,11 +1399,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
       <h2 id="watermarks" class="notranslate">watermarks</h2>
-      <code>watermarks:Array</code>
+      <code translate="No">watermarks:Array</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code>dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
 
       <p><strong>Default:</strong> Profile generator uses lists of standard resolutions for all known aspect ratios. Whenever possible, aspect ratio, sample aspect ratio and framerate of the source is preserved in output configurations.</p>
 
@@ -1432,7 +1432,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         }
       }</code></pre>
 
-      <p>Watermarks can also be part of <code>video_configurations</code>:</p>
+      <p>Watermarks can also be part of <code translate="No">video_configurations</code>:</p>
 
       <pre class="line-numbers">
         <code class="language-json">{
@@ -1493,40 +1493,40 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code>speed</code></a></td>
+            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
             <td>Integer</td>
             <td>Encoding speed setting.</td>
-            <td><code>3</code></td>
+            <td><code translate="No">3</code></td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code>one_pass</code></a></td>
+            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
             <td>Boolean</td>
             <td>Force 1-pass encoding.</td>
-            <td><code>false</code></td>
+            <td><code translate="No">false</code></td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code>tuning</code></a></td>
+            <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code translate="No">tuning</code></a></td>
             <td>String</td>
             <td>Codec-specific tuning option.</td>
             <td> </td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code>start_clip</code></a></td>
+            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
             <td>String/Number</td>
-            <td>Create a subclip of the original video, starting at a particular time. This can either be a timecode with a format of <code>HH:MM:SS.S</code>, or a decimal expressing the number of seconds to start at.</td>
-            <td><code>0</code></td>
+            <td>Create a subclip of the original video, starting at a particular time. This can either be a timecode with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the number of seconds to start at.</td>
+            <td><code translate="No">0</code></td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code>clip_length</code></a></td>
+            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
             <td>String/Number</td>
-            <td>Create a subclip of a particular length. This can either be a duration with a format of <code>HH:MM:SS.S</code>, or a decimal expressing the length of the clip in seconds.</td>
+            <td>Create a subclip of a particular length. This can either be a duration with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the length of the clip in seconds.</td>
             <td>source duration</td>
           </tr>
         </tbody>
       </table>
       <h3>HDR settings</h3>
 
-      <p>CAE also supports HDR10 and the following settings can be included in <code>dynamic_profile_options</code>.</p>
+      <p>CAE also supports HDR10 and the following settings can be included in <code translate="No">dynamic_profile_options</code>.</p>
 
       <table class="bcls-table">
         <caption class="bcls-caption--table">Additional Settings</caption>
@@ -1540,19 +1540,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#master_display"><code>master_display</code></a></td>
+            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#master_display"><code translate="No">master_display</code></a></td>
             <td>Object</td>
             <td>Hash containing color volume and luminance settings for HDR outputs.</td>
             <td>none</td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_content_light_level"><code>max_content_light_level</code></a></td>
+            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_content_light_level"><code translate="No">max_content_light_level</code></a></td>
             <td>Integer</td>
             <td>Maximum light level for the content as a whole nits or candelas per square meter (cd/m2) - integer values.</td>
             <td>none</td>
           </tr>
           <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_frame_average_light_level"><code>max_frame_average_light_level</code></a></td>
+            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
             <td>Integer</td>
             <td>Maximum average light level for content frames nits or candelas per square meter (cd/m2) - integer values. Although values up to 10000 are allowed, values in the 100-200 range will generally produce the best results.</td>
             <td>none</td>
@@ -1579,55 +1579,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td><code>width</code></td>
+            <td><code translate="No">width</code></td>
             <td>Integer</td>
             <td>Video frame width [pixels]</td>
             <td style="text-align:center">required</td>
           </tr>
           <tr>
-            <td><code>height</code></td>
+            <td><code translate="No">height</code></td>
             <td>Integer</td>
             <td>Video frame height [pixels]</td>
             <td style="text-align:center">required</td>
           </tr>
           <tr>
-            <td><code>sample_aspect_ratio</code></td>
+            <td><code translate="No">sample_aspect_ratio</code></td>
             <td>Integer:Integer pair</td>
             <td>Sample aspect ratio (e.g. 1:1, 4:3)</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>frame_rate</code></td>
+            <td><code translate="No">frame_rate</code></td>
             <td>Number</td>
             <td>Video frame rate [fps]</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>video_codec_profile</code></td>
+            <td><code translate="No">video_codec_profile</code></td>
             <td>String</td>
             <td>video codec profile</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>video_codec_level</code></td>
+            <td><code translate="No">video_codec_level</code></td>
             <td>String</td>
             <td>video codec level</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>video_reference_frames</code></td>
+            <td><code translate="No">video_reference_frames</code></td>
             <td>Integer</td>
             <td>Constraint on number of reference frames. Default=4 (3 for H.264 baseline).</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>video_bframes</code></td>
+            <td><code translate="No">video_bframes</code></td>
             <td>Integer</td>
             <td>Constraint on number of B frames. Default=3 (0 for H.264 baseline).</td>
             <td style="text-align:center">optional</td>
           </tr>
           <tr>
-            <td><code>required</code></td>
+            <td><code translate="No">required</code></td>
             <td>Boolean</td>
             <td>Setting this to true will guarantee the suggested configuration settings in the output. Default = false.</td>
             <td style="text-align:center">optional</td>
