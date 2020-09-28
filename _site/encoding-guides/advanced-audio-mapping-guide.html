@@ -670,7 +670,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Multiple_outputs_from_source_multiple_tracks">Create multiple outputs from a source with multiple audio tracks</h2>
     <p>A fairly common use case is to have a source video with multiple audio tracks, and you want to output multiple audio files, each having one of the audio tracks. Here is the best way to configure the outputs for this:</p>
-<pre class="line-numbers"><code class="language-json">outputs: [
+<pre class="line-numbers"><code class="language-json" translate="No">outputs: [
   {
   label: "Output 1",
   url: "your hosting server for outputs/output1.mp4",
@@ -718,7 +718,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>This example maps individual audio tracks into the named channels <code translate="No">FL, FR, FC, LFE, BL, BR</code> and create a single 5.1 surround sound track from the mapping.</p>
 
   <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test-multitrack-audio.mov",
   "output": {
     "input_audio_channels": {
@@ -737,7 +737,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>The example below shows how to create a stereo mixdown from the 5.1 surround audio track that was created in the example above.</p>
 
   <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test-multitrack-audio.mov",
   "output": {
     "input_audio_channels": {
@@ -757,7 +757,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>The <code translate="No">output_audio_channels</code> option can be used to create a custom channel layout in addition to creating mixdowns. The example below will create a stereo output from the front-left and front-right channels, but with their order swapped, so the left channel is in the right and vice versa.</p>
 
   <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test-multitrack-audio.mov",
   "output": {
     "input_audio_channels": {
@@ -777,7 +777,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>By using the <code translate="No">input_audio_channels</code> option on an input that contains multiple language tracks, it is possible to create multiple outputs each with separate language tracks. Assume that an input file had 4 discrete audio tracks and that track 1 contained the English (left) audio, track 2 contained the English (right) audio, track 3 contained the Spanish (left) audio and track 4 contained the Spanish (right) audio. By defining the <code translate="No">input_audio_channels</code> parameter differently for each output, it is possible to create multiple language outputs from a single file.</p>
 
   <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test-multitrack-audio.mov",
   "outputs": [
     {
@@ -802,7 +802,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <p>The example below shows how to extract an existing stereo downmix out of a media file, in which the first audio track contains both a 5.1 surround mix and a stereo downmix (where stereo pair).</p>
 
   <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test-multichannel-audio.mov",
   "output": {
     "input_audio_channels": {
@@ -828,7 +828,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

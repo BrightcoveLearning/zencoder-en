@@ -31,7 +31,7 @@ grandparent: Encoding Settings
     <p>Normally you would not set this and instead would specify the <a class="notranslate" href="#video_codec_profile">video_codec_profile</a> which would provide the bit depth.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -69,7 +69,7 @@ grandparent: Encoding Settings
     <p>Use 1 for video created for legacy iPod or first-generation iPhone video, or for other technically-limited decoders.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -108,7 +108,7 @@ grandparent: Encoding Settings
     <p>In general, lower levels are supported by a wider range of devices and may be simpler to decode. Higher levels offer more features such as additional bit depths and chroma subsampling choices. In some cases, higher levels also support increased compression efficiency.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -140,7 +140,7 @@ grandparent: Encoding Settings
     <p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -178,7 +178,7 @@ grandparent: Encoding Settings
     <p>We recommend a value of 3 for compression/quality improvements. Values higher than 5 or 6 rarely provide much benefit, and greatly increase encoding time.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -212,7 +212,7 @@ grandparent: Encoding Settings
     <p>To ensure that this metadata is not embedded in outputs, set <code translate="No">color_metadata</code> to <code translate="No">discard</code>.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

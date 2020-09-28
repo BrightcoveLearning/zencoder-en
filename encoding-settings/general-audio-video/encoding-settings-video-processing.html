@@ -30,7 +30,7 @@ grandparent: Encoding Settings
     <p>Explicitly rotate a movie. By default, Zencoder will automatically rotate rotated content (including rotated iPhone video), but you can also manually rotate a movie. If you set "rotate" to 0, we will not auto-rotate, so leave this option unset if you want auto-rotation.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -62,7 +62,7 @@ grandparent: Encoding Settings
     <p>Note that Zencoder makes this determination based on file metadata. If interlaced content is re-encoded with an encoder that does not deinterlace the content, or flag it as interlaced, we may not be able to auto-deinterlace the content in "detect" mode.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -92,7 +92,7 @@ grandparent: Encoding Settings
     <p>Apply a sharpen filter to the video.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -124,7 +124,7 @@ grandparent: Encoding Settings
     <p>Values above 'weak' should be used carefully, though animation can sometimes handle a high level of denoising.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -156,7 +156,7 @@ grandparent: Encoding Settings
     <p>The VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec">video_codec</a> does not support the autolevel option.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -186,7 +186,7 @@ grandparent: Encoding Settings
     <p>Apply a deblocking filter to the video.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

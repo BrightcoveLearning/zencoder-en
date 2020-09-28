@@ -651,7 +651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>We'll start off by making several segmented files, each targeted at a given bandwidth. With these outputs Zencoder creates a manifest file and segmented video files, which allow the player to download each file individually as it plays the video.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
     "audio_bitrate": 56,
     "audio_sample_rate": 22050,
     "base_url": "s3://my-bucket/",
@@ -682,7 +682,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>HLS outputs (with video) that have <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#max-hls-protocol-version">max_hls_protocol_version</a> of 4 or greater will now generate an I-Frame playlist, also known as a "keyframe manifest". By default, the filename is the same as the main manifest file, but with "-iframe-index" appended. For example, for a manifest with the filename "master.m3u8", the keyframe manifest would be named "master-iframe-index.m3u8". This can be overridden using <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#keyframe-manifest-filename">keyframe_manifest_filename</a>. If an HLS playlist output specifies a "source" stream that has a keyframe manifest, then that keyframe manifest will automatically be included into the playlist as an EXT-X-I-FRAMES-ONLY stream.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
     "base_url": "s3://my-bucket/",
     "filename": "playlist.m3u8",
     "public": 1,
@@ -717,7 +717,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/encoding-guides/iosmobile-encoding.html">iOS encoding guide</a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
     "input": "s3://zencodertesting/test.mov",
     "output": [
     {
@@ -879,7 +879,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

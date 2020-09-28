@@ -8,7 +8,7 @@ parent: Encoding Guides
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "skip_audio": true,
   "base_url": "s3://my-bucket/",
   "decoder_bitrate_cap": 900,
@@ -31,7 +31,7 @@ parent: Encoding Guides
       Zencoder also supports generating CBCS-encrypted fragmented MP4, HLS outputs with necessary headers for integrating with Fairplay DRM. For each output, specify <a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption</a> options. Once you have those keys, the Zencoder API structure for a single rendition
       is:
     </p>
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "input": "http://s3.amazonaws.com/zencodertesting/test.mov",
   "outputs": [
     {
@@ -68,7 +68,7 @@ parent: Encoding Guides
     <h2 id="complete_example">Complete example</h2>
     <p>Multiple outputs of different bitrates may be specified and referenced by the playlist. These settings match the guidelines given in our <a href="/encoding-guides/iosmobile-encoding.html">iOS encoding guide</a>.</p>
     <h3>Audio outputs</h3>
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "outputs": [
       {
             "public": true,
@@ -101,7 +101,7 @@ parent: Encoding Guides
     ]
 }</code></pre>
     <h3>Video outputs</h3>
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
  "outputs": [
         {
             "public": true,
@@ -268,7 +268,7 @@ parent: Encoding Guides
     ]
 }</code></pre>
     <h3>Playlist outputs</h3>
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
     "outputs":[
        {
             "public": true,

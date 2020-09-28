@@ -43,7 +43,7 @@ grandparent: Encoding Settings
     <p>Aspect mode will be preserved by default, so if the input video is 16:9 and a 4:3 output resolution is requested, the output will maintain the 16:9 aspect ratio. This will result in the output dimensions not matching the requested size. Use <a href="#aspect-mode">aspect_mode</a> to control this.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -75,7 +75,7 @@ grandparent: Encoding Settings
     <p>Note that width and <a href="#height">height</a> take precedence over <a href="#size">size</a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -107,7 +107,7 @@ grandparent: Encoding Settings
     <p>Note that <a href="#width">width</a> and height take precedence over <a href="#size">size</a>.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -141,7 +141,7 @@ grandparent: Encoding Settings
     <p>But if you do want to force Zencoder to increase the size of an input video, set “upscale” to true. If you do, an input video that is smaller than the output resolution will expand to fit the resolution. For example, if your output spec is 480×360, and someone submits a video that is 320×240, the video will be upsized to 480×360 if you set this option to true, and will remain at 320×240 otherwise.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -183,7 +183,7 @@ grandparent: Encoding Settings
     <p><em>Note: the VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video-codec">video_codec</a> does not support the "pad" aspect_mode. If you ask for "pad" with VP6 video, we will use the default mode of "preserve".</em></p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -217,7 +217,7 @@ grandparent: Encoding Settings
     <p>This option only applies when using the H.264 and HEVC codecs.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -247,7 +247,7 @@ grandparent: Encoding Settings
     <p>This option only applies when using the H.264 codec.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {

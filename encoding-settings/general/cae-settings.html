@@ -35,7 +35,7 @@ grandparent: Encoding Settings
 
     <p>For mixed-codec outputs, an array of the codecs to create renditions for. Currently, the allowed item values are <code translate="No">h264</code> and <code translate="No">hevc</code>.</p>
 
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
     "dynamic_profile_options": {
       "max_renditions": 6,
       "video_codecs" : ["h264", "hevc"'],
@@ -65,7 +65,7 @@ grandparent: Encoding Settings
     <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong></p>
-    <pre class="line-numbers"><code class="language-json">"video_codec_options": {
+    <pre class="line-numbers"><code class="language-json" translate="No">"video_codec_options": {
   "h264": {
     "min_renditions": 2,
     "max_resolution": { "width": 1280, "height": 720 }
@@ -91,7 +91,7 @@ grandparent: Encoding Settings
     </ul>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: these settings are also used at the global level. When you are using settings both at the global and per-codec levels, the values must be compatible. For example, max_renditions set at the global level must be greater than or equal to the sum of min_rendition values set at the per-codec level.</aside>
 
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
     "dynamic_profile_options": {
       "max_renditions": 6,
       "video_codecs" : ["h264", "hevc"'],
@@ -129,7 +129,7 @@ grandparent: Encoding Settings
     <p>The minimum number of renditions to generate.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -158,7 +158,7 @@ grandparent: Encoding Settings
     <p>The maximum number of renditions to generate.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -188,7 +188,7 @@ grandparent: Encoding Settings
     <p>Minimum resolution to be considered for the ladder.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -222,7 +222,7 @@ grandparent: Encoding Settings
     <p>Maximum resolution to be considered for the ladder.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -260,7 +260,7 @@ grandparent: Encoding Settings
     <p>Maximum frame rate that can be used.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -291,7 +291,7 @@ grandparent: Encoding Settings
     <p>Keyframe rate. This value can be either 0.5 or 1. For SSAI enabled content, this value needs to be 1.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -322,7 +322,7 @@ grandparent: Encoding Settings
     <p>Instructs generator to use same frame rate across all renditions. If false, H.264 baseline profile renditions at resolutions below 360p will be assigned halved frame rate.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -353,7 +353,7 @@ grandparent: Encoding Settings
     <p>Minimum bitrate [kbps] that can be used.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -384,7 +384,7 @@ grandparent: Encoding Settings
     <p>Maximum bitrate [kbps] that can be used.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -416,7 +416,7 @@ grandparent: Encoding Settings
     <p>Maximum bitrate [kbps] that can be used for first rendition.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -449,7 +449,7 @@ grandparent: Encoding Settings
     <p>Minimum relative change in bitrate between renditions.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -480,7 +480,7 @@ grandparent: Encoding Settings
     <p>Maximum relative change in bitrate between renditions.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -512,7 +512,7 @@ grandparent: Encoding Settings
     <p>Video codec to use.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -543,7 +543,7 @@ grandparent: Encoding Settings
     <p>Ratio of maximum bit rate to average bitrate to be used for VBR encoding.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -574,7 +574,7 @@ grandparent: Encoding Settings
     <p>Ratio of decoder buffer size to average bitrate to be used for VBR encoding.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -604,7 +604,7 @@ grandparent: Encoding Settings
     <p>Constant added when computing maximum bitrate.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -635,7 +635,7 @@ grandparent: Encoding Settings
     <p>Constant added when computing VBV buffer size.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -679,7 +679,7 @@ grandparent: Encoding Settings
     </p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -708,7 +708,7 @@ grandparent: Encoding Settings
     <p>At least one rendition used in the profile will be baseline profile. Note that <code translate="No">select_baseline_profile_configuration</code> is <code translate="No">true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -737,7 +737,7 @@ grandparent: Encoding Settings
     <p>An array of structures describing resolutions, frame rates and associated codec settings that should be preferentially or mandatorily generated as part of the CAE encoding. See the <a href="#video_configurations_settings">section</a> below.</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options": {
@@ -778,7 +778,7 @@ grandparent: Encoding Settings
     <p>An array of hashes describing <a href="/encoding-settings/assets/encoding-settings-watermarks.html">watermarks</a>.</p>
 
     <pre class="line-numbers">
-    <code class="language-json">{
+    <code class="language-json" translate="No">{
         "input": "s3://zencodertesting/test.mov",
         "generate_dynamic_profile": true,
         "dynamic_profile_options" : {
@@ -797,7 +797,7 @@ grandparent: Encoding Settings
     <p>Watermarks can also be part of <code translate="No">video_configurations</code>:</p>
 
     <pre class="line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
           "generate_dynamic_profile": true,
           "dynamic_profile_options" : {

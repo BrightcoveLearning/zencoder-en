@@ -656,7 +656,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The following is an example of a Highwinds SMIL file which describes a video that has been encoded to multiple bitrates. All paths ("src") given are relative to where the SMIL will be served and all bitrates ("system-bitrate") are in bits per second (bps).</p>
 
     <pre class="line-numbers">
-<code class="language-xml">
+<code class="language-xml" translate="No">
 &lt;smil&gt;
 &lt;head&gt;
 &lt;/head&gt;
@@ -681,7 +681,7 @@ system-bitrate="64000"/&gt;
     <p>Creating a Highwinds SMIL playlist with Zencoder is easy.</p>
 
     <pre class="line-numbers">
-<code class="language-json">
+<code class="language-json" translate="No">
 {
     "api_key": "asdf1234",
     "input": "s3://my-bucket/input/file.mov",
@@ -747,7 +747,7 @@ system-bitrate="64000"/&gt;
     <p>Multiple outputs of different bitrates may be specified and referenced by the playlist.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
     "api_key": "1234abcd",
     "input": "http://example.com/file.mp4",
     "output": [
@@ -868,7 +868,7 @@ system-bitrate="64000"/&gt;
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

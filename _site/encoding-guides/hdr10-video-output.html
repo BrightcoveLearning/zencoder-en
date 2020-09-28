@@ -774,7 +774,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p>In cases when input mezzanine contains all metadata associated with the HDR format, all such information can be propagated to the outputs by using the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a> parameter.</p>
     <p>This method is illustrated by following example:</p>
-    <pre class="line-numbers"><code class="language-json">{ 
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/hdr_master.mp4", 
   "outputs": [ 
     { 
@@ -842,7 +842,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </table>
 
     <p>For example, encoding of an HDR10 video with <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a> and <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">content light level</a> metadata parameters communicated externally can be performed by using following command:</p>
-<pre class="line-numbers"><code class="language-json">{
+<pre class="line-numbers"><code class="language-json" translate="No">{
   "input": "s3://mybucket/prores_hdr_master.mov",
   "outputs": [
     {
@@ -865,7 +865,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </code></pre>
     <p>This method is appropriate when working with post-production mezzanines, using codecs such as Apple ProRes 4444, Avid DNxHD, or JPEG 2000 (J2K) in OP1a MXF, etc.</p>
     <p>Similarly, when transcoding DolbyVision content, the dynamic metadata (“RPU” file) associated with DolbyVision Content can be communicated externally by using <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a> parameter:</p>
-<pre class="line-numbers"><code class="language-json">{ 
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/dv5_master.mp4", 
   "outputs": [ 
     { 
@@ -889,7 +889,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ul>
     </p>
     <p>The second method is more compact and preferred. An example illustrating the use of the second method is provided below:</p>
-<pre class="line-numbers"><code class="language-json">{ 
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/hdr_master.mp4", 
   "generate_dynamic_profile": true,
   "dynamic_profile_options": 
@@ -926,7 +926,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 29 Jul 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

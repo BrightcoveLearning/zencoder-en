@@ -666,7 +666,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Codec parameter for temporal down watermark percentage. Specifies the percentage of the datarate buffer remaining below which the encoder is allowed to start dropping frames. Only used if <a href="#vp6_temporal_resampling">vp6_temporal_resampling</a> is enabled. A larger percentage will make it more likely frames will be dropped to achieve the requested video bitrate. The converse is also true.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -702,7 +702,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Note: when using <a href="#constant_bitrate">constant_bitrate</a> mode, this option is forced to true. Adjust <a href="#vp6_temporal_down_watermark">vp6_temporal_down_watermark</a> to adjust results.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -734,7 +734,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Creates output that targets a slightly lower datarate so there are bits available in the buffer to improve difficult sections. This is a percentage, so valid values are 0-100.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -765,7 +765,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Either "vp6s" or "vp6e". vp6e is designed for general use. vp6s is optimized for high resolution/datarate video by decreasing decoding complexity, which allows playback on resource constrained machines.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -795,7 +795,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Affects the speed of encoding, compared to the quality of output. "good" balances speed and quality. "best" prioritizes quality over speed, resulting in higher compression but slower encoding. If you set <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed">speed</a> to 1 or 2 and use VP6, we will use the "best" mode; otherwise, we use "good".</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -829,7 +829,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>For example, if <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_min_section is set to 50, the lowest bitrate of any section will be 500kbps (1000 * 50%).</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -863,7 +863,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>For example, if <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#video_bitrate">video_bitrate</a> is set to 1000 kbps and vp6_2_pass_max_section is set to 450, the highest bitrate of any section will be 4500kbps (1000 * 450%).</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -894,7 +894,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Seconds of preload that are necessary before starting playback. The buffer is used to maintain a consistent datarate and minimize playback interruption. Valid for <a href="#constant_bitrate">constant_bitrate</a> encoding only.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -923,7 +923,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The maximum size of the buffer, in seconds. Valid for <a href="#constant_bitrate">constant_bitrate</a> encoding only.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -955,7 +955,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>If <a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace">deinterlace</a> is enabled, this option sets the deinterlacing filter that will be applied. Valid options are adaptive, blur (for 1:2:1 Blur deinterlacing), and drop (for Drop Field deinterlacing).</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -987,7 +987,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Specifies the noise level of the source. Any value greater than 0 implies a constant and known level of noise within the source. A value of 0 will cause the filter to estimate the noise level, allowing it to vary from frame to frame. Larger noise levels indicate a noisier source resulting in increased removal by the filter, at the cost of sharpness.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1021,7 +1021,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Currently, only the VP6 <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video_codec">video_codec</a> supports alpha transparency. Behind the scenes, this setting tells the encoder to use the VP6A codec instead of VP6.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1055,7 +1055,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Different video_codecs behave differently with the constant_bitrate setting.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
@@ -1080,7 +1080,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

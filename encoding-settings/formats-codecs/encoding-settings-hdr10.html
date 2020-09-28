@@ -30,7 +30,7 @@ grandparent: Encoding Settings
     <p>When set to true, this parameter instructs Zencoder to import (most or all) HDR-related metadata from input file and pass them to the output.</p>
     <p>For example, transcoding of HEVC-encoded video streams in HDR10, PQ10, or HLG10 formats can be accomplished by using the following job request: </p>
 
-    <pre class="line-numbers"><code class="language-json">{ 
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/hdr_master.mp4", 
   "outputs": [ 
     { 
@@ -42,7 +42,7 @@ grandparent: Encoding Settings
   ] 
 }</code></pre>
     <p>This parameter may also be used in combination with other parameters, specifying HDR-related metadata directly. For example, below JSON job request shows how <a href="#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a> parameter may also be used for carrying over <a href="#master_display"><code translate="No">master display</code></a> and <a href="#max_content_light_level"><code translate="No">content light level</code></a> metadata from HEVC-encoded DolbyVision 8.1 streams, while DolbyVision dynamic metadata (<code translate="No">RPU</code> file) is communicated separately by using the dolby_vision_rpu_url parameter:</p>
-    <pre class="line-numbers"><code class="language-json">{ 
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/dv81_master.mp4", 
   "outputs": [ 
     { 
@@ -86,7 +86,7 @@ grandparent: Encoding Settings
 
     <p>For example, a PQ color graded content provided as J2K encoded MFX can be converted to PQ10 output stream by following job request:</p>
 
-    <pre class="line-numbers"><code class="language-json">{ 
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/j2k_master.mfx", 
   "outputs": [ 
     { 
@@ -99,7 +99,7 @@ grandparent: Encoding Settings
 }</code></pre>
 
     <p>Or. if the same J2K MXF master represents HDR10 content, and comes with additional files describing its <a href="#master_display">master display</a> and <a href="#max_content_light_level">content light level</a> metadata parameters, then encoding of it in HDR10 HEVC stream can be accomplished by using following job request:</p>
-    <pre class="line-numbers"><code class="language-json">{
+    <pre class="line-numbers"><code class="language-json" translate="No">{
   "input": "s3://mybucket/j2k_master.mfx",
   "outputs": [
     {
@@ -151,7 +151,7 @@ grandparent: Encoding Settings
     <p>The example below shows how the master display metadata can be specified:</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/j2k_master.mfx",
   "outputs": [
     {
@@ -203,7 +203,7 @@ grandparent: Encoding Settings
 
     <p>The example below shows how <a href="#max_content_light_level">max_content_light_level</a>, and <a href="#max_frame_average_light_level">max_frame_average_light_level</a>  metadata can be specified:</p>
 
-<pre class=" line-numbers"><code class="language-json">{
+<pre class=" line-numbers"><code class="language-json" translate="No">{
   "input": "s3://mybucket/j2k_master.mfx",
   "outputs": [
     {
@@ -259,7 +259,7 @@ grandparent: Encoding Settings
 
     <p>The example below shows how <a href="#max_content_light_level">max_content_light_level</a>, and <a href="#max_frame_average_light_level">max_frame_average_light_level</a>  metadata can be specified:</p>
 
-<pre class=" line-numbers"><code class="language-json">{
+<pre class=" line-numbers"><code class="language-json" translate="No">{
   "input": "s3://mybucket/j2k_master.mfx",
   "outputs": [
     {
@@ -308,7 +308,7 @@ grandparent: Encoding Settings
     <p>This parameter is currently required when transcoding videos in DolbyVision 5 and DolbyVision 8.1 formats.</p> 
     <p> Usage example: </p>
 
-<pre class=" line-numbers"><code class="language-json">{ 
+<pre class=" line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/dv5_master.mp4", 
   "outputs": [ 
    { 
@@ -354,7 +354,7 @@ grandparent: Encoding Settings
     <p>The vast majority of content is currently produced and encoded using <code translate="No">limited</code> pixels. However <code translate="No">full</code>-range pixels may also be sometimes used. For example, 10-bit-wide full-range pixels are used in the DolbyVision 5 format.</p>
     <p> Usage example: </p>
 
-<pre class=" line-numbers"><code class="language-json">{ 
+<pre class=" line-numbers"><code class="language-json" translate="No">{ 
   "input": "s3://mybucket/dv5_master.mp4", 
   "outputs": [ 
    { 
@@ -396,7 +396,7 @@ grandparent: Encoding Settings
     <p>Hash containing color volume setting for red.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -452,7 +452,7 @@ grandparent: Encoding Settings
     <p>Color volume x setting for red.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -508,7 +508,7 @@ grandparent: Encoding Settings
     <p>Color volume y setting for red.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -560,7 +560,7 @@ grandparent: Encoding Settings
     <p>Hash containing color volume setting for green.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -616,7 +616,7 @@ grandparent: Encoding Settings
     <p>Color volume x setting for green.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -672,7 +672,7 @@ grandparent: Encoding Settings
     <p>Color volume y setting for green.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -724,7 +724,7 @@ grandparent: Encoding Settings
     <p>Hash containing color volume setting for blue.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -780,7 +780,7 @@ grandparent: Encoding Settings
     <p>Color volume x setting for blue.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -836,7 +836,7 @@ grandparent: Encoding Settings
     <p>Color volume y setting for blue.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -888,7 +888,7 @@ grandparent: Encoding Settings
     <p>Hash containing color volume setting for white_point.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -944,7 +944,7 @@ grandparent: Encoding Settings
     <p>Color volume x setting for white_point.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1000,7 +1000,7 @@ grandparent: Encoding Settings
     <p>Color volume y setting for white_point.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1052,7 +1052,7 @@ grandparent: Encoding Settings
     <p>Hash containing luminance settings.</p>
 
     <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1108,7 +1108,7 @@ grandparent: Encoding Settings
     <p>Minimum luminance in <span class="notranslate</code>>nits or candelas per square meter (cd/m2)</span>.</p>
 
 <pre class=" line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
@@ -1164,7 +1164,7 @@ grandparent: Encoding Settings
     <p>Maximum luminance in <span class="notranslate</code>>nits or candelas per square meter (cd/m2)</span>.</p>
 
 <pre class=" line-numbers">
-        <code class="language-json">{
+        <code class="language-json" translate="No">{
   "input": "s3://mybucket/hdr_master.mov",
   "outputs": [
     {
