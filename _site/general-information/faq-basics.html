@@ -716,7 +716,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Our integration libraries abstract you from the raw HTTP requests. Using <a href="http://github.com/zencoder/zencoder-rb">our Ruby library</a>, for instance, you can create a job like this:</p>
 
         <pre class="line-numbers">
-<code class="language-ruby notranslate"><span translate="No">Zencoder</span>::Job.create({:input =&gt; 's3://bucket/key.mp4',
+<code class="language-ruby" translate="No"><span translate="No">Zencoder</span>::Job.create({:input =&gt; 's3://bucket/key.mp4',
     :outputs =&gt; [{:label =&gt; 'vp8 for the web',
     :url =&gt; 's3://bucket/key_output.webm'}]})
 </code></pre>
@@ -724,7 +724,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Rather than doing something like this:</p>
 
         <pre class="line-numbers">
-<code class="language-ruby notranslate">require 'uri'
+<code class="language-ruby" translate="No">require 'uri'
     require 'json'
     response = Net::HTTP.post_form(URI.parse('jobs.json'),
     {:input =&gt; 's3://bucket/key.mp4',
