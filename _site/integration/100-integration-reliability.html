@@ -684,7 +684,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol>
       <li>Imagine a Videos table that includes these columns. (It will obviously have more, including columns to store a Zencoder job ID and a Zencoder output file ID.)
         <pre class="line-numbers">
-<code class="language-ruby">create_table :videos do |t|
+<code class="language-ruby" translate="No">create_table :videos do |t|
 t.string  :state
 t.integer :lock_version
 t.index   :state
@@ -701,7 +701,7 @@ end</code></pre>
       </li>
       <li>When a new video is ingested, save the video in the 'submitting' state and trigger a background job to submit the video to Zencoder.
         <pre class="line-numbers">
-<code class="language-ruby"># got a new video!
+<code class="language-ruby" translate="No"># got a new video!
 video = Video.new(params)
 video.state = "submitting"
 video.save!
@@ -710,13 +710,13 @@ submit_to_zencoder(video)</code></pre>
         <p>You really should background the submit_to_zencoder method. In Ruby, using DelayedJob, this might look like this:</p>
 
         <pre class="line-numbers">
-<code class="language-ruby">delay.submit_to_zencoder(video)</code></pre>
+<code class="language-ruby" translate="No">delay.submit_to_zencoder(video)</code></pre>
 
         <p>But we'll stick with our <code translate="No">submit_to_zencoder(video)</code> method for example purposes.</p>
       </li>
       <li>The <code translate="No">submit_to_zencoder</code> function looks something like this. This should be run asynchronously, in the background.
         <pre class="line-numbers">
-<code class="language-ruby">def submit_to_zencoder(video)
+<code class="language-ruby" translate="No">def submit_to_zencoder(video)
 begin
 response = Zencoder::Job.create(attributes, :timeout =&gt; 30_000)
 if response.code == 201
@@ -742,7 +742,7 @@ end</code></pre>
       </li>
       <li>Every so often - e.g. every minute - try to resubmit jobs that are in the 'pending' state.
         <pre class="line-numbers">
-<code class="language-ruby">def resubmit_pending_jobs
+<code class="language-ruby" translate="No">def resubmit_pending_jobs
 Video.where(:state =&gt; "pending").find_each do |video|
 begin
 video.state = "submitting"

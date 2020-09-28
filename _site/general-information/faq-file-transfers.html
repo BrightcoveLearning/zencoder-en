@@ -668,7 +668,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Examples:</p>
 
         <pre class="line-numbers">
-<code class="language-http">http://example.com/path/to/file.avi
+<code class="language-http" translate="No">http://example.com/path/to/file.avi
 http://s3.amazonaws.com/bucket/file.avi
 s3://bucket/file.avi
 gcs://bucket/file.avi
@@ -680,7 +680,7 @@ sftp://example.com/path/to/file.avi</code></pre>
 
         <aside class="bcls-aside bcls-aside--information">Note on ports: if you need to include a port in the file address, it must be declared at the end of the domain in the URL, like this:
           <pre>
-<code class="language-http">sftp://example.com<span class="bcls-highlight">:8888</span>/path/to/file.avi</code></pre>
+<code class="language-http" translate="No">sftp://example.com<span class="bcls-highlight">:8888</span>/path/to/file.avi</code></pre>
         </aside>
       </li>
       <li>
@@ -689,7 +689,7 @@ sftp://example.com/path/to/file.avi</code></pre>
         <p>Sure. Use SFTP or HTTPS and include a username and password in the URL, like this:</p>
 
         <pre class="line-numbers">
-<code class="language-http">
+<code class="language-http" translate="No">
 https://user:pass@example.com/file.mp4
 sftp://user:pass@example.com/file.mp4</code></pre>
       </li>
