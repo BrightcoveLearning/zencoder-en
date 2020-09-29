@@ -664,14 +664,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p >By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code translate="No">segmented</code> and <code translate="No">playlist</code>.</p>
 
-<ul><li ><code translate="No">segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
-	<li ><code translate="No">captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
+<ul><li><code translate="No">segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
+	<li><code translate="No">captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	The captions output type creates a file containing just the captions from the source video, rather than a video with captions added to it. <em>Note: captions type outputs may not be the only outputs for a job.</em><br />
 	Captions may be provided to Zencoder as a separate file (using the <a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url">caption_url</a> option), or will be extracted from the source video by default.<br />
 	Supported formats for extracting captions from the source video are MP4 and TS. In an MP4 file, the captions may be located in a separate track (in CEA-608 format); otherwise captions in an MP4 or TS file must be embedded in an MPEG2 or AVC video stream, compliant to A/53 or SCTE-128 (CC1 and CC3) standards.<br />
 	Supported output formats for captions type outputs: '<code translate="No">mp4</code>', '<code translate="No">scc</code>', '<code translate="No">webvtt</code>', '<code translate="No">vtt</code>', '<code translate="No">m3u8</code>', '<code translate="No">dfxp</code>'.</li>
-	<li ><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
-	<li ><code translate="No">transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
+	<li><strong>playlist</strong>: The playlist output type is used in multi-bitrate output streams to generate the master M3U8 playlist file. <em>Note: playlist type outputs may not be the only outputs for a job.</em></li>
+	<li><code translate="No">transfer-only</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em><br />
 	A <code translate="No">transfer-only</code> output skips encoding and sends the original video to a <a translate="No" href="#url">url</a>.<br />
 	A <code translate="No">transfer-only</code> output can also use <a translate="No" href="#source">source</a> to transfer the video from another output to the specified <a translate="No" href="#url">url</a>, rather than using the input.</li>
 </ul><pre class="line-numbers">
@@ -1024,15 +1024,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <p >Profiles and their default values:</p>
 
-<ul><li ><code translate="No">mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li ><code translate="No">mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
-	<li ><code translate="No">mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
-	<li ><code translate="No">v1/mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 128, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li ><code translate="No">v1/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500}</code></li>
-	<li ><code translate="No">v1/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 24, "max_audio_sample_rate": 16000, "max_frame_rate": 15, "max_video_bitrate": 192, "video_bitrate": 192, "bitrate_cap": 192, "upscale": true, "aspect_mode": "pad", "format": "3gp", "video_codec": "mpeg4"}</code></li>
-	<li ><strong>v2/mobile/advanced</strong>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
-	<li ><code translate="No">v2/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
-	<li ><code translate="No">v2/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
+<ul><li><code translate="No">mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li><code translate="No">mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
+	<li><code translate="No">mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
+	<li><code translate="No">v1/mobile/advanced</code>: <code translate="No">{"size": "1280x720", "audio_bitrate": 128, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li><code translate="No">v1/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500}</code></li>
+	<li><code translate="No">v1/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 24, "max_audio_sample_rate": 16000, "max_frame_rate": 15, "max_video_bitrate": 192, "video_bitrate": 192, "bitrate_cap": 192, "upscale": true, "aspect_mode": "pad", "format": "3gp", "video_codec": "mpeg4"}</code></li>
+	<li><strong>v2/mobile/advanced</strong>: <code translate="No">{"size": "1280x720", "audio_bitrate": 56, "max_audio_sample_rate": 48000, "max_frame_rate": 30, "max_video_bitrate": 5000, "video_codec_level": 3.1, "videoe_codec_profile": "main"}</code></li>
+	<li><code translate="No">v2/mobile/baseline</code>: <code translate="No">{"size": "480x320", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 1500, "video_reference_frames": 1}</code></li>
+	<li><code translate="No">v2/mobile/legacy</code>: <code translate="No">{"size": "320x240", "audio_bitrate": 96, "max_audio_sample_rate": 44100, "max_frame_rate": 30, "max_video_bitrate": 768, "video_codec_level": 1.3, "video_reference_frames": 1}</code></li>
 </ul><pre class="line-numbers">
 <code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
@@ -1276,8 +1276,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <p >Zencoder supports setting a limited subset of these headers: <code translate="No">Cache-Control</code>, <code translate="No">Content-Disposition</code>, <code translate="No">Content-Encoding</code>, <code translate="No">Content-Type</code>, <code translate="No">Expires</code>, <code translate="No">x-amz-acl</code>, <code translate="No">x-amz-storage-class</code>, <code translate="No">x-amz-server-side-encryption</code>, <code translate="No">x-amz-meta-*</code>, x-goog-acl and <code translate="No">x-goog-meta-*</code>.</p>
 
 <aside class="bcls-aside bcls-aside--information">Notes:
-<ul><li >To use <a href="https://aws.amazon.com/blogs/aws/aws-storage-update-new-lower-cost-s3-storage-option-glacier-price-reduction/">S3's Standard_IA feature</a>, you will need to set the <code translate="No">x-amz-storage-class</code> header to the appropriate value. These values change and are controlled by AWS and Google, so you will need to get correct values from them.</li>
-	<li >The "goog" headers are supported for GCS output URLs, but not for URLs on S3.</li>
+<ul><li>To use <a href="https://aws.amazon.com/blogs/aws/aws-storage-update-new-lower-cost-s3-storage-option-glacier-price-reduction/">S3's Standard_IA feature</a>, you will need to set the <code translate="No">x-amz-storage-class</code> header to the appropriate value. These values change and are controlled by AWS and Google, so you will need to get correct values from them.</li>
+	<li>The "goog" headers are supported for GCS output URLs, but not for URLs on S3.</li>
 </ul></aside><p >Headers will be ignored when an output location is not specified.</p>
 
 <pre class="line-numbers">
