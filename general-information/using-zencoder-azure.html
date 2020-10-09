@@ -34,4 +34,75 @@ parent: General Information
 
 <p>The <strong>blob</strong> field in the URL represents the name of the file. The blob is the only component of the URL that does not need to be configured in advance in Azure.</p>
 </section>
+
+<section class="bcls-section">
+  <h2 id="Azure_SAS_Token_Support">Azure SAS Token Support</h2>
+  <p>Support for authorizing Azure file transfers is included in Zencoder. Only Account SAS tokens are currently supported, and at least the "sv", "si", "sr" and "sig" parameters are required as part of the token.</p>
+
+  <p>Example SAS token:</p>
+
+<pre><code translate="No">sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D</code></pre>
+
+<p>There are two ways to include the SAS token along with an Azure URL:</p>
+<ul>
+  <li>Append the token to the URL as a query string parameter.</li>
+  <li>Provide the token separately with the "azure_sas" setting.</li>
+</ul>
+<aside class="bcls-aside bcls-aside--information language-editable">Note: The Azure URL must use an azure:// scheme as is standard within Zencoder, not https:// .</aside>
+<h3>API Request Examples</h3>
+<h4>Input URLs</h4>
+<h5>Query string version</h5>
+<pre class="line-numbers"><code class="language-json" translate="No">{  "input": "azure://account-name@container/path/to/input.mp4?sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"}</code></pre>
+<h5>Separate parameter version</h5>
+<pre class="line-numbers"><code class="language-json" translate="No">{  "input": "azure://account-name@container/path/to/input.mp4",  "azure_sas": "sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"}</code></pre>
+<h4>Output URLs</h4>
+<aside class="bcls-aside bcls-aside--information language-editable">Note: For multi-file outputs (such as HLS outputs with a manifest and media segments) the filename withinthe URL will be automatically updated for uploading each additional file, but the path and parameters willotherwise be preserved.</aside>
+<h5>Query string version</h5>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "outputs": [
+    {
+      "url": "azure://account-name@container/path/to/output.mp4?sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"
+    }
+  ]
+}</code></pre>
+<h5>Separate parameter version</h5>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "outputs": [
+    {
+      "url": "azure://account-name@container/path/to/output.mp4",  "azure_sas": "sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"
+    }
+  ]
+}</code></pre>
+<h3>Thumbnail URLs</h3>
+<p>For thumbnails, the base URL typically doesn't include a filename. As with output URLs, this will be updated in a way that preserves query string parameters that include an SAS token.</p>
+<h4>Query string version</h4>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "outputs": [
+    {
+      "thumbnails": [
+        {
+          "label": "my-thumbs",
+          "number": 10,
+          "base_url": "azure://account-name@container/path/to/thumbs/?sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+<h4>Separate parameter version</h4>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "outputs": [
+    {
+      "thumbnails": [
+        {
+          "label": "my-thumbs",
+          "number": 10,
+          "base_url": "azure://account-name@container/path/to/thumbs/",
+          "azure_sas": "sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+</section>
 </article>
