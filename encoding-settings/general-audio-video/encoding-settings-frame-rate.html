@@ -57,9 +57,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Limits the output frame rate to a certain number. If the frame rate would otherwise exceed this number (e.g. the input frame rate is too high), this will reduce the frame rate to the max_frame_rate setting</p>
+    <p>Limits the output frame rate to a certain number. If the frame rate would otherwise exceed this number (e.g. the input frame rate is too high), this will reduce the frame rate to the <code translate="No">max_frame_rate</code> setting</p>
 
-    <p>Example: if you set max_frame_rate to 29.97, and the input has a frame rate of 59.94, the output file will have a frame rate of 29.97.</p>
+    <p>Example: if you set <code translate="No">max_frame_rate</code> to 29.97, and the input has a frame rate of 59.94, the output file will have a frame rate of 29.97.</p>
 
     <p>We recommend using this setting rather than setting an exact <a href="#frame-rate">frame_rate</a>, for two reasons:</p>
 
@@ -73,6 +73,42 @@ grandparent: Encoding Settings
   "outputs": [
     {
       "max_frame_rate": 30
+    }
+  ]
+}</code></pre>
+
+    <p><strong>See Also:</strong> <a href="#frame-rate">frame_rate</a> and <a href="#decimate">decimate</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="min_frame_rate" translate="No">min_frame_rate</h2>
+    <code translate="No">min_frame_rate:Float</code>
+
+    <p><strong>API Versions:</strong> V1, V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Example:</strong> 30</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Limits the minumumoutput frame rate to a certain number. If the frame rate would otherwise be less than this number (e.g. the input frame rate is too low), this will increase the frame rate to the <code translate="No">min_frame_rate</code> setting</p>
+
+    <p>Example: if you set <code translate="No">min_frame_rate</code> to 30.0, and the input has a frame rate of 29.97, the output file will have a frame rate of 30.0.</p>
+
+    <p>We recommend using this setting rather than setting an exact <a href="#frame-rate">frame_rate</a>, for two reasons:</p>
+
+    <p>First, changing a frame_rate can result in a visual quality drop due to stuttering and jerky motion.</p>
+
+    <p>Second, setting frame rate to a fixed number may actually increase the frame rate of the output video beyond the frame rate of the input, which would result in an unneeded increase in file size (or decrease in quality).</p>
+
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "min_frame_rate": 30
     }
   ]
 }</code></pre>
@@ -95,11 +131,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Divide the input frame rate by the specified number. This is useful if you know you want to cut frame rate in half, but you don’t know what the input frame rate is. Given an input frame rate of 20, if you set decimate to 2, you’ll get an output frame rate of 10. You can still set <a href="#max-frame-rate">max_frame_rate</a> if you want to ensure that a decimated frame rate does not exceed a certain value.</p>
+    <p>Divide the input frame rate by the specified number. This is useful if you know you want to cut frame rate in half, but you don’t know what the input frame rate is. Given an input frame rate of 20, if you set decimate to 2, you’ll get an output frame rate of 10. You can still set <a href="#max-frame-rate" translate="No">max_frame_rate</a> if you want to ensure that a decimated frame rate does not exceed a certain value.</p>
 
-    <p> </p>
-
-    <p>The output video will have a frame_rate that is equal to the input frame rate divided by the decimate value. So if the input is 24 fps, and you set decimate to 4, the output would be 6 fps (24 / 4).</p>
+    <p>The output video will have a frame_rate that is equal to the input frame rate divided by the <code translate="No">decimate</code> value. So if the input is 24 fps, and you set decimate to 4, the output would be 6 fps (24 / 4).</p>
 
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -139,7 +173,7 @@ grandparent: Encoding Settings
 
     <p>For <code translate="No">H.264</code> video, keyframes are IDR frames.</p>
 
-    <p>keyframe_interval takes precedence over <a href="#keyframe-rate">keyframe_rate</a>.</p>
+    <p>keyframe_interval takes precedence over <a href="#keyframe-rate" translate="No">keyframe_rate</a>.</p>
 
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -151,7 +185,7 @@ grandparent: Encoding Settings
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#keyframe-rate">keyframe_rate</a></p>
+    <p><strong>See Also:</strong> <a href="#keyframe-rate" translate="No">keyframe_rate</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="keyframe_rate" translate="No">keyframe_rate</h2>
