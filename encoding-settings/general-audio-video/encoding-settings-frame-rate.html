@@ -93,7 +93,9 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>Limits the minumumoutput frame rate to a certain number. If the frame rate would otherwise be less than this number (e.g. the input frame rate is too low), this will increase the frame rate to the <code translate="No">min_frame_rate</code> setting</p>
+    <p>Limits the minumumoutput frame rate to a certain number. If the frame rate would otherwise be less than this number (e.g. the input frame rate is too low), this will increase the frame rate to the <code translate="No">min_frame_rate</code> setting.</p>
+
+    <p>The <code translate="No">min_frame_rate</code> value <em>must be less than</em> the <code translate="No">max_frame_rate</code> value.</p>
 
     <p>Example: if you set <code translate="No">min_frame_rate</code> to 30.0, and the input has a frame rate of 29.97, the output file will have a frame rate of 30.0.</p>
 
