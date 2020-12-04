@@ -1,0 +1,71 @@
+---
+title: AV1 Guide
+description: This page documents AV1-specific encoding with Zencoder. This is a beta release as AV1 codec itself is relatively new and being improved everyday. 
+parent: Encoding Guides
+layout: staging
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="AV!_Overview">AV! Overview</h2>
+    <ul>
+      <li>AV1 is an open, royalty-free, next-generation video encoding format from the Alliance of Open Media Video. It can deliver superior quality at significantly lower bitrates compared to HEVC, VP9 and H.264 codecs.</li>
+      <li>
+        Support for AV1 codec is available to all Zencoder customers.
+        <aside class="bcls-aside bcls-aside--information language-editable">Support for AV1 codec is available to all Zencoder customers.</aside>
+      </li>
+      <li>Currently <code>mp4</code> and <code>webm</code> containers are supported with AV1 codec.</li>
+      <li>As AV1 popularity and usage increases, new features and containers are added by the Alliance of Open Media. We will be adding new features in the future as they are available.</li>
+      <li>See the list of limitations for more information.</li>
+    </ul>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="Specific_Options">Specific Options</h2>
+    <ul>
+      <li>
+        <code>video_codec_level</code>: constrains the bitrate and coding tree units (CTUs).
+        <p>Valid values (see <a href="https://en.wikipedia.org/wiki/AV1#Levels">this article</a> for the specific output values associated with these values):</p>
+        <ul>
+          <li>2.0</li>
+          <li>2.1</li>
+          <li>3.0</li>
+          <li>3.1</li>
+          <li>4.0</li>
+          <li>4.1</li>
+          <li>5.0</li>
+          <li>5.1</li>
+          <li>5.2</li>
+          <li>5.3</li>
+          <li>6.0</li>
+          <li>6.1</li>
+          <li>6.2</li>
+          <li>6.3</li>
+        </ul>
+      </li>
+      <li><code>video_codec_profile</code>: sets the encoding profile. The currently supported AV1 profiles are: <code>main</code>, <code>high</code> and <code>professional</code>. Default: <code>main</code>.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitation">Limitations</h2>
+    <p>The following are current limitations to AV1 outputs.</p>
+    <ul>
+      <li>All AV1 encoding are currently single pass only.</li>
+      <li>Segmented / Fragmented streaming file outputs are not supported yet by AV1</li>
+      <li>
+        The following settings are not supported:
+        <ul>
+          <li><code>video_bframes</code></li>
+          <li><code>video_reference_frames</code></li>
+          <li><code>deocoder_bitrate_cap</code> (decoder_buffer_size is supported)</li>
+          <li><code>max_video_bitrate</code></li>
+          <li><code>quality</code></li>
+          <li><code>crf</code></li>
+          <li>Resolutions that are not multiple of 8 (width and height)</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</article>
