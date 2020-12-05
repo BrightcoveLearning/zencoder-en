@@ -125,17 +125,13 @@ grandparent: Encoding Settings
 
     <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC levels</a>.</p>
-
-    <p><strong>Valid Values:</strong> A valid level: <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC levels</a>.</p>
-    
-    <p><strong>Compatible Job Types:</strong> All</p>
+    main, high and professional. Default: main.    <p><strong>Compatible Job Types:</strong> All</p>
 
     <p><strong>Example:</strong> 4.1</p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC)</p>
+    <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC), constrains the bitrate and coding tree units (CTUs) (AV1).</p>
 
     <p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
 

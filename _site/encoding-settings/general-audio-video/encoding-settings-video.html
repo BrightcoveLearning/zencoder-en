@@ -755,9 +755,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li>H.264 profiles: <code translate="No">baseline</code>, <code translate="No">main</code>, <code translate="No">high</code>, <code translate="No">high10</code>, <code translate="No">high422</code>, <code translate="No">high444</code>.</li>
       <li>HEVC profiles: <code translate="No">main</code>, <code translate="No">main10</code>, <code translate="No">main12</code>, <code translate="No">main422-10</code>, <code translate="No">main422-12</code>, <code translate="No">main444-8</code>, <code translate="No">main444-10</code>, <code translate="No">main444-12</code>.</li>
-      <li>VP9 profiles: 0, 1, 2, 3.
+      <li>VP9 profiles: 0, 1, 2, 3.</li>
+      <li>AV1 profiles:  <code translate="No">main</code>, <code translate="No">high</code> and <code translate="No">professional</code>. Default: <code translate="No">main</code>.</li>
 
-      </li>
     </ul>
     <p>In general, lower levels are supported by a wider range of devices and may be simpler to decode. Higher levels offer more features such as additional bit depths and chroma subsampling choices. In some cases, higher levels also support increased compression efficiency.</p>
 
@@ -779,17 +779,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264-levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC-levels</a></p>
+    <p><strong>Default:</strong> Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC levels</a>.</p>
 
     <p><strong>Valid Values:</strong> A valid level: <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC levels</a>.</p>
-
+    
     <p><strong>Compatible Job Types:</strong> All</p>
 
     <p><strong>Example:</strong> 4.1</p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC).</p>
+    <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC)</p>
 
     <p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
 

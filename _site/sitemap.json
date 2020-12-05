@@ -215,6 +215,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-video-stage.html",
+      "oldURL": "/encoding-settings-video-stage"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-video.html",
       "oldURL": "/encoding-settings-video"
   },
