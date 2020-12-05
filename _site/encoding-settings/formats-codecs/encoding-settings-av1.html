@@ -3,30 +3,20 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic contains details for encoding settings related to general settings for video outputs.">
-
-  <title>Video Settings</title>
+  <meta name="description" content="This topic contains details for encoding settings related to AV1 video outputs.">
+  
+  <title>AV1 Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
-  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="manifest" href="/site.webmanifest">  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -130,9 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/encoding-settings/general-audio-video/">Audio/Video Settings</a></li>
+      <li class="breadcrumb-item"><a href="/encoding-settings/formats-codecs/">Formats and Codec Settings</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Video Settings</li>
+      <li class="breadcrumb-item active" aria-current="page">AV1 Settings</li>
     </ol>
   </nav>
 </header>
@@ -658,76 +648,69 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Video Settings</h1>
+<h1>AV1 Settings</h1>
 <article class="bcls-article">
-  <summary>This topic contains details for encoding settings related to general settings for video outputs.</summary>
+  <summary>This topic contains details for encoding settings related to AV1 video outputs.</summary>
 
   <section class="bcls-section">
-    <h2 translate="No" id="video_bit_depth">video_bit_depth</h2>
-    <code translate="No">video_bit_depth:Number</code>
+    <h2 id="Encoding_recommendations">Encoding recommendations</h2>
+    <p>AV1 is an open, royalty-free, next-generation video encoding format from the Alliance of Open Media Video. It can deliver superior quality at significantly lower bitrates compared to HEVC, VP9 and H.264 codecs.</p>
 
-    <p><strong>API Versions:</strong> V2</p>
+    <p>See the <a href="/encoding-guides/av1-guide.html">AV1 Guide</a> for more information, and pay particular attention to the <a href="https://zencoder.support.brightcove.com/encoding-guides/av1-guide.html#limitation">Limitations</a> for current support.</p>
+    <p>In addition to settings found on this page, you may want to include other general video settings, but note that following settings are <strong>not</strong> currently supported:</p>
 
-    <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-    <p><strong>Default:</strong> 10</p>
-
-    <p><strong>Valid Values:</strong> 8, 10, or 12</p>
-
-    <p><strong>Compatible Job Types:</strong> vod, live</p>
-
-    <p><strong>Example:</strong> 5</p>
-
-    <p><strong>Description:</strong></p>
-
-    <p>The number of bits per color channel.</p>
-
-    <p>Normally you would not set this and instead would specify the <a translate="No" href="#video_codec_profile">video_codec_profile</a> which would provide the bit depth.</p>
-
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "video_bit_depth": 10
-    }
-  ]
-}</code></pre>
+    <ul>
+      <li><code translate="No"><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_reference_frames">video_reference_frames</a></code></li>
+      <li><code translate="No"><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_bframes">video_bframes</a></code></li>
+      <li><code translate="No"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_video_bitrate">max_video_bitrate</a></code></li>
+      <li><code translate="No"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#quality">quality</a></code></li>
+      <li><code translate="No"><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf">crf</a></code></li>
+      <li><code translate="No"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap">decoder_bitrate_cap</a></code></li>
+    </ul>
+    <p>Also note that for <a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution settings</a> (whether you use <code translate="No">size</code> or <code translate="No">width</code> and <code translate="No">height</code>) both the width and height <strong>must</strong> be multiples of 8.</p>
   </section>
   <section class="bcls-section">
-    <h2 translate="No" id="video_reference_frames">video_reference_frames</h2>
-    <code translate="No">video_reference_frames:String</code>
+    <h2 translate="No" id="video_codec_level">video_codec_level</h2>
+    <code translate="No">video_codec_level:String</code>
 
     <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> 3</p>
+    <p><strong>Valid Values:</strong>
+      <ul>
+        <li>2.0</li>
+        <li>2.1</li>
+        <li>3.0</li>
+        <li>3.1</li>
+        <li>4.0</li>
+        <li>4.1</li>
+        <li>5.0</li>
+        <li>5.1</li>
+        <li>5.2</li>
+        <li>5.3</li>
+        <li>6.0</li>
+        <li>6.1</li>
+        <li>6.2</li>
+        <li>6.3</li>
+      </ul>
+  </p>   
+    
+    <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Valid Values:</strong> 0-16, <code translate="No">auto</code></p>
-
-    <p><strong>Compatible Job Types:</strong> vod, live</p>
-
-    <p><strong>Example:</strong> 5</p>
+    <p><strong>Example:</strong> 4.1</p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Number of reference frames to use.</p>
-
-    <p>More reference frames result in slightly higher compression quality, but increased decoding complexity. In practice, going above 5 rarely has much benefit.</p>
-
-    <p>Determined partly by <a translate="No" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed">speed</a> as well as <a translate="No" href="#video-codec_profile">video_codec_profile</a>. Set to "auto" to allow our <a translate="No" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed">speed</a> setting to naturally choose this number.</p>
-
-    <p>We default to 3 as a good compromise of compression and decoding complexity.</p>
-
-    <p>Use 1 for video created for legacy iPod or first-generation iPhone video, or for other technically-limited decoders.</p>
+    <p>Constrains the bitrate and coding tree units (CTUs) (AV1).</p>
+    <p>Note that this setting can be used for other codecs with different allowed values. See <a href="/encoding-settings/general-audio-video/encoding-settings-video.html">Video Encoding Settings</a>.</p>
 
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
-      "video_reference_frames": 5
+      "video_codec_level": "5.1"
     }
   ]
 }</code></pre>
@@ -740,26 +723,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> H.264: <code translate="No">baseline</code>, HEVC: <code translate="No">main</code>, VP9: 0</p>
-
-    <p><strong>Valid Values:</strong> codec-dependent</p>
+    <p><strong>Valid Values:</strong> <code translate="No">main</code>, <code translate="No">high</code>, <code translate="No">professional</code></p>   
+    
+    <p><strong>Default:</strong> <code translate="No">main</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> high</p>
+    <p><strong>Example:</strong> 4.1</p>
 
     <p><strong>Description:</strong></p>
 
-    <p>Sets the encoding profile used by the video codec.</p>
-
-    <ul>
-      <li>H.264 profiles: <code translate="No">baseline</code>, <code translate="No">main</code>, <code translate="No">high</code>, <code translate="No">high10</code>, <code translate="No">high422</code>, <code translate="No">high444</code>.</li>
-      <li>HEVC profiles: <code translate="No">main</code>, <code translate="No">main10</code>, <code translate="No">main12</code>, <code translate="No">main422-10</code>, <code translate="No">main422-12</code>, <code translate="No">main444-8</code>, <code translate="No">main444-10</code>, <code translate="No">main444-12</code>.</li>
-      <li>VP9 profiles: 0, 1, 2, 3.</li>
-      <li>AV1 profiles:  <code translate="No">main</code>, <code translate="No">high</code> and <code translate="No">professional</code>. Default: <code translate="No">main</code>.</li>
-
-    </ul>
-    <p>In general, lower levels are supported by a wider range of devices and may be simpler to decode. Higher levels offer more features such as additional bit depths and chroma subsampling choices. In some cases, higher levels also support increased compression efficiency.</p>
+    <p>Sets the encoding profile.</p>
+    <p>Note that this setting can be used for other codecs with different allowed values. See <a href="/encoding-settings/general-audio-video/encoding-settings-video.html">Video Encoding Settings</a>.</p>
 
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -767,110 +742,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   "outputs": [
     {
       "video_codec_profile": "high"
-    }
-  ]
-}</code></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 translate="No" id="video_codec_level">video_codec_level</h2>
-    <code translate="No">video_codec_level:String</code>
-
-    <p><strong>API Versions:</strong> V2</p>
-
-    <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-    <p><strong>Default:</strong> Automatically calculated using a level chart based on the output video. See <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264-levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC-levels</a>, <a href="https://en.wikipedia.org/wiki/AV1#Levels">AV1 levels</a>.</p>
-
-    <p><strong>Valid Values:</strong> A valid level: <a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 levels</a>, <a href="http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels">HEVC levels</a>, <a href="https://en.wikipedia.org/wiki/AV1#Levels">AV1 levels</a>.</p>
-    
-    <p><strong>Compatible Job Types:</strong> All</p>
-
-    <p><strong>Example:</strong> 4.1</p>
-
-    <p><strong>Description:</strong></p>
-
-    <p>Constrains bitrate, macroblocks (H.264) or bitrate, coding tree units (HEVC), constrains the bitrate and coding tree units (CTUs) (AV1).</p>
-
-    <p>Primarily used for device compatibility. For example, the iPhone supports H.264 Level 3, which means that a video’s <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder-bitrate-cap">decoder_bitrate_cap</a> can’t exceed 10,000kbps. Typically, you should only change this setting if you’re targeting a specific device that requires it.</p>
-
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "video_codec_level": "4.1"
-    }
-  ]
-}</code></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 translate="No" id="video_bframes">video_bframes</h2>
-    <code translate="No">video_bframes:Integer</code>
-
-    <p><strong>API Versions:</strong> V2</p>
-
-    <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-    <p><strong>Default:</strong> 0</p>
-
-    <p><strong>Valid Values:</strong> 0-16</p>
-
-    <p><strong>Compatible Job Types:</strong> All</p>
-
-    <p><strong>Example:</strong> 2</p>
-
-    <p><strong>Description:</strong></p>
-
-    <p>Maximum number of consecutive B-frames.</p>
-
-    <p>Using B-frames can increase quality at the same bitrate, but is more demanding on CPUs. This may be problematic on old computers or devices, but generally plays smoothly on modern hardware.</p>
-
-    <p>H.264 supports by b-frames with <a translate="No" href="#video-codec_profile">Main or High profile</a>, not Baseline. The default is 0 for widest compatibility.</p>
-
-    <p>For HEVC, b-frames can be used on any level. The default is 3.</p>
-
-    <p>We recommend a value of 3 for compression/quality improvements. Values higher than 5 or 6 rarely provide much benefit, and greatly increase encoding time.</p>
-
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "video_bframes": 2
-    }
-  ]
-}</code></pre>
-
-    <p><strong>See Also:</strong> <a translate="No" href="#video-codec_profile">video_codec_profile</a></p>
-  </section>
-  <section class="bcls-section">
-    <h2 translate="No" id="color_metadata">color_metadata</h2>
-    <code translate="No">color_metadata:String</code>
-
-    <p><strong>API Versions:</strong> V2</p>
-
-    <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-    <p><strong>Default:</strong> <code translate="No">preserve</code></p>
-
-    <p><strong>Valid Values:</strong> <code translate="No">preserve</code> or <code translate="No">discard</code></p>
-
-    <p><strong>Compatible Job Types:</strong> All</p>
-
-    <p><strong>Example:</strong> <code translate="No">discard</code></p>
-
-    <p><strong>Description:</strong></p>
-
-    <p>This option is currently supported on H.264, HEVC and VP9 outputs. If the input video has matrix coefficients, transfer characteristics, and color primaries metadata, Zencoder will <code translate="No">preserve</code> those settings by default.</p>
-
-    <p>To ensure that this metadata is not embedded in outputs, set <code translate="No">color_metadata</code> to <code translate="No">discard</code>.</p>
-
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "color_metadata": "discard"
     }
   ]
 }</code></pre>
@@ -891,7 +762,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 04 Dec 2020
+  Page last updated on 05 Dec 2020
 </div>
 
 
