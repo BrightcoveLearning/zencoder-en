@@ -40,6 +40,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/cae-guide-stage.html",
+      "oldURL": "/cae-guide-stage"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html",
       "oldURL": "/cae-guide"
   },
@@ -605,7 +610,17 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "newURL": "https://zencoder.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
       "oldURL": "/index"
   },
 
@@ -620,7 +635,17 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/general-information/",
+      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
       "oldURL": "/index"
   },
 
@@ -640,7 +665,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/general-information/",
       "oldURL": "/index"
   },
 
@@ -650,32 +680,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
       "oldURL": "/index"
   },
 
