@@ -4,7 +4,7 @@
 - section: 
   name: 'Getting Started'
   url: '/getting-started/index.html'
-  icon: '<i class="far fa-location-arrow"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/play.svg">'
   docs:
     - name: 'Overview'
       url: '/getting-started/overview-zencoder.html'
@@ -18,7 +18,7 @@
       url: '/getting-started/creating-multiple-outputs.html'
 - section: 
   name: 'General Information'
-  icon: '<i class="far fa-info-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/info.svg">'
   url: '/general-information/index.html'
   docs:
     - name: 'Basics'
@@ -326,7 +326,7 @@
 - section: 
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i class="far fa-question-circle"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'
