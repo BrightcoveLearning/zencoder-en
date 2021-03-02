@@ -191,7 +191,7 @@
 - section: 
   name: 'Errors/Troubleshooting'
   url: '/error-troubleshooting/index.html'
-  icon: '<i class="far fa-exclamation-triangle"></i>'
+  icon: '<i data-feather="alert-triangle"></i>'
   docs:
   - name: 'Common Problems'
     url: '/error-troubleshooting/problems.html'
