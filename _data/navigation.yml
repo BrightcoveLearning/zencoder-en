@@ -18,7 +18,7 @@
       url: '/getting-started/creating-multiple-outputs.html'
 - section: 
   name: 'General Information'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/info.svg">'
+  icon: '<i data-feather="info"></i>'
   url: '/general-information/index.html'
   docs:
     - name: 'Basics'
@@ -326,7 +326,7 @@
 - section: 
   name: 'Support'
   url: '/support/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
+  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'
