@@ -4,7 +4,7 @@
 - section: 
   name: 'Getting Started'
   url: '/getting-started/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/play.svg">'
+  icon: '<i data-feather="play"></i>'
   docs:
     - name: 'Overview'
       url: '/getting-started/overview-zencoder.html'
@@ -50,7 +50,7 @@
 - section: 
   name: 'References'
   url: '/references/index.html'
-  icon: '<i class="fal fa-books"></i>'
+  icon: '<i data-feather="book-open"></i>'
   docs:
     - name: 'API Reference'
       url: '/references/reference.html'
@@ -61,7 +61,7 @@
 - section: 
   name: 'Encoding Settings'
   url: '/encoding-settings/index.html'
-  icon: '<i class="fal fa-cogs"></i>'
+  icon: '<i data-feather="settings"></i>'
   docs:
     - name: 'General Settings'
       url: '/encoding-settings/general/index.html'
@@ -148,7 +148,7 @@
 - section: 
   name: 'Encoding Guides'
   url: '/encoding-guides/index.html'
-  icon: '<i class="fas fa-fast-forward"></i>'
+  icon: '<i data-feather="fast-forward"></i>'
   docs:
     - name: 'Audio Mapping Guide'
       url: '/encoding-guides/advanced-audio-mapping-guide.html'
@@ -313,7 +313,7 @@
 - section: 
   name: 'Integration'
   url: '/integration/index.html'
-  icon: '<i class="far fa-handshake-alt"></i>'
+  icon: '<i data-feather="link"></i>'
   docs:
     - name: 'Integration libraries'
       url: '/integration/faq-integration-libraries.html'
