@@ -4,7 +4,6 @@
 - section: 
   name: 'Getting Started'
   url: '/getting-started/index.html'
-  icon: '<i data-feather="play"></i>'
   docs:
     - name: 'Overview'
       url: '/getting-started/overview-zencoder.html'
@@ -18,7 +17,6 @@
       url: '/getting-started/creating-multiple-outputs.html'
 - section: 
   name: 'General Information'
-  icon: '<i data-feather="info"></i>'
   url: '/general-information/index.html'
   docs:
     - name: 'Basics'
@@ -50,7 +48,6 @@
 - section: 
   name: 'References'
   url: '/references/index.html'
-  icon: '<i data-feather="book-open"></i>'
   docs:
     - name: 'API Reference'
       url: '/references/reference.html'
@@ -61,7 +58,6 @@
 - section: 
   name: 'Encoding Settings'
   url: '/encoding-settings/index.html'
-  icon: '<i data-feather="settings"></i>'
   docs:
     - name: 'General Settings'
       url: '/encoding-settings/general/index.html'
@@ -148,7 +144,6 @@
 - section: 
   name: 'Encoding Guides'
   url: '/encoding-guides/index.html'
-  icon: '<i data-feather="fast-forward"></i>'
   docs:
     - name: 'Audio Mapping Guide'
       url: '/encoding-guides/advanced-audio-mapping-guide.html'
@@ -191,7 +186,6 @@
 - section: 
   name: 'Errors/Troubleshooting'
   url: '/error-troubleshooting/index.html'
-  icon: '<i data-feather="alert-triangle"></i>'
   docs:
   - name: 'Common Problems'
     url: '/error-troubleshooting/problems.html'
@@ -313,7 +307,6 @@
 - section: 
   name: 'Integration'
   url: '/integration/index.html'
-  icon: '<i data-feather="link"></i>'
   docs:
     - name: 'Integration libraries'
       url: '/integration/faq-integration-libraries.html'
@@ -326,7 +319,6 @@
 - section: 
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'

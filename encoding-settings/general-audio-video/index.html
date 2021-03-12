@@ -1,38 +1,15 @@
 ---
 title: Audio/Video Settings
 description: General audio and video settings for Zencoder jobs.
-icon: '<i data-feather="settings"></i>'
 parent: Home
 ---
-<style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:{{site.product_color}};
-    margin-right: .5rem;
-  }
-  .card-icon i {
-    color: {{site.product_color}};
-  }
-  .card-wrapper {
-  justify-content: start;
-}
-.bcls-card h2 {
-  font-size: 1rem;
-}
-.bcls-card ul {
-  font-size: small;
-  margin-left: -3em;
-}
-</style>
 
 <article class="bcls-article">
-  <h1>{{ page.icon }} {{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
-  <section class="card-wrapper">
-    <section class="bcls-card">
-      <div class="card-content">
+    <section>
         <h2 id="Topics_in_this_section">Topics in {{ page.title }}</h2>
-        <ul>
+        <ul style="margin-left: -2.2rem;list-style: none;">
         {% for item in site.data.navigation %}
           {% if item.name == 'Encoding Settings' %}
             {% for entry in item.docs %}
@@ -44,7 +21,5 @@ parent: Home
             {% endfor %}
           {% endif %}
         {% endfor %}
-      </div>
-    </section>
   </section>
 </article>

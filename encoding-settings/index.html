@@ -1,27 +1,14 @@
 ---
 title: Encoding Settings
 description: Detailed explanation of all encoding settings.
-icon: '<i data-feather="settings"></i>'
 parent: Home
 ---
-<style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:{{site.product_color}};
-    margin-right: .5rem;
-  }
-  .bcls-card-small ul {
-    font-size: small;
-    list-style: none;
-    margin-left: -3em;
-  }
-
-</style>
 
 <article class="bcls-article">
-  <h1>{{ page.icon }} {{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <p><a href="/encoding-settings/quick-reference.html">Quick Reference</a></p>
+	<h2>Topics in this section</h2>
   <section class="card-wrapper">
     {% for item in site.data.navigation %}
       {% if item.name == page.title %}

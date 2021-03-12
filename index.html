@@ -2,12 +2,6 @@
 title: Zencoder Documentation
 parent: null
 ---
-<style>
-  h1 {
-    font-weight: bold;
-    color: rgb(9, 7, 140);
-  }
-</style>
 
 <article class="landing-page-wrapper">
   <section class="landing-page-header" id="landing_page_header">
@@ -19,18 +13,14 @@ parent: null
     {% for section in site.data.navigation offset:1 %}
     <section class="bcls-card-small" onclick="window.location.href='{{ section.url }}'">
 
-      <div class="card-icon">
-        {{ section.icon }}
-      </div>
-
       <div class="card-content">
         <h2>{{ section.name }}</h2>
         <ul>
           {% for doc in section.docs limit:4 %}
-          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+          <li style="margin-left: .4rem;"><a href="{{ doc.url }}">{{ doc.name }}</a></li>
           {% endfor %}
         </ul>
-        <p style="font-size:small;"><a href="{{ section.url }}">View all...</a></p>
+        <p><a href="{{ section.url }}">View all...</a></p>
       </div>
     </section>
     {% endfor %}
