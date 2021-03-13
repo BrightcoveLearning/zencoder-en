@@ -17,7 +17,7 @@ parent: null
         <h2>{{ section.name }}</h2>
         <ul>
           {% for doc in section.docs limit:4 %}
-          <li style="margin-left: .4rem;"><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
           {% endfor %}
         </ul>
         <p><a href="{{ section.url }}">View all...</a></p>
