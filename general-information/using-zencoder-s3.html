@@ -8,6 +8,12 @@ parent: General Information
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
 
+	<section class="bcls-section">
+		<h2 id="Introduction">Introduction</h2>
+		<p>Zencoder can upload and download files from your Amazon S3 bucket. For Zencoder to download files, they either need to be accessible by Everyone, or a bucket policy needs to be added to your bucket that will grant Zencoder access, or you must save credentials to your account for accessing the bucket.</p>
+		<aside class="bcls-aside bcls-aside--information language-editable">Note that Zencoder only supports Amazon AWS S3 buckets. <strong>S3 compatible storage buckets from non-Amazon vendors are <em>not</em> supported.</strong></aside>
+	</section>
+
   <section class="bcls-section">
     <h2 id="Use_credentials">Use credentials</h2>
 
