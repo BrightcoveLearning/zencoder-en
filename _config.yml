@@ -40,9 +40,6 @@ product_icon: "COVE004_Brightcove_Zencoder_Logo_RGB_K.svg"
 search_id: "017969773216783359937:chdh4nuxqmh"
 feedbackify_id: "15027"
 bing_custom_config_id: "f86fff2b-1515-45cb-9de7-dfc8200ad095"
-talla_appID: "00c26be3-4421-41e6-bb00-1dee68740f67"
-talla_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
-talla_knowledgegroup: '2233f970-dfad-4c06-bb6e-fdf4ddba4506'
 defaults:
   -
     scope:
