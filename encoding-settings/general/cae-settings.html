@@ -701,7 +701,7 @@ grandparent: Encoding Settings
 
     <p><strong>Compatible Job Types:</strong> VOD</p>
 
-    <p><strong>Example:</strong> 100</p>
+    <p><strong>Example:</strong> false</p>
 
     <p><strong>Description:</strong></p>
 
@@ -715,6 +715,35 @@ grandparent: Encoding Settings
             "min_renditions": 2,
             "max_renditions": 10,
             <span class="bcls-highlight">"select_baseline_profile_configuration": true</span>
+          }
+        }</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="select_distinct_configurations" translate="No">select_distinct_configurations</h2>
+    <code translate="No">select_distinct_configurations:Boolean</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+
+    <p><strong>Default Value:</strong> false</p>
+
+    <p><strong>Compatible Job Types:</strong> VOD</p>
+
+    <p><strong>Example:</strong> true</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>If true, CAE will ensure that no two renditions use the same combination of: resolution, frame rate, and codec profile.</p>
+
+    <pre class="line-numbers">
+        <code class="language-json" translate="No">{
+          "input": "s3://zencodertesting/test.mov",
+          "generate_dynamic_profile": true,
+          "dynamic_profile_options": {
+            "min_renditions": 2,
+            "max_renditions": 10,
+            <span class="bcls-highlight">"select_distinct_configurations": true</span>
           }
         }</code></pre>
   </section>

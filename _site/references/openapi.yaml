@@ -959,6 +959,16 @@ components:
           minimum: -40
           maximum: 40
           default: 0
+        select_baseline_profile_configuration:
+          type: boolean
+          description: |-
+            At least one rendition used in the profile will be baseline profile. Note that `select_baseline_profile_configuration`is `true` by default, and it requires *at least one rendition* to have a resolution at or below 512x288.
+          default: true
+        select_distinct_configurations:
+          type: boolean
+          description: |-
+            If true, CAE will ensure that no two renditions use the same combination of: resolution, frame rate, and codec profile.
+          default: false
         video_configurations:
           type: array
           description: |-
