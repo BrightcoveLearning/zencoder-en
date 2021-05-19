@@ -600,12 +600,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/support/",
+      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
@@ -615,7 +610,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "newURL": "https://zencoder.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -656,6 +651,11 @@
 
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
       "oldURL": "/index"
   },
 
@@ -757,6 +757,11 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/references/release-notes.html",
       "oldURL": "/release-notes"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/support/reset-support-portal-password.html",
+      "oldURL": "/reset-support-portal-password"
   },
 
   {
