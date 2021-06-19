@@ -886,7 +886,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <li>Append the token to the URL as a query string parameter.</li>
   <li>Provide the token separately with the "azure_sas" setting.</li>
 </ul>
-<aside class="bcls-aside bcls-aside--information language-editable">Note: The Azure URL must use an azure:// scheme as is standard within Zencoder, not https:// .</aside>
+<aside class="bcls-aside bcls-aside--information">Note: The Azure URL must use an azure:// scheme as is standard within Zencoder, not https:// .</aside>
 <h3>API Request Examples</h3>
 <h4>Input URLs</h4>
 <h5>Query string version</h5>
@@ -894,7 +894,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h5>Separate parameter version</h5>
 <pre class="line-numbers"><code class="language-json" translate="No">{  "input": "azure://account-name@container/path/to/input.mp4",  "azure_sas": "sv=2019-10-10&si=sas-account&sr=c&sig=as87LKJHab87afjlghKJH654kjmasfRas02fabf34x8%3D"}</code></pre>
 <h4>Output URLs</h4>
-<aside class="bcls-aside bcls-aside--information language-editable">Note: For multi-file outputs (such as HLS outputs with a manifest and media segments) the filename withinthe URL will be automatically updated for uploading each additional file, but the path and parameters willotherwise be preserved.</aside>
+<aside class="bcls-aside bcls-aside--information">Note: For multi-file outputs (such as HLS outputs with a manifest and media segments) the filename withinthe URL will be automatically updated for uploading each additional file, but the path and parameters willotherwise be preserved.</aside>
 <h5>Query string version</h5>
 <pre class="line-numbers"><code class="language-json" translate="No">{
   "outputs": [
