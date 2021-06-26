@@ -1,0 +1,156 @@
+---
+title: Forensic Watermarking Settings
+description: 'This topic provides information on settings for forensic watermarking.'
+parent: Content Protection Settings
+grandparent: Encoding Settings
+layout: staging
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>Forensic watermarking will help protect your premium content from piracy and unauthorized content sharing. This feature also helps to quickly identify the source of a content leak, so that action can be taken. See <a href="/encoding-guides/forensic-watermarking.html">Forensic Watermarking</a> for more details on requirements for using forensic watermarking.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="forensic_watermark">forensic_watermark</h2>
+    <code translate="No">forensic_watermark:String</code>
+
+    <p><strong>API Versions:</strong>V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Valid Values:</strong> "A", "B"</p>
+
+    <aside class="bcls-aside bcls-aside--information">Must be set to <code translate="No">A</code> for one output, and <code translate="No">B</code> for a second output</aside>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> A</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>To generate outputs with forensic watermarking in Zencoder, you need to specify 2 outputs per video, an output <strong translate="no">A</strong> and <strong translate="no">B</strong> so that segments from each output can be intermixed in different sequences to produce a range of different watermarked "videos" for playback (for example: AABABBABA, ABBBABABA, BABAABBAA, etc.).</p>
+
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that forensic watermarking <strong>cannot</strong> be added to videos shorter than 5 minutes</aside>
+
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "base_url": "s3://urlTest",
+      "filename": "contextAwareEncoding1_A.m4f",
+      "public": false,
+      "format": "m4f",
+      "label": "m4f-contextAwareEncoding1-A-b30e1",
+      "generate_mp4_atom_map": true,
+      "Mp4_atom_map_filename": "contextAwareEncod-A-atom_map.json",
+      "skip_audio": true,
+      <span class="bc-highlight">"forensic_watermark": "A"</span>,
+      "dynamic_profile_rendition": 1,
+      "skip": {
+          "require_video": true
+      },
+      "fragment_duration": 2000,
+      "segment_seconds": 2,
+      "headers": {
+          "x-amz-server-side-encryption": "AES256"
+      }
+    },
+    {         
+      "base_url": "s3://urlTest",
+      "filename": "contextAwareEncoding1_B.m4f",
+      "public": false,
+      "format": "m4f",
+      "label": "m4f-contextAwareEncoding1-B-e348",
+      "generate_mp4_atom_map": true,
+      "mp4_atom_map_filename": "contextAwareEncod-B-atom_map.json",
+      "skip_audio": true,
+      <span class="bc-highlight">"forensic_watermark": "B"</span>,
+      "dynamic_profile_rendition": 1,
+      "skip": {
+          "require_video": true
+      },
+      "fragment_duration": 2000,
+      "segment_seconds": 2,
+      "headers": {
+          "x-amz-server-side-encryption": "AES256"
+      }
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="forensic_watermark_stub_mode">forensic_watermark_stub_mode</h2>
+    <code translate="No">forensic_watermark_stub_mode:Boolean</code>
+
+    <p><strong>API Versions:</strong>V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Valid Values:</strong> true, false</p>
+
+    <p><strong>Default Value:</strong> false</p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> true</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>To <strong>be used for purposes of testing integrations</strong> that generate outputs with forensic watermarking in Zencoder. When set to <code translate="No">true</code> together with <a href="#forensic_watermark"><code translate="No">forensic_watermark</code></a>, this flag causes visible watermarks to be created (to verify that forensic watermarking is being successfully added).</p>
+
+    <p>Once testing is complete, you will need to run the job again, omitting the <code translate="No">forensic_watermark_stub_mode:Boolean</code> flag or setting it to <code translate="No">false</code>, to get outputs without the visible watermarks.</p>
+
+<pre class="line-numbers">
+  <code class="language-json" translate="No">{
+    "input": "s3://zencodertesting/test.mov",
+    "outputs": [
+      {
+        "base_url": "s3://urlTest",
+        "filename": "contextAwareEncoding1_A.m4f",
+        "public": false,
+        "format": "m4f",
+        "label": "m4f-contextAwareEncoding1-A-b30e1",
+        "generate_mp4_atom_map": true,
+        "Mp4_atom_map_filename": "contextAwareEncod-A-atom_map.json",
+        "skip_audio": true,
+        <span class="bc-highlight">"forensic_watermark": "A"</span>,
+        <span class="bc-highlight">"forensic_watermark_stub_mode": true</span>,
+        "dynamic_profile_rendition": 1,
+        "skip": {
+            "require_video": true
+        },
+        "fragment_duration": 2000,
+        "segment_seconds": 2,
+        "headers": {
+            "x-amz-server-side-encryption": "AES256"
+        }
+    },
+    {         
+        "base_url": "s3://urlTest",
+        "filename": "contextAwareEncoding1_B.m4f",
+        "public": false,
+        "format": "m4f",
+        "label": "m4f-contextAwareEncoding1-B-e348",
+        "generate_mp4_atom_map": true,
+        "mp4_atom_map_filename": "contextAwareEncod-B-atom_map.json",
+        "skip_audio": true,
+        <span class="bc-highlight">"forensic_watermark": "B"</span>,
+        <span class="bc-highlight">"forensic_watermark_stub_mode": true</span>,
+        "dynamic_profile_rendition": 1,
+        "skip": {
+            "require_video": true
+        },
+        "fragment_duration": 2000,
+        "segment_seconds": 2,
+        "headers": {
+            "x-amz-server-side-encryption": "AES256"
+        }
+    }
+  ]
+}</code></pre>
+        </section>
+</article>

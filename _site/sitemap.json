@@ -140,6 +140,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/encoding-settings-forensic-watermarking.html",
+      "oldURL": "/encoding-settings-forensic-watermarking"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs-stage.html",
       "oldURL": "/encoding-settings-format-and-codecs-stage"
   },
@@ -545,6 +550,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/forensic-watermarking.html",
+      "oldURL": "/forensic-watermarking"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/getting-started/getting-api-key.html",
       "oldURL": "/getting-api-key"
   },
@@ -600,7 +610,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
       "oldURL": "/index"
   },
 
@@ -611,6 +621,11 @@
 
   {
       "newURL": "https://zencoder.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
@@ -636,11 +651,6 @@
 
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/sources-destinations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
       "oldURL": "/index"
   },
 

@@ -1,0 +1,33 @@
+---
+title: Forensic Watermarking
+description: "In this topic, you will get a high-level overview of Brightcove's Forensic Watermarking feature for Zencoder."
+parent: Encoding Guides
+layout: staging
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>Brightcove has partnered with <a href="https://dtv.nagra.com/nexguard-forensic-watermarking">NAGRA</a> to provide forensic watermarking as a feature in the Zencoder. This will help protect your premium content from piracy and unauthorized content sharing. This feature also helps to quickly identify the source of a content leak, so that action can be taken.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Setup">Setup</h2>
+    <p>The following setup is needed to support Brightcove's Forensic Watermarking solution:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        Contact your account manager:
+        <ol>
+          <li>Enable your account for Forensic Watermarking; This is a paid add-on to Video Cloud.</li>
+        </ol>
+      </li>
+      <li>Get your License Key from <a href="https://dtv.nagra.com/nexguard-forensic-watermarking">NAGRA</a>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="implementation">implementation</h2>
+    <p>To generate outputs with forensic watermarking in Zencoder, you need to specify 2 outputs per video, an output <strong translate="no">A</strong> and <strong translate="no">B</strong>. There is also a testing mode that allows you to test integrations by creating visible forensic watermarks.</p>
+    <p>Find details of the job settings in <a href="/encoding-settings/content-protection/encoding-settings-forensic-watermarking.html">Forensic Watermarking Settings</a>.</p>
+  </section>
+</article>
