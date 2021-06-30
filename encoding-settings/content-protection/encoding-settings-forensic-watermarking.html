@@ -33,7 +33,13 @@ layout: staging
 
     <p>To generate outputs with forensic watermarking in Zencoder, you need to specify 2 outputs per video, an output <strong translate="no">A</strong> and <strong translate="no">B</strong> so that segments from each output can be intermixed in different sequences to produce a range of different watermarked "videos" for playback (for example: AABABBABA, ABBBABABA, BABAABBAA, etc.).</p>
 
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that forensic watermarking <strong>cannot</strong> be added to videos shorter than 5 minutes</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">
+      Notes: 
+      <ul>
+        <li>forensic watermarking <strong>cannot</strong> be added to videos shorter than 5 minutes</li>
+        <li><code translate="No">segment_seconds</code> <strong>must</strong> be set to <code translate="No">2</code> or forensic watermarking will not be added</li>
+      </ul>
+    </aside>
 
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -54,7 +60,7 @@ layout: staging
           "require_video": true
       },
       "fragment_duration": 2000,
-      "segment_seconds": 2,
+      <span class="bc-highlight">"segment_seconds": 2</span>,
       "headers": {
           "x-amz-server-side-encryption": "AES256"
       }
@@ -74,7 +80,7 @@ layout: staging
           "require_video": true
       },
       "fragment_duration": 2000,
-      "segment_seconds": 2,
+      <span class="bc-highlight">"segment_seconds": 2</span>,
       "headers": {
           "x-amz-server-side-encryption": "AES256"
       }
