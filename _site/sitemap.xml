@@ -563,6 +563,15 @@
             <priority>0.5</priority>
           </url>
         
+          <url>
+            
+              <loc>https://zencoder.support.brightcove.com/encoding-settings/content-protection/encoding-settings-forensic-watermarking.html</loc>
+            
+            <lastmod>2021-07-15</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
@@ -653,6 +662,16 @@
         <url>
           
             <loc>https://zencoder.support.brightcove.com/encoding-guides/dash-streaming-and-playlists.html</loc>
+          
+            <lastmod>2021-07-15</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://zencoder.support.brightcove.com/encoding-guides/forensic-watermarking.html</loc>
           
             <lastmod>2021-07-15</lastmod>
             <changefreq>daily</changefreq>
