@@ -252,4 +252,35 @@ parent: General Information
   }
 }</code></pre>
   </section>
+  <section class="bcls-section">
+    <h2 id="Sample_app"">Sample notification handler</h2>
+    <p>Below is a simple PHP app for handling notifications.</p>
+<pre class="line-numbers"><code class="language-php"><?php
+  // POST won't work for JSON data
+  $problem = "No errors";
+  $notificationType = null;
+  try {
+      $json    = file_get_contents('php://input');
+      $decoded = json_decode($json, true);
+      // turn notification into pretty printed JSON
+      $notification = json_encode($decoded, JSON_PRETTY_PRINT);
+  } catch (Exception $e) {
+      $problem = $e--->getMessage();
+      $notification = $json;
+  }
+
+  $logEntry = $notification."\n \n";
+
+  // Tell PHP where it can find the log file and tell PHP to open it
+  // and add the string we created earlier to it.
+      $logFileLocation = "live-log.txt";
+      $fileHandle      = fopen($logFileLocation, 'a') or die("-1");
+      fwrite($fileHandle, $logEntry);
+      fclose($fileHandle);
+
+  // line below is displayed when you browse the app directly
+  echo "Zencoder callback app is running";
+  ?>
+</code></pre>
+  </section>
 </article>
