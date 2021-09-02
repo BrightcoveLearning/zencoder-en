@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="This topic contains details for encoding settings related to video formats and codecs.">
-  
+
   <title>Format and Codecs Settings</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -30,6 +32,8 @@
 
   gtag('config', 'UA-2728311-17');
 </script>
+<script src="/assets/js/sajari-head.js"></script>
+
   <link rel="stylesheet" href="/assets/css/local.css" />
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -861,9 +865,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> Determined by the output filename and then video or audio codec. Otherwise: mp4 (for standard outputs); ts (for segmented outputs).</p>
+    <p><strong>Default:</strong> Determined by the output filename and then video or audio codec. Otherwise: <code translate="no">mp4</code> (for standard outputs); <code translate="no">ts</code> (for segmented outputs); <code translate="no">m3u8</code> for captions.</p>
 
-    <p><strong>Valid Values:</strong> 3gp, aac, ac3, ec3, flv, m4f, mj2, mkv, mp3, mp4, mxf, ogg, ts, webm, and wmv</p>
+    <p><strong>Valid Values for video and audio: </strong> <code translate="no">3gp</code>, <code translate="no">aac</code>, <code translate="no">ac3</code>, <code translate="">ec3</code>, <code translate="no">flv</code>, <code translate="no">m4f</code>, <code translate="no">mj2</code>, <code translate="no">mkv</code>, <code translate="no">mp3</code>, <code translate="no">mp4</code>, <code translate="no">mxf</code>, <code translate="no">ogg</code>, <code translate="no">ts</code>, <code translate="no">webm</code>, and <code translate="no">wmv</code></p>
+    <p><strong>Valid Values for captions: <code translate="no">mp4</code>, <code translate="no">scc</code>, <code translate="no">webvtt</code>, <code translate="no">vtt</code>, <code translate="no">m3u8</code>, and <code translate="no">dfxp</code></p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -878,21 +883,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Compatibility:</p>
 
     <ul>
-      <li>mp4 is compatible with <code translate="No">h264</code> (default), <code translate="No">hevc</code>, <code translate="No">mpeg4</code>, and <code translate="No">AV1</code> video, and aac (default), mp3, ac3, and eac3 audio. Valid values and file extensions: mp4, m4a, m4v, f4v, f4a, m4b, m4r, f4b</li>
-      <li>m4f is compatible with <code translate="No">h264</code> and <code translate="No">hevc</code> video and aac, ac3, and eac3 audio.</li>
-      <li>ogg is compatible with <code translate="No">theora</code> video and vorbis audio. Valid values and file extensions: ogg, oga, ogv, ogx</li>
-      <li>webm is compatible with vp8 (default), vp9, and AV1 video and vorbis audio. Valid values and file extensions: webm</li>
-      <li>3gp is compatible with <code translate="No">mpeg4</code> (default) and <code translate="No">h264</code> video, and aac (default) and mp3 audio. Valid values and file extensions: 3gp, 3gp2, 3g2, 3gpp, 3gpp2. Note that the 3gp format can also use a mp4 file extension.</li>
-      <li>flv is compatible with vp6 (default) and <code translate="No">h264</code> video, and aac (default) and mp3 audio. Valid values and file extensions: flv</li>
-      <li>ts is compatible with <code translate="No">h264</code> video and aac (default), mp3 or ac3 audio. Valid values and file extensions: ts</li>
-      <li>mkv is compatible with <code translate="No">h264</code> video and aac (default), mp3, ac3 or eac3 audio. Valid values and file extensions: mkv</li>
+      <li>mp4 is compatible with h264 (default), hevc, and mpeg4 video, and aac (default), mp3, ac3, and eac3 audio. Valid values and file extensions: mp4, m4a, m4v, f4v, f4a, m4b, m4r, f4b</li>
+      <li>m4f is compatible with h264 and hevc video and aac, ac3, and eac3 audio.</li>
+      <li>ogg is compatible with theora video and vorbis audio. Valid values and file extensions: ogg, oga, ogv, ogx</li>
+      <li>webm is compatible with vp8 (default) and vp9 video and vorbis audio. Valid values and file extensions: webm</li>
+      <li>3gp is compatible with mpeg4 (default) and h264 video, and aac (default) and mp3 audio. Valid values and file extensions: 3gp, 3gp2, 3g2, 3gpp, 3gpp2. Note that the 3gp format can also use a mp4 file extension.</li>
+      <li>flv is compatible with vp6 (default) and h264 video, and aac (default) and mp3 audio. Valid values and file extensions: flv</li>
+      <li>ts is compatible with h264 video and aac (default), mp3 or ac3 audio. Valid values and file extensions: ts</li>
+      <li>mkv is compatible with h264 video and aac (default), mp3, ac3 or eac3 audio. Valid values and file extensions: mkv</li>
       <li>wmv is compatible with wmv video and wma (default) or mp3 audio. Valid values and file extensions: wmv, wma</li>
       <li>aac is compatible with aac audio and no video. Valid values and file extensions: aac</li>
       <li>mp3 is compatible with mp3 audio and no video. Valid values and file extensions: mp3</li>
       <li>ac3 is compatible with ac3 audio and no video. Valid values and file extensions: ac3</li>
       <li>ec3 is compatible with eac3 audio and no video. Valid values and file extensions: ec3</li>
-      <li>mj2 is compatible with <code translate="No">jp2</code> video and aac audio. Valid values and file extensions: mj2, mjp2.</li>
-      <li>mxf is compatible with <code translate="No">h264</code> video and pcm audio. Valid values and file extensions: mxf.</li>
+      <li>mj2 is compatible with jp2 video and aac audio. Valid values and file extensions: mj2, mjp2.</li>
+      <li>mxf is compatible with h264 video and pcm audio. Valid values and file extensions: mxf.</li>
     </ul>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -912,9 +917,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> Determined by the format, profile, or <a href="#audio_codec">audio_codec</a>. <code translate="No">h264</code> if none are provided.</p>
+    <p><strong>Default:</strong> Determined by the format, profile, or <a href="#audio_codec">audio_codec</a>. h264 if none are provided.</p>
 
-    <p><strong>Valid Values:</strong> <code translate="No">h264</code>, <code translate="No">hevc</code>, <code translate="No">av1</code>, <code translate="No">jp2</code>, <code translate="No">mpeg4</code>, <code translate="No">theora</code>, vp6, vp8, vp9, and wmv</p>
+    <p><strong>Valid Values:</strong> h264, hevc, jp2, mpeg4, theora, vp6, vp8, vp9, and wmv</p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -922,13 +927,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Description:</strong></p>
 
-    <p>The output video codec to use. Zencoder currently supports the following codecs: <code translate="No">h264</code> (default), <code translate="No">hevc</code>, <code translate="No">jp2</code>, <code translate="No">theora</code>, <code translate="No">vp6</code>, <code translate="No">vp8</code>, <code translate="No">vp9</code>, <code translate="No">mpeg4</code>, and <code translate="No">wmv</code>.</p>
+    <p>The output video codec to use. Zencoder currently supports the following codecs: h264 (default), hevc, jp2, theora, vp6, vp8, vp9, mpeg4, and wmv.</p>
 
     <p>Compatibility:</p>
 
     <ul>
-      <li></li>
-      <li><code translate="No">h264</code> is compatible with <code translate="No">aac</code> (default) and <code translate="No">mp3</code> audio and the <code translate="No">mp4</code> (default), <code translate="No">m4f</code>, <code translate="No">flv</code>, or <code translate="No">3gp</code> formats</li>
+      <li>h264 is compatible with aac (default) and mp3 audio and the mp4 (default), m4f, flv, or 3gp formats</li>
       <li>hevc is compatible with aac (default) or mp3 audio and the mp4 or m4f formats.</li>
       <li>vp9 is compatible with vorbis audio and the webm format</li>
       <li>vp8 is compatible with vorbis audio and the webm format</li>
@@ -960,7 +964,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Default:</strong> Determined by the format, profile, or <a href="#video_codec">video_codec</a>. aac if none are provided.</p>
 
-    <p><strong>Valid Values:</strong> aac, ac3, amr, av1, eac3, mp3, pcm, vorbis, and wma</p>
+    <p><strong>Valid Values:</strong> aac, ac3, amr, eac3, mp3, pcm, vorbis, and wma</p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
@@ -975,11 +979,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Compatibility:</p>
 
     <ul>
-      <li>aac is compatible with <code translate="No">h264</code> video (mp4, m4f, 3gp, or flv format), <code translate="No">mpeg4</code> video (mp4 or 3gp format), and vp6 (flv format)</li>
-      <li>vorbis is compatible vp8 video (webm format) and <code translate="No">theora</code> video (ogg format)</li>
+      <li>aac is compatible with h264 video (mp4, m4f, 3gp, or flv format), mpeg4 video (mp4 or 3gp format), and vp6 (flv format)</li>
+      <li>vorbis is compatible vp8 video (webm format) and theora video (ogg format)</li>
       <li>wma is compatible with wmv video and the wmv format</li>
-      <li>mp3 is compatible with <code translate="No">h264</code> video (mp4, 3gp, or flv format) and wmv video (wmv format). mp3, <code translate="No">h264</code>, and mp4 will not play back in Quicktime</li>
-      <li>pcm is compatible with <code translate="No">h264</code> video and the mxf format.</li>
+      <li>mp3 is compatible with h264 video (mp4, 3gp, or flv format) and wmv video (wmv format). mp3, h264, and mp4 will not play back in Quicktime</li>
+      <li>pcm is compatible with h264 video and the mxf format.</li>
     </ul>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
@@ -1116,6 +1120,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
   
   <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>

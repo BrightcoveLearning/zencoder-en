@@ -75,6 +75,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/assets/encoding-auto-transcription.html",
+      "oldURL": "/encoding-auto-transcription"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-aac.html",
       "oldURL": "/encoding-settings-aac"
   },
@@ -157,6 +162,11 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-frame-rate.html",
       "oldURL": "/encoding-settings-frame-rate"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-general-output-settings-stage.html",
+      "oldURL": "/encoding-settings-general-output-settings-stage"
   },
 
   {

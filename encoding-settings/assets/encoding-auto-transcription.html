@@ -13,137 +13,178 @@ grandparent: Encoding Settings
 
     <p>Zencoder can automatically generate transcriptions of the audio track for your videos during transcoding. </p>
 
-    <aside class="bcls-aside bcls-aside--warning">Note that captions muxed onto the video track are <strong>not</strong> supported.</aside>
-    <p>Input formats supported for captions:</p>
+    <p>Output formats supported for captions (set using <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="No">format</code></a> ):</p>
 
     <ul>
-      <li>MP4/M4V video files that have caption tracks in CEA-608 format</li>
-      <li>VTT, SCC, DFXP, or SAMI files specified with the caption_url option</li>
+      <li>mp4 files, with caption track in CEA-608 format</li>
+      <li>m3u8 outputs (segmented outputs with H.264 video in TS format)</li>
+      <li>SCC, WebVTT, VTT, and DFXP formats are also supported with <code translate="no">captions</code> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type">type</a> output</li>
     </ul>
-    <p>Output formats supported for captions:</p>
 
+    <p>In addition to the settings described below, you will need to use the following settings:</p>
     <ul>
-      <li>MP4/M4V files, with caption track in CEA-608 format</li>
-      <li>HLS outputs (segmented outputs with H.264 video in TS format)</li>
-      <li>SCC and DFXP formats are also supported with <code translate="no">captions</code> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type">type</a> output</li>
-    </ul>
-    <p>For HLS, captions must be mapped to the outputs to get proper in-manifest captions. For example:</p>
-    <pre class="line-numbers"><code class="language-json">{
-  "label": "Captions",
-  "type": "captions",
-  "segmented": true,
-  "public": true,
-  "filename": "captions.m3u8",
-  "caption_url": "PATH_TO_CAPTION_FILE_HERE",
-  "streaming_delivery_format": "hls"
-}, {
-  "filename": "master_playlist.m3u8",
-  "type": "playlist",
-  "captions": [{
-    "path": "Captions/captions.m3u8",
-    "language": "en",
-    "name": "english"
-  }],
-  "streams": [{
-    "path": "video/video-1800.m3u8",
-    "source": "video-res1",
-    "audio": "64k_audio"
-  }]
-}</code></pre>
-
-    <p><strong>Note:</strong> The following restrictions currently apply to caption conversion:</p>
-
-    <p>For DFXP inputs:</p>
-
-    <ul>
-      <li>UTF8 encoding is required for all special characters</li>
-      <li>Only the first language is converted (the first DIV tag)</li>
-      <li>Animation, layout, and region features are not supported</li>
-      <li>Styles can be inline or referenced by ID, but only the tts:textAlign property is applied</li>
-      <li>Nested DIV and P tags are ignored</li>
-      <li>SPAN tags are ignored</li>
-      <li>Explicit breaks may be inserted with BR tags</li>
-      <li>Only a single caption may be on-screen at any time (subsequent captions will end previous ones)</li>
-    </ul>
-    <p>For SAMI inputs:</p>
-
-    <ul>
-      <li>Only the first language listed is converted (the first class-selector style)</li>
-      <li>Inline styles are not supported</li>
-      <li>Layout-related styling tags (table, div, etc.) are not supported</li>
-      <li>Explicit breaks may be inserted by using separate P tags</li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#type"><code translate="no">type</code></a></li>
+      <li><a href="/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="no">format</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#base_url"><code translate="no">base_url</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#filename"><code translate="no">filename</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#url"><code translate="no">url</code></a></li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="caption_url">caption_url</h2>
-    <code translate="no">caption_url:String</code>
+    <h2 id="caption_from_audio_transcription">caption_from_audio_transcription</h2>
+    <code translate="no">caption_from_audio_transcription:Boolean</code>
 
-    <p><strong>API Versions: V1, V2 </strong></p>
+    <p><strong>API Versions: V2 </strong></p>
 
     <p><strong>Parent: <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> </strong></p>
 
-    <p><strong>Valid Values:</strong> A valid URL to an SCC, DFXP, or SAMI caption file to include in the output</p>
+    <p><strong>Default:</strong> false</p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> http://example.com/captions.scc</p>
-
     <p><strong>Description:</strong></p>
 
-    <p>The URL to an SCC, DFXP, or SAMI caption file to include in the output.</p>
-
-    <p>Zencoder supports captions for multiple output video formats:</p>
-
-    <ul>
-      <li>MP4/M4V files, with caption track in CEA-608 format</li>
-      <li>HLS outputs (segmented outputs with H.264 video in TS format)</li>
-    </ul>
-    <p> </p>
-
-    <p><strong>Note:</strong> Captioning is not currently supported on transmuxed outputs.</p>
+    <p>Uses audio transcription to generate captions when captions are not available in the source file.</p>
 
     <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
-      "caption_url": "http://example.com/captions.scc"
+      "type": "captions",
+      "caption_from_audio_transcription": true
     }
   ]
 }</code></pre>
 
-    <p><strong>See Also:</strong> <a href="#skip-captions">skip_captions</a> and <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare-for-segmenting">prepare_for_segmenting</a></p>
   </section>
   <section class="bcls-section">
-    <h2 id="skip_captions">skip_captions</h2>
-    <code translate="no">skip_captions:Boolean</code>
+    <h2 id="transcription_vocabulary_name">transcription_vocabulary_name</h2>
+    <code translate="no">transcription_vocabulary_name:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> false</p>
-
-    <p><strong>Valid Values:</strong> true or false</p>
+    <p><strong>Default:</strong> none</p>
 
     <p><strong>Compatible Job Types:</strong> All</p>
 
-    <p><strong>Example:</strong> true</p>
-
     <p><strong>Description:</strong></p>
 
-    <p>Don't add or pass through captions to the output file.</p>
+    <p>Custom vocabulary to be used.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: This should be already added to Zencoder before the request. See <a href="#adding_custom_vocab">Adding Custom Vocabulary</a> section.</aside>
+
 
     <pre class="line-numbers">
 <code class="language-json">{
   "input": "s3://zencodertesting/test.mov",
   "outputs": [
     {
-      "skip_captions": "true"
+      "type": "captions",
+      "transcription_vocabulary_name": "my_vocab"
     }
   ]
 }</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transcription_vocabulary_filter">transcription_vocabulary_filter</h2>
+    <code translate="no">transcription_vocabulary_filter:String</code>
 
-    <p><strong>See Also:</strong> <a href="#caption-url">caption_url</a> and <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare-for-segmenting">prepare_for_segmenting</a></p>
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Custom vocabulary to be used.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: This should be already added to Zencoder before the request. See <a href="#adding_custom_vocab">Adding Custom Vocabulary</a> section.</aside>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "transcription_vocabulary_filter": "my_vocab_filter"
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="select_audio_language">select_audio_language</h2>
+    <code translate="no">select_audio_language:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The language of the audio track to be used for transcription.</p>
+
+    <p><strong>Valid values:</strong> ISO 639-1 or 639-2 language code</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "select_audio_language": "en"
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="adding_custom_vocab">Adding Custom Vocabulary</h2>
+    <p>You can improve the quality of auto transcriptions by providing instructions. This can be done using a <strong>custom vocabulary</strong> or a <strong>custom vocabulary filter</strong>.</p>
+    <h3>Custom vocabulary</h3>
+    <p>Brightcove uses the format developed by <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html">AWS</a> for custom vocabularies. A custom vocabulary is a text file that contains a table of words and phrases that you want translated in a particular way. The "columns" of the table are separated by tabs.</p>
+    <p>The four columns of the table are as follows:</p>
+    <dl>
+      <dt><code translate="No">Phrase</code></dt>
+      <dd>
+        <p>The word or phrase that should be recognized.</p>
+        <p>If the entry is a phrase, separate the words with a hyphen (-). For example, you type <code translate="no">Los Angeles</code> as <code translate="No">Los-Angeles</code>.</p>
+        <p>Enter acronyms or other words whose letters should be pronounced individually as single letters followed by dots, such <code translate="No">A.B.C.</code> or <code translate="No">F.B.I.</code>. To enter the plural form of an acronym, such as "ABCs," separate the "s" from the acronym with a hyphen: <code translate="No">A.B.C.-s</code>. You can use either upper- or lower-case letters to enter an acronym.</p>
+        <p>The Phrase field is required. You can use any of the allowed characters for the input language. For the list of allowed characters, see the individual languages. If you do not specify the <code translate="No">DisplayAs</code> field, transcription uses the contents of the Phrase field in the output file.</p>
+      </dd>
+      <dt>IPA</dt>
+      <dd>
+        <p>The pronunciation of your word or phrase using IPA characters.</p>
+        <p>You can include characters in the <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet (IPA)</a> in this field. The IPA field can't contain leading or trailing spaces, and you must use a single space to separate each phoneme in the input. For example, in English, you would enter the phrase <code translate="No">Los-Angeles</code> as <code translate="No">l ɔ s æ n ʤ ə l ə s</code> and <code translate="No">F.B.I.</code> as <code translate="No">ɛ f b i aɪ</code>.</p>
+        <p>For a list of allowed IPA characters for a specific language, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character sets for custom vocabularies</a>.</p>
+      </dd>
+      <dt><code translate="No">SoundsLike</code></dt>
+      <dd>
+        <p>The pronunciation of your word or phrase using the standard orthography of the language to mimic the way that the word sounds.</p>
+        <p>You can break a word or phrase down into smaller pieces (typically based on syllables) and provide a pronunciation for each piece based on how that piece sounds. For example, in English, you can provide pronunciation hints for the phrase <code translate="No">Los-Angeles</code> as <code translate="No">loss-ann-gel-es</code>. The hint for the word <code translate="No">Etienne</code> would look like this: <code translate="No">eh-tee-en</code>. You separate each part of the hint with a hyphen (-).</p>
+      </dd>
+      <dt>DisplayAs</dt>
+      <dd>
+        <p>Defines the how the word or phrase looks when it's output. For example, if the word or phrase is <code translate="No">Los-Angeles</code>, you can specify the display form as <code translate="No">Los Angeles</code> so that the hyphen is not present in the output.</p>
+        <p>If you don't specify the <code translate="No">DisplayAs</code> field, transcriptions uses the <code translate="No">Phrase</code> field from the input file in the output.</p>
+      </dd>
+    </dl>
+      
+    <p>Below is an example, where "[TAB]" represents a tab:</p>
+<pre><code translate="no">Phrase[TAB]IPA[TAB]SoundsLike[TAB]DisplayAs
+Los-Angeles[TAB][TAB][TAB]Los Angeles
+F.B.I.[TAB]ɛ f b i aɪ[TAB][TAB]FBI
+Etienne[TAB][TAB]eh-tee-en[TAB]</code></pre>
+    <h3>Vocabulary filters</h3>
+    <p>Brightcove uses the format developed by <a href="https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabularyFilter.html">AWS</a> for vocabulary. A vocabulary filter is a list of words that you want omitted from the transcription, if they happen to be present in the audio track. You might use a filter to omit profanity, for example.</p>
+    <p>Your filter will simply be a text file containing a comma-delimited list of filter words.</p>
   </section>
 </article>
