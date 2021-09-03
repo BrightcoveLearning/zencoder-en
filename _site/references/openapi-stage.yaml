@@ -1156,6 +1156,47 @@ components:
     
             Note: The AAC codec does not define a fixed CBR mode, so there are still small variations in bitrate over short time periods. Most software will still report these encodes as VBR.
           type: boolean
+        audio_language:
+          description: Set the audio language for the input audio track for auto-transcriptions. BCP-47 style language code, for instance “en-US”, “en-GB”.
+          example: en-US
+          type: string
+          enum:
+            - af-ZA
+            - ar-AE
+            - ar-SA
+            - cy-GB
+            - da-DK
+            - de-CH
+            - de-DE
+            - en-AB
+            - en-AU
+            - en-GB
+            - en-IE
+            - en-IN
+            - en-US
+            - en-WL
+            - es-ES
+            - es-US
+            - fa-IR
+            - fr-CA
+            - fr-FR
+            - ga-IE
+            - gd-GB
+            - he-IL
+            - hi-IN
+            - id-ID
+            - it-IT
+            - ja-JP
+            - ko-KR
+            - ms-MY
+            - nl-NL
+            - pt-BR
+            - pt-PT
+            - ru-RU
+            - ta-IN
+            - te-IN
+            - tr-TR
+            - zh-CN
         audio_quality:
           default: 3
           description: |-
@@ -1741,6 +1782,26 @@ components:
     
             This option has no effect if segment_image_file is set.
           type: boolean
+        select_audio_language:
+          description: Set the language for auto-transcription output. 3-letter ISO 639-2 language code
+          example: eng
+          type: string
+        select_audio_service_type:
+          description: |-
+            'main',  'music_and_effects',  'visually_impaired',  'hearing_impaired', 'dialogue', 'commentary', 'emergency', 'voice_over'
+
+            *Note: Only Dolby audio codecs (ac-3 and eac-3) support including audio service type metadata.  This is a feature of the codecs, not a limitation of Zencoder support.  AAC audio cannot contain service type metadata.*
+          example: main
+          type: string
+          enum:
+            - main  
+            - music_and_effects  
+            - visually_impaired  
+            - hearing_impaired 
+            - dialogue 
+            - commentary 
+            - emergency 
+            - voice_over
         size:
           description: |-
             The resolution of the output file, expressed as WxH, like 640×480 or 1280×720. Note that width and height take precedence over size.
