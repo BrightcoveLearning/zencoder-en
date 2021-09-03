@@ -995,6 +995,73 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   ]
 }</code></pre>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="select_audio_service_type">select_audio_service_type</h2>
+    <code translate="no">select_audio_service_type:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The type of audio to be transcribed.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: Only Dolby audio codecs (ac-3 and eac-3) support including audio service type metadata.  This is a feature of the codecs, not a limitation of Zencoder support.  AAC audio cannot contain service type metadata.</aside>
+
+    <p><strong>Valid values:</strong> 'main',  'music_and_effects',  'visually_impaired',  'hearing_impaired', 'dialogue', 'commentary', 'emergency',
+      'voice_over'</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "select_audio_service_type": "dialogue"
+    }
+  ]
+}</code></pre>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="audio_language">audio_language</h2>
+    <code translate="no">audio_language:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The language of the input audio for using on transcription.</p>
+    <p>This value is a BCP-47 style language code, 
+      for instance “en-US”, “en-GB”.
+     </p>
+    <p><strong>Valid values:</strong> af-ZA, ar-AE, ar-SA, cy-GB, da-DK, de-CH, de-DE, en-AB, en-AU, en-GB, en-IE, en-IN, en-US, en-WL, es-ES, es-US, fa-IR, fr-CA, fr-FR, ga-IE, gd-GB, he-IL, hi-IN, id-ID, it-IT, ja-JP, ko-KR, ms-MY, nl-NL, pt-BR, pt-PT, ru-RU, ta-IN, te-IN, tr-TR, and zh-CN</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "audio_language": "es-ES"
+    }
+  ]
+}</code></pre>
+  </section>
+
   <section class="bcls-section">
     <h2 id="adding_custom_vocab">Adding Custom Vocabulary</h2>
     <p>You can improve the quality of auto transcriptions by providing instructions. This can be done using a <strong>custom vocabulary</strong> or a <strong>custom vocabulary filter</strong>.</p>
@@ -1052,7 +1119,7 @@ Etienne[TAB][TAB]eh-tee-en[TAB]</code></pre>
 
 <hr>
 <div class="last-updated">
-  Page last updated on 01 Sep 2021
+  Page last updated on 02 Sep 2021
 </div>
 
 
