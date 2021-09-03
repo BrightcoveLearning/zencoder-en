@@ -1794,13 +1794,13 @@ components:
           example: main
           type: string
           enum:
-            - main  
-            - music_and_effects  
-            - visually_impaired  
-            - hearing_impaired 
-            - dialogue 
-            - commentary 
-            - emergency 
+            - main
+            - music_and_effects
+            - visually_impaired
+            - hearing_impaired
+            - dialogue
+            - commentary
+            - emergency
             - voice_over
         size:
           description: |-
