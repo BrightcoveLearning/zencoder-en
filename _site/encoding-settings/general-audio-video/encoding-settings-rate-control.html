@@ -879,7 +879,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p>This automatically chooses a video bitrate that produces a video of the desired quality. This is useful, because one video may need a higher bitrate than another to achieve a target visual quality, due to the complexity of the content, the resolution, etc.</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note that if <code translate="No">quality</code> and <code translate="No">video_bitrate</code> are set, the <code translate="No">video_bitrate</code> setting will be ignored.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes:
+      <ul>
+        <li>If <code translate="No">quality</code> and <code translate="No">video_bitrate</code> are set, the <code translate="No">video_bitrate</code> setting will be ignored.</li>
+        <li>By using the <code translate="No">quality</code> option rather than the <code translate="No">video_bitrate</code> option, users can reduce the encoding time by about 40%</li>
+      </ul>
+    </aside>
     <p>Higher quality means higher bitrate and vice versa.</p>
 
     <p>Quality 1: Highly compressed. Mediocre visual quality, but small files.<br />
@@ -924,7 +930,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p>If a reliable bitrate is more important than reliable quality, choose video_bitrate. If a reliable visual quality is more important, use <a translate="No" href="#quality">quality</a> instead.</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note that if <code translate="No">quality</code> and <code translate="No">video_bitrate</code> are set, the <code translate="No">video_bitrate</code> setting will be ignored.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes:
+      <ul>
+        <li>If <code translate="No">quality</code> and <code translate="No">video_bitrate</code> are set, the <code translate="No">video_bitrate</code> setting will be ignored.</li>
+        <li>By using the <code translate="No">quality</code> option rather than the <code translate="No">video_bitrate</code> option, users can reduce the encoding time by about 40%</li>
+      </ul>
+    </aside>
     <p>video_bitrate uses two-pass, variable bitrate (VBR) encoding. one_pass encoding may be triggered via the <a translate="No" href="#one_pass">one_pass</a> option, though one_pass VBR encoding is typically of poor quality, and only results in a small speedup, so this is not recommended.</p>
 
     <p>Also keep in mind that bitrates that are too high or too low are unusable. By default, if you specify a bitrate that is too low, we will automatically correct to an acceptable bitrate. Enable <a translate="No" href="/encoding-settings/general/encoding-settings-general-output-settings.html#strict">strict</a> mode if you would prefer a job to fail in this situation rather than auto-correcting.</p>
@@ -1233,7 +1245,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Sep 2020
+  Page last updated on 05 Sep 2021
 </div>
 
 
