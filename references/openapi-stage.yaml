@@ -1157,7 +1157,7 @@ components:
             Note: The AAC codec does not define a fixed CBR mode, so there are still small variations in bitrate over short time periods. Most software will still report these encodes as VBR.
           type: boolean
         audio_language:
-          description: Set the audio language for the input audio track for auto-transcriptions. BCP-47 style language code, for instance “en-US”, “en-GB”.
+          description: Set the audio language for the input audio track for auto-transcriptions. BCP-47 style language code, for instance “en-US”, “en-GB”. See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
           example: en-US
           type: string
           enum:
@@ -1218,6 +1218,12 @@ components:
     
             Requires `max_hls_protocol_version` or `hls_protocol_version` set to `4` or higher.
           type: boolean
+        caption_from_audio_transcription:
+          description: |-
+            Use audio transcription to generate captions when captions are not available in the source file.
+            See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
+          type: boolean
+          default: false
         caption_url:
           description: |-
             The URL to an SCC, DFXP, or SAMI caption file to include in the output.
@@ -1783,12 +1789,15 @@ components:
             This option has no effect if segment_image_file is set.
           type: boolean
         select_audio_language:
-          description: Set the language for auto-transcription output. 3-letter ISO 639-2 language code
+          description: |-
+            Set the language for auto-transcription output. 3-letter ISO 639-2 language code.
+            See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
           example: eng
           type: string
         select_audio_service_type:
           description: |-
             'main',  'music_and_effects',  'visually_impaired',  'hearing_impaired', 'dialogue', 'commentary', 'emergency', 'voice_over'
+            See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
 
             *Note: Only Dolby audio codecs (ac-3 and eac-3) support including audio service type metadata.  This is a feature of the codecs, not a limitation of Zencoder support.  AAC audio cannot contain service type metadata.*
           example: main
@@ -1919,6 +1928,16 @@ components:
                 $ref: '#/components/schemas/Thumbnail'
               type: array
             - $ref: '#/components/schemas/Thumbnail'
+        transcription_vocabulary_name:
+          description: |-
+            Custom vocabulary to be used for auto transcription.
+            See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
+          type: string
+        transcription_vocabulary_filter:
+          description: |-
+            Custom vocabulary filter to be used for auto transcription.
+            See [Auto Transcriptions](/encoding-settings/assets/encoding-auto-transcription.html)
+          type: string
         transfer_maximum_rate:
           default: 250000
           description: |-
