@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic contains details for encoding settings related to automatically generating transcriptions for your videos when they are processed.">
+  <meta name="description" content="This topic contains details for encoding settings related to automatically generating captions for your videos when they are processed.">
   
-  <title>Auto Transcription</title>
+  <title>Auto Captions</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -68,7 +68,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Auto Transcription</li>
+        <li class="breadcrumb-item active" aria-current="page">Auto Captions</li>
       
     
   </nav>
@@ -388,7 +388,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                       <ul class="sidenav-subsubmenu" style="display:none;">
                         
                           
-                            <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                            <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Auto Captions</a></li>
                           
                         
                           
@@ -849,14 +849,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Auto Transcription</h1>
+<h1>Auto Captions</h1>
 <article class="bcls-article">
-  <summary>This topic contains details for encoding settings related to automatically generating transcriptions for your videos when they are processed.</summary>
+  <summary>This topic contains details for encoding settings related to automatically generating captions for your videos when they are processed.</summary>
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
 
-    <p>Zencoder can automatically generate transcriptions of the audio track for your videos during transcoding. </p>
+    <p>Zencoder can automatically generate captions of the audio track for your videos during transcoding. </p>
 
     <p>Output formats supported for captions (set using <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="No">format</code></a> ):</p>
 
@@ -903,7 +903,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }</code></pre>
 
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="transcription_vocabulary_name">transcription_vocabulary_name</h2>
     <code translate="no">transcription_vocabulary_name:String</code>
 
@@ -931,8 +931,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     }
   ]
 }</code></pre>
-  </section>
-  <section class="bcls-section">
+  </section> -->
+  <!-- <section class="bcls-section">
     <h2 id="transcription_vocabulary_filter">transcription_vocabulary_filter</h2>
     <code translate="no">transcription_vocabulary_filter:String</code>
 
@@ -960,7 +960,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     }
   ]
 }</code></pre>
-  </section>
+  </section> -->
   <section class="bcls-section">
     <h2 id="select_audio_language">select_audio_language</h2>
     <code translate="no">select_audio_language:String</code>
@@ -1058,7 +1058,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }</code></pre>
   </section>
 
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="adding_custom_vocab">Adding Custom Vocabulary</h2>
     <p>You can improve the quality of auto transcriptions by providing instructions. This can be done using a <strong>custom vocabulary</strong> or a <strong>custom vocabulary filter</strong>.</p>
     <h3>Custom vocabulary</h3>
@@ -1098,7 +1098,7 @@ Etienne[TAB][TAB]eh-tee-en[TAB]</code></pre>
     <h3>Vocabulary filters</h3>
     <p>Brightcove uses the format developed by <a href="https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabularyFilter.html">AWS</a> for vocabulary. A vocabulary filter is a list of words that you want omitted from the transcription, if they happen to be present in the audio track. You might use a filter to omit profanity, for example.</p>
     <p>Your filter will simply be a text file containing a comma-delimited list of filter words.</p>
-  </section>
+  </section> -->
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -1115,7 +1115,7 @@ Etienne[TAB][TAB]eh-tee-en[TAB]</code></pre>
 
 <hr>
 <div class="last-updated">
-  Page last updated on 05 Sep 2021
+  Page last updated on 06 Sep 2021
 </div>
 
 
