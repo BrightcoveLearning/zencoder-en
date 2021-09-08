@@ -1,0 +1,258 @@
+---
+title: Auto Captions
+description: This topic contains details for encoding settings related to automatically generating captions for your videos when they are processed.
+parent: Media Settings
+grandparent: Encoding Settings
+layout: staging
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+
+    <p>Zencoder can automatically generate captions of the audio track for your videos. The job may also include transcoding by including video outputs, but does not have to. </p>
+
+    <p>Output formats supported for captions (set using <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="No">format</code></a> ):</p>
+
+    <ul>
+      <li>mp4 files, with caption track in CEA-608 format</li>
+      <li>m3u8 outputs (segmented outputs with H.264 video in TS format)</li>
+      <li>SCC, WebVTT, VTT, and DFXP formats are also supported with <code translate="no">captions</code> <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type">type</a> output</li>
+    </ul>
+
+    <p>In addition to the settings described below, you will need to use the following settings:</p>
+    <ul>
+      <li><a href="/general/encoding-settings-general-output-settings.html#type"><code translate="no">type</code></a></li>
+      <li><a href="/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="no">format</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#base_url"><code translate="no">base_url</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#filename"><code translate="no">filename</code></a></li>
+      <li><a href="/general/encoding-settings-general-output-settings.html#url"><code translate="no">url</code></a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="caption_from_audio_transcription">caption_from_audio_transcription</h2>
+    <code translate="no">caption_from_audio_transcription:Boolean</code>
+
+    <p><strong>API Versions: V2 </strong></p>
+
+    <p><strong>Parent: <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> </strong></p>
+
+    <p><strong>Default:</strong> false</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Uses audio transcription to generate captions when captions are not available in the source file.</p>
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "caption_from_audio_transcription": true
+    }
+  ]
+}</code></pre>
+
+  </section>
+  <!-- <section class="bcls-section">
+    <h2 id="transcription_vocabulary_name">transcription_vocabulary_name</h2>
+    <code translate="no">transcription_vocabulary_name:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Custom vocabulary to be used.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: This should be already added to Zencoder before the request. See <a href="#adding_custom_vocab">Adding Custom Vocabulary</a> section.</aside>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "transcription_vocabulary_name": "my_vocab"
+    }
+  ]
+}</code></pre>
+  </section> -->
+  <!-- <section class="bcls-section">
+    <h2 id="transcription_vocabulary_filter">transcription_vocabulary_filter</h2>
+    <code translate="no">transcription_vocabulary_filter:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Custom vocabulary filter to be used.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: This should be already added to Zencoder before the request. See <a href="#adding_custom_vocab">Adding Custom Vocabulary</a> section.</aside>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "transcription_vocabulary_filter": "my_vocab_filter"
+    }
+  ]
+}</code></pre>
+  </section> -->
+  <section class="bcls-section">
+    <h2 id="select_audio_language">select_audio_language</h2>
+    <code translate="no">select_audio_language:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The language of the audio track to be used for transcription.</p>
+
+    <p><strong>Valid values:</strong> ISO 639-1 or 639-2 language code</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "select_audio_language": "en"
+    }
+  ]
+}</code></pre>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="select_audio_service_type">select_audio_service_type</h2>
+    <code translate="no">select_audio_service_type:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The type of audio to be transcribed.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: Only Dolby audio codecs (ac-3 and eac-3) support including audio service type metadata.  This is a feature of the codecs, not a limitation of Zencoder support.  AAC audio cannot contain service type metadata.</aside>
+
+    <p><strong>Valid values:</strong> 'main',  'music_and_effects',  'visually_impaired',  'hearing_impaired', 'dialogue', 'commentary', 'emergency',
+      'voice_over'</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "select_audio_service_type": "dialogue"
+    }
+  ]
+}</code></pre>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="audio_language">audio_language</h2>
+    <code translate="no">audio_language:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> auto (same as the <a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a> value)</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The language of the input audio for using on transcription.</p>
+    <p>This value is a BCP-47 style language code, 
+      for instance “en-US”, “en-GB”.
+     </p>
+    <p><strong>Valid values:</strong> af-ZA, ar-AE, ar-SA, cy-GB, da-DK, de-CH, de-DE, en-AB, en-AU, en-GB, en-IE, en-IN, en-US, en-WL, es-ES, es-US, fa-IR, fr-CA, fr-FR, ga-IE, gd-GB, he-IL, hi-IN, id-ID, it-IT, ja-JP, ko-KR, ms-MY, nl-NL, pt-BR, pt-PT, ru-RU, ta-IN, te-IN, tr-TR, and zh-CN</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "audio_language": "es-ES"
+    }
+  ]
+}</code></pre>
+  </section>
+
+  <!-- <section class="bcls-section">
+    <h2 id="adding_custom_vocab">Adding Custom Vocabulary</h2>
+    <p>You can improve the quality of auto transcriptions by providing instructions. This can be done using a <strong>custom vocabulary</strong> or a <strong>custom vocabulary filter</strong>.</p>
+    <h3>Custom vocabulary</h3>
+    <p>Brightcove uses the format developed by <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html">AWS</a> for custom vocabularies. A custom vocabulary is a text file that contains a table of words and phrases that you want translated in a particular way. The "columns" of the table are separated by tabs.</p>
+    <p>The four columns of the table are as follows:</p>
+    <dl>
+      <dt><code translate="No">Phrase</code></dt>
+      <dd>
+        <p>The word or phrase that should be recognized.</p>
+        <p>If the entry is a phrase, separate the words with a hyphen (-). For example, you type <code translate="no">Los Angeles</code> as <code translate="No">Los-Angeles</code>.</p>
+        <p>Enter acronyms or other words whose letters should be pronounced individually as single letters followed by dots, such <code translate="No">A.B.C.</code> or <code translate="No">F.B.I.</code>. To enter the plural form of an acronym, such as "ABCs," separate the "s" from the acronym with a hyphen: <code translate="No">A.B.C.-s</code>. You can use either upper- or lower-case letters to enter an acronym.</p>
+        <p>The Phrase field is required. You can use any of the allowed characters for the input language. For the list of allowed characters, see the individual languages. If you do not specify the <code translate="No">DisplayAs</code> field, transcription uses the contents of the Phrase field in the output file.</p>
+      </dd>
+      <dt>IPA</dt>
+      <dd>
+        <p>The pronunciation of your word or phrase using IPA characters.</p>
+        <p>You can include characters in the <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">International Phonetic Alphabet (IPA)</a> in this field. The IPA field can't contain leading or trailing spaces, and you must use a single space to separate each phoneme in the input. For example, in English, you would enter the phrase <code translate="No">Los-Angeles</code> as <code translate="No">l ɔ s æ n ʤ ə l ə s</code> and <code translate="No">F.B.I.</code> as <code translate="No">ɛ f b i aɪ</code>.</p>
+        <p>For a list of allowed IPA characters for a specific language, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character sets for custom vocabularies</a>.</p>
+      </dd>
+      <dt><code translate="No">SoundsLike</code></dt>
+      <dd>
+        <p>The pronunciation of your word or phrase using the standard orthography of the language to mimic the way that the word sounds.</p>
+        <p>You can break a word or phrase down into smaller pieces (typically based on syllables) and provide a pronunciation for each piece based on how that piece sounds. For example, in English, you can provide pronunciation hints for the phrase <code translate="No">Los-Angeles</code> as <code translate="No">loss-ann-gel-es</code>. The hint for the word <code translate="No">Etienne</code> would look like this: <code translate="No">eh-tee-en</code>. You separate each part of the hint with a hyphen (-).</p>
+      </dd>
+      <dt>DisplayAs</dt>
+      <dd>
+        <p>Defines the how the word or phrase looks when it's output. For example, if the word or phrase is <code translate="No">Los-Angeles</code>, you can specify the display form as <code translate="No">Los Angeles</code> so that the hyphen is not present in the output.</p>
+        <p>If you don't specify the <code translate="No">DisplayAs</code> field, transcriptions uses the <code translate="No">Phrase</code> field from the input file in the output.</p>
+      </dd>
+    </dl>
+      
+    <p>Below is an example, where "[TAB]" represents a tab:</p>
+<pre><code translate="no">Phrase[TAB]IPA[TAB]SoundsLike[TAB]DisplayAs
+Los-Angeles[TAB][TAB][TAB]Los Angeles
+F.B.I.[TAB]ɛ f b i aɪ[TAB][TAB]FBI
+Etienne[TAB][TAB]eh-tee-en[TAB]</code></pre>
+    <h3>Vocabulary filters</h3>
+    <p>Brightcove uses the format developed by <a href="https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabularyFilter.html">AWS</a> for vocabulary. A vocabulary filter is a list of words that you want omitted from the transcription, if they happen to be present in the audio track. You might use a filter to omit profanity, for example.</p>
+    <p>Your filter will simply be a text file containing a comma-delimited list of filter words.</p>
+  </section> -->
+</article>
