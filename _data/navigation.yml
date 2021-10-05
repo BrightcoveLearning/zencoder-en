@@ -117,8 +117,8 @@
     - name: 'Media Asset Settings'
       url: '/encoding-settings/assets/index.html'
       docs:
-        # - name: 'Captions Settings'
-          # url: 'encoding-settings/assets/encoding-settings-auto-captions.html'
+        - name: 'Captions Settings'
+          url: 'encoding-settings/assets/encoding-settings-auto-captions.html'
         - name: 'Auto Captions'
           url: '/encoding-settings/assets/encoding-settings-captions.html'
         - name: 'Clips Settings'
