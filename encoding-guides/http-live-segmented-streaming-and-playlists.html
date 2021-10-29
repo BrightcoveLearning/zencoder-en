@@ -28,6 +28,8 @@ parent: Encoding Guides
     "format": "ts"
 }</code></pre>
 
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that the <code translate="No">audio_sample_rate</code> and other fields here are just sample values - you should adjust values based on your specific needs.</aside>
+
     <p>The <code translate="No">m3u8</code> file created by the above output is a segmented file. Requesting this output, plus the others described below, will create multiple segmented files targeted at different bandwidths.</p>
 
     <p>This output has a type of "segmented", a format of "ts", and defaults to a video codec of "h264". Each segmented output will have a manifest file in M3U8 format created as its main output, and the segments will be named like the filename of the output. The segmented files will be uploaded along-side the manifest, and named with "-00001" suffixes before the extension. These outputs can be used as-is for standard streaming, simply by referencing the .m3u8 file from the client, and ensuring the segment files are available from the same location as the manifest. Multiple .m3u8 file can also be referenced by a playlist to support adaptive streaming.</p>
