@@ -1224,6 +1224,17 @@ components:
             See [Auto Transcriptions](/encoding-settings/assets/encoding-settings-auto-captions.html)
           type: boolean
           default: false
+        include_transcription_json:
+          description: |-
+            Whether a JSON version of the transcription should be included along with the captions. `caption_from_audio_transcription` must also be set to `true`.
+          type: boolean
+          default: false
+        transcription_filename:
+          description: |-
+            Specify a filename for the JSON transcription file. If not included, a default name will be used. If included, it must have a value, or an error will be returned.
+          type: string
+          default: false
+          example: stc-episode-3-transcript.json
         caption_url:
           description: |-
             The URL to an SCC, DFXP, or SAMI caption file to include in the output.

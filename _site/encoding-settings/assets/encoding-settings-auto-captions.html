@@ -912,6 +912,81 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }</code></pre>
 
   </section>
+  <section class="bcls-section">
+    <h2 id="include_transcription_json">include_transcription_json</h2>
+    <code translate="no">include_transcription_json:Boolean</code>
+
+    <p><strong>API Versions: V2</strong></p>
+
+    <p><strong>Parent: <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> </strong></p>
+
+    <p><strong>Default:</strong> false</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Whether a JSON version of the transcription should be included along with the captions. <code translate="No">caption_from_audio_transcription</code> must also be set to <code translate="No">true</code>.</p>
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "caption_from_audio_transcription": true,
+      "include_transcription_json": true
+    }
+  ]
+}</code></pre>
+  <details>
+    <summary>Sample JSON output</summary>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "results": {
+    "language_code": "en-US",
+    "transcripts": [
+        {
+            "transcript": "funny woman Tina Fey is about to team up with Steve Carell and "
+        }
+    ],
+    "items": [
+        {
+            "start_time": "3.64",
+            "end_time": "3.94",
+            "confidence":"1.0",
+            "content": "funny"
+        },...</code></pre>
+  </details>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transcription_filename">transcription_filename</h2>
+    <code translate="no">transcription_filename:String</code>
+
+    <p><strong>API Versions: V2</strong></p>
+
+    <p><strong>Parent: <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> </strong></p>
+
+    <p><strong>Default:</strong> none</p>
+
+    <p><strong>Compatible Job Types:</strong> All</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Specify a filename for the JSON transcription file. If not included, a default name will be used. If included, it must have a value, or an error will be returned.</p>
+
+    <pre class="line-numbers">
+<code class="language-json">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "captions",
+      "caption_from_audio_transcription": true,
+      "include_transcription_json": true,
+      "transcription_filename": "stc-episode-3-transcript.json"
+    }
+  ]
+}</code></pre>
+  </section>
   <!-- <section class="bcls-section">
     <h2 id="transcription_vocabulary_name">transcription_vocabulary_name</h2>
     <code translate="no">transcription_vocabulary_name:String</code>
