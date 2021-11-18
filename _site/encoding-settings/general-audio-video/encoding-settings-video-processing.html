@@ -916,6 +916,49 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }</code></pre>
   </section>
   <section class="bcls-section">
+    <h2 id="deinterlace_mode">deinterlace_mode</h2>
+    <code translate="No">deinterlace_mode:String</code>
+
+    <p><strong>API Versions:</strong> V1, V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Default:</strong> <code translate="No">frame-to-frame</code></p>
+
+    <p><strong>Valid Values:</strong> <code translate="No">frame-to-frame</code> | <code translate="No">field-to-frame</code></p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> <code translate="No">field-to-frame</code></p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>If not included or set to <code translate="No">frame-to-frame</code>, Zencoder outputs will match the framerate of the input file. If set to <code translate="No">field-to-frame</code>, Zencoder will double the framerate of the input file for the output. If you manually set <code translate="No">framerate</code> to double the framerate of the input file, Zencoder will automatically set <code translate="No">deinterlace_mode</code> to <code translate="No">field-to-frame</code> and double the framerate for the output</p>
+
+
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input":"url to interlaced content",
+  "outputs": [
+    {
+      // example SD output with same fps as source
+      "height": 480,
+      "deinterlace_mode": "frame-to-frame" // optional as this is default.
+    },
+    {
+      //example FHD output with 2x framerate
+      "height": 1080,
+      "deinterlace_mode": "field-to-frame"
+    },
+    {
+      //example explicit 2x frame rate given by user (assuming source fps=25)
+      // we will automatically switch to "field-to-frame" mode.
+      "frame_rate": 50
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
     <h2 id="sharpen">sharpen</h2>
     <code translate="No">sharpen:Boolean</code>
 
