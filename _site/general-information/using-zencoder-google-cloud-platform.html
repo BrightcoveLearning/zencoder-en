@@ -847,37 +847,53 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <article class="bcls-article">
   <h1>Using Zencoder with Google Cloud Storage</h1>
-<summary>This topic explains the setup for using Zencoder on the Google Cloud Platform.</summary>
+  <summary>This topic explains the setup for using Zencoder on the Google Cloud Platform.</summary>
   <section id="Google_Cloud_Storage_Setup" class="bcls-section">
-  <h2>Google Cloud Storage Setup</h2>
-  
-  <h3>Generate Interoperable GCS Credentials</h3>
-  
-  <aside class="bcls-aside bcls-aside--warning">Warning: Support for Google Compute Engine regions was discontinued on May 30th, 2017.</aside>
-  
-  <p>Google Cloud Storage is interoperable with the Amazon S3 API, but requires some initial setup work. To get started with GCS on Zencoder, you'll need to enable <strong>Interoperable Access</strong> from the Google Cloud Console and generate a key. Check out the <strong>To generate a developer key</strong> section in <a href="https://developers.google.com/storage/docs/migrating#keys">this document</a> for instructions on turning on interoperable access and generating access keys.</p>
+    <h2>Google Cloud Storage Setup</h2>
+    <p>Follow the steps below to use Zencoder on the Google Cloud Platform.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        Go to Cloud Storage settings and click on the <strong>Interoperability</strong> tab:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general-information/google-cloud-storage/google-cloud-storage-settings.png" alt="Interoperability Tab">
+          <figcaption class="bcls-caption--image">Interoperability Tab</figcaption>
+        </figure>
+      </li>
+      <li>
+        In the User account HMAC select your project as default and click on <strong>Create Key</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general-information/google-cloud-storage/create-key.png" alt="Create Access Key">
+          <figcaption class="bcls-caption--image">Create Access Key</figcaption>
+        </figure>
+      </li>
+      <li>Save the Access Key and Secret to enter in Zencoder later.</li>
+      <li>
+        Add a new principal on the permission at bucket level for <code translate="No">allAuthenticatedUsers</code> with Storage Object Viewer role. <em>You need to activate the public to internet option.</em>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general-information/google-cloud-storage/add-prinicals.png" alt="Add New Prinical">
+          <figcaption class="bcls-caption--image">Add New Prinical</figcaption>
+        </figure>
+      </li>
+      <li>
+        Add the <strong>Access Key</strong> and <strong>Secret</strong> to Zencoder in the <strong>Credentials</strong> section of the Zencoder Dashboard:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general-information/google-cloud-storage/add-credentials-to-zencoder.png" alt="Enter Credentials in Zencoder">
+          <figcaption class="bcls-caption--image">Enter Credentials in Zencoder</figcaption>
+        </figure>
+      </li>
+    </ol>
   </section>
-  
-  <section id="Store_Credentials" class="bcls-section">
-  <h2>Store Credentials</h2>
-  
-  <p>Once you have a set of Interoperable GCS credentials for your account, you can then securely store them with Zencoder, at the <a href="https://app.zencoder.com/account/credentials">Zencoder Credentials</a> page.</p>
-  
-  <p><img alt="GCS Credentials" class="guides_screenshot" src="/assets/images/general-information/gcs-credentials.png" /></p>
-  
-  <p>Under <strong>Add Credentials</strong>, select <strong>Google Cloud Storage</strong>. Then, populate the <code translate="No">Google Cloud Storage Access Key ID</code> and <code translate="No">Secret Access Key</code> parameters with your newly generated credentials. Be sure to click "Default credentials for transfers with gcs" -- this will ensure that any input or output URLs that specify the <code translate="No">gcs://</code> protocol will use these credentials.</p>
-  </section>
-  
+
   <section id="Transcoding" class="bcls-section">
-  <h2>Transcoding</h2>
-  
-  <!-- <p>Armed with a set of GCS credentials and some stored content to transcode, the next step is to start running jobs in GCE (Google Computing Engine). By setting the <a href="/node/17878#region">region</a> parameter, you can control which cloud region transcoding jobs will be run in on a job-by-job basis. The new region names for GCE are "us-central-gce" and "eu-west-gce".</p> -->
-  
-  <p>The example below shows a working job which pulls an input video from GCS, creates renditions for HTTP Live Streaming, and sends the output streams to GCS. You can test this out by changing <code translate="No">my-bucket</code> to an existing GCS bucket that you own and pasting this into the <a href="https://app.zencoder.com/request_builder">Request Builder</a>.</p>
-  
-  <h3>Example HLS Job Using GCS</h3>
-  
-  <pre class="line-numbers">
+    <h2>Transcoding</h2>
+
+    <!-- <p>Armed with a set of GCS credentials and some stored content to transcode, the next step is to start running jobs in GCE (Google Computing Engine). By setting the <a href="/node/17878#region">region</a> parameter, you can control which cloud region transcoding jobs will be run in on a job-by-job basis. The new region names for GCE are "us-central-gce" and "eu-west-gce".</p> -->
+
+    <p>The example below shows a working job which pulls an input video from GCS, creates renditions for HTTP Live Streaming, and sends the output streams to GCS. You can test this out by changing <code translate="No">my-bucket</code> to an existing GCS bucket that you own and pasting this into the <a href="https://app.zencoder.com/request_builder">Request Builder</a>.</p>
+
+    <h3>Example HLS Job Using GCS</h3>
+
+    <pre class="line-numbers">
   <code class="language-json" translate="No">{
       "test": true,
       "input": "gcs://zencoder-testing/test.mov",
@@ -1032,9 +1048,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       ]
   }</code></pre>
   </section>
-  </article>
-  
-  
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
