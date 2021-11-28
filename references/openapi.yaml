@@ -1173,8 +1173,10 @@ components:
             - en-GB
             - en-IE
             - en-IN
+            - en-NZ
             - en-US
             - en-WL
+            - en-ZA
             - es-ES
             - es-US
             - fa-IR
@@ -1195,8 +1197,10 @@ components:
             - ru-RU
             - ta-IN
             - te-IN
+            - th-TH
             - tr-TR
             - zh-CN
+            - zh-TW
         audio_quality:
           default: 3
           description: |-
