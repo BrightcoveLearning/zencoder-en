@@ -884,13 +884,13 @@ grandparent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deblock"><code translate="No">deblock</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deblock"><code translate="No">deblock</code></a></td>
           <td>Boolean</td>
           <td>Apply a deblocking filter to the video.</td>
           <td><code translate="No">false</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace"><code translate="No">deinterlace</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace"><code translate="No">deinterlace</code></a></td>
           <td>String</td>
           <td>
             Determines whether or not to apply a deinterlacing filter. Default is "detect" – if the input file is detected as interlaced, it will be deinterlaced. Set this to "on" to force deinterlacing (which will reduce quality if the input is not interlaced), or "off" to avoid deinterlacing.
@@ -898,7 +898,7 @@ grandparent: Encoding Settings
           <td><code translate="No">detect</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace_mode"><code translate="No">deinterlace_mode</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace_mode"><code translate="No">deinterlace_mode</code></a></td>
           <td>String</td>
           <td>
             If not included or set to <code translate="No">frame-to-frame</code>, Zencoder outputs will match the framerate of the input file. If set to <code translate="No">field-to-frame</code>, Zencoder will double the framerate of the input file for the output. If you manually set <code translate="No">framerate</code> to double the framerate of the input file, Zencoder will automatically set <code translate="No">deinterlace_mode</code> to <code translate="No">field-to-frame</code> and double the framerate for the output.
@@ -906,7 +906,7 @@ grandparent: Encoding Settings
           <td><code translate="No">frame-to-frame</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#denoise"><code translate="No">denoise</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#denoise"><code translate="No">denoise</code></a></td>
           <td>String</td>
           <td>
             Apply a denoise filter to the video. Valid options are <code translate="no">weak</code>, <code translate="no">medium</code>, <code translate="no">strong</code>, and <code translate="no">strongest</code>. Typically reduces file size by 5%-20%, depending on denoising level, bitrate, and source video. Any denoising slows down encoding by about 20%. Values above 'weak' should be used carefully, though animation can sometimes handle a high level of denoising.
@@ -914,31 +914,31 @@ grandparent: Encoding Settings
           <td><code translate="No">none (denoising not applied)</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
           <td>Integer</td>
           <td>Encoding speed setting.</td>
           <td><code translate="No">3</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
           <td>Boolean</td>
           <td>Force 1-pass encoding.</td>
           <td><code translate="No">false</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code translate="No">tuning</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code translate="No">tuning</code></a></td>
           <td>String</td>
           <td>Codec-specific tuning option.</td>
           <td> </td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
           <td>String/Number</td>
           <td>Create a clip of the original video, starting at a particular time. This can either be a timecode with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the number of seconds to start at.</td>
           <td><code translate="No">0</code></td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
           <td>String/Number</td>
           <td>Create a clip of a particular length. This can either be a duration with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the length of the clip in seconds.</td>
           <td>source duration</td>
@@ -961,19 +961,19 @@ grandparent: Encoding Settings
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#master_display"><code translate="No">master_display</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#master_display"><code translate="No">master_display</code></a></td>
           <td>Object</td>
           <td>Hash containing color volume and luminance settings for HDR outputs.</td>
           <td>none</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_content_light_level"><code translate="No">max_content_light_level</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_content_light_level"><code translate="No">max_content_light_level</code></a></td>
           <td>Integer</td>
           <td>Maximum light level for the content as a whole nits or candelas per square meter (cd/m2) - integer values.</td>
           <td>none</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
           <td>Integer</td>
           <td>Maximum average light level for content frames nits or candelas per square meter (cd/m2) - integer values. Although values up to 10000 are allowed, values in the 100-200 range will generally produce the best results.</td>
           <td>none</td>
