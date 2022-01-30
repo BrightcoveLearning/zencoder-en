@@ -174,4 +174,17 @@ parent: Encoding Guides
     "output_audio_channels": 2
   }
 }</code></pre>
+
+<p>Another use case is a source file with 8 audio tracks and each track has 1 channel. In this case, you will need to use mapping such as the one below:</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test-multichannel-audio.mov",
+  "output": {
+    "input_audio_channels": {
+      "FL": "7:1",
+      "FR": "8:1"
+    },
+    "output_audio_channels": 2
+  }
+}</code></pre>
+
 </article>
