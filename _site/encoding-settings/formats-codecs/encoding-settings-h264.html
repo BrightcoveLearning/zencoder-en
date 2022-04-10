@@ -879,47 +879,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="tuning"><code translate="No">tuning</code></h2>
-    <code translate="No">tuning:String</code>
-
-    <p><strong>API Versions:</strong> V1, V2</p>
-
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
-
-    <p><strong>Valid Values:</strong> film, animation, grain, psnr, ssim, fastdecode, or zerolatency</p>
-
-    <p><strong>Compatible Job Types:</strong> All</p>
-
-    <p><strong>Example:</strong> film</p>
-
-    <p><strong>Description:</strong></p>
-
-    <p>Tune the output video to optimize for a specific content type, or a specific encoding priority.</p>
-
-    <p>Behind the scenes, this sets the x264 --tune option.</p>
-
-    <p>Possible values:</p>
-
-    <ul>
-      <li>film - optimized for most non-animated video content (not only feature films).</li>
-      <li>animation - optimized for animation. Note that most 3D animation behaves more like film and not like hand-drawn animation, so only use this for hand-drawn animation (anime, classic Disney, etc.).</li>
-      <li>grain - optimized for film with high levels of grain.</li>
-      <li>psnr - uses "peak signal-to-noise ratio" to optimize video quality.</li>
-      <li>ssim - uses "structural similarity" to optimize video quality.</li>
-      <li>fastdecode - reduces encoding complexity, to allow for easier decoding.</li>
-      <li>zerolatency - x264 will keep an internal buffer of frames to improve quality; this setting removes that buffer, but reduces quality.</li>
-    </ul>
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "tuning": "film"
-    }
-  ]
-}</code></pre>
-  </section>
-  <section class="bcls-section">
     <h2 id="crf"><code translate="No">crf</code></h2>
     <code translate="No">crf:Integer</code>
 
