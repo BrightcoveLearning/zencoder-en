@@ -10,8 +10,19 @@ parent: Getting Started
 
     <p>Our default output is a single video file with the following settings:</p>
 
-    <p>H.264 video, AAC Audio, MP4 file format<br />
-      Video: <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#quality">medium quality</a><br /> Audio: stereo, <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio-quality">medium quality</a> (about 112kbps), 44100 Hz</p>
+    <ul>
+      <li>H.264 video, AAC Audio, MP4 file format</li>
+      <li>Video: <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#quality">medium quality</a></li>
+      <li>Audio: stereo, <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio-quality">medium quality</a> (about 112kbps), 44100 Hz</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">
+      Note:
+      <ul>
+        <li>If you provide invalid information or fields in the <code translate="No">output</code> section, these will be ignored and Zencoder will output a MP4 file using the mentioned specs.</li>
+        <li>If <code translate="No">output</code> is empty,  Zencoder will output a MP4 file using the default specs above.</li>
+        <li>If you don't want an MP4 output, they need to make sure you are providing the correct output fields in the request. If you do not, default MP4 will be output.</li>
+      </ul>
+    </aside>
 
     <p>If you don't specify an output location, the file will be temporarily hosted by Zencoder. After 24 hours the file will no longer be available.</p>
 
