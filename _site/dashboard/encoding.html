@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
 
-  <title>Output Settings</title>
+  <title>Encoding</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -65,11 +65,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/getting-started/">Getting started</a></li>
+        <li class="breadcrumb-item"><a href="/dashboard/">Dashboard</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Output Settings</li>
+        <li class="breadcrumb-item active" aria-current="page">Encoding</li>
       
     
   </nav>
@@ -859,46 +859,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Output Settings</h1>
-  <summary>This topic explains the default outputs for Zencoder jobs and the basics of defining your own outputs.</summary>
+  <h1>Encoding Dashboard</h1>
+
+  <summary>In this topic, you will learn about the Encoding dashboard.</summary>
   <section class="bcls-section">
-    <h2 id="Defining_outputs">Defining outputs</h2>
-
-    <p>Our default output is a single video file with the following settings:</p>
-
+    <h2 id="Encoding">Encoding</h2>
+   <p> The Encoding Dashboard will appear the first time you login into the Zencoder application and will help you get started with your first job.</p>
+   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/dashboard/encoding-dashboard.png" alt="encoding-dashboard" />
+    
+    <p>Note that you have different options to start. </p>
     <ul>
-      <li>H.264 video, AAC Audio, MP4 file format</li>
-      <li>Video: <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#quality">medium quality</a></li>
-      <li>Audio: stereo, <a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio-quality">medium quality</a> (about 112kbps), 44100 Hz</li>
+        <li>You can start an encoding job using the <strong>Submit your first job </strong>in your account. An encoding job is taking an input video or audio file and converting it to one or more output formats.  </li>
+        <li>You can take a look at our documentation  <a href="https://zencoder.support.brightcove.com/">Brightcove Zencoder Documentation</a></li>
+        <li>Grap an API.</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information language-editable">
-      Note:
-      <ul>
-        <li>If you provide invalid information or fields in the <code translate="No">output</code> section, these will be ignored and Zencoder will output a MP4 file using the mentioned specs.</li>
-        <li>If <code translate="No">output</code> is empty,  Zencoder will output a MP4 file using the default specs above.</li>
-        <li>If you don't want an MP4 output, they need to make sure you are providing the correct output fields in the request. If you do not, default MP4 will be output.</li>
-      </ul>
-    </aside>
-
-    <p>If you don't specify an output location, the file will be temporarily hosted by Zencoder. After 24 hours the file will no longer be available.</p>
-
-    <p>Of course, you can control the <a href="/encoding-settings/index.html">output settings</a>. To do this, pass an array of options in the API request, like this:</p>
-
-    <pre class="line-numbers">
-<code class="language-json" translate="No">{
-  "api_key": "93h630j1dsyshjef620qlkavnmzui3",
-  "input": "s3://bucket-name/file-name.avi",
-  "outputs": [
-    {
-      "url": "s3://output-bucket/output-file-name.mp4",
-      "width": "1280",
-      "height": "720"
-    }
-  ]
-}</code></pre>
-
-    <p>This example will create a single output file from the original input video and upload it to an S3 bucket. You can create <a href="/getting-started/creating-multiple-outputs.html">multiple output files</a> from the original without having to create additional encoding jobs.</p>
+    <p>In the section below, you can see your encoding Jobs. To learn more about Encoding jobs, see  <a href="https://zencoder.support.brightcove.com/general-information/index.html">General Information</a></li>
+    </p>
   </section>
+  <section class="bcls-section">
+      <p>Inputs</p>
+      <p>Outputs</p>
+      <p>Encode profiles</p>
+   
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -915,7 +897,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 30 Apr 2022
+  Page last updated on 05 May 2022
 </div>
 
 
