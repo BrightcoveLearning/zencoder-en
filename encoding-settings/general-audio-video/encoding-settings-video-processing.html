@@ -40,6 +40,34 @@ grandparent: Encoding Settings
 }</code></pre>
   </section>
   <section class="bcls-section">
+    <h2 id="flip">flip</h2>
+    <code translate="No">flip:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Valid Values:</strong> <code translate="No">horizontal</code> or <code translate="No">vertical</code></p>
+
+    <p><strong>Compatible Job Types:</strong> vod</p>
+
+    <p><strong>Example:</strong> <code translate="No">horizontal</code></p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>Flip a video vertically or horizontally. Valid options are 'vertical' and 'horizontal'. If <code translate="No">flip</code> is combined with <code translate="No">rotate</code> the video will flip first and then rotate.</p>
+
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "flip": "vertical"
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
     <h2 id="deinterlace">deinterlace</h2>
     <code translate="No">deinterlace:String</code>
 

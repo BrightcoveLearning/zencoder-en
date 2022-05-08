@@ -75,6 +75,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/dashboard/encoding-dashboard.html",
+      "oldURL": "/encoding-dashboard"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-aac.html",
       "oldURL": "/encoding-settings-aac"
   },
