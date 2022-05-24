@@ -640,17 +640,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/error-codes/",
       "oldURL": "/index"
   },
 
@@ -665,7 +660,12 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/general-information/",
       "oldURL": "/index"
   },
 
@@ -685,17 +685,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/general-information/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
       "oldURL": "/index"
   },
 
@@ -705,13 +695,28 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/content-protection/",
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-guides/iosmobile-encoding.html",
       "oldURL": "/iosmobile-encoding"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
 
   {
