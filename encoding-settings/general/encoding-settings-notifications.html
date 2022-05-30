@@ -38,11 +38,11 @@ grandparent: Encoding Settings
     <h2 id="notifications">notifications</h2>
     <code translate="No">notifications:Array</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> An array of notification strings (valid email addresses or URLs), or hashes of <a translate="No" href="#notification_url">url</a> and <a translate="No" href="#notification_format">format</a>.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -95,13 +95,13 @@ grandparent: Encoding Settings
     <h2 id="notification_url">url</h2>
     <code translate="No">url:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a translate="No" href="#notifications">notifications</a></p>
 
     <p><strong>Valid Values:</strong> A valid HTTP or HTTPS URL to notify, optionally including HTTP Auth credentials</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Examples:</strong></p>
 
@@ -156,13 +156,13 @@ grandparent: Encoding Settings
     <h2 id="notification_format">format</h2>
     <code translate="No">format:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a translate="No" href="#notifications">notifications</a></p>
 
     <p><strong>Valid Values:</strong> <code translate="No">json</code> or <code translate="No">xml</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">json</code></p>
 
@@ -211,7 +211,7 @@ grandparent: Encoding Settings
 
     <p><strong>There is a length limit of 100 characters for each notification header.</strong></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">{'Accept': 'application/json', 'Internal-Id': '12345'}</code></p>
 
@@ -262,7 +262,7 @@ grandparent: Encoding Settings
 
     <p><strong>Valid Values:</strong> <code translate="No">first_segment_uploaded</code>, <code translate="No">seamless_playback</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">{'event': 'seamless_playback'}</code></p>
 

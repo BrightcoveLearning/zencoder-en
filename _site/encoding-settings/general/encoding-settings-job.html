@@ -7,10 +7,10 @@
   <meta name="description" content="This topic contains details for encoding settings related to the overall job.">
   
   <title>Job Settings</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -861,11 +861,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="api_key" translate="No">api_key</h2>
     <code translate="No">api_key:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> Your Zencoder API key from <a href="https://app.zencoder.com/api">https://app.zencoder.com/api</a></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> bcafecadfecabafedac</p>
 
@@ -885,7 +885,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -921,7 +921,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Default Value:</strong> false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -951,7 +951,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="input" translate="No">input</h2>
     <code translate="No">input:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> A valid URL to a media file (HTTP/HTTPS, FTP/FTPS, SFTP, Azure, GCS, CF or S3), with or without authentication</p>
 
@@ -1023,11 +1023,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="outputs" translate="No">outputs</h2>
     <code translate="No">outputs:Array or Hash</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> An array of hashes or a single hash</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong></p>
 
@@ -1063,13 +1063,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="region" translate="No">region</h2>
     <code translate="No">region:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> us</p>
 
     <p><strong>Valid Values:</strong> us, europe, asia, sa, australia, us-virginia, us-oregon, us-n-california, eu-dublin, asia-singapore, asia-tokyo, sa-saopaulo, australia-sydney, us-central-gce, eu-west-gce, or asia-east-gce</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> us-virginia</p>
 
@@ -1091,13 +1091,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="test" translate="No">test</h2>
     <code translate="No">test:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> false</p>
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1113,13 +1113,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="private" translate="No">private</h2>
     <code translate="No">private:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> false</p>
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1135,7 +1135,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="download_connections" translate="No">download_connections</h2>
     <code translate="No">download_connections:Integer</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> 5</p>
 
@@ -1157,11 +1157,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="pass_through" translate="No">pass_through</h2>
     <code translate="No">pass_through:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> Any string up to 255 characters.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> my-custom-pass-through-value</p>
 
@@ -1179,13 +1179,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="mock" translate="No">mock</h2>
     <code translate="No">mock:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> false</p>
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1201,11 +1201,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="grouping" translate="No">grouping</h2>
     <code translate="No">grouping:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Valid Values:</strong> Any string.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> my-custom-pass-through-value</p>
 
@@ -1225,7 +1225,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="aspera_transfer_policy" translate="No">aspera_transfer_policy</h2>
     <code translate="No">aspera_transfer_policy:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> fair</p>
 
@@ -1255,7 +1255,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="transfer_minimum_rate" translate="No">transfer_minimum_rate</h2>
     <code translate="No">transfer_minimum_rate:Number</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> 1000</p>
 
@@ -1281,7 +1281,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="transfer_maximum_rate" translate="No">transfer_maximum_rate</h2>
     <code translate="No">transfer_maximum_rate:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Default:</strong> 250000</p>
 

@@ -7,10 +7,10 @@
   <meta name="description" content="This topic contains details for encoding settings related to segmented streaming.">
   
   <title>Segmented Streaming Settings</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -882,13 +882,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="streaming_delivery_format" translate="No">streaming_delivery_format</h2>
     <code translate="No">streaming_delivery_format:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> dash</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> dash</p>
 
@@ -915,7 +915,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="streaming_delivery_profile" translate="No">streaming_delivery_profile</h2>
     <code translate="No">streaming_delivery_profile:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -923,7 +923,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> live, hbbtv_1.5, on_demand</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> live</p>
 
@@ -956,13 +956,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="playlist_format" translate="No">playlist_format</h2>
     <code translate="No">playlist_format:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> <code translate="No">dash</code>, <code translate="No">mpd</code>, <code translate="No">hls</code>, <code translate="No">m3u</code>, <code translate="No">m3u8</code>, <code translate="No">ism</code>, <code translate="No">mss</code>, <code translate="No">highwinds</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> dash</p>
 
@@ -985,7 +985,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="segment_seconds" translate="No">segment_seconds</h2>
     <code translate="No">segment_seconds:Float</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -993,7 +993,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> Numbers between 1.0 and 3600.0; values less than 2.0 are only allowed when <a href="#byte_range_segmenting"><code translate="No">byte_range_segmenting</code></a> is enabled. Because very short segments have been found to cause playback issues, the final segment may be longer than the specified value.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> 8</p>
 
@@ -1016,13 +1016,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="alternate_audio" translate="No">alternate_audio</h2>
     <code translate="No">alternate_audio:Hash</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> Hash of alternate audio groups, each of which is an array of audio stream rendition hashes</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1072,13 +1072,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="streams" translate="No">streams</h2>
     <code translate="No">streams:Array</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> Array of hashes containing playlist stream info</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1108,13 +1108,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="path" translate="No">path</h2>
     <code translate="No">path:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing an absolute or relative path to a manifest file</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1146,13 +1146,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="bandwidth" translate="No">bandwidth</h2>
     <code translate="No">bandwidth:Integer</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> Positive integer values in Kbps</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> 500</p>
 
@@ -1186,13 +1186,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="resolution" translate="No">resolution</h2>
     <code translate="No">resolution:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing width and height as: 800x600</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1224,13 +1224,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="codecs" translate="No">codecs</h2>
     <code translate="No">codecs:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing codecs in HTML5 format, such as: mp4a.40.2</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1262,13 +1262,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="audio" translate="No">audio</h2>
     <code translate="No">audio:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
     <p><strong>Valid Values:</strong> String containing the name of the audio GROUP-ID to use. This value must have been defined as an <a href="#alternate_audio">alternate_audio</a> grouping. The <a href="#codecs">codecs</a> setting should reflect all codecs of the alternate audio group.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1312,11 +1312,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="segment_image_url" translate="No">segment_image_url</h2>
     <code translate="No">segment_image_url:String (URL)</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1337,7 +1337,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="segment_video_snapshots" translate="No">segment_video_snapshots</h2>
     <code translate="No">segment_video_snapshots:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -1345,7 +1345,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> true</p>
 
@@ -1375,7 +1375,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1408,7 +1408,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="max_hls_protocol_version" translate="No">max_hls_protocol_version</h2>
     <code translate="No">max_hls_protocol_version:Integer</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
@@ -1416,7 +1416,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> 2-5</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> 4</p>
 
@@ -1467,7 +1467,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="hls_protocol_version" translate="No">hls_protocol_version</h2>
     <code translate="No">hls_protocol_version:Integer</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
@@ -1476,7 +1476,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p><strong>Valid Values:</strong> 2-5</p>
 
     <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">HLS</code> versions 6 and 7 are not fully supported; if you specify them for <code translate="No">hls_protocol_version</code> the only effect will be to remove deprecated features from the playlist.</aside>
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> 3</p>
 
@@ -1504,7 +1504,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="hls_optimized_ts" translate="No">hls_optimized_ts</h2>
     <code translate="No">hls_optimized_ts:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a> / <a href="#streams">streams</a></p>
 
@@ -1512,7 +1512,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -1536,13 +1536,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="prepare_for_segmenting" translate="No">prepare_for_segmenting</h2>
     <code translate="No">prepare_for_segmenting:String or Array</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
     <p><strong>Valid Values:</strong> <code translate="No">hls</code>, <code translate="No">mss</code>, <code translate="No">dash</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">hls,dash</code></p>
 
@@ -1570,11 +1570,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="smil-base-url" translate="No">smil-base-url</h2>
     <code translate="No">smil_base_url:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> rtmp://127.0.0.1/base/path/</p>
 
@@ -1635,7 +1635,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> true</p>
 
@@ -1671,7 +1671,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">true</code></p>
 
@@ -1708,7 +1708,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Default:</strong> <code translate="No">iframe_index.m3u8</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">my_iframe_index.m3u8</code></p>
 
@@ -1745,7 +1745,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p><strong>Valid Values:</strong> <code translate="No">true</code> or <code translate="No">false</code></p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> <code translate="No">true</code></p>
 

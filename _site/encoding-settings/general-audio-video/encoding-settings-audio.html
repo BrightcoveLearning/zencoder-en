@@ -7,10 +7,10 @@
   <meta name="description" content="This topic contains details for encoding settings related to audio.">
   
   <title>Audio Settings</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -860,7 +860,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="audio_sample_rate" translate="No">audio_sample_rate</h2>
       <code translate="No">audio_sample_rate:Integer</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -875,8 +875,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Audio sample rate in Hz.</p>
 
       <p>We recommend that you only use this setting if you have a good reason to do so. Forcing an output sample rate can cause unexpected problems - for example, each <a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec">audio_codec</a> only supports a limited range of sample rates, and each sample rate is only compatible with a limited range of bitrates. You can't encode 48Khz AAC at 16kbps, or 8000hz MP3 at 320kbps.</p>
-
-      <p> </p>
 
       <p>By default, the input sample rate will be used (i.e. the audio will not be resampled), though sample rates higher than 96000 will be reduced to a max of 96000.</p>
 
@@ -898,7 +896,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="max_audio_sample_rate" translate="No">max_audio_sample_rate</h2>
       <code translate="No">max_audio_sample_rate:Integer</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -936,7 +934,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="audio_channels" translate="No">audio_channels</h2>
       <code translate="No">audio_channels:Integer</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -944,7 +942,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
       <p><strong>Valid Values:</strong> 1, 2 or 6 (6 is valid only if the input content has 6 channels in a 5.1 config, or <code translate="no">input_audio_channels</code> provides a valid 5.1 config)</p>
 
-      <p><strong>Compatible Job Types:</strong> All</p>
+      <p><strong>Compatible Job Types:</strong> VOD</p>
 
       <p><strong>Example:</strong> 1</p>
 
@@ -970,7 +968,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="audio_bit_depth" translate="No">audio_bit_depth</h2>
       <code translate="No">audio_bit_depth:Integer</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
@@ -978,7 +976,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
       <p><strong>Valid Values:</strong> 16, 24, 32 for PCM; 16 for all others.</p>
 
-      <p><strong>Compatible Job Types:</strong> All</p>
+      <p><strong>Compatible Job Types:</strong> VOD</p>
 
       <p><strong>Example:</strong> 24</p>
 
@@ -1002,13 +1000,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="audio_language" translate="No">audio_language</h2>
       <code translate="No">audio_language:String</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
       <p><strong>Valid Values:</strong> ISO 639-1 or 639-2 language code</p>
 
-      <p><strong>Compatible Job Types:</strong> All</p>
+      <p><strong>Compatible Job Types:</strong> VOD</p>
 
       <p><strong>Example:</strong> en</p>
 
@@ -1032,13 +1030,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h2 id="input_audio_channels" translate="No">input_audio_channels</h2>
       <code translate="No">input_audio_channels:Hash</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
       <p><strong>Valid Values:</strong> A hash of channel identifiers and track index values.</p>
 
-      <p><strong>Compatible Job Types:</strong> All</p>
+      <p><strong>Compatible Job Types:</strong> VOD</p>
 
       <p><strong>Example:</strong></p>
 
@@ -1072,17 +1070,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     ]
   }</code></pre>
     </section>
+
     <section class="bcls-section">
       <h2 id="output_audio_channels" translate="No">output_audio_channels</h2>
       <code translate="No">output_audio_channels:Array or Integer</code>
 
-      <p><strong>API Versions:</strong> V1, V2</p>
+      <p><strong>API Versions:</strong> V2</p>
 
       <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
 
       <p><strong>Valid Values:</strong> A channel layout or integer to define the number of output audio channels.</p>
 
-      <p><strong>Compatible Job Types:</strong> All</p>
+      <p><strong>Compatible Job Types:</strong> VOD</p>
 
       <p><strong>Example:</strong></p>
 
@@ -1130,6 +1129,35 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       }
     ]
   }</code></pre>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="select_audio_language" translate="No">select_audio_language</h2>
+      <code translate="No">select_audio_language:Stringr</code>
+
+      <p><strong>API Versions:</strong> V2</p>
+
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></p>
+
+      <p><strong>Valid Values:</strong> A 2- or 3-character language code defined in ISO 639-1 and ISO 639-2.</p>
+
+      <p><strong>Compatible Job Types:</strong> VOD</p>
+
+      <p><strong>Example:</strong></p>
+
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "select_audio_language": "es"
+    }
+  ]
+}</code></pre>
+     
+      <p><strong>Description:</strong></p>
+
+      <p>This option for multi-channel audio to select the channel to use for the output by language. Note that if there are multiple channels with the same language, the encoder will use the first one it finds that matches the <code translate="No">select_audio_language</code> value. Typically, this setting would be used to select one of the channels where the video has different audio channels in different languages.</p>
+
     </section>
 <!-- complete bootstrap layout -->
     </div>

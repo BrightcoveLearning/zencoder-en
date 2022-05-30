@@ -11,7 +11,7 @@ grandparent: Encoding Settings
     <h2 id="public">public</h2>
     <code translate="No">public:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
 
@@ -19,7 +19,7 @@ grandparent: Encoding Settings
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -53,7 +53,7 @@ grandparent: Encoding Settings
     <h2 id="rrs">rrs</h2>
     <code translate="No">rrs:Boolean</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
@@ -61,7 +61,7 @@ grandparent: Encoding Settings
 
     <p><strong>Valid Values:</strong> true or false</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Example:</strong> true</p>
 
@@ -83,13 +83,13 @@ grandparent: Encoding Settings
     <h2 id="access_control">access_control</h2>
     <code translate="No">access_control:Array</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> OR <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a></p>
 
     <p><strong>Valid Values:</strong> An array of hashes containing two settings: grantee and permissions.</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -120,13 +120,13 @@ grandparent: Encoding Settings
     <h2 id="grantee">grantee</h2>
     <code translate="No">grantee:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
 
     <p><strong>Valid Values:</strong> A valid S3 grantee (email, ID, or URI)</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
@@ -170,13 +170,13 @@ grandparent: Encoding Settings
     <h2 id="permission">permission</h2>
     <code translate="No">permission:String</code>
 
-    <p><strong>API Versions:</strong> V1, V2</p>
+    <p><strong>API Versions:</strong> V2</p>
 
     <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="#access-control">access_control</a> OR <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails">thumbnails</a> / <a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails-access-control">access_control</a></p>
 
     <p><strong>Valid Values:</strong> A string or array of strings containing: READ, READ_ACP, WRITE_ACP, or FULL_CONTROL</p>
 
-    <p><strong>Compatible Job Types:</strong> All</p>
+    <p><strong>Compatible Job Types:</strong> VOD</p>
 
     <p><strong>Description:</strong></p>
 
