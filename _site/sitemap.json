@@ -625,7 +625,22 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
       "oldURL": "/index"
   },
 
@@ -650,7 +665,17 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/general-information/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
       "oldURL": "/index"
   },
 
@@ -680,32 +705,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -802,6 +802,16 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/search.html",
       "oldURL": "/search"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/s-doc-updates/site-doc-updates-help.html",
+      "oldURL": "/site-doc-updates-help"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/s-doc-updates/site-doc-updates.html",
+      "oldURL": "/site-doc-updates"
   },
 
   {
