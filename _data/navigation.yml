@@ -217,7 +217,7 @@
       - name: 'FileNotFoundError'
         url: '/error-troubleshooting/error-codes/error-filenotfounderror.html'
       - name: 'FilePermanentlyMovedError'
-        url: '/error-troubleshooting/error-codes/error-inaccuratedurationerror.html'
+        url: '/error-troubleshooting/error-codes/error-filepermanentlymovederror.html'
       - name: 'InaccurateDurationError'
         url: '/error-troubleshooting/error-codes/error-inaccuratedurationerror.html'
       - name: 'IncompatibleWithDynamicProfilesError'
