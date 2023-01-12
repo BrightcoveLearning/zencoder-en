@@ -9,19 +9,23 @@ parent: Encoding Guides
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Overview">Overview</h2>
+    <h2 id="Overview">Notes</h2>
 
-    <aside class="bcls-aside bcls-aside--information">Notes:
+    <aside class="bcls-aside bcls-aside--information">
       <ul>
-        <li>Context Aware Encoding is not available to all Zencoder customers. If you have questions about whether or not you can use Context Aware Encoding, please contact your Account Manager.</li>
-        <li>The <a href="/encoding-guides/av1-guide.html">AV1 video codec</a> is currently not supported for CAE jobs.</li>
+        <li>For details of the encoding fields, see <a href="/encoding-settings/general/cae-settings.html"></a></li>
+        <li>Context Aware Encoding is not available to all Zencoder customers. If you have questions about whether or not you can use Context Aware Encoding, please contact your Customer Success Manager.</li>
+        <!-- <li>The <a href="/encoding-guides/av1-guide.html">AV1 video codec</a> is currently not supported for CAE jobs.</li> -->
       </ul>
-      </aside>
+    </aside>
   </section>
   <section class="bcls-section">
     <h2 id="process">Process</h2>
 
-    <p>CAE is enabled on a Zencoder Job by setting <code translate="No"><a href="/encoding-settings/general/encoding-settings-job.html#generate_dynamic_profile"><code translate="No">generate_dynamic_profile</code></a></code> to true and adding <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a> values to Outputs of the Job. In addition, you can add <a href="/encoding-settings/general/cae-settings.html"><code translate="No">dynamic_profile_options</code></a>, but this is not required. After downloading and inspecting the Input source file for the Job, Zencoder runs the CAE dynamic profile generator on the source file. The resulting dynamic profile ladder settings are added to each corresponding Output before they are encoded. The following settings are automatically set for Outputs with a dynamic_profile_rendition value:</p>
+    <p>CAE is enabled on a Zencoder Job by setting <code translate="No">"type": "cae"</code> on a Zencoder output. In addition, <code translate="No">cae_options</code> may also be configured.</p>
+    <p>Zencoder <code translate="No">"type": "cae"</code> output runs the context aware profile generator on the given input and the resulting profile generated as a json file is uploaded to the user provided location.</p>
+
+    <p>The generated profile json contains following settings that are used for encoding each rendition in the ladder.</p>
 
     <ul>
       <li><code translate="No">width</code></li>
@@ -39,11 +43,28 @@ parent: Encoding Guides
       <li><code translate="No">keyframe_rate</code></li>
       <li><code translate="No">fixed_keyframe_interval</code></li>
     </ul>
-    <p><strong>Mixed codec outputs:</strong> you can output mixed HEVC/H.264 renditions. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details.</p>
-    <p>Other Outputs without a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"> <code translate="No">dynamic_profile_rendition</code></a> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
+    <p>For Zencoder to automatically encode the renditions, additional dependent outputs are required and each output with <code translate="No">cae_rendition</code> set. Other Outputs without a <code translate="No">cae_rendition</code> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
+    <h3>Sample request</h3>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test_media.mp4",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "url": "s3://test_bucket/cae_generated_profile.json",
+      "cae_options": {
+        "min_renditions": 1,
+        "max_renditions": 6
+      }
+    },
+    {"source": "cae_profile", "cae_rendition": 1}, {"source": "cae_profile", "cae_rendition": 2},
+    {"source": "cae_profile", "cae_rendition": 3}, {"source": "cae_profile", "cae_rendition": 4},
+    {"source": "cae_profile", "cae_rendition": 5}, {"source": "cae_profile", "cae_rendition": 6}
+  ]
+ }</code></pre>
   </section>
   <section class="bcls-section">
-    <h2 id="guidelines_for_configuring_dynamic_profile_options">Guidelines for configuring <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_options</code></a></h2>
+    <h2 id="guidelines_for_configuring_dynamic_profile_options">Guidelines for configuring <code translate="No">cae_options</code></h2>
 
     <h3>Number of Renditions</h3>
 

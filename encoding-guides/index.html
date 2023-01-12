@@ -3,29 +3,27 @@ title: Encoding Guides
 description: Guides to help you get the best results with different output formats.
 parent: Home
 ---
-<summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list">
+<h1>{{ page.title }}</h1>
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
-	<section>
-		<h2 id="Topics_in_this_section">Topics in this section</h2>
-		<ul style="margin-left: -2.3rem;list-style: none;">
-		{% for item in site.data.navigation %}
-		{% if item.name == page.title %}
-					{% for entry in item.docs %}
-						<li><a href="{{ entry.url }}">{{ entry.name }}</a>
-						{% if entry.docs %}
-							<ul>
-								{% for subentry in entry.docs %}
-									<li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
-								{% endfor %}
-							</ul>
-						{% endif %}
-						</li>
-					{% endfor %}
-		{% endif %}
-	{% endfor %}
+  <section>
+    <h2 id="Topics_in_this_section">Topics in this section</h2>
+    <ul style="margin-left: -2.3rem;list-style: none;">
+    {% for item in site.data.navigation %}
+    {% if item.name == page.title %}
+          {% for entry in item.docs %}
+            <li><a href="{{ entry.url }}">{{ entry.name }}</a>
+            {% if entry.docs %}
+              <ul>
+                {% for subentry in entry.docs %}
+                  <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            </li>
+          {% endfor %}
+    {% endif %}
+  {% endfor %}
 
 </section>
 </article>

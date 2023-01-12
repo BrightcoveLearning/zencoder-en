@@ -4,6 +4,8 @@
 - section: 
   name: 'Getting Started'
   url: '/getting-started/index.html'
+  icon: fa-regular fa-map-pin
+  description: Guides to help you get started using Zencoder.
   docs:
     - name: 'Overview'
       url: '/getting-started/overview-zencoder.html'
@@ -18,6 +20,8 @@
 - section: 
   name: 'General Information'
   url: '/general-information/index.html'
+  icon: fa-regular fa-circle-info
+  description: General information about using Zencoder.
   docs:
     - name: 'Basics'
       url: '/general-information/faq-basics.html'
@@ -48,6 +52,8 @@
 - section: 
   name: 'References'
   url: '/references/index.html'
+  icon: fa-regular fa-books
+  description: The API Reference and Other Reference Information.
   docs:
     - name: 'API Reference'
       url: '/references/reference.html'
@@ -58,6 +64,8 @@
 - section: 
   name: 'Encoding Settings'
   url: '/encoding-settings/index.html'
+  icon: fa-solid fa-binary
+  description: 'Detailed explanation of all encoding settings.<br><a href="/encoding-settings/quick-reference.html">Quick Reference</a> '
   docs:
     - name: 'General Settings'
       url: '/encoding-settings/general/index.html'
@@ -148,6 +156,8 @@
 - section: 
   name: 'Encoding Guides'
   url: '/encoding-guides/index.html'
+  icon: fa-regular fa-books
+  description: Guides to help you get the best results with different output formats.
   docs:
     - name: 'Audio Mapping Guide'
       url: '/encoding-guides/advanced-audio-mapping-guide.html'
@@ -192,6 +202,8 @@
 - section: 
   name: 'Errors/Troubleshooting'
   url: '/error-troubleshooting/index.html'
+  icon: fa-regular fa-bug
+  description: Help when something is not right.
   docs:
   - name: 'Common Problems'
     url: '/error-troubleshooting/problems.html'
@@ -313,6 +325,8 @@
 - section: 
   name: 'Integration'
   url: '/integration/index.html'
+  icon: fa-regular fa-puzzle-piece-simple
+  description: Guides to help you integrate Zencoder with your CMS or other apps.
   docs:
     - name: 'Integration libraries'
       url: '/integration/faq-integration-libraries.html'
@@ -325,6 +339,8 @@
 - section: 
   name: 'Support'
   url: '/support/index.html'
+  icon: fa-regular fa-comments-question-check
+  description: Learn how to get help from Brightcove Support.
   docs:
     - name: 'Viewing the Brightcove System Status Page'
       url: '/support/viewing-brightcove-system-status-page.html'
