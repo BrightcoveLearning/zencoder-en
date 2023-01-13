@@ -190,6 +190,11 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-job-stage.html",
+      "oldURL": "/encoding-settings-job-stage"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-job.html",
       "oldURL": "/encoding-settings-job"
   },

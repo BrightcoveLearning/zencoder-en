@@ -3,7 +3,7 @@ title: General Output Settings
 description: This topic contains details for encoding settings related to general output settings (applying to all outputs).
 parent: General Settings
 grandparent: Encoding Settings
-layout: staging
+layout: docs_pages_staging
 ---
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
@@ -17,9 +17,18 @@ layout: staging
 
     <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
 
-    <p><strong>Default:</strong> standard</p>
+    <p><strong>Default:</strong> <code translate="No">standard</code></p>
 
-    <p><strong>Valid Values:</strong> <code translate="No">standard</code>, <code translate="No">segmented</code>, <code translate="No">captions</code>, <code translate="No">playlist</code>, and <code translate="No">transfer-only</code></p>
+    <p><strong>Valid Values:</strong> 
+      <ul>
+        <li><code translate="No">cae</code></li>
+        <li><code translate="No">captions</code></li>
+        <li><code translate="No">playlist</code></li>
+        <li><code translate="No">segmented</code></li>
+        <li><code translate="No">standard</code></li>
+        <li><code translate="No">transfer-only</code></li>
+      </ul>
+      , , , , and </p>
 
     <p><strong>Compatible Job Types:</strong> VOD</p>
 
@@ -30,6 +39,7 @@ layout: staging
     <p>By default Zencoder will consider outputs to be standard audio or video files. Currently, there are two special types of outputs: <code translate="No">segmented</code> and <code translate="No">playlist</code>.</p>
 
     <ul>
+      <li><code translate="No">cae</code> for Context Aware Encoding (see <a href="/encoding-guides/cae-guide.html"></a>)</li>
       <li><code translate="No">segmented</code>: The typical use-case for segmentation is for Apple's Live HTTP Streaming (see <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming</a>). For segmented outputs the default format will be changed to ts instead of mp4.</li>
       <li>
         <code translate="No">captions</code>: <em><strong><a href="/references/api-version-history.html">API V2 Only</a></strong></em>
@@ -89,7 +99,7 @@ layout: staging
     <p><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
   </section>
   <section class="bcls-section">
-    <h2 translate="No" id="dynamic_profile_rendition">dynamic_profile_rendition</h2>
+    <h2 translate="No" id="dynamic_profile_rendition">dynamic_profile_rendition <span style="color: red">DEPRECATED</span></h2>
     <code translate="No">dynamic_profile_rendition:Integer</code>
 
     <p><strong>API Versions:</strong> V2</p>

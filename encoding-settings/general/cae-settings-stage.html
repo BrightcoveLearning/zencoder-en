@@ -3,7 +3,7 @@ title: CAE Settings
 description: This topic covers Context Aware Encoding (CAE) settings for Zencoder.
 parent: General Settings
 grandparent: Encoding Settings
-layout: staging
+layout: docs_pages_staging
 ---
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
@@ -29,7 +29,7 @@ layout: staging
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
     <p><strong>Valid Array Item Values:</strong> <code translate="No">h264</code>, <code translate="No">hevc</code></p>
 
@@ -44,20 +44,26 @@ layout: staging
     <p>For mixed-codec outputs, an array of the codecs to create renditions for. Currently, the allowed item values are <code translate="No">h264</code> and <code translate="No">hevc</code>.</p>
 
   <pre class="line-numbers"><code class="language-json" translate="No">{
-    "dynamic_profile_options": {
-      "max_renditions": 6,
-      "video_codecs" : ["h264", "hevc"'],
-      "video_codec_options": {
-        "h264": {
-          "min_renditions": 2,
-          "max_resolution": { "width": 1280, "height": 720 }
-        },
-        "hevc": {
-          "min_renditions": 2,
-          "max_resolution": { "width": 1920, "height": 1080 }
+    "input": "s3://zencodertesting/test.mov",
+    "outputs": [
+      {
+        "type": "cae",
+        "cae_options": {
+          "max_renditions": 6,
+          "video_codecs" : ["h264", "hevc"'],
+          "video_codec_options": {
+            "h264": {
+              "min_renditions": 2,
+              "max_resolution": { "width": 1280, "height": 720 }
+            },
+            "hevc": {
+              "min_renditions": 2,
+              "max_resolution": { "width": 1920, "height": 1080 }
+            }
+          }
         }
       }
-    }
+    ]
   }</code></pre>
   </section>
   <section class="bcls-section">
@@ -66,7 +72,7 @@ layout: staging
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
     <p><strong>Default Value:</strong> none</p>
 
@@ -100,21 +106,27 @@ layout: staging
     <aside class="bcls-aside bcls-aside--information">Note: these settings are also used at the global level. When you are using settings both at the global and per-codec levels, the values must be compatible. For example, max_renditions set at the global level must be greater than or equal to the sum of min_rendition values set at the per-codec level.</aside>
 
   <pre class="line-numbers"><code class="language-json" translate="No">{
-    "dynamic_profile_options": {
-      "max_renditions": 6,
-      "video_codecs" : ["h264", "hevc"'],
-      "video_codec_options": {
-        "h264": {
-          "min_renditions": 2,
-          "max_resolution": { "width": 1280, "height": 720 }
-        },
-        "hevc": {
-          "min_renditions": 2,
-          "max_resolution": { "width": 1920, "height": 1080 }
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae"
+      "cae_options": {
+        "max_renditions": 6,
+        "video_codecs" : ["h264", "hevc"'],
+        "video_codec_options": {
+          "h264": {
+            "min_renditions": 2,
+            "max_resolution": { "width": 1280, "height": 720 }
+          },
+          "hevc": {
+            "min_renditions": 2,
+            "max_resolution": { "width": 1920, "height": 1080 }
+          }
         }
       }
     }
-  }</code></pre>
+  ]
+}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="min_renditions" translate="No">min_renditions</h2>
@@ -122,7 +134,7 @@ layout: staging
 
     <p><strong>API Versions:</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
     <p><strong>Valid Values:</strong> 1-15</p>
 
@@ -137,13 +149,17 @@ layout: staging
     <p>The minimum number of renditions to generate.</p>
 
     <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            <span class="bcls-highlight">"min_renditions": 2</span>
-          }
-        }</code></pre>
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        <span class="bcls-highlight">"min_renditions": 2</span>
+      }
+    }
+  ]
+}</code></pre>
   </section>
   <section class="bcls-section">
     <section class="bcls-section">
@@ -152,11 +168,11 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1-15</p>
 
-      <p><strong>Default Value:</strong> 8</p>
+      <p><strong>Default Value:</strong> 6</p>
 
       <p><strong>Compatible Job Types:</strong> VOD</p>
 
@@ -166,15 +182,19 @@ layout: staging
 
       <p>The maximum number of renditions to generate.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            <span class="bcls-highlight">"max_renditions": 10</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        <span class="bcls-highlight">"max_renditions": 10</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="min_resolution" translate="No">min_resolution</h2>
@@ -182,7 +202,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 16x16 - 8192x8192</p>
 
@@ -196,19 +216,23 @@ layout: staging
 
       <p>Minimum resolution to be considered for the ladder.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"min_resolution": {
-              "height": 180,
-              "width": 320
-            }</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"min_resolution": {
+          "height": 180,
+          "width": 320
+        }</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="max_resolution" translate="No">max_resolution</h2>
@@ -216,7 +240,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 16x16 - 8192x8192</p>
 
@@ -230,23 +254,27 @@ layout: staging
 
       <p>Maximum resolution to be considered for the ladder.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "min_resolution": {
-              "height": 180,
-              "width": 320
-            },
-            <span class="bcls-highlight">"max_resolution": {
-              "height": 1080,
-              "width": 1920
-            }</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        "min_resolution": {
+          "height": 180,
+          "width": 320
+        },
+        <span class="bcls-highlight">"max_resolution": {
+          "height": 1080,
+          "width": 1920
+        }</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="max_frame_rate" translate="No">max_frame_rate</h2>
@@ -254,7 +282,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 0.1 - 120</p>
 
@@ -268,16 +296,20 @@ layout: staging
 
       <p>Maximum frame rate that can be used.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"max_frame_rate": 60</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"max_frame_rate": 60</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="keyframe_rate" translate="No">keyframe_rate</h2>
@@ -285,7 +317,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 0.5, 1.0</p>
 
@@ -299,16 +331,20 @@ layout: staging
 
       <p>Keyframe rate. This value can be either 0.5 or 1. For SSAI enabled content, this value needs to be 1.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"keyframe_rate": 0.5</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"keyframe_rate": 0.5</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="fixed_frame_rate" translate="No">fixed_frame_rate</h2>
@@ -316,7 +352,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> true or false</p>
 
@@ -330,16 +366,20 @@ layout: staging
 
       <p>Instructs generator to use same frame rate across all renditions. If false, H.264 baseline profile renditions at resolutions below 360p will be assigned halved frame rate.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"fixed_frame_rate": true</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"fixed_frame_rate": true</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="min_bitrate" translate="No">min_bitrate</h2>
@@ -347,7 +387,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 40 - 400</p>
 
@@ -361,16 +401,20 @@ layout: staging
 
       <p>Minimum bitrate [kbps] that can be used.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"min_bitrate": 300</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"min_bitrate": 300</span>
+    }
+  ]
+  }
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="max_bitrate" translate="No">max_bitrate</h2>
@@ -378,7 +422,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 400 - 40000</p>
 
@@ -392,17 +436,21 @@ layout: staging
 
       <p>Maximum bitrate [kbps] that can be used.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "min_bitrate": 300,
-            <span class="bcls-highlight">"max_bitrate": 20000</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        "min_bitrate": 300,
+        <span class="bcls-highlight">"max_bitrate": 20000</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="max_first_rendition_bitrate" translate="No">max_first_rendition_bitrate</h2>
@@ -410,7 +458,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 40 - 1000</p>
 
@@ -424,18 +472,22 @@ layout: staging
 
       <p>Maximum bitrate [kbps] that can be used for first rendition.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "min_bitrate": 300,
-            "max_bitrate": 20000
-            <span class="bcls-highlight">"max_first_rendition_bitrate": 700</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        "min_bitrate": 300,
+        "max_bitrate": 20000
+        <span class="bcls-highlight">"max_first_rendition_bitrate": 700</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="min_granularity" translate="No">min_granularity</h2>
@@ -443,7 +495,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1 - 100 (%)</p>
 
@@ -457,16 +509,20 @@ layout: staging
 
       <p>Minimum relative change in bitrate between renditions.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"min_granularity": 20</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"min_granularity": 20</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="max_granularity" translate="No">max_granularity</h2>
@@ -474,7 +530,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1 - 100 (%)</p>
 
@@ -491,13 +547,17 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "min_granularity": 20,
-            <span class="bcls-highlight">"max_granularity": 80</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                "min_granularity": 20,
+                <span class="bcls-highlight">"max_granularity": 80</span>
+              }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -506,7 +566,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> h264, hevc</p>
 
@@ -520,16 +580,20 @@ layout: staging
 
       <p>Video codec to use.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"video_codec": "h264"</span>
-          }
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"video_codec": "h264"</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="bitrate_cap_to_bitrate_ratio" translate="No">bitrate_cap_to_bitrate_ratio</h2>
@@ -537,7 +601,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1.0 - 2.0</p>
 
@@ -554,12 +618,16 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"bitrate_cap_to_bitrate_ratio": 1.5</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                <span class="bcls-highlight">"bitrate_cap_to_bitrate_ratio": 1.5</span>
+              }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -568,7 +636,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> 1.0 - 4.0</p>
 
@@ -585,13 +653,17 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "bitrate_cap_to_bitrate_ratio": 1.5,
-            <span class="bcls-highlight">"buffer_size_to_bitrate_ratio": 2.5</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                "bitrate_cap_to_bitrate_ratio": 1.5,
+                <span class="bcls-highlight">"buffer_size_to_bitrate_ratio": 2.5</span>
+              }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -600,7 +672,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Default Value:</strong> 64 [KBPS]</p>
 
@@ -615,14 +687,18 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "bitrate_cap_to_bitrate_ratio": 1.5,
-            "buffer_size_to_bitrate_ratio": 2.5,
-            <span class="bcls-highlight">"bitrate_cap_offset": 128</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                "bitrate_cap_to_bitrate_ratio": 1.5,
+                "buffer_size_to_bitrate_ratio": 2.5,
+                <span class="bcls-highlight">"bitrate_cap_offset": 128</span>
+              }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -631,7 +707,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Default Value:</strong> 85 [KBPS]</p>
 
@@ -646,8 +722,13 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
+          "outputs": [
+            {
+
+            }
+          ]
+          "type": "cae",
+          "cae_options": {
             "min_renditions": 2,
             "max_renditions": 10,
             "bitrate_cap_to_bitrate_ratio": 1.5,
@@ -663,7 +744,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Valid Values:</strong> -40.0 - 40.0</p>
 
@@ -690,8 +771,8 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
+          "type": "cae",
+          "cae_options": {
             "min_renditions": 2,
             "max_renditions": 10,
             <span class="bcls-highlight">"quality_rate_tune": 2</span>
@@ -704,9 +785,9 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
-      <p><strong>Default Value:</strong> true</p>
+      <p><strong>Default Value:</strong> false</p>
 
       <p><strong>Compatible Job Types:</strong> VOD</p>
 
@@ -719,8 +800,8 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
+          "type": "cae",
+          "cae_options": {
             "min_renditions": 2,
             "max_renditions": 10,
             <span class="bcls-highlight">"select_baseline_profile_configuration": true</span>
@@ -733,7 +814,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Default:</strong> Profile generator uses lists of standard resolutions for all known aspect ratios. Whenever possible, aspect ratio, sample aspect ratio and framerate of the source is preserved in output configurations.</p>
 
@@ -748,8 +829,8 @@ layout: staging
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options": {
+          "type": "cae",
+          "cae_options": {
             "min_renditions": 2,
             "max_renditions": 10,
             <span class="bcls-highlight">"video_configurations": [
@@ -774,7 +855,7 @@ layout: staging
 
       <p><strong>API Versions:</strong> V2</p>
 
-      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></p>
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
 
       <p><strong>Default:</strong> Profile generator uses lists of standard resolutions for all known aspect ratios. Whenever possible, aspect ratio, sample aspect ratio and framerate of the source is preserved in output configurations.</p>
 
@@ -789,63 +870,67 @@ layout: staging
       <pre class="line-numbers">
     <code class="language-json" translate="No">{
         "input": "s3://zencodertesting/test.mov",
-        "generate_dynamic_profile": true,
-        "dynamic_profile_options" : {
+        "type": "cae",
+        "cae_options" : {
           "min_rendition": 2,
           "max_rendition": 6,
           "watermarks":[
-           {
+            {
               "url": "{url_to_watermark}",
-             "width": "10%",
-             "height": "10%"
-           }
+              "width": "10%",
+              "height": "10%"
+            }
           ]
         }
       }</code></pre>
 
       <p>Watermarks can also be part of <code translate="No">video_configurations</code>:</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "generate_dynamic_profile": true,
-          "dynamic_profile_options" : {
-            "video_configurations": [  
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options" : {
+        "video_configurations": [  
+          {
+            "width": 640,
+            "height": 360,
+            "watermarks":[
               {
-               "width": 640,
-               "height": 360,
-                "watermarks":[
-                  {
-                    "url": "{url_to_watermark}",
-                    "x": "-10",
-                    "y": 10"
-                  }
-                ]
-              },
-              {
-               "width": 960,
-               "height": 540,
-                "watermarks":[
-                  {
-                    "url": "{url_to_watermark}",
-                    "x": "-15",
-                    "y": "15"
-                 }
-                ]
-              },
-              {
-                "width": 1280,
-                "height": 720,
-                "watermarks":[
-                  {
-                    "url": "{url_to_watermark}",
-                    "x": "-20",
-                    "y": "20"
-                 }
-                ]
+                "url": "{url_to_watermark}",
+                "x": "-10",
+                "y": 10"
               }
             ]
-          }</code></pre>
+          },
+          {
+            "width": 960,
+            "height": 540,
+            "watermarks":[
+              {
+                "url": "{url_to_watermark}",
+                "x": "-15",
+                "y": "15"
+              }
+            ]
+          },
+          {
+            "width": 1280,
+            "height": 720,
+            "watermarks":[
+              {
+                "url": "{url_to_watermark}",
+                "x": "-20",
+                "y": "20"
+              }
+            ]
+          }
+        ]
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="additional_settings" translate="No">Additional settings</h2>
@@ -897,7 +982,7 @@ layout: staging
       </table>
       <h3>HDR settings</h3>
 
-      <p>CAE also supports HDR10 and the following settings can be included in <code translate="No">dynamic_profile_options</code>.</p>
+      <p>CAE also supports HDR10 and the following settings can be included in <code translate="No">cae_options</code>.</p>
 
       <table class="bcls-table">
         <caption class="bcls-caption--table">Additional Settings</caption>
