@@ -92,6 +92,7 @@ layout: doc_pages_staging
     <h3>Support for legacy devices</h3>
 
     <p>To support older devices that are only capable of <code translate="No"><code translate="No">Baseline</code></code> profile H.264 playback, use the <a href="/encoding-settings/general/cae-settings.html#select_baseline_profile_configuration"><code translate="No">select_baseline_profile_configuration</code></a> setting. When this is set, at least one rendition will be encoded with <code translate="No">Baseline</code> profile. Additional constraints (codec profile, level, number of reference frames, b-frames, etc.) can be controlled with a custom <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a> setting.</p>
+    <p>Note that <code translate="No">select_baseline_profile_configuration</code> is <code translate="No">true</code> by default, and it requires <em>at least one rendition</em> to have a resolution at or below 512x288.</p>
 
     <h3>VBR variability control</h3>
 
@@ -122,7 +123,7 @@ layout: doc_pages_staging
       "type": "cae",
       "label": "cae_profile",
       "base_url": "s3://test_bucket/outputs/hls_cae/",
-      "filename": "cae_profile.json",
+      "filename": "cae_options.json",
       "cae_options": {
         "max_renditions": 6,
         "min_renditions": 2,
@@ -131,7 +132,7 @@ layout: doc_pages_staging
       }
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_1",
       "cae_rendition": 1,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_1",
@@ -144,7 +145,7 @@ layout: doc_pages_staging
       "skip_audio": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_2",
       "cae_rendition": 2,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_2",
@@ -157,7 +158,7 @@ layout: doc_pages_staging
       "skip_audio": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_3",
       "cae_rendition": 3,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_3",
@@ -170,7 +171,7 @@ layout: doc_pages_staging
       "skip_audio": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_4",
       "cae_rendition": 4,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_4",
@@ -183,7 +184,7 @@ layout: doc_pages_staging
       "skip_audio": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_5",
       "cae_rendition": 5,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_5",
@@ -196,7 +197,7 @@ layout: doc_pages_staging
       "skip_audio": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_6",
       "cae_rendition": 6,
       "base_url": "s3://test_bucket/outputs/hls_cae/cae_6",
@@ -277,7 +278,7 @@ layout: doc_pages_staging
       "type": "cae",
       "label": "cae_profile",
       "base_url": "s3://test_bucket/outputs/hls_cae/",
-      "filename": "cae_profile.json",
+      "filename": "cae_options.json",
       "cae_options": {
         "max_renditions": 6,
         "min_renditions": 2,
@@ -286,7 +287,7 @@ layout: doc_pages_staging
       }
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_1",
       "cae_rendition": 1,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_1",
@@ -298,7 +299,7 @@ layout: doc_pages_staging
       "public": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_2",
       "cae_rendition": 2,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_2",
@@ -310,7 +311,7 @@ layout: doc_pages_staging
       "public": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_3",
       "cae_rendition": 3,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_3",
@@ -322,7 +323,7 @@ layout: doc_pages_staging
       "public": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_4",
       "cae_rendition": 4,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_4",
@@ -334,7 +335,7 @@ layout: doc_pages_staging
       "public": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_5",
       "cae_rendition": 5,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_5",
@@ -346,7 +347,7 @@ layout: doc_pages_staging
       "public": true
     },
     {
-      "source": "cae_profile",
+      "source": "cae_options",
       "label": "cae_6",
       "cae_rendition": 6,
       "base_url": "s3://test_bucket/outputs/dash_cae/cae_6",

@@ -1956,17 +1956,16 @@
           "input": "s3://zencodertesting/test.mov",
           "outputs": [
             {
-
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                "bitrate_cap_to_bitrate_ratio": 1.5,
+                "buffer_size_to_bitrate_ratio": 2.5,
+                bitrate_cap_offset": 128,
+                <span class="bcls-highlight">"buffer_size_offset": 100</span>
             }
           ]
-          "type": "cae",
-          "cae_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            "bitrate_cap_to_bitrate_ratio": 1.5,
-            "buffer_size_to_bitrate_ratio": 2.5,
-            bitrate_cap_offset": 128,
-            <span class="bcls-highlight">"buffer_size_offset": 100</span>
           }
         }</code></pre>
     </section>
@@ -2003,12 +2002,16 @@
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "type": "cae",
-          "cae_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"quality_rate_tune": 2</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                <span class="bcls-highlight">"quality_rate_tune": 2</span>
+              }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -2032,17 +2035,54 @@
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "type": "cae",
-          "cae_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"select_baseline_profile_configuration": true</span>
-          }
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                <span class="bcls-highlight">"select_baseline_profile_configuration": true</span>
+              }
+            }
+          ]
         }</code></pre>
-    </section>
-    <section class="bcls-section">
-      <h2 id="video_configurations" translate="No">video_configurations</h2>
-      <code translate="No">video_configurations:Array</code>
+  </section>
+  <section class="bcls-section">
+    <h2 id="select_distinct_configurations" translate="No">select_distinct_configurations</h2>
+    <code translate="No">select_distinct_configurations:Boolean</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
+
+    <p><strong>Default Value:</strong> false</p>
+
+    <p><strong>Compatible Job Types:</strong> VOD</p>
+
+    <p><strong>Example:</strong> true</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>If true, CAE will ensure that no two renditions use the same combination of: resolution, frame rate, and codec profile.</p>
+
+    <pre class="line-numbers">
+        <code class="language-json" translate="No">{
+          "input": "s3://zencodertesting/test.mov",
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                <span class="bcls-highlight">"select_distinct_configurations": true</span>
+          }
+        }
+      ]
+    }</code></pre>
+</section>
+  <section class="bcls-section">
+    <h2 id="video_configurations" translate="No">video_configurations</h2>
+    <code translate="No">video_configurations:Array</code>
 
       <p><strong>API Versions:</strong> V2</p>
 
@@ -2061,24 +2101,28 @@
       <pre class="line-numbers">
         <code class="language-json" translate="No">{
           "input": "s3://zencodertesting/test.mov",
-          "type": "cae",
-          "cae_options": {
-            "min_renditions": 2,
-            "max_renditions": 10,
-            <span class="bcls-highlight">"video_configurations": [
-              {
-                "width": 1920,
-                "height": 1080,
-                "sample_aspect_ratio": "16:9",
-                "frame_rate": 30,
-                "video_codec_profile": "high",
-                "video_codec_level": 4.1,
-                "video_reference_frames": 4,
-                "video_bframes": 3,
-                "required": true
+          "outputs": [
+            {
+              "type": "cae",
+              "cae_options": {
+                "min_renditions": 2,
+                "max_renditions": 10,
+                <span class="bcls-highlight">"video_configurations": [
+                  {
+                    "width": 1920,
+                    "height": 1080,
+                    "sample_aspect_ratio": "16:9",
+                    "frame_rate": 30,
+                    "video_codec_profile": "high",
+                    "video_codec_level": 4.1,
+                    "video_reference_frames": 4,
+                    "video_bframes": 3,
+                    "required": true
+                  }
+                  ]</span>
               }
-              ]</span>
-          }
+            }
+          ]
         }</code></pre>
     </section>
     <section class="bcls-section">
@@ -2100,9 +2144,11 @@
       <p>An array of hashes describing <a href="/encoding-settings/assets/encoding-settings-watermarks.html">watermarks</a>.</p>
 
       <pre class="line-numbers">
-    <code class="language-json" translate="No">{
-        "input": "s3://zencodertesting/test.mov",
-        "type": "cae",
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
         "cae_options" : {
           "min_rendition": 2,
           "max_rendition": 6,
@@ -2114,7 +2160,9 @@
             }
           ]
         }
-      }</code></pre>
+      }
+    ]
+  }</code></pre>
 
       <p>Watermarks can also be part of <code translate="No">video_configurations</code>:</p>
 
@@ -2169,50 +2217,74 @@
 
       <p>Below are additional general encoding settings that can be used for CAE.</p>
 
-      <table class="bcls-table">
-        <caption class="bcls-caption--table">Additional Settings</caption>
-        <thead class="bcls-table__head">
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Default</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
-            <td>Integer</td>
-            <td>Encoding speed setting.</td>
-            <td><code translate="No">3</code></td>
-          </tr>
-          <tr>
-            <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
-            <td>Boolean</td>
-            <td>Force 1-pass encoding.</td>
-            <td><code translate="No">false</code></td>
-          </tr>
-          <tr>
-            <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code translate="No">tuning</code></a></td>
-            <td>String</td>
-            <td>Codec-specific tuning option.</td>
-            <td> </td>
-          </tr>
-          <tr>
-            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
-            <td>String/Number</td>
-            <td>Create a subclip of the original video, starting at a particular time. This can either be a timecode with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the number of seconds to start at.</td>
-            <td><code translate="No">0</code></td>
-          </tr>
-          <tr>
-            <td><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
-            <td>String/Number</td>
-            <td>Create a subclip of a particular length. This can either be a duration with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the length of the clip in seconds.</td>
-            <td>source duration</td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>HDR settings</h3>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Additional Settings</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deblock"><code translate="No">deblock</code></a></td>
+          <td>Boolean</td>
+          <td>Apply a deblocking filter to the video.</td>
+          <td><code translate="No">false</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace"><code translate="No">deinterlace</code></a></td>
+          <td>String</td>
+          <td>
+            Determines whether or not to apply a deinterlacing filter. Default is "detect" – if the input file is detected as interlaced, it will be deinterlaced. Set this to "on" to force deinterlacing (which will reduce quality if the input is not interlaced), or "off" to avoid deinterlacing.
+          </td>
+          <td><code translate="No">detect</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace_mode"><code translate="No">deinterlace_mode</code></a></td>
+          <td>String</td>
+          <td>
+            If not included or set to <code translate="No">frame-to-frame</code>, Zencoder outputs will match the framerate of the input file. If set to <code translate="No">field-to-frame</code>, Zencoder will double the framerate of the input file for the output. If you manually set <code translate="No">framerate</code> to double the framerate of the input file, Zencoder will automatically set <code translate="No">deinterlace_mode</code> to <code translate="No">field-to-frame</code> and double the framerate for the output.
+          </td>
+          <td><code translate="No">frame-to-frame</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#denoise"><code translate="No">denoise</code></a></td>
+          <td>String</td>
+          <td>
+            Apply a denoise filter to the video. Valid options are <code translate="no">weak</code>, <code translate="no">medium</code>, <code translate="no">strong</code>, and <code translate="no">strongest</code>. Typically reduces file size by 5%-20%, depending on denoising level, bitrate, and source video. Any denoising slows down encoding by about 20%. Values above 'weak' should be used carefully, though animation can sometimes handle a high level of denoising.
+          </td>
+          <td><code translate="No">none (denoising not applied)</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
+          <td>Integer</td>
+          <td>Encoding speed setting.</td>
+          <td><code translate="No">3</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
+          <td>Boolean</td>
+          <td>Force 1-pass encoding.</td>
+          <td><code translate="No">false</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
+          <td>String/Number</td>
+          <td>Create a clip of the original video, starting at a particular time. This can either be a timecode with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the number of seconds to start at.</td>
+          <td><code translate="No">0</code></td>
+        </tr>
+        <tr>
+          <td style="white-space:nowrap"><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
+          <td>String/Number</td>
+          <td>Create a clip of a particular length. This can either be a duration with a format of <code translate="No">HH:MM:SS.S</code>, or a decimal expressing the length of the clip in seconds.</td>
+          <td>source duration</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>HDR settings</h3>
 
       <p>CAE also supports HDR10 and the following settings can be included in <code translate="No">cae_options</code>.</p>
 
