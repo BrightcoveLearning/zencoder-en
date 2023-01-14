@@ -866,32 +866,32 @@ layout: doc_pages_staging
 
       <p>An array of structures describing resolutions, frame rates and associated codec settings that should be preferentially or mandatorily generated as part of the CAE encoding. See the <a href="#video_configurations_settings">section</a> below.</p>
 
-      <pre class="line-numbers">
-        <code class="language-json" translate="No">{
-          "input": "s3://zencodertesting/test.mov",
-          "outputs": [
-            {
-              "type": "cae",
-              "cae_options": {
-                "min_renditions": 2,
-                "max_renditions": 10,
-                <span class="bcls-highlight">"video_configurations": [
-                  {
-                    "width": 1920,
-                    "height": 1080,
-                    "sample_aspect_ratio": "16:9",
-                    "frame_rate": 30,
-                    "video_codec_profile": "high",
-                    "video_codec_level": 4.1,
-                    "video_reference_frames": 4,
-                    "video_bframes": 3,
-                    "required": true
-                  }
-                  ]</span>
-              }
-            }
-          ]
-        }</code></pre>
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "min_renditions": 2,
+        "max_renditions": 10,
+        <span class="bcls-highlight">"video_configurations": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "sample_aspect_ratio": "16:9",
+            "frame_rate": 30,
+            "video_codec_profile": "high",
+            "video_codec_level": 4.1,
+            "video_reference_frames": 4,
+            "video_bframes": 3,
+            "required": true
+          }
+          ]</span>
+      }
+    }
+  ]
+}</code></pre>
     </section>
     <section class="bcls-section">
       <h2 id="watermarks" translate="No">watermarks</h2>
