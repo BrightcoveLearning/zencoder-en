@@ -3,75 +3,35 @@ title: Errors/Troubleshooting
 description: Help when something is not right.
 parent: Home
 ---
-<style translate="no">
-.bcls-card {
-  justify-content: start;
-}
-.bcls-card h1 {
-  font-size: 1rem;
-}
-.bcls-card ul {
-  margin-left: -2rem;
-}
-</style>
 
 <h1><i class="fa-regular fa-bug"></i> {{ page.title }}</h1>
 
 <article class="bcls-article">
+
   <summary>{{ page.description }}</summary>
-  <div class="row">
-    {% for item in site.data.navigation %}
-    {% if item.name == page.title %}
-    {% for entry in item.docs %}
-    <div class="col-12 col-lg-4 py-3">
+  <br/>
+  <h2 id="Topics_in_this_section">Topics in this section</h2>
+  <br/>
+    <div>
       <div class="card shadow-sm" style="background: white">
         <div class="card-body">
-          <div>
-            {% if entry.docs %}
-            <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
-            <ul class="list-group list-group-flush">
-              {% for subdoc in entry.docs %}
-              <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
-              {% endfor %}
-            </ul>
-            {% else %}
-            <h5 class="card-title">{{ entry.name }}</h5>
-            {% endif %}
-        </div>
-        <!-- <a class="card-link-mask" href="{{entry.url}}"></a> -->
-      </div>
-    </div>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-  </div>
-  
-      </article>
-<!-- <article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="card-wrapper">
-    <section class="bcls-card">
-      <div class="card-content">
-        <h2 id="Topics_in_this_section">Topics in this section</h2>
-        <ul>
-          {% for item in site.data.navigation %}
+          <ul class="list-group list-group-flush">
+            {% for item in site.data.navigation %}
             {% if item.name == page.title %}
-              {% for entry in item.docs %}
-                <li><a href="{{ entry.url }}">{{ entry.name }}</a>
-                {% if entry.docs %}
-                  <ul>
-                    {% for subentry in entry.docs %}
-                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-                </li>
-              {% endfor %}
+            {% for entry in item.docs %}
+            <li class="list-group-item"><a href="{{ entry.url }}" style="text-decoration: none;">{{ entry.name }}</a>
+              {% if entry.docs %}
+              <ul class="list-group list-group-flush">
+                {% for subentry in entry.docs %}
+                <li class="list-group-item"><a href="{{ subentry.url }}" style="text-decoration: none;"> <strong>{{ subentry.name }}</strong></a></li>
+                {% endfor %}
+              </ul>
+              {% endif %} </li>
+            {% endfor %}
             {% endif %}
-          {% endfor %}
-        </ul>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-    </section>
-  </section>
-</article> -->
+    </div>
+  </article>
