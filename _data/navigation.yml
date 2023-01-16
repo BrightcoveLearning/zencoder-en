@@ -156,7 +156,7 @@
 - section: 
   name: 'Encoding Guides'
   url: '/encoding-guides/index.html'
-  icon: fa-regular fa-books
+  icon: fa-light fa-signs-post
   description: Guides to help you get the best results with different output formats.
   docs:
     - name: 'Audio Mapping Guide'
