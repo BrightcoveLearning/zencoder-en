@@ -679,6 +679,7 @@ components:
           $ref: '#/components/schemas/DynamicProfileOptions'
         generate_dynamic_profile:
           type: boolean
+          deprecated: true
           description: |-
             'With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. To specify limits on the number of outputs to be generated as well as other profile constraints, CAE job request must also include dynamic_profile_options object. The outputs reserved for CAE use should not include resolution, bitrate, or codec-related parameters. Instead, they should include labels dynamic_profile_rendition. The number of outputs reserved for CAE use must match the number specified as max_renditions in dynamic_profile_options.'
           default: false
@@ -837,6 +838,7 @@ components:
     DynamicProfileOptions:
       title: Dynamic Profile Options
       type: object
+      deprecated: true
       description: |-
          'hash of options for CAE (Context Aware Encoding) jobs. With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The dynamic_profile_options settings define the way renditions should be created. See [CAE Settings](/encoding-settings/general/cae-settings.html) for details. You must also set generate_dynamic_profile equal to true to use this feature.'
       properties:
@@ -1222,6 +1224,146 @@ components:
     
             Requires `max_hls_protocol_version` or `hls_protocol_version` set to `4` or higher.
           type: boolean
+        cae_options:
+          type: object
+          description: |-
+            hash of options for CAE (Context Aware Encoding) jobs. With CAE the number of outputs and parameters of such outputs may change dynamically for each input file. The dynamic_profile_options settings define the way renditions should be created. See [CAE Settings](/encoding-settings/general/cae-settings.html) for details. You must also set 'type' equal to 'true' to use this feature.
+          properties:
+            min_renditions:
+              type: integer
+              description: The minimum number of renditions to generate.
+              minimum: 1
+              maximum: 15
+              default: 1
+            max_renditions:
+              type: integer
+              description: The maximum number of renditions to generate.
+              minimum: 1
+              maximum: 15
+              default: 8
+            min_resolution:
+              type: object
+              description: Minimum resolution to be considered for the ladder.
+              properties:
+                height:
+                  type: integer
+                  minimum: 16
+                  maximum: 8192
+                  default: 108
+                width:
+                  type: integer
+                  minimum: 16
+                  maximum: 8192
+                  default: 192
+            max_resolution:
+              type: object
+              description: Maximum resolution to be considered for the ladder.
+              properties:
+                height:
+                  type: integer
+                  minimum: 16
+                  maximum: 8192
+                  default: (sourse height)
+                width:
+                  type: integer
+                  minimum: 16
+                  maximum: 8192
+                  default: (source width)
+            max_frame_rate:
+              type: number
+              description: Maximum frame rate that can be used.
+              minimum: 0.1
+              maximum: 120
+              default: 30
+            keyframe_rate:
+              type: number
+              description: Keyframe rate. This value can be either 0.5 or 1. For SSAI enabled content, this value needs to be 1.
+              minimum: 0.5
+              maximum: 1.0
+              default: 0.5
+            fixed_frame_rate:
+              type: boolean
+              description: Instructs generator to use same frame rate across all renditions. If false, H.264 baseline profile renditions at resolutions below 360p will be assigned halved frame rate.
+              default: true
+            max_bitrate:
+              type: integer
+              description: Maximum bitrate [kbps] that can be used.
+              minimum: 400
+              maximum: 40000
+              default: 15000
+            min_bitrate:
+              type: integer
+              description: Minimum bitrate [kbps] that can be used.
+              minimum: 40
+              maximum: 400
+              default: 200
+            max_first_rendition_bitrate:
+              type: integer
+              description: Maximum bitrate [kbps] that can be used for first rendition.
+              minimum: 40
+              maximum: 1000
+              default: 700
+            min_granularity:
+              type: integer
+              description: Minimum relative change in bitrate between renditions as a percentage.
+              minimum: 1
+              maximum: 100
+              default: 90
+            max_granularity:
+              type: integer
+              description: Maximum relative change in bitrate between renditions as a percentage.
+              minimum: 1
+              maximum: 100
+              default: 30
+            video_codec:
+              type: string
+              description: Video codec to use.
+              enum:
+                - h264
+                - hevc
+              default: h264
+            bitrate_cap_to_bitrate_ratio:
+              type: number
+              description: Ratio of maximum bit rate to average bitrate to be used for VBR encoding.
+              minimum: 1.0
+              maximum: 2.0
+              default: 1.3
+            buffer_size_to_bitrate_ratio:
+              type: number
+              description: Ratio of decoder buffer size to average bitrate to be used for VBR encoding.
+              minimum: 1.0
+              maximum: 4.0
+              default: 2.0
+            bitrate_cap_offset:
+              type: integer
+              description: Constant added when computing maximum bitrate (KBPS).
+              default: 64
+            buffer_size_offset:
+              type: integer
+              description: Constant added when computing VBV buffer size.
+              default: 85
+            quality_rate_tune:
+              type: integer
+              description: Quality vs rate tuning parameter.
+              minimum: -40
+              maximum: 40
+              default: 0
+            select_baseline_profile_configuration:
+              type: boolean
+              description: |-
+                At least one rendition used in the profile will be baseline profile. Note that `select_baseline_profile_configuration`is `true` by default, and it requires *at least one rendition* to have a resolution at or below 512x288.
+              default: true
+            select_distinct_configurations:
+              type: boolean
+              description: |-
+                If true, CAE will ensure that no two renditions use the same combination of: resolution, frame rate, and codec profile.
+              default: false
+            video_configurations:
+              type: array
+              description: |-
+                'An array of structures describing resolutions, frame rates and associated codec settings that should be preferentially or mandatorily generated as part of the CAE encoding. See the [CAE encoding guide](/encoding-settings/general/cae-settings.html#video_configurations) for details.'
+              items:
+                type: object
         caption_from_audio_transcription:
           description: |-
             Use audio transcription to generate captions when captions are not available in the source file.
@@ -1371,7 +1513,7 @@ components:
         drm:
           $ref: '#/components/schemas/DRM'
         dynamic_profile_rendition:
-          description: '''The `dynamic_profile_rendition` setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When `dynamic_profile_rendition` is set, there is no need to specify encoding settings such as resolution, bitrate, etc. (See the [CAE Guide](/encoding-guides/cae-guide.html) for the full list of settings that are automatically set by CAE.)'''
+          description: 'The `dynamic_profile_rendition` setting specifies that this Output should use settings from the dynamically generated CAE profile, and specifically which rendition of the profile to use settings from. When `dynamic_profile_rendition` is set, there is no need to specify encoding settings such as resolution, bitrate, etc. (See the [CAE Guide](/encoding-guides/cae-guide.html) for the full list of settings that are automatically set by CAE.)'
           type: integer
         encryption_iv:
           description: |-
@@ -2011,6 +2153,7 @@ components:
             - segmented
             - playlist
             - transfer-only
+            - cae
             - captions
           type: string
         upscale:
