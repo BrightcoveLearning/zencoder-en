@@ -1346,25 +1346,20 @@
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
   "input": "s3://test_bucket/test_media.mp4",
+  "generate_dynamic_profile": true,
+  "dynamic_profile_options": {
+    "max_renditions": 6,
+    "min_renditions": 2,
+    "select_baseline_profile_configuration": true,
+    "keyframe_rate": "0.5",
+    "fixed_keyframe_interval": "true"
+  },
   "outputs": [
     {
-      "type": "cae",
-      "label": "cae_profile",
-      "base_url": "s3://test_bucket/outputs/hls_cae/",
-      "filename": "cae_options.json",
-      "cae_options": {
-        "max_renditions": 6,
-        "min_renditions": 2,
-        "keyframe_rate": "0.5",
-        "fixed_keyframe_interval": "true"
-      }
-    },
-    {
-      "source": "cae_options",
-      "label": "cae_1",
-      "cae_rendition": 1,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_1",
-      "filename": "cae_1.m3u8",
+      "label": "CAE1",
+      "dynamic_profile_rendition": 1,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE1",
+      "filename": "CAE1.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1373,11 +1368,10 @@
       "skip_audio": true
     },
     {
-      "source": "cae_options",
-      "label": "cae_2",
-      "cae_rendition": 2,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_2",
-      "filename": "cae_2.m3u8",
+      "label": "CAE2",
+      "dynamic_profile_rendition": 2,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE2",
+      "filename": "CAE2.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1386,11 +1380,10 @@
       "skip_audio": true
     },
     {
-      "source": "cae_options",
-      "label": "cae_3",
-      "cae_rendition": 3,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_3",
-      "filename": "cae_3.m3u8",
+      "label": "CAE3",
+      "dynamic_profile_rendition": 3,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE3",
+      "filename": "CAE3.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1399,11 +1392,10 @@
       "skip_audio": true
     },
     {
-      "source": "cae_options",
-      "label": "cae_4",
-      "cae_rendition": 4,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_4",
-      "filename": "cae_4.m3u8",
+      "label": "CAE4",
+      "dynamic_profile_rendition": 4,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE4",
+      "filename": "CAE4.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1412,11 +1404,10 @@
       "skip_audio": true
     },
     {
-      "source": "cae_options",
-      "label": "cae_5",
-      "cae_rendition": 5,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_5",
-      "filename": "cae_5.m3u8",
+      "label": "CAE5",
+      "dynamic_profile_rendition": 5,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE5",
+      "filename": "CAE5.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1425,11 +1416,10 @@
       "skip_audio": true
     },
     {
-      "source": "cae_options",
-      "label": "cae_6",
-      "cae_rendition": 6,
-      "base_url": "s3://test_bucket/outputs/hls_cae/cae_6",
-      "filename": "cae_6.m3u8",
+      "label": "CAE6",
+      "dynamic_profile_rendition": 6,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE6",
+      "filename": "CAE6.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -1444,12 +1434,14 @@
       "segment_seconds": 2,
       "byte_range_segmenting": true,
       "skip_video": true,
-      "base_url": "s3://test_bucket/outputs/hls_cae/Audio/128k/",
-      "filename": "audio_128k.ac3"
+      "hls_protocol_version": 7,
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/Audio/128k/",
+      "filename": "audio_128k.m3u8"
     },
     {
-      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "base_url": "s3://test_bucket/outputs/HLS_CAE/",
       "filename": "master_playlist.m3u8",
+      "public": 1,
       "hls_protocol_version": 7,
       "type": "playlist",
       "allow_skipped_sources": true,
@@ -1462,33 +1454,33 @@
       },
       "streams": [
         {
-          "path": "cae_1/cae_1.m3u8",
-          "source": "cae_1",
+          "path": "CAE1/CAE1.m3u8",
+          "source": "CAE1",
           "audio": "128k_audio"
         },
         {
-          "path": "cae_2/cae_2.m3u8",
-          "source": "cae_2",
+          "path": "CAE2/CAE2.m3u8",
+          "source": "CAE2",
           "audio": "128k_audio"
         },
         {
-          "path": "cae_3/cae_3.m3u8",
-          "source": "cae_3",
+          "path": "CAE3/CAE3.m3u8",
+          "source": "CAE3",
           "audio": "128k_audio"
         },
         {
-          "path": "cae_4/cae_4.m3u8",
-          "source": "cae_4",
+          "path": "CAE4/CAE4.m3u8",
+          "source": "CAE4",
           "audio": "128k_audio"
         },
         {
-          "path": "cae_5/cae_5.m3u8",
-          "source": "cae_5",
+          "path": "CAE5/CAE5.m3u8",
+          "source": "CAE5",
           "audio": "128k_audio"
         },
         {
-          "path": "cae_6/cae_6.m3u8",
-          "source": "cae_6",
+          "path": "CAE6/CAE6.m3u8",
+          "source": "CAE6",
           "audio": "128k_audio"
         }
       ]
@@ -1498,8 +1490,7 @@
 
     <h3>CAE - DASH example</h3>
 
-<pre class="line-numbers">
-<code class="language-json" translate="No">{
+<pre class="line-numbers"><code class="language-json" translate="No">{
   "input": "s3://test_bucket/test.mov",
   "outputs": [
     {
