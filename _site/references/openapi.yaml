@@ -2754,7 +2754,7 @@ components:
             - type: string
             - type: integer
           description: |-
-            The width of the watermark, expressed as a number of pixels (e.g. `64`) or as a percent of the video width (e.g. `10%`). If `height` is provided, but not `width`, the watermark image will be scaled proportionately.
+            The width of the watermark, expressed as a number of pixels (e.g. `64`) or as a percent of the video width (e.g. `10%`). If `height` is provided, but not `width`, the watermark image will be scaled proportionately. Note that percentage values must be strings - pixel values may be strings or numbers.
           default: Scale to `height`, or original image width
         height:
           oneOf:
