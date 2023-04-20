@@ -2,6 +2,7 @@
 title: CAE Guide
 description: 'Context Aware Encoding (CAE) analyzes each source video and intelligently builds a custom bitrate ladder (set of renditions) for each piece of content. In addition, Context Aware Encoding takes into account constraints associated with the delivery network and device being used to view the content. It decides how many renditions are needed and what resolutions and bitrates to use for each, while still maintaining a consistent level of quality across all titles. This results in massive savings on storage and bandwidth costs, while improving the playback experience for users. For additional information, please see the <a href="/general-information/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a>.'
 parent: Encoding Guides
+layout: doc_pages_staging
 ---
 
 <h1>{{ page.title }}</h1>
@@ -9,11 +10,12 @@ parent: Encoding Guides
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Overview">Overview</h2>
+    <h2 id="Overview">Notes</h2>
 
-    <aside class="bcls-aside bcls-aside--information">Notes:
+    <aside class="bcls-aside bcls-aside--information">
       <ul>
-        <li>Context Aware Encoding is not available to all Zencoder customers. If you have questions about whether or not you can use Context Aware Encoding, please contact your Account Manager.</li>
+        <li>For details of the encoding fields, see <a href="/encoding-settings/general/cae-settings.html"></a></li>
+        <li>Context Aware Encoding is not available to all Zencoder customers. If you have questions about whether or not you can use Context Aware Encoding, please contact your Customer Success Manager.</li>
         <!-- <li>The <a href="/encoding-guides/av1-guide.html">AV1 video codec</a> is currently not supported for CAE jobs.</li> -->
       </ul>
     </aside>
@@ -21,7 +23,10 @@ parent: Encoding Guides
   <section class="bcls-section">
     <h2 id="process">Process</h2>
 
-    <p>CAE is enabled on a Zencoder Job by setting <code translate="No"><a href="/encoding-settings/general/encoding-settings-job.html#generate_dynamic_profile"><code translate="No">generate_dynamic_profile</code></a></code> to true and adding <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a> values to Outputs of the Job. In addition, you can add <a href="/encoding-settings/general/cae-settings.html"><code translate="No">dynamic_profile_options</code></a>, but this is not required. After downloading and inspecting the Input source file for the Job, Zencoder runs the CAE dynamic profile generator on the source file. The resulting dynamic profile ladder settings are added to each corresponding Output before they are encoded. The following settings are automatically set for Outputs with a dynamic_profile_rendition value:</p>
+    <p>CAE is enabled on a Zencoder Job by setting <code translate="No">"type": "cae"</code> on a Zencoder output. In addition, <code translate="No">cae_options</code> may also be configured.</p>
+    <p>Zencoder <code translate="No">"type": "cae"</code> output runs the context aware profile generator on the given input and the resulting profile generated as a json file is uploaded to the user provided location.</p>
+
+    <p>The generated profile json contains following settings that are used for encoding each rendition in the ladder.</p>
 
     <ul>
       <li><code translate="No">width</code></li>
@@ -39,15 +44,32 @@ parent: Encoding Guides
       <li><code translate="No">keyframe_rate</code></li>
       <li><code translate="No">fixed_keyframe_interval</code></li>
     </ul>
-    <p><strong>Mixed codec outputs:</strong> you can output mixed HEVC/H.264 renditions. See <a href="/encoding-settings/general/cae-settings.html">CAE Settings</a> for details.</p>
-    <p>Other Outputs without a <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"> <code translate="No">dynamic_profile_rendition</code></a> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
+    <p>For Zencoder to automatically encode the renditions, additional dependent outputs are required and each output with <code translate="No">cae_rendition</code> set. Other Outputs without a <code translate="No">cae_rendition</code> will begin encoding as soon as the Input source is inspected, concurrently while the dynamic profile generator is running.</p>
+    <h3>Sample request</h3>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test_media.mp4",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "url": "s3://test_bucket/cae_generated_profile.json",
+      "cae_options": {
+        "min_renditions": 1,
+        "max_renditions": 6
+      }
+    },
+    {"source": "cae_profile", "cae_rendition": 1}, {"source": "cae_profile", "cae_rendition": 2},
+    {"source": "cae_profile", "cae_rendition": 3}, {"source": "cae_profile", "cae_rendition": 4},
+    {"source": "cae_profile", "cae_rendition": 5}, {"source": "cae_profile", "cae_rendition": 6}
+  ]
+ }</code></pre>
   </section>
   <section class="bcls-section">
-    <h2 id="guidelines_for_configuring_dynamic_profile_options">Guidelines for configuring <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_options</code></a></h2>
+    <h2 id="guidelines_for_configuring_cae_options">Guidelines for configuring <code translate="No">cae_options</code></h2>
 
     <h3>Number of Renditions</h3>
 
-    <p>The minimum and maximum number of renditions to create is controlled with the <a href="/encoding-settings/general/cae-settings.html#min_renditions">min_renditions</a> and <a href="/encoding-settings/general/cae-settings.html#max_renditions">max_renditions</a> settings. For best performance, it is recommended to leave a certain gap between these limits (e.g. set <code translate="No">min_renditions</code> to 2 and <code translate="No">max_renditions</code> to 10), allowing CAE profile generator to select number most suitable for each content. For easy to encode content, it may produce fewer renditions, while for more complex content it may produce more. It is also recommended to set min_renditions to be as small as possible, to allow for saving bandwidth when more renditions are unnecessary.</p>
+    <p>The minimum and maximum number of renditions to create is controlled with the <a href="/encoding-settings/general/cae-settings.html#min_renditions">min_renditions</a> and <a href="/encoding-settings/general/cae-settings.html#max_renditions">max_renditions</a> settings. For best performance, it is recommended to leave a certain gap between these limits (e.g. set <code translate="No">min_renditions</code> to 2 and <code translate="No">max_renditions</code> to 10), allowing the CAE profile generator to select the number most suitable for each content. For easy to encode content, it may produce fewer renditions, while for more complex content it may produce more. It is also recommended to set min_renditions to be as small as possible, to allow for saving bandwidth when more renditions are unnecessary.</p>
 
     <h3>Resolutions</h3>
 
@@ -89,27 +111,32 @@ parent: Encoding Guides
   <section class="bcls-section">
     <h2 id="CAE_and_Segmented_outputs">CAE and segmented outputs</h2>
 
-    <p>CAE is compatible with segmented outputs in Zencoder. On the <code translate="No">Output</code> rendition settings, set the <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a> as <code translate="No">segmented</code> and the appropriate <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a> value. Also, <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a> and <a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code translate="No">fixed_keyframe_interval</code></a> settings must be set in <code translate="No">dynamic_profile_options</code>.</p>
+    <p>CAE is compatible with segmented outputs in Zencoder. On the <code translate="No">Output</code> rendition settings, set the <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a> as <code translate="No">segmented</code> and the appropriate <a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a> value. Also, <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a> and <a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code translate="No">fixed_keyframe_interval</code></a> settings must be set in <code translate="No">cae_options</code>.</p>
 
     <h3>CAE - HLS example</h3>
 
 <pre class="line-numbers">
 <code class="language-json" translate="No">{
   "input": "s3://test_bucket/test_media.mp4",
-  "generate_dynamic_profile": true,
-  "dynamic_profile_options": {
-    "max_renditions": 6,
-    "min_renditions": 2,
-    "select_baseline_profile_configuration": true,
-    "keyframe_rate": "0.5",
-    "fixed_keyframe_interval": "true"
-  },
   "outputs": [
     {
-      "label": "CAE1",
-      "dynamic_profile_rendition": 1,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE1",
-      "filename": "CAE1.m3u8",
+      "type": "cae",
+      "label": "cae_profile",
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "filename": "cae_options.json",
+      "cae_options": {
+        "max_renditions": 6,
+        "min_renditions": 2,
+        "keyframe_rate": "0.5",
+        "fixed_keyframe_interval": "true"
+      }
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_1",
+      "cae_rendition": 1,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_1",
+      "filename": "cae_1.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -118,10 +145,11 @@ parent: Encoding Guides
       "skip_audio": true
     },
     {
-      "label": "CAE2",
-      "dynamic_profile_rendition": 2,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE2",
-      "filename": "CAE2.m3u8",
+      "source": "cae_options",
+      "label": "cae_2",
+      "cae_rendition": 2,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_2",
+      "filename": "cae_2.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -130,10 +158,11 @@ parent: Encoding Guides
       "skip_audio": true
     },
     {
-      "label": "CAE3",
-      "dynamic_profile_rendition": 3,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE3",
-      "filename": "CAE3.m3u8",
+      "source": "cae_options",
+      "label": "cae_3",
+      "cae_rendition": 3,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_3",
+      "filename": "cae_3.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -142,10 +171,11 @@ parent: Encoding Guides
       "skip_audio": true
     },
     {
-      "label": "CAE4",
-      "dynamic_profile_rendition": 4,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE4",
-      "filename": "CAE4.m3u8",
+      "source": "cae_options",
+      "label": "cae_4",
+      "cae_rendition": 4,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_4",
+      "filename": "cae_4.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -154,10 +184,11 @@ parent: Encoding Guides
       "skip_audio": true
     },
     {
-      "label": "CAE5",
-      "dynamic_profile_rendition": 5,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE5",
-      "filename": "CAE5.m3u8",
+      "source": "cae_options",
+      "label": "cae_5",
+      "cae_rendition": 5,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_5",
+      "filename": "cae_5.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -166,10 +197,11 @@ parent: Encoding Guides
       "skip_audio": true
     },
     {
-      "label": "CAE6",
-      "dynamic_profile_rendition": 6,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/CAE6",
-      "filename": "CAE6.m3u8",
+      "source": "cae_options",
+      "label": "cae_6",
+      "cae_rendition": 6,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_6",
+      "filename": "cae_6.m3u8",
       "type": "segmented",
       "segment_seconds": 2,
       "byte_range_segmenting": true,
@@ -184,14 +216,12 @@ parent: Encoding Guides
       "segment_seconds": 2,
       "byte_range_segmenting": true,
       "skip_video": true,
-      "hls_protocol_version": 7,
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/Audio/128k/",
-      "filename": "audio_128k.m3u8"
+      "base_url": "s3://test_bucket/outputs/hls_cae/Audio/128k/",
+      "filename": "audio_128k.ac3"
     },
     {
-      "base_url": "s3://test_bucket/outputs/HLS_CAE/",
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
       "filename": "master_playlist.m3u8",
-      "public": 1,
       "hls_protocol_version": 7,
       "type": "playlist",
       "allow_skipped_sources": true,
@@ -204,33 +234,33 @@ parent: Encoding Guides
       },
       "streams": [
         {
-          "path": "CAE1/CAE1.m3u8",
-          "source": "CAE1",
+          "path": "cae_1/cae_1.m3u8",
+          "source": "cae_1",
           "audio": "128k_audio"
         },
         {
-          "path": "CAE2/CAE2.m3u8",
-          "source": "CAE2",
+          "path": "cae_2/cae_2.m3u8",
+          "source": "cae_2",
           "audio": "128k_audio"
         },
         {
-          "path": "CAE3/CAE3.m3u8",
-          "source": "CAE3",
+          "path": "cae_3/cae_3.m3u8",
+          "source": "cae_3",
           "audio": "128k_audio"
         },
         {
-          "path": "CAE4/CAE4.m3u8",
-          "source": "CAE4",
+          "path": "cae_4/cae_4.m3u8",
+          "source": "cae_4",
           "audio": "128k_audio"
         },
         {
-          "path": "CAE5/CAE5.m3u8",
-          "source": "CAE5",
+          "path": "cae_5/cae_5.m3u8",
+          "source": "cae_5",
           "audio": "128k_audio"
         },
         {
-          "path": "CAE6/CAE6.m3u8",
-          "source": "CAE6",
+          "path": "cae_6/cae_6.m3u8",
+          "source": "cae_6",
           "audio": "128k_audio"
         }
       ]
@@ -240,135 +270,144 @@ parent: Encoding Guides
 
     <h3>CAE - DASH example</h3>
 
-    <pre class="line-numbers">
-  <code class="language-json" translate="No">
-  {
-    "input": "s3://test_bucket/test.mov",
-    "generate_dynamic_profile": true,
-    "dynamic_profile_options": {
-      "max_renditions": 6,
-      "min_renditions": 2,
-      "select_baseline_profile_configuration": true,
-      "keyframe_rate": "0.5",
-      "fixed_keyframe_interval": "true"
-    },
-    "outputs": [
-      {
-        "label": "CAE1",
-        "dynamic_profile_rendition": 1,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE1",
-        "filename": "CAE1.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "CAE2",
-        "dynamic_profile_rendition": 2,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE2",
-        "filename": "CAE2.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "CAE3",
-        "dynamic_profile_rendition": 3,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE3",
-        "filename": "CAE3.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "CAE4",
-        "dynamic_profile_rendition": 4,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE4",
-        "filename": "CAE4.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "CAE5",
-        "dynamic_profile_rendition": 5,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE5",
-        "filename": "CAE5.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "CAE6",
-        "dynamic_profile_rendition": 6,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/CAE6",
-        "filename": "CAE6.mpd",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_audio": true,
-        "public": true
-      },
-      {
-        "label": "Audio",
-        "audio_bitrate": "128",
-        "type": "segmented",
-        "segment_seconds": 10,
-        "streaming_delivery_format": "dash",
-        "skip_video": true,
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/Audio/128k/",
-        "filename": "audio_128k.mpd",
-        "public": true
-      },
-      {
-        "base_url": "s3://test_bucket/outputs/DASH_CAE/",
-        "filename": "master_playlist.mpd",
-        "streaming_delivery_format": "dash",
-        "type": "playlist",
-        "allow_skipped_sources": true,
-        "public": true,
-        "streams": [
-          {
-            "path": "CAE1/CAE1.mpd",
-            "source": "CAE1"
-          },
-          {
-            "path": "CAE2/CAE2.mpd",
-            "source": "CAE2"
-          },
-          {
-            "path": "CAE3/CAE3.mpd",
-            "source": "CAE3"
-          },
-          {
-            "path": "CAE4/CAE4.mpd",
-            "source": "CAE4"
-          },
-          {
-            "path": "CAE5/CAE5.mpd",
-            "source": "CAE5"
-          },
-          {
-            "path": "CAE6/CAE6.mpd",
-            "source": "CAE6"
-          },
-          {
-            "path": "Audio/128k/audio_128k.mpd",
-            "source": "Audio"
-          }
-        ]
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "filename": "cae_options.json",
+      "cae_options": {
+        "max_renditions": 6,
+        "min_renditions": 2,
+        "keyframe_rate": "0.5",
+        "fixed_keyframe_interval": "true"
       }
-    ]
-  }</code></pre>
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_1",
+      "cae_rendition": 1,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_1",
+      "filename": "cae_1.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_2",
+      "cae_rendition": 2,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_2",
+      "filename": "cae_2.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_3",
+      "cae_rendition": 3,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_3",
+      "filename": "cae_3.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_4",
+      "cae_rendition": 4,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_4",
+      "filename": "cae_4.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_5",
+      "cae_rendition": 5,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_5",
+      "filename": "cae_5.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_6",
+      "cae_rendition": 6,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_6",
+      "filename": "cae_6.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "label": "Audio",
+      "audio_bitrate": "128",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_video": true,
+      "base_url": "s3://test_bucket/outputs/dash_cae/Audio/128k/",
+      "filename": "audio_128k.mpd",
+      "public": true
+    },
+    {
+      "base_url": "s3://test_bucket/outputs/dash_cae/",
+      "filename": "master_playlist.mpd",
+      "streaming_delivery_format": "dash",
+      "type": "playlist",
+      "allow_skipped_sources": true,
+      "public": true,
+      "streams": [
+        {
+          "path": "cae_1/cae_1.mpd",
+          "source": "cae_1"
+        },
+        {
+          "path": "cae_2/cae_2.mpd",
+          "source": "cae_2"
+        },
+        {
+          "path": "cae_3/cae_3.mpd",
+          "source": "cae_3"
+        },
+        {
+          "path": "cae_4/cae_4.mpd",
+          "source": "cae_4"
+        },
+        {
+          "path": "cae_5/cae_5.mpd",
+          "source": "cae_5"
+        },
+        {
+          "path": "cae_6/cae_6.mpd",
+          "source": "cae_6"
+        },
+        {
+          "path": "Audio/128k/audio_128k.mpd",
+          "source": "Audio"
+        }
+      ]
+    }
+  ]
+}</code></pre>
   </section>
 </article>

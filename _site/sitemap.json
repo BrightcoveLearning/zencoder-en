@@ -35,18 +35,8 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/cae-guide-stage.html",
-      "oldURL": "/cae-guide-stage"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html",
       "oldURL": "/cae-guide"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/cae-settings-stage.html",
-      "oldURL": "/cae-settings-stage"
   },
 
   {
@@ -167,11 +157,6 @@
   {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-frame-rate.html",
       "oldURL": "/encoding-settings-frame-rate"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/encoding-settings-general-output-settings-stage.html",
-      "oldURL": "/encoding-settings-general-output-settings-stage"
   },
 
   {
@@ -630,22 +615,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/error-troubleshooting/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
       "oldURL": "/index"
   },
 
@@ -670,17 +640,7 @@
   },
 
   {
-      "newURL": "https://zencoder.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://zencoder.support.brightcove.com/general-information/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://zencoder.support.brightcove.com/integration/",
       "oldURL": "/index"
   },
 
@@ -710,7 +670,32 @@
   },
 
   {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-settings/general/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/integration/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/encoding-guides/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://zencoder.support.brightcove.com/",
       "oldURL": "/index"
   },
 
