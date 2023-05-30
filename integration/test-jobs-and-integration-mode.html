@@ -41,6 +41,42 @@ parent: Integration
           <figcaption class="bcls-caption--image">Integration-Only Key</figcaption>
         </figure>
       </li>
+      <li>
+        Once you have your key, you are ready to start making requests. The easiest way to do this is to use the Zencoder Request Builder, which you can reach from the same page where you got the API key:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/integrations/request-builder-link.webp" alt="Go to Request Builder">
+          <figcaption class="bcls-caption--image">Go to Request Builder</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">You can also, of course, use whatever tool you like to make the requests - cURL, Postman, Insomnia, etc. You will probably still find it useful to look at the Request Builder to see how the request body is structured.</aside>
+      </li>
+      <li>
+        On the Request Builder page, you can create a new test request:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/integrations/request-settings.webp" alt="Request Settings">
+          <figcaption class="bcls-caption--image">Request Settings</figcaption>
+        </figure>
+        <ul>
+          <li>You don't need to make any changes to <strong>Request Type</strong>.</li>
+          <li>Zencoder will automatically include your API Key.</li>
+          <li>
+            Select one of the templates:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/integrations/job-templates.webp" alt="Job Templates">
+              <figcaption class="bcls-caption--image">Job Templates</figcaption>
+            </figure>
+            <p>Depending on the configuration of your Zencoder account, you may see different options in the template. Also note that you can change the template after selecting one.</p>
+          </li>
+          <li>Select a local video file to upload<./li>
+        </ul>
+      </li>
+      <li>
+        In the Post Body Editor, notice that you can make any changes you want to the JSON, or even insert your own custom request body.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/integrations/post-body-editor.webp" alt="Post Body Editor">
+          <figcaption class="bcls-caption--image">Post Body Editor</figcaption>
+        </figure>
+      </li>
+      <li>Click <strong>Execute</strong> to send the request.</li>
     </ol>
   </section>
 </article>
