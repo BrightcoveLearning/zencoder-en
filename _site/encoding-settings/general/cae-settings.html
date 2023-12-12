@@ -2204,6 +2204,43 @@
   ]
 }</code></pre>
     </section>
+    
+    <section class="bcls-section">
+      <h2 id="true_resolution" translate="No">true_resolution</h2>
+      <code translate="No">true_resolution:String</code>
+
+      <p><strong>API Versions:</strong> V2</p>
+
+      <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#cae_options"><code translate="No">cae_options</code></a></p>
+
+      <p><strong>Valid Values:</strong> off, detect, limit</p>
+      <p><strong>Default:</strong> off</p>
+
+      <p><strong>Compatible Job Types:</strong> VOD</p>
+
+      <p><strong>Example:</strong> detect</p>
+
+      <p><strong>Description:</strong></p>
+
+      <p>Enables detection of the input video's original or <strong>true</strong> resolution and limits the CAE-generated profile to <strong>true resolution</strong>. This option is helpful when input video is upscaled and does not deliver quality as expected at a given resolution. If <code translate="no">true_resolution</code> is set to <code translate="no">detect</code>, CAE will detect the true resolution, and if it is less than the declared pixel resolution of the input video file, it will produce a warning, advising that the input file is upscaled. If <code translate="no">true_resolution</code> is set to <code translate="no">limit</code>, CAE will detect the true resolution. Suppose it is less than the declared pixel resolution of the input video file. In that case, it will produce a warning advising that the input file is upscaled. It will also limit the resolutions of renditions to be included in the CAE-generated profile not to exceed the input file's true resolution. Such limiting will enable additional savings in bandwidth and storage needed for a given asset. By default, this feature is <strong>off</strong>.</p>
+
+      <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "cae_options": {
+        "max_renditions": 10,
+        "max_resolution": {"width": 1920, "height": 1080},
+        "true_resolution": "detect"
+      }
+    }
+  ]
+}</code></pre>
+    </section>
+    
+
     <section class="bcls-section">
       <h2 id="additional_settings" translate="No">Additional settings</h2>
 
@@ -2312,6 +2349,7 @@
         </tbody>
       </table>
     </section>
+    
     <section class="bcls-section">
       <h2 id="video_configurations_settings">Video configurations settings</h2>
 
