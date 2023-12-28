@@ -7,6 +7,8 @@ parent: Encoding Guides
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
 
+  <!-- REPLACE HDR_FORMAT FOR video_color_format -->
+
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
 
@@ -88,6 +90,28 @@ parent: Encoding Guides
           <td></td>
           <td>SMPTE 2094-10 <sup><strong><a href="#note1-11">[1-11]</a></strong></sup></td>
         </tr>
+        <!-- <tr>
+          <td>SDR<sup><strong><a href="#note1-1">[1-12]</a></strong></sup></td>
+          <td>8</td>
+          <td>limited</td>
+          <td>BT.709 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WCG <sup><strong><a href="#note1-1">[1-13]</a></strong></sup></td>
+          <td>8 or 10</td>
+          <td>limited</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
     </table>
     <h3>Notes</h3>
     <ul>
@@ -117,6 +141,8 @@ parent: Encoding Guides
   <section class="bcls-section">
     <h2 id="supported_operations">Supported operations</h2>
     <p>Zencoder currently performs only <em>direct transcoding operations</em> with videos in HDR formats. That is, if input video is color-graded and encoded in a particular HDR format, the same color-grading and HDR-format related metadata will be preserved in the output(s).</p>
+    <!-- Comment the following out and replace for -->
+    <!-- <p>Conversions between different types of HDR formats or conversions between Standard Dynamic Range (SDR) and HDR formats currently supported.</p> -->
     <p>Conversions between different types of HDR formats or conversions between Standard Dynamic Range (SDR) and HDR formats currently are not supported. In principle, conversions between HDR formats are non-trivial operations that may impact artistic intent and/or introduce visible artifacts. For these reasons, we recommend such conversion operations to be done professionally in post-production.</p>
     <p>Encoding of videos in HDR formats currently requires the use of HEVC video codec, operating in Main10 profile, and using 10-bit pixels. Such codec, profile and bit-depth parameters must be defined for all HDR outputs. The use of other codecs/profiles/bit-depths with HDR formats currently is not supported.</p>
     <p>Encoding of videos in DolbyVision formats further requires the use of ISOBMFF (MP4) container formats for outputs. The use of other container formats with DolbyVision currently is not supported.</p>
