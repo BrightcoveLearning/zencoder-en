@@ -1493,7 +1493,7 @@
 }</code></pre>
   </section>
 
-  <!-- <section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="video_format_conversion">video_format_conversion</h2>
     <code translate="No">video_format_conversion:String</code>
 
@@ -1514,19 +1514,119 @@
       <li><a href="https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#frame_rate"><code>frame_rate</code></a> conversion</li>
       <li><a href="#deinterlace"><code>deinterlace</code></a></li>
       <li><a href="https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Scaling</a></li>
-      <li><a href="https://zencoder.support.brightcove.com/encoding-settings/general-audio-video/encoding-settings-resolution.html">Color Conversion</a></li>
+      <li><a href="#video_color_format">Color Conversion</a></li>
     </ul>
 
+    <p>The choice <code>standard</code> implies the use of in-house conversion technology. 
+    </p>
+    <p>The choice <code>frameformer</code> will enable the advanced video processing from <a href="https://www.insync.tv/frameformer/">InSync Technologies</a>. This technology will be required to be enabled per account, and it is a premium technology with <a href="https://www.brightcove.com/en/products/zencoder/?utm_source=zencoder.com">additional cost</a>. For more information contact your Customer Success Manager.</p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "deblock": true
-    }
-  ]
+  "frame_rate": 30,
+  "video_format_conversion": "frameformer"
 }</code></pre>
-  </section> -->
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="video_color_format">video_color_format</h2>
+    <code translate="No">video_color_format:String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <!-- <p><strong>Default:</strong> standard</p> -->
+
+    <p><strong>Valid Values:</strong></p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+          <tr>
+              <th>video_color_format</th>
+              <th>Color Primaries</th>
+              <th>Transfer Characteristics</th>
+              <th>Matrix Coefficients</th>
+              <th>color_range</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td><strong>sdr</strong></td>
+              <td>bt709 (1)</td>
+              <td>bt709 (1)</td>
+              <td>bt709 (1)</td>
+              <td>Limited (default)</td>
+          </tr>
+          <tr>
+            <td><strong>hlg10</strong></td>
+            <td>bt2020 (9)</td>
+            <td>arib-std-b67 (18)</td>
+            <td>bt2020nc (9)</td>
+            <td>Limited (default)</td>
+          </tr>
+          <tr>
+            <td><strong>wcg / bt2020</strong></td>
+            <td>bt2020 (9)</td>
+            <td>bt2020 (14)</td>
+            <td>bt2020nc (9)</td>
+            <td>Limited</td>
+          </tr>
+          <tr>
+            <td><strong>pq10 / hdr10 / dv8.1</strong></td>
+            <td>bt2020 (9)</td>
+            <td>smpte2084 (16)</td>
+            <td>bt2020nc (9)</td>
+            <td>Limited</td>
+          </tr>
+          <tr>
+            <td><strong>dv5</strong></td>
+            <td>unknown (2)</td>
+            <td>unknown (2)</td>
+            <td>unknown (2)</td>
+            <td>Full</td>
+          </tr>
+      </tbody>
+  </table>
+
+    <p><strong>Description:</strong></p>
+
+    <p>This parameter converts output video colors to the given <code>video_color_format</code>.</p>
+    <ul>
+      <li>To convert colors from one format to another, you need:
+        <ul>
+          <li>Valid metadata to be present in the input media.
+          </li>
+          <li><code>color_conversion</code> feature flag enabled for the account.
+          </li>
+        </ul>
+      </li>
+      <li>For HDR formats (hlg10, pq10, hdr10, dv8.1 and dv5). It is required to use 
+        <code class="language-json">"video_codec" : "hevc"</code>  and <code class="language-json">"video_bit_depth": 10</code></li>
+      <li>Refer to HDR guide for further details on HDR formats. See <a href="https://zencoder.support.brightcove.com/encoding-guides/hdr10-video-output.html">Supported HDR Video Formats</a> for more information.
+      </li>
+    </ul>
+ <p><strong>Example:</strong></p>
+ <ul>
+  <li>Covert to <strong>sdr:</strong>
+<pre class="line-numbers">
+  <code class="language-json" translate="No">{
+  "video_codec": "h264",
+  "video_color_format": "sdr"
+}</code></pre>
+
+  </li>
+  <li>Covert to <strong>pq10:</strong>
+    <pre class="line-numbers">
+      <code class="language-json" translate="No">{
+        "video_codec": "hevc",
+        "video_bit_depth": 10,
+        "video_color_format": "pq10"
+      }</code></pre>
+    
+      </li>
+ </ul>
+   
+    
+  </section>
 
   
 </article>
