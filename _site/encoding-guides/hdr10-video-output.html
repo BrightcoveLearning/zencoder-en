@@ -1400,16 +1400,16 @@
 }</code></pre>
     <p>This method should work well with HEVC-encoded HDR10, PQ10, anf HLG10 mezzanines.</p>
     <p>In cases when input mezzanine does not describe HDR format exactly, or carries only partial information, an explicit specification of HDR format parameters should be used.</p>
-    <p>In such cases, Zencoder should receive the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> parameter, describing the exact type of HDR format being used, along with several additional parameters that may be required to pass the associated metadata. Below table lists possible values of <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> parameter and additional parameters that must be specified.</p>
+    <p>In such cases, Zencoder should receive the <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#video_color_format"><code translate="No">video_color_format</code></a> parameter, describing the exact type of HDR format being used, along with several additional parameters that may be required to pass the associated metadata. Below table lists possible values of <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#video_color_format"><code translate="No">video_color_format</code></a> parameter and additional parameters that must be specified.</p>
     <table class="bcls-table">
-      <caption class="bcls-caption--table">hdr_format Details</caption>
+      <caption class="bcls-caption--table">video_color_format Details</caption>
       <thead class="bcls-table__head">
         <tr>
           <th rowspan="2">HDR format</th>
           <th colspan="4">Zencoder API parameters / values</th>
         </tr>
         <tr>
-        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#video_color_format"><code translate="No">video_color_format</code></a></td>
         <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a></td>
         <td style="padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code translate="No">max_content_light_level</code></a>, <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
         <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a></td>
@@ -1462,7 +1462,7 @@
       "video_codec": "hevc", 
       "video_codec_profile": "main10", 
       "video_bit_depth": 10,
-      "hdr_format": "hdr10",
+      "video_color_format": "hdr10",
       "master_display": {
         "red": {"x": 0.708, "y": 0.292},
         "green": {"x": 0.17, "y": 0.797},
@@ -1486,7 +1486,7 @@
      "video_codec_profile": "main10", 
      "video_bit_depth": 10,
      "video_color_range": "full",
-     "hdr_format": "dv5",
+     "video_color_format": "dv5",
      "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
     } 
   ] 
