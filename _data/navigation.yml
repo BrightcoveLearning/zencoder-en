@@ -4,7 +4,7 @@
 - section: 
   name: 'Getting Started'
   url: '/getting-started/index.html'
-  icon: fa-regular fa-map-pin
+  icon: fa-solid fa-map-pin
   description: Guides to help you get started using Zencoder.
   docs:
     - name: 'Overview'
@@ -20,7 +20,7 @@
 - section: 
   name: 'General Information'
   url: '/general-information/index.html'
-  icon: fa-regular fa-circle-info
+  icon: fa-solid fa-circle-info
   description: General information about using Zencoder.
   docs:
     - name: 'Basics'
@@ -52,7 +52,7 @@
 - section: 
   name: 'References'
   url: '/references/index.html'
-  icon: fa-regular fa-books
+  icon: fa-solid fa-book
   description: The API Reference and Other Reference Information.
   docs:
     - name: 'API Reference'
@@ -64,7 +64,7 @@
 - section: 
   name: 'Encoding Settings'
   url: '/encoding-settings/index.html'
-  icon: fa-solid fa-binary
+  icon: fa-solid fa-sliders
   description: 'Detailed explanation of all encoding settings.<br><a href="/encoding-settings/quick-reference.html">Quick Reference</a> '
   docs:
     - name: 'General Settings'
@@ -156,7 +156,7 @@
 - section: 
   name: 'Encoding Guides'
   url: '/encoding-guides/index.html'
-  icon: fa-light fa-signs-post
+  icon: fa-solid fa-signs-post
   description: Guides to help you get the best results with different output formats.
   docs:
     - name: 'Audio Mapping Guide'
@@ -202,7 +202,7 @@
 - section: 
   name: 'Errors/Troubleshooting'
   url: '/error-troubleshooting/index.html'
-  icon: fa-regular fa-bug
+  icon: fa-solid fa-bug
   description: Help when something is not right.
   docs:
   - name: 'Common Problems'
@@ -325,7 +325,7 @@
 - section: 
   name: 'Integration'
   url: '/integration/index.html'
-  icon: fa-regular fa-puzzle-piece-simple
+  icon: fa-solid fa-puzzle-piece
   description: Guides to help you integrate Zencoder with your CMS or other apps.
   docs:
     - name: 'Integration libraries'
@@ -339,7 +339,7 @@
 - section: 
   name: 'Support'
   url: '/support/index.html'
-  icon: fa-regular fa-comments-question-check
+  icon: fa-solid fa-comments
   description: Learn how to get help from Brightcove Support.
   docs:
     - name: 'Viewing the Brightcove System Status Page'
