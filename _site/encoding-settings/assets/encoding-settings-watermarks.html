@@ -1270,7 +1270,7 @@
         <ul>
           <li>All settings above may be entered as strings or numbers if they have pixel values.</li>
           <li>If you use <code translate="No">width</code> or <code translate="No">height</code> the image will be stretched or squeezed, reducing the image quality.</li>
-          <li>If you must resize the image, specify either the <code translate="No">width</code> <strong>or</strong> <code translate="No">height</code>, but not both. In that case the other dimension will be scaled accordingly while maintaining the aspect ratio.</li>
+          <li>If you must resize the image, specify either the <strong>width</strong> or <strong>height</strong>. In that case, the other dimension will be scaled accordingly while maintaining the aspect ratio. The watermark image will be stretched relative to the video aspect ratio if both are specified.</li>
           <li>The watermark must be sized and positioned in such a way that it will fit entirely with the frame-size of the output it is assigned to. If it does not, Zencoder will return an error.</li>
           <li>There is also an <code translate="No">origin</code> which allows you to make all measurements with reference to the video frame size rather than the content size, if the two are different - but that is rare.</li>
         </ul>
