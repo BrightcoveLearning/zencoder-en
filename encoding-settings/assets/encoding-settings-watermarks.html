@@ -86,7 +86,7 @@ grandparent: Encoding Settings
 
     <p><strong>Description:</strong></p>
 
-    <p>You can add one or more watermarks to an output video using our watermarking API. Zencoder supports up to 4 watermark files per output in JPEG, BMP, or PNG format.</p>
+    <p>You can add one or more watermarks to an output video using our watermarking API. Zencoder supports up to 4 watermark files per output in JPEG, BMP, or PNG format. See <a href="https://www.brightcove.com/en/resources/blog/advanced-watermarking/">here</a> for examples.</p>
 
     <aside class="bcls-aside bcls-aside--warning">
       <ul>
@@ -101,13 +101,22 @@ grandparent: Encoding Settings
     "input": "s3://zencodertesting/test.mov",
     "outputs": [
       {
+        //Single watermark
+        "watermark":{
+          "url": "s3://bucket/watermark_file.png",
+          "x": -10,
+          "y": -10,
+          "width": "12.5%",
+          "height": "12.5%"
+        },
+        //Multiple watermarks
         "watermarks": [
           {
             "url": "s3://bucket/watermark_file.png",
-            "x": 20,
-            "y": "-10%",
-            "width": 32,
-            "height": 24
+            "x": 20
+          }, {
+            "url": "s3://bucket/watermark_file.png",
+            "x": -20
           }
         ]
       }
