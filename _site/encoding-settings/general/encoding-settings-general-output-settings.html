@@ -1322,8 +1322,10 @@
 
     <p><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
   </section>
+
   <section class="bcls-section">
     <h2 translate="No" id="cae_options">cae_options</h2>
+    
     <code translate="no">cae_options:Hash</code>
 
     <p><strong>API Versions:</strong> V2</p>
@@ -1353,9 +1355,58 @@
     {"source": "cae_profile", "cae_rendition": 5}, {"source": "cae_profile", "cae_rendition": 6}
   ]
 }</code></pre>
-
     <p><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
   </section>
+
+  <section class="bcls-section">
+    <h2 translate="No" id="reference_profile_for_comparision">reference_profile_for_comparision</h2>
+    <code translate="no">reference_profile_for_comparision:&lt;cae-output-label&gt; String</code>
+
+    <p><strong>API Versions:</strong> V2</p>
+
+    <p><strong>Parent:</strong> <a translate="No" href="/encoding-settings/general/encoding-settings-job.html#outputs">outputs</a></p>
+
+    <p><strong>Compatible Job Types:</strong> VOD</p>
+
+    <p><strong>Description:</strong></p>
+
+    <p>The <code translate="no">reference_profile_for_comparision</code> compares and analyzes the CAE-generated profile for a reference static profile. The string used should match the label of the reference CAE output. For example, if your static profile contains seven renditions, to see how that profile does, you can use the following:
+      </p>
+
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3+us-east-1://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "ref_static_profile",
+      "cae_options": {
+        "video_configurations":[
+        {"width": 416, "height": 234, "video_codec": "h264", "bitrate": 145},
+        {"width": 640, "height": 360, "video_codec": "h264", "bitrate": 365},
+        {"width": 768, "height": 432, "video_codec": "h264", "bitrate": 730},
+        {"width": 768, "height": 432, "video_codec": "h264", "bitrate": 1100},
+        {"width": 960, "height": 540, "video_codec": "h264", "bitrate": 2000},
+        {"width": 1280, "height": 720, "video_codec": "h264", "bitrate": 3000},
+        {"width": 1280, "height": 720, "video_codec": "h264", "bitrate": 4500}]
+      }
+    },
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "reference_profile_for_comparison": "ref_static_profile",
+      "cae_options": {
+        "max_bitrate": "5000",
+        "max_resolution": { "height": 1080},
+        "max_renditions": 7
+      }
+    }
+  ]
+}</code></pre>
+  <aside class="bcls-aside bcls-aside--information">Note: The result of this comparison is only available in Zencoder UI.</aside>
+  <p><strong>See Also:</strong> <a translate="No" href="#source">source</a></p>
+  </section>
+
   <section class="bcls-section">
     <h2 translate="No" id="cae_rendition">cae_rendition</h2>
     <code translate="No">cae_rendition:Integer</code>
